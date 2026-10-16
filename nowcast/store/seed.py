@@ -153,6 +153,8 @@ def load_seed(store: Store, catalogue: list[dict] | None = None) -> list[str]:
                 "first": df["ref_period"].min(),
                 "last": df["ref_period"].max(),
             }
+        if not rows:
+            continue
         store.write_observations(run_id, pd.concat(rows, ignore_index=True))
         store.write_run_file(
             run_id,

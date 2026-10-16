@@ -23,9 +23,10 @@ def session() -> requests.Session:
 
 
 def get(
-    s: requests.Session, url: str, params: dict | None = None, retries: int = RETRIES, sleep=time.sleep
+    s: requests.Session, url: str, params: dict | None = None, retries: int = RETRIES, sleep=None
 ) -> requests.Response:
     """GET with retries. Raises the last error when every attempt fails."""
+    sleep = sleep or time.sleep
     backoff = 2.0
     wait_429 = 20.0
     last: Exception | None = None

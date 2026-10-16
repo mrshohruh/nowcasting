@@ -36,7 +36,15 @@ def main(out: str) -> int:
     p = a.parse(raw)
     print("link:", PINK_LINK.search(page.text).group(1))
     print("xlsx:", raw.url, len(raw.content), "bytes")
-    print("unit:", p.meta["unit"], "| points:", len(p.data), p.data["ref_period"].min(), "to", p.data["ref_period"].max())
+    print(
+        "unit:",
+        p.meta["unit"],
+        "| points:",
+        len(p.data),
+        p.data["ref_period"].min(),
+        "to",
+        p.data["ref_period"].max(),
+    )
     print(p.data.tail(3).to_string(index=False))
     return 0
 

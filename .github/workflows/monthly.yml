@@ -21,6 +21,10 @@ on:
         description: "Catch-up: retry only the series that failed in this month's last run"
         type: boolean
         default: false
+      accept:
+        description: "Accept failed checks for these series (after confirming the change is real)"
+        required: false
+        default: ""
   # Development only: a push to the phase-1 branch runs the full pipeline against the throwaway
   # data-dev branch. Removed when phase-1 is merged.
   push:
@@ -74,11 +78,13 @@ jobs:
         env:
           CATCH_UP: ${{ github.event.schedule == '0 1 2 * *' || inputs.catch_up }}
           SERIES: ${{ inputs.series }}
+          ACCEPT: ${{ inputs.accept }}
           TRIGGER: ${{ github.event_name == 'schedule' && 'scheduled' || github.event_name == 'push' && 'dev' || 'manual' }}
         run: |
           args=(--store store --trigger "$TRIGGER")
           if [ "$CATCH_UP" = "true" ]; then args+=(--catch-up); fi
           if [ -n "$SERIES" ]; then args+=(--series "$SERIES"); fi
+          if [ -n "$ACCEPT" ]; then args+=(--accept "$ACCEPT"); fi
           python -m nowcast.ingest.run "${args[@]}"
 
       - name: Commit the vintage to the data branch

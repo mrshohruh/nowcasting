@@ -6,7 +6,10 @@
 * ``--catch-up``: only the series that failed in this month's latest run (the scheduled run on
   the 2nd); if this month has no run yet it does a full run, and if nothing failed it does
   nothing;
-* ``--series``: just these series.
+* ``--series``: just these series;
+* ``--accept``: series whose failed *checks* (not download or parse errors) are accepted for this
+  run, after someone has confirmed on the publisher's site that the change is real (e.g. a new
+  unit). The run then stores the data and the new unit becomes the reference.
 
 A source that breaks never stops the run: its series are marked fail, the store keeps what it
 had for them, and every other series is processed. Results:
@@ -115,8 +118,10 @@ def run(
     trigger: str = "manual",
     catalogue: list[dict] | None = None,
     session=None,
+    accept: list[str] | None = None,
 ) -> dict:
     run_date = run_date or today_tashkent()
+    accept = set(accept or [])
     store = Store(store_dir)
     catalogue = catalogue or load_catalogue()
     problems = validate(catalogue)
@@ -199,6 +204,10 @@ def run(
                 revised=len(ch.revised),
                 removed=len(ch.removed),
             )
+            if q.status == "fail" and sid in accept:
+                q.status = "warn"
+                q.messages.append("warn: failed checks accepted by hand for this run (--accept)")
+                rep.update(status=q.status, messages=q.messages, accepted=True)
             if q.status != "fail":
                 rows.append(delta_rows(ch, run_date, run_id, rep["sha256"], fetched_at))
                 store.save_meta(sid, parsed.meta)
@@ -288,9 +297,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--series", default="", help="comma-separated series ids; empty = all")
     ap.add_argument("--catch-up", action="store_true")
     ap.add_argument("--trigger", default="manual")
+    ap.add_argument("--accept", default="", help="series whose failed checks are accepted for this run")
     args = ap.parse_args(argv)
     only = [x.strip() for x in args.series.split(",") if x.strip()] or None
-    report = run(args.store, args.run_date, only, args.catch_up, args.trigger)
+    accept = [x.strip() for x in args.accept.split(",") if x.strip()]
+    report = run(args.store, args.run_date, only, args.catch_up, args.trigger, accept=accept)
     text = summary_text(report)
     print(text)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
