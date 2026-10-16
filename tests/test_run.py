@@ -120,6 +120,8 @@ def test_second_run_reports_no_change_then_finds_planted_revision(setup):
     ):
         assert second["series"][sid]["changes"] == "no change", sid
     assert second["new_points"] == second["revised_points"] == 0
+    # the USD rate file covers only the months fetched: older months are not "removed"
+    assert second["series"]["usd_rate"]["removed"] == 0 and second["removed_points"] == 0
 
     # plant a revision in the real SIAT file: August industry 108.0 -> 108.3
     f = src.dir / "siat/562.json"

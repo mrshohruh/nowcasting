@@ -253,6 +253,9 @@ class CbuRate(Source):
                 "unit": "UZS per USD, mean of calendar days",
                 "items": ["USD"],
                 "incomplete_months": [str(p) for p in g.index.difference(full.index)],
+                # the file covers only the months fetched in this run: months before it are not
+                # "removed", they were simply not asked for (see run.py)
+                "window_start": min(r[1] for r in rows) if rows else None,
             },
         )
 

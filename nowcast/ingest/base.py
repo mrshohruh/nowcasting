@@ -6,7 +6,9 @@ Every source is a ``Source`` subclass with two steps:
   URL and anything the publisher says about the file, e.g. SIAT's ``updated_at``);
 * ``parse(raw)`` turns those bytes into ``Parsed``: a long table with columns
   ``item, ref_period, value`` and a ``meta`` dict (unit as published, items found, labels) that
-  the quality checks compare from run to run.
+  the quality checks compare from run to run. A file that covers only recent periods (the USD
+  rate, fetched month by month) sets ``meta["window_start"]``: the run then compares it with the
+  store only from that period on, so older periods are not mistaken for removed ones.
 
 The two are separate so that a raw file saved by an earlier run, or a file dropped in the manual
 inbox, goes through exactly the same parser as a fresh download.

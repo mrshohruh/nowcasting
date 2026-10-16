@@ -191,7 +191,9 @@ def run(
                 rep["updated_at"] = raw.info["updated_at"]
             parsed = a.parse(raw)
             prev = prev_by_series.get(sid, pd.DataFrame(columns=["item", "ref_period", "value"]))
-            ch = compare(sid, prev, parsed.data)
+            window = parsed.meta.get("window_start")
+            # a file that covers only recent periods (USD rate) is compared inside its window
+            ch = compare(sid, prev[prev["ref_period"] >= window] if window else prev, parsed.data)
             prev_latest = prev["ref_period"].max() if len(prev) else None
             q = quality.check(s, parsed, store.load_meta(sid), ch, prev_latest, run_date)
             rep.update(
