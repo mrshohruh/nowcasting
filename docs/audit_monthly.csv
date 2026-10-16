@@ -1,0 +1,92 @@
+series,form_detected,first,last,n,gaps_inside,falls_within_year,min,max
+Industrial production — Industrial production (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,22233.6,1101130.8
+Industrial production — Mining and quarrying (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,3093.9,77019.7
+Industrial production — Manufacturing industry (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,16936.6,947176.8
+"Industrial production — Electricity, gas, steam and air conditioning (billion UZS) [M]",cumulative YTD,2019-01,2026-08,92,0,0,2045.2,70787.9
+"Industrial production — Water supply; sewerage, waste collection and disposal (billion UZS) [M]",cumulative YTD,2019-01,2026-08,92,0,0,142.3,6146.4
+Industrial production — Manufacturing of food products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,2257.2,152099.4
+Industrial production — Manufacture of beverages (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,292.1,29268.9
+Industrial production — Manufacture of tobacco products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,131.1,4515.3
+Industrial production — Manufacture of textiles (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,2490.7,101416.8
+Industrial production — Manufacture of wearing apparel (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,457.9,43120.3
+Industrial production — Manufacture of leather and related products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,79.1,4752.6
+"Industrial production — Manufacture of wooden and cork products, (except furniture), products made of straw and plaiting materials (billion UZS) [M]",level / rate,2019-01,2026-08,92,0,2,69.3,11250.5
+Industrial production — Manufacture of paper and paper products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,104.8,10178.4
+Industrial production — Printing and Playback of Recorded Materials (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,42.9,3771.9
+Industrial production — Manufacture of chemical products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,498.6,38386.9
+Industrial production — Manufacture of coke and refined petroleum products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,1474.1,43641.9
+Industrial production — Manufacture of basic pharmaceutical products and preparations (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,96.3,5423.9
+Industrial production — Manufacture of rubber and plastic products (billion UZS) [M],level / rate,2019-01,2026-08,92,0,1,299.9,21431.1
+Industrial production — Manufacture of other non-metallic mineral products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,667.8,53004.2
+Industrial production — Metallurgical industry (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,3865.7,243562.7
+"Industrial production — Manufacture of fabricated metal products, except machinery and equipment (billion UZS) [M]",level / rate,2019-01,2026-08,92,0,3,284.9,20794.0
+"Industrial production — Manufacture of computers, electronic and optical products (billion UZS) [M]",level / rate,2019-01,2026-08,92,0,1,108.9,6261.7
+Industrial production — Manufacture of electrical equipment (billion UZS) [M],level / rate,2019-01,2026-08,92,0,1,338.6,30946.1
+"Industrial production — Manafacture of machinery and equipment,not elsewhere classified (billion UZS) [M]",level / rate,2019-01,2026-08,92,0,1,135.6,12247.0
+"Industrial production — Manufacture of motor vehicles, trailers and semi-trailers (billion UZS) [M]",cumulative YTD,2019-01,2026-08,92,0,0,564.4,94242.1
+Industrial production — Manufacture of other transport equipment (billion UZS) [M],level / rate,2019-01,2026-08,92,0,1,44.8,3778.1
+Industrial production — Furniture manufacture (billion UZS) [M],level / rate,2019-01,2026-08,92,0,1,109.5,23259.2
+Industrial production — Manufacture of other finished products (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,88.5,17565.7
+Industrial production — Repair and installation of machinery and equipment (billion UZS) [M],cumulative YTD,2019-01,2026-08,92,0,0,48.7,7848.7
+Construction works (billion UZS) [M],cumulative YTD,2021-01,2026-08,68,0,0,5033.8,313887.8
+Retail trade volume (million UZS) [M],cumulative YTD,2020-01,2026-08,80,0,0,12860509.6,482443065.2
+Wholesale trade volume (million UZS) [M],level / rate,2020-01,2026-08,80,0,2,6306705.9,543262946.5
+"CPI — Cumulative index (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,25,99.71,102.8
+"CPI — Food products (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,28,97.95,103.01
+"CPI — Non-food products (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,27,100.15,102.3
+"CPI — Services (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,30,100.1,115.22
+"CPI — Food and non-alcoholic drinks (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,27,97.81,103.12
+"CPI — Alcoholic drinks, tobacco products (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,31,100.23,102.03
+"CPI — Clothes and footwear (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,27,99.91,101.43
+"CPI — Housing services, water, electricity, gas and other fuels (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,29,99.98,128.51
+"CPI — Household items, appliances and routine home maintenance (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,34,100.06,101.56
+"CPI — Health care (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,33,99.9,106.88
+"CPI — Transport (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,28,99.55,105.24
+"CPI — Information and communication (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,28,97.83,102.72
+"CPI — Recreation, sports and culture (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,33,100.2,103.8
+"CPI — Services in the field of education (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,27,99.56,107.55
+"CPI — Restaurants and hotel services (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,30,100.03,103.18
+"CPI — Insurance and financial services (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,31,99.22,140.8
+"CPI — Household goods and services, social protection and miscellaneous goods and services (index, %) [M]",index or growth rate (~100),2021-01,2026-09,69,0,31,99.7,101.83
+"PPI — Composite index (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,50,98.7,109.5
+"PPI — Mining and quarrying (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,44,94.6,136.1
+"PPI — Manufacturing industry (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,44,98.8,111.4
+"PPI — Electricity, gas, steam and air conditioning (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,38,91.6,165.7
+"PPI — Water supply; sewerage, waste collection and disposal (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,29,95.4,133.5
+"PPI — Manufacturing of food products (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,41,98.6,118.0
+"PPI — Manufacture of beverages (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,42,97.0,109.9
+"PPI — Manufacture of textiles (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,38,97.8,108.7
+"PPI — Manufacture of chemical products (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,41,91.5,130.3
+"PPI — Manufacture of coke and refined petroleum products (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,41,89.8,134.4
+"PPI — Manufacture of other non-metallic mineral products (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,40,97.1,105.9
+"PPI — Metallurgical industry (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,43,90.6,171.9
+"PPI — Manufacture of fabricated metal products, except machinery and equipment (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,40,97.9,114.5
+"PPI — Manufacture of electrical equipment (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,43,97.3,108.3
+"PPI — Manufacture of motor vehicles, trailers and semi-trailers (index, %) [M]",index or growth rate (~100),2019-01,2026-08,92,0,34,96.7,111.6
+"PPI — Mining of metal ores (index, %) [M]",level / rate,2019-01,2026-08,92,0,37,0.0,133.9
+Export volume (million USD) [M],cumulative YTD,2021-01,2026-08,68,0,0,694.7,34247.9
+Import volume (million USD) [M],cumulative YTD,2021-01,2026-08,68,0,0,1639.2,48515.6
+Gold (USD/troy oz) [M],level / rate,2019-01,2026-09,93,0,39,1284.0,5020.0
+M2 — Broad money liabilities (billion UZS) [M],level / rate,2019-01,2026-08,92,0,14,82509.67,437719.64
+International reserves — Foreign currency reserves (in convertible foreign currencies) (million USD) [M],level / rate,2019-01,2026-09,93,0,47,5932.59,15439.73
+International reserves — Gold (million USD) [M],level / rate,2019-01,2026-09,93,0,33,14413.63,67672.31
+Rendered market services — Trade (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,8,109.1,119.8
+Rendered market services — Information and communication (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,13,113.3,126.0
+Rendered market services — Transport activities (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,15,106.5,115.9
+Rendered market services — of which: motor transport (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,8,108.5,117.1
+Rendered market services — Accommodation and food service activities (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,15,107.7,117.3
+Rendered market services — Financial activities (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,10,113.2,127.6
+Rendered market services — Real estate activities (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,10,107.3,118.3
+"Rendered market services — Architectural and engineering activities, technical testing and analysis (% of previous year) [M]",index or growth rate (~100),2024-01,2026-08,32,0,16,103.85,125.6
+Rendered market services — Renting and leasing (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,13,102.3,125.6
+Rendered market services — Education (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,14,103.4,131.5
+Rendered market services — Human health activities (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,13,107.2,126.7
+Rendered market services — Repair of computers and household goods (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,5,107.8,113.0
+Rendered market services — Personal (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,5,107.6,114.7
+Rendered market services — Other services (% of previous year) [M],index or growth rate (~100),2024-01,2026-08,32,0,13,107.6,123.3
+Small business entities (units) [M],cumulative YTD,2022-01,2026-08,56,0,0,5920.0,90177.0
+Operating enterprises (units) [M],level / rate,2022-01,2026-09,57,0,14,424840.0,592371.0
+Interest rates — Time deposits of individuals (annual %) [M],level / rate,2019-01,2026-08,92,0,37,16.42,22.14
+Interest rates — Time deposits of legal entities (annual %) [M],level / rate,2019-01,2026-08,92,0,46,14.17,18.52
+Interest rates — Loans extended to individuals (annual %) [M],level / rate,2019-01,2026-08,92,0,46,19.83,28.28
+Interest rates — Loans extended to legal entities (annual %) [M],level / rate,2019-01,2026-08,92,0,43,18.47,24.49
