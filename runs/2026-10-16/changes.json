@@ -1,0 +1,10449 @@
+{
+ "run_id": "2026-10-16",
+ "vintage_date": "2026-10-16",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "92 new (2019-01 to 2026-08)",
+   "new": [
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-01",
+     "value": 105.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-02",
+     "value": 105.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-03",
+     "value": 105.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-04",
+     "value": 105.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-05",
+     "value": 105.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-06",
+     "value": 105.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-07",
+     "value": 105.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-08",
+     "value": 105.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-09",
+     "value": 105.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-10",
+     "value": 105.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-11",
+     "value": 105.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2019-12",
+     "value": 105.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-01",
+     "value": 100.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-02",
+     "value": 101.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-03",
+     "value": 101.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-04",
+     "value": 99.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-05",
+     "value": 99.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-06",
+     "value": 99.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-07",
+     "value": 97.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-08",
+     "value": 96.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-09",
+     "value": 98.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-10",
+     "value": 98.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-11",
+     "value": 100.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2020-12",
+     "value": 100.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-01",
+     "value": 98.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-02",
+     "value": 101.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-03",
+     "value": 103.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-04",
+     "value": 106.6
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-05",
+     "value": 108.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-06",
+     "value": 108.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-07",
+     "value": 108.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-08",
+     "value": 109.2
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-09",
+     "value": 109.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-10",
+     "value": 109.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-11",
+     "value": 109.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2021-12",
+     "value": 108.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-01",
+     "value": 108.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-02",
+     "value": 107.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-03",
+     "value": 105.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-04",
+     "value": 105.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-05",
+     "value": 106.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-06",
+     "value": 105.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-07",
+     "value": 105.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-08",
+     "value": 105.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-09",
+     "value": 105.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-10",
+     "value": 105.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-11",
+     "value": 105.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2022-12",
+     "value": 105.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-01",
+     "value": 90.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-02",
+     "value": 96.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-03",
+     "value": 104.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-04",
+     "value": 105.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-05",
+     "value": 105.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-06",
+     "value": 105.6
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-07",
+     "value": 105.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-08",
+     "value": 105.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-09",
+     "value": 105.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-10",
+     "value": 105.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-11",
+     "value": 106.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2023-12",
+     "value": 106.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-01",
+     "value": 116.6
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-02",
+     "value": 116.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-03",
+     "value": 106.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-04",
+     "value": 109.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-05",
+     "value": 108.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-06",
+     "value": 107.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-07",
+     "value": 107.1
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-08",
+     "value": 106.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-09",
+     "value": 107.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-10",
+     "value": 106.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-11",
+     "value": 106.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2024-12",
+     "value": 106.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-01",
+     "value": 104.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-02",
+     "value": 106.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-03",
+     "value": 106.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-04",
+     "value": 106.3
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-05",
+     "value": 106.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-06",
+     "value": 106.6
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-07",
+     "value": 106.5
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-08",
+     "value": 106.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-09",
+     "value": 106.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-10",
+     "value": 106.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-11",
+     "value": 106.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2025-12",
+     "value": 106.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-01",
+     "value": 107.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-02",
+     "value": 107.7
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-03",
+     "value": 108.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-04",
+     "value": 107.8
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-05",
+     "value": 107.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-06",
+     "value": 108.0
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-07",
+     "value": 107.9
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-08",
+     "value": 108.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "ind_mining_real": {
+   "summary": "92 new (2019-01 to 2026-08)",
+   "new": [
+    {
+     "item": "B",
+     "ref_period": "2019-01",
+     "value": 105.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-02",
+     "value": 107.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-03",
+     "value": 103.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-04",
+     "value": 106.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-05",
+     "value": 106.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-06",
+     "value": 105.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-07",
+     "value": 104.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-08",
+     "value": 102.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-09",
+     "value": 102.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-10",
+     "value": 102.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-11",
+     "value": 102.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2019-12",
+     "value": 99.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-01",
+     "value": 88.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-02",
+     "value": 99.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-03",
+     "value": 86.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-04",
+     "value": 81.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-05",
+     "value": 81.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-06",
+     "value": 81.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-07",
+     "value": 75.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-08",
+     "value": 73.6
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-09",
+     "value": 73.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-10",
+     "value": 72.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-11",
+     "value": 77.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2020-12",
+     "value": 78.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-01",
+     "value": 99.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-02",
+     "value": 98.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-03",
+     "value": 99.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-04",
+     "value": 101.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-05",
+     "value": 102.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-06",
+     "value": 107.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-07",
+     "value": 107.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-08",
+     "value": 110.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-09",
+     "value": 114.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-10",
+     "value": 116.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-11",
+     "value": 116.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2021-12",
+     "value": 110.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-01",
+     "value": 104.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-02",
+     "value": 101.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-03",
+     "value": 100.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-04",
+     "value": 100.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-05",
+     "value": 100.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-06",
+     "value": 99.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-07",
+     "value": 100.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-08",
+     "value": 100.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-09",
+     "value": 101.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-10",
+     "value": 101.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-11",
+     "value": 100.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2022-12",
+     "value": 101.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-01",
+     "value": 95.6
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-02",
+     "value": 99.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-03",
+     "value": 102.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-04",
+     "value": 101.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-05",
+     "value": 101.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-06",
+     "value": 100.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-07",
+     "value": 100.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-08",
+     "value": 100.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-09",
+     "value": 100.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-10",
+     "value": 100.6
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-11",
+     "value": 100.6
+    },
+    {
+     "item": "B",
+     "ref_period": "2023-12",
+     "value": 99.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-01",
+     "value": 96.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-02",
+     "value": 100.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-03",
+     "value": 104.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-04",
+     "value": 101.2
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-05",
+     "value": 98.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-06",
+     "value": 100.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-07",
+     "value": 100.8
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-08",
+     "value": 100.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-09",
+     "value": 101.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-10",
+     "value": 101.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-11",
+     "value": 100.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2024-12",
+     "value": 101.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-01",
+     "value": 102.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-02",
+     "value": 99.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-03",
+     "value": 98.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-04",
+     "value": 101.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-05",
+     "value": 106.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-06",
+     "value": 105.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-07",
+     "value": 104.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-08",
+     "value": 104.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-09",
+     "value": 104.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-10",
+     "value": 103.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-11",
+     "value": 105.9
+    },
+    {
+     "item": "B",
+     "ref_period": "2025-12",
+     "value": 103.5
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-01",
+     "value": 107.7
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-02",
+     "value": 109.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-03",
+     "value": 104.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-04",
+     "value": 106.4
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-05",
+     "value": 106.3
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-06",
+     "value": 102.1
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-07",
+     "value": 100.0
+    },
+    {
+     "item": "B",
+     "ref_period": "2026-08",
+     "value": 97.6
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "ind_manuf_real": {
+   "summary": "92 new (2019-01 to 2026-08)",
+   "new": [
+    {
+     "item": "C",
+     "ref_period": "2019-01",
+     "value": 105.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-02",
+     "value": 104.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-03",
+     "value": 105.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-04",
+     "value": 105.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-05",
+     "value": 105.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-06",
+     "value": 105.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-07",
+     "value": 105.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-08",
+     "value": 106.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-09",
+     "value": 106.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-10",
+     "value": 106.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-11",
+     "value": 106.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2019-12",
+     "value": 106.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-01",
+     "value": 104.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-02",
+     "value": 102.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-03",
+     "value": 106.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-04",
+     "value": 105.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-05",
+     "value": 104.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-06",
+     "value": 104.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-07",
+     "value": 103.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-08",
+     "value": 103.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-09",
+     "value": 104.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-10",
+     "value": 105.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-11",
+     "value": 106.2
+    },
+    {
+     "item": "C",
+     "ref_period": "2020-12",
+     "value": 107.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-01",
+     "value": 97.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-02",
+     "value": 101.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-03",
+     "value": 104.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-04",
+     "value": 107.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-05",
+     "value": 109.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-06",
+     "value": 108.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-07",
+     "value": 109.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-08",
+     "value": 108.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-09",
+     "value": 107.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-10",
+     "value": 107.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-11",
+     "value": 106.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2021-12",
+     "value": 108.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-01",
+     "value": 109.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-02",
+     "value": 107.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-03",
+     "value": 105.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-04",
+     "value": 106.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-05",
+     "value": 106.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-06",
+     "value": 105.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-07",
+     "value": 105.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-08",
+     "value": 105.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-09",
+     "value": 105.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-10",
+     "value": 105.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-11",
+     "value": 105.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2022-12",
+     "value": 105.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-01",
+     "value": 88.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-02",
+     "value": 95.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-03",
+     "value": 104.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-04",
+     "value": 105.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-05",
+     "value": 106.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-06",
+     "value": 106.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-07",
+     "value": 106.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-08",
+     "value": 106.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-09",
+     "value": 106.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-10",
+     "value": 106.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-11",
+     "value": 106.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2023-12",
+     "value": 107.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-01",
+     "value": 120.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-02",
+     "value": 120.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-03",
+     "value": 107.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-04",
+     "value": 112.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-05",
+     "value": 110.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-06",
+     "value": 109.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-07",
+     "value": 108.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-08",
+     "value": 108.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-09",
+     "value": 108.2
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-10",
+     "value": 108.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-11",
+     "value": 107.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2024-12",
+     "value": 107.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-01",
+     "value": 105.2
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-02",
+     "value": 108.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-03",
+     "value": 108.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-04",
+     "value": 108.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-05",
+     "value": 107.3
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-06",
+     "value": 107.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-07",
+     "value": 107.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-08",
+     "value": 106.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-09",
+     "value": 107.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-10",
+     "value": 107.4
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-11",
+     "value": 107.2
+    },
+    {
+     "item": "C",
+     "ref_period": "2025-12",
+     "value": 107.7
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-01",
+     "value": 107.9
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-02",
+     "value": 107.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-03",
+     "value": 109.1
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-04",
+     "value": 108.5
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-05",
+     "value": 108.6
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-06",
+     "value": 108.8
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-07",
+     "value": 109.0
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-08",
+     "value": 109.1
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "ind_elec_real": {
+   "summary": "92 new (2019-01 to 2026-08)",
+   "new": [
+    {
+     "item": "D",
+     "ref_period": "2019-01",
+     "value": 105.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-02",
+     "value": 102.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-03",
+     "value": 105.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-04",
+     "value": 107.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-05",
+     "value": 104.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-06",
+     "value": 105.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-07",
+     "value": 106.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-08",
+     "value": 105.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-09",
+     "value": 105.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-10",
+     "value": 104.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-11",
+     "value": 104.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2019-12",
+     "value": 105.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-01",
+     "value": 102.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-02",
+     "value": 100.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-03",
+     "value": 107.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-04",
+     "value": 105.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-05",
+     "value": 104.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-06",
+     "value": 108.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-07",
+     "value": 108.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-08",
+     "value": 111.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-09",
+     "value": 113.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-10",
+     "value": 111.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-11",
+     "value": 113.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2020-12",
+     "value": 106.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-01",
+     "value": 104.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-02",
+     "value": 107.2
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-03",
+     "value": 110.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-04",
+     "value": 111.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-05",
+     "value": 113.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-06",
+     "value": 112.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-07",
+     "value": 111.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-08",
+     "value": 110.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-09",
+     "value": 110.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-10",
+     "value": 112.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-11",
+     "value": 112.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2021-12",
+     "value": 111.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-01",
+     "value": 105.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-02",
+     "value": 115.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-03",
+     "value": 115.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-04",
+     "value": 111.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-05",
+     "value": 111.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-06",
+     "value": 114.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-07",
+     "value": 115.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-08",
+     "value": 115.2
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-09",
+     "value": 114.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-10",
+     "value": 113.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-11",
+     "value": 112.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2022-12",
+     "value": 113.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-01",
+     "value": 96.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-02",
+     "value": 99.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-03",
+     "value": 105.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-04",
+     "value": 107.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-05",
+     "value": 110.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-06",
+     "value": 109.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-07",
+     "value": 108.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-08",
+     "value": 109.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-09",
+     "value": 108.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-10",
+     "value": 109.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-11",
+     "value": 109.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2023-12",
+     "value": 109.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-01",
+     "value": 110.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-02",
+     "value": 105.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-03",
+     "value": 102.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-04",
+     "value": 102.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-05",
+     "value": 103.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-06",
+     "value": 104.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-07",
+     "value": 103.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-08",
+     "value": 103.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-09",
+     "value": 104.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-10",
+     "value": 105.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-11",
+     "value": 105.2
+    },
+    {
+     "item": "D",
+     "ref_period": "2024-12",
+     "value": 105.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-01",
+     "value": 97.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-02",
+     "value": 95.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-03",
+     "value": 95.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-04",
+     "value": 96.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-05",
+     "value": 96.4
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-06",
+     "value": 103.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-07",
+     "value": 103.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-08",
+     "value": 103.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-09",
+     "value": 104.0
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-10",
+     "value": 103.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-11",
+     "value": 103.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2025-12",
+     "value": 103.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-01",
+     "value": 105.5
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-02",
+     "value": 104.8
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-03",
+     "value": 103.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-04",
+     "value": 103.3
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-05",
+     "value": 103.7
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-06",
+     "value": 107.9
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-07",
+     "value": 108.1
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-08",
+     "value": 111.8
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "ind_total_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "constr_real": {
+   "summary": "68 new (2021-01 to 2026-08)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2021-01",
+     "value": 97.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-02",
+     "value": 87.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-03",
+     "value": 103.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-04",
+     "value": 100.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-05",
+     "value": 97.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-06",
+     "value": 101.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-07",
+     "value": 101.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-08",
+     "value": 102.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-09",
+     "value": 104.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-10",
+     "value": 105.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-11",
+     "value": 105.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-12",
+     "value": 106.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-01",
+     "value": 99.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-02",
+     "value": 102.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-03",
+     "value": 106.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-04",
+     "value": 102.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-05",
+     "value": 103.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-06",
+     "value": 105.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-07",
+     "value": 106.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-08",
+     "value": 105.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-09",
+     "value": 106.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-10",
+     "value": 105.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-11",
+     "value": 105.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-12",
+     "value": 106.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-01",
+     "value": 66.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-02",
+     "value": 91.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-03",
+     "value": 104.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-04",
+     "value": 104.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-05",
+     "value": 104.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-06",
+     "value": 105.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-07",
+     "value": 105.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-08",
+     "value": 107.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-09",
+     "value": 107.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-10",
+     "value": 107.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-11",
+     "value": 108.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-12",
+     "value": 107.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-01",
+     "value": 124.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-02",
+     "value": 118.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-03",
+     "value": 106.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-04",
+     "value": 107.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-05",
+     "value": 107.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-06",
+     "value": 110.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-07",
+     "value": 110.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-08",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-09",
+     "value": 109.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-10",
+     "value": 109.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-11",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-12",
+     "value": 108.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-01",
+     "value": 117.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-02",
+     "value": 111.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-03",
+     "value": 110.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-04",
+     "value": 110.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-05",
+     "value": 110.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-06",
+     "value": 110.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-07",
+     "value": 110.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-08",
+     "value": 111.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "value": 114.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-10",
+     "value": 114.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-11",
+     "value": 114.5948261075
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-12",
+     "value": 114.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-01",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-02",
+     "value": 110.5852031769
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-03",
+     "value": 115.4827042075
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-04",
+     "value": 114.1179643447
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-05",
+     "value": 114.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-06",
+     "value": 113.8147328923
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-07",
+     "value": 112.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-08",
+     "value": 111.8
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "constr_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "retail_real": {
+   "summary": "80 new (2020-01 to 2026-08)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2020-01",
+     "value": 108.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-02",
+     "value": 108.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-03",
+     "value": 106.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-04",
+     "value": 100.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-05",
+     "value": 97.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-06",
+     "value": 98.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-07",
+     "value": 98.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-08",
+     "value": 99.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-09",
+     "value": 101.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-10",
+     "value": 102.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-11",
+     "value": 103.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-12",
+     "value": 105.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-01",
+     "value": 101.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-02",
+     "value": 100.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-03",
+     "value": 102.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-04",
+     "value": 108.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-05",
+     "value": 111.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-06",
+     "value": 109.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-07",
+     "value": 108.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-08",
+     "value": 109.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-09",
+     "value": 109.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-10",
+     "value": 110.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-11",
+     "value": 111.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-12",
+     "value": 113.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-01",
+     "value": 115.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-02",
+     "value": 113.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-03",
+     "value": 110.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-04",
+     "value": 110.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-05",
+     "value": 110.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-06",
+     "value": 109.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-07",
+     "value": 111.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-08",
+     "value": 111.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-09",
+     "value": 110.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-10",
+     "value": 111.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-11",
+     "value": 111.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-12",
+     "value": 112.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-01",
+     "value": 91.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-02",
+     "value": 100.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-03",
+     "value": 105.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-04",
+     "value": 106.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-05",
+     "value": 107.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-06",
+     "value": 106.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-07",
+     "value": 107.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-08",
+     "value": 107.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-09",
+     "value": 107.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-10",
+     "value": 107.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-11",
+     "value": 108.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-12",
+     "value": 109.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-01",
+     "value": 111.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-02",
+     "value": 109.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-03",
+     "value": 109.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-04",
+     "value": 108.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-05",
+     "value": 108.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-06",
+     "value": 108.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-07",
+     "value": 108.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-08",
+     "value": 109.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-09",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-10",
+     "value": 109.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-11",
+     "value": 109.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-12",
+     "value": 109.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-01",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-02",
+     "value": 110.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-03",
+     "value": 109.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-04",
+     "value": 109.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-05",
+     "value": 109.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-06",
+     "value": 109.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-07",
+     "value": 109.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-08",
+     "value": 110.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "value": 111.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-10",
+     "value": 110.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-11",
+     "value": 111.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-12",
+     "value": 111.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-01",
+     "value": 114.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-02",
+     "value": 117.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-03",
+     "value": 125.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-04",
+     "value": 122.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-05",
+     "value": 120.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-06",
+     "value": 120.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-07",
+     "value": 120.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-08",
+     "value": 118.8
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "retail_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_real": {
+   "summary": "80 new (2020-01 to 2026-08)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2020-01",
+     "value": 107.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-02",
+     "value": 108.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-03",
+     "value": 100.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-04",
+     "value": 92.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-05",
+     "value": 90.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-06",
+     "value": 94.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-07",
+     "value": 93.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-08",
+     "value": 94.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-09",
+     "value": 97.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-10",
+     "value": 100.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-11",
+     "value": 101.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2020-12",
+     "value": 106.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-01",
+     "value": 109.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-02",
+     "value": 107.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-03",
+     "value": 109.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-04",
+     "value": 106.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-05",
+     "value": 111.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-06",
+     "value": 109.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-07",
+     "value": 110.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-08",
+     "value": 110.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-09",
+     "value": 111.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-10",
+     "value": 112.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-11",
+     "value": 113.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2021-12",
+     "value": 128.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-01",
+     "value": 111.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-02",
+     "value": 112.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-03",
+     "value": 114.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-04",
+     "value": 119.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-05",
+     "value": 118.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-06",
+     "value": 122.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-07",
+     "value": 120.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-08",
+     "value": 119.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-09",
+     "value": 118.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-10",
+     "value": 126.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-11",
+     "value": 126.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2022-12",
+     "value": 126.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-01",
+     "value": 103.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-02",
+     "value": 106.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-03",
+     "value": 108.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-04",
+     "value": 107.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-05",
+     "value": 110.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-06",
+     "value": 108.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-07",
+     "value": 110.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-08",
+     "value": 111.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-09",
+     "value": 112.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-10",
+     "value": 112.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-11",
+     "value": 113.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023-12",
+     "value": 112.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-01",
+     "value": 113.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-02",
+     "value": 112.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-03",
+     "value": 112.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-04",
+     "value": 112.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-05",
+     "value": 111.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-06",
+     "value": 110.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-07",
+     "value": 110.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-08",
+     "value": 110.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-09",
+     "value": 110.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-10",
+     "value": 110.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-11",
+     "value": 111.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024-12",
+     "value": 111.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-01",
+     "value": 110.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-02",
+     "value": 112.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-03",
+     "value": 110.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-04",
+     "value": 110.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-05",
+     "value": 109.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-06",
+     "value": 112.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-07",
+     "value": 112.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-08",
+     "value": 112.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "value": 112.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-10",
+     "value": 112.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-11",
+     "value": 112.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025-12",
+     "value": 112.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-01",
+     "value": 115.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-02",
+     "value": 116.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-03",
+     "value": 110.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-04",
+     "value": 112.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-05",
+     "value": 115.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-06",
+     "value": 116.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-07",
+     "value": 115.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026-08",
+     "value": 116.9
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "wholesale_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "agri_real_q": {
+   "summary": "15 new (2022Q4 to 2026Q2)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2022Q4",
+     "value": 103.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023Q1",
+     "value": 103.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023Q2",
+     "value": 104.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023Q3",
+     "value": 104.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2023Q4",
+     "value": 104.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q1",
+     "value": 103.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q2",
+     "value": 104.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q3",
+     "value": 103.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q4",
+     "value": 103.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q1",
+     "value": 103.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q2",
+     "value": 104.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "value": 104.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q4",
+     "value": 104.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026Q1",
+     "value": 105.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026Q2",
+     "value": 104.7
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "mkt_services_growth": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "10 new (2024Q1 to 2026Q2)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2024Q1",
+     "value": 102.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q2",
+     "value": 104.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q3",
+     "value": 103.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2024Q4",
+     "value": 103.1
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q1",
+     "value": 102.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q2",
+     "value": 101.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "value": 101.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q4",
+     "value": 101.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026Q1",
+     "value": 107.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2026Q2",
+     "value": 109.2
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "exports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "exports_gold_usd": {
+   "summary": "44 new (2023-01 to 2026-08)",
+   "new": [
+    {
+     "item": "71",
+     "ref_period": "2023-01",
+     "value": 1182135.1
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-02",
+     "value": 591.0
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-03",
+     "value": 1229497.2
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-04",
+     "value": 653037.4
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-05",
+     "value": 1379605.7
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-06",
+     "value": 17073.7
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-07",
+     "value": 1266561.0
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-08",
+     "value": 15671.1
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-09",
+     "value": 8641.1
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-10",
+     "value": 1234360.2
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-11",
+     "value": 1335255.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2023-12",
+     "value": 12130.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-01",
+     "value": 8579.3
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-02",
+     "value": 1319285.4
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-03",
+     "value": 1420830.4
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-04",
+     "value": 788096.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-05",
+     "value": 784462.5
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-06",
+     "value": 6139.5
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-07",
+     "value": 46797.2
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-08",
+     "value": 798510.7
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-09",
+     "value": 812097.6
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-10",
+     "value": 844382.2
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-11",
+     "value": 56580.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2024-12",
+     "value": 865828.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-01",
+     "value": 54907.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-02",
+     "value": 1813871.7
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-03",
+     "value": 1867775.4
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-04",
+     "value": 1932794.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-05",
+     "value": 1050756.0
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-06",
+     "value": 68593.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-07",
+     "value": 1233146.5
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-08",
+     "value": 853095.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-09",
+     "value": 1524657.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-10",
+     "value": 51683.5
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-11",
+     "value": 21117.5
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-12",
+     "value": 59674.1
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-01",
+     "value": 27818.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-02",
+     "value": 71888.8
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-03",
+     "value": 133260.6
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-04",
+     "value": 1669309.3
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-05",
+     "value": 143583.2
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-06",
+     "value": 173110.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-07",
+     "value": 1492800.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-08",
+     "value": 326881.2
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "imports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "usd_rate": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 2
+  },
+  "remittances_q": {
+   "summary": "56 new (2005Q1 to 2018Q4)",
+   "new": [
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2005Q1",
+     "value": 34.308113825851876
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2005Q2",
+     "value": 73.61980510941935
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2005Q3",
+     "value": 95.59138750703225
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2005Q4",
+     "value": 147.84484622178226
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2006Q1",
+     "value": 95.2074228660309
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2006Q2",
+     "value": 224.56762115850492
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2006Q3",
+     "value": 230.24785706788356
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2006Q4",
+     "value": 210.67894792378596
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2007Q1",
+     "value": 161.20993357770556
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2007Q2",
+     "value": 278.1484494793177
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2007Q3",
+     "value": 309.7420643491233
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2007Q4",
+     "value": 248.07889606897285
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2008Q1",
+     "value": 344.8267633956882
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2008Q2",
+     "value": 418.5936381252104
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2008Q3",
+     "value": 944.3941047625729
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2008Q4",
+     "value": 1252.4936967351327
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2009Q1",
+     "value": 235.66354499069902
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2009Q2",
+     "value": 192.47147670633169
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2009Q3",
+     "value": 592.2292409609606
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2009Q4",
+     "value": 352.151419680712
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2010Q1",
+     "value": 337.6067327320395
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2010Q2",
+     "value": 491.80780917852843
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2010Q3",
+     "value": 816.9149978163684
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2010Q4",
+     "value": 749.1784394061879
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2011Q1",
+     "value": 492.91743797935385
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2011Q2",
+     "value": 800.9543234408593
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2011Q3",
+     "value": 1180.9146677186666
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2011Q4",
+     "value": 1038.7346312907885
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2012Q1",
+     "value": 701.746356700227
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2012Q2",
+     "value": 1044.613999584638
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2012Q3",
+     "value": 1674.2858499155589
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2012Q4",
+     "value": 1385.0032696111612
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2013Q1",
+     "value": 729.1878164160173
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2013Q2",
+     "value": 1112.0343499689334
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2013Q3",
+     "value": 1561.7716189537073
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2013Q4",
+     "value": 1330.4829725651607
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2014Q1",
+     "value": 956.6659343054664
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2014Q2",
+     "value": 1351.5331620048373
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2014Q3",
+     "value": 2050.098010082756
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2014Q4",
+     "value": 880.0446446395788
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2015Q1",
+     "value": 422.1501214516524
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2015Q2",
+     "value": 807.0113185756261
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2015Q3",
+     "value": 927.8367935660285
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2015Q4",
+     "value": 717.043182570805
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2016Q1",
+     "value": 492.5380476619299
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2016Q2",
+     "value": 897.8904537155324
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2016Q3",
+     "value": 1257.2539812834614
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2016Q4",
+     "value": 1079.529755768739
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2017Q1",
+     "value": 815.3991343627786
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2017Q2",
+     "value": 1098.2119460489994
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2017Q3",
+     "value": 1555.5241532013326
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2017Q4",
+     "value": 1346.9220250037404
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2018Q1",
+     "value": 937.1277203937112
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2018Q2",
+     "value": 1167.5842360159597
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2018Q3",
+     "value": 1404.5121005028197
+    },
+    {
+     "item": "secondary_income_credits",
+     "ref_period": "2018Q4",
+     "value": 1313.6859737035145
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 30
+  },
+  "cpi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm_old": {
+   "summary": "132 new (2010-01 to 2020-12)",
+   "new": [
+    {
+     "item": "1",
+     "ref_period": "2010-01",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-02",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-03",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-04",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-05",
+     "value": 100.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-06",
+     "value": 99.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-07",
+     "value": 99.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-08",
+     "value": 100.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-09",
+     "value": 100.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-10",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-11",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2010-12",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-01",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-02",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-03",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-04",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-05",
+     "value": 100.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-06",
+     "value": 99.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-07",
+     "value": 99.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-08",
+     "value": 100.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-09",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-10",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-11",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2011-12",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-01",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-02",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-03",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-04",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-05",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-06",
+     "value": 99.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-07",
+     "value": 99.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-08",
+     "value": 99.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-09",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-10",
+     "value": 101.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-11",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2012-12",
+     "value": 101.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-01",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-02",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-03",
+     "value": 100.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-04",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-05",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-06",
+     "value": 99.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-07",
+     "value": 98.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-08",
+     "value": 100.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-09",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-10",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-11",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2013-12",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-01",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-02",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-03",
+     "value": 100.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-04",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-05",
+     "value": 100.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-06",
+     "value": 99.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-07",
+     "value": 98.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-08",
+     "value": 99.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-09",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-10",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-11",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2014-12",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-01",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-02",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-03",
+     "value": 100.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-04",
+     "value": 100.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-05",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-06",
+     "value": 99.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-07",
+     "value": 98.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-08",
+     "value": 99.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-09",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-10",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-11",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2015-12",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-01",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-02",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-03",
+     "value": 100.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-04",
+     "value": 100.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-05",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-06",
+     "value": 99.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-07",
+     "value": 98.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-08",
+     "value": 99.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-09",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-10",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-11",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2016-12",
+     "value": 101.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-01",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-02",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-03",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-04",
+     "value": 101.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-05",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-06",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-07",
+     "value": 100.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-08",
+     "value": 100.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-09",
+     "value": 101.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-10",
+     "value": 101.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-11",
+     "value": 102.0
+    },
+    {
+     "item": "1",
+     "ref_period": "2017-12",
+     "value": 102.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-01",
+     "value": 102.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-02",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-03",
+     "value": 101.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-04",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-05",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-06",
+     "value": 99.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-07",
+     "value": 99.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-08",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-09",
+     "value": 101.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-10",
+     "value": 101.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-11",
+     "value": 102.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2018-12",
+     "value": 102.1
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-01",
+     "value": 101.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-02",
+     "value": 101.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-03",
+     "value": 101.2
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-04",
+     "value": 100.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-05",
+     "value": 100.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-06",
+     "value": 99.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-07",
+     "value": 99.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-08",
+     "value": 102.9
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-09",
+     "value": 101.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-10",
+     "value": 101.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-11",
+     "value": 101.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2019-12",
+     "value": 101.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-01",
+     "value": 100.6
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-02",
+     "value": 100.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-03",
+     "value": 101.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-04",
+     "value": 101.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-05",
+     "value": 100.3
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-06",
+     "value": 99.8
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-07",
+     "value": 99.7
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-08",
+     "value": 100.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-09",
+     "value": 101.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-10",
+     "value": 101.4
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-11",
+     "value": 101.5
+    },
+    {
+     "item": "1",
+     "ref_period": "2020-12",
+     "value": 101.6
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "ppi_mm": {
+   "summary": "73 new (2013-01 to 2026-09)",
+   "new": [
+    {
+     "item": "1000",
+     "ref_period": "2013-01",
+     "value": 100.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-02",
+     "value": 101.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-03",
+     "value": 100.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-04",
+     "value": 101.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-05",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-06",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-07",
+     "value": 103.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-08",
+     "value": 101.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-09",
+     "value": 100.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-10",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-11",
+     "value": 99.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2013-12",
+     "value": 100.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-01",
+     "value": 101.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-02",
+     "value": 100.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-03",
+     "value": 101.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-04",
+     "value": 99.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-05",
+     "value": 100.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-06",
+     "value": 100.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-07",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-08",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-09",
+     "value": 101.1
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-10",
+     "value": 101.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-11",
+     "value": 99.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2014-12",
+     "value": 100.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-01",
+     "value": 100.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-02",
+     "value": 100.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-03",
+     "value": 100.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-04",
+     "value": 100.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-05",
+     "value": 96.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-06",
+     "value": 101.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-07",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-08",
+     "value": 103.1
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-09",
+     "value": 100.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-10",
+     "value": 101.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-11",
+     "value": 100.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2015-12",
+     "value": 101.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-01",
+     "value": 101.1
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-02",
+     "value": 102.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-03",
+     "value": 101.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-04",
+     "value": 101.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-05",
+     "value": 101.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-06",
+     "value": 100.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-07",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-08",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-09",
+     "value": 99.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-10",
+     "value": 100.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-11",
+     "value": 101.1
+    },
+    {
+     "item": "1000",
+     "ref_period": "2016-12",
+     "value": 100.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-01",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-02",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-03",
+     "value": 101.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-04",
+     "value": 101.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-05",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-06",
+     "value": 103.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-07",
+     "value": 101.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-08",
+     "value": 100.7
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-09",
+     "value": 106.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-10",
+     "value": 104.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-11",
+     "value": 103.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2017-12",
+     "value": 101.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-01",
+     "value": 101.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-02",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-03",
+     "value": 101.5
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-04",
+     "value": 104.1
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-05",
+     "value": 101.8
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-06",
+     "value": 100.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-07",
+     "value": 99.6
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-08",
+     "value": 101.0
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-09",
+     "value": 103.3
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-10",
+     "value": 100.4
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-11",
+     "value": 106.2
+    },
+    {
+     "item": "1000",
+     "ref_period": "2018-12",
+     "value": 112.9
+    },
+    {
+     "item": "1000",
+     "ref_period": "2026-09",
+     "value": 100.6
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "m2": {
+   "summary": "72 new (2013-01 to 2018-12)",
+   "new": [
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-01",
+     "value": 24432.690855
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-02",
+     "value": 24502.445158
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-03",
+     "value": 24981.911865999995
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-04",
+     "value": 24927.939824
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-05",
+     "value": 25424.860416
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-06",
+     "value": 25706.327865
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-07",
+     "value": 26600.632274
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-08",
+     "value": 26694.829058
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-09",
+     "value": 28217.434452
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-10",
+     "value": 28501.068989
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-11",
+     "value": 28677.04189
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2013-12",
+     "value": 29397.129651
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-01",
+     "value": 29014.073004
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-02",
+     "value": 28775.337556
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-03",
+     "value": 28874.338384
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-04",
+     "value": 29192.454563
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-05",
+     "value": 30637.142421
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-06",
+     "value": 31464.171288
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-07",
+     "value": 32170.452306
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-08",
+     "value": 32320.863831999995
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-09",
+     "value": 32662.827495
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-10",
+     "value": 32929.156783000006
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-11",
+     "value": 33113.07029
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2014-12",
+     "value": 34024.09551399999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-01",
+     "value": 33930.698379
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-02",
+     "value": 34071.19201699999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-03",
+     "value": 33549.61395
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-04",
+     "value": 35537.611912
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-05",
+     "value": 36084.742238
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-06",
+     "value": 37669.979367
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-07",
+     "value": 38296.690501
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-08",
+     "value": 39131.28127299999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-09",
+     "value": 39962.346719
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-10",
+     "value": 40454.715656
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-11",
+     "value": 40648.06129699999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2015-12",
+     "value": 42288.951682000006
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-01",
+     "value": 42605.744215
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-02",
+     "value": 43440.699945
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-03",
+     "value": 44166.650754
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-04",
+     "value": 44061.226674
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-05",
+     "value": 45541.003992
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-06",
+     "value": 46482.18947
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-07",
+     "value": 47286.118664
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-08",
+     "value": 48277.555643
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-09",
+     "value": 48147.381073
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-10",
+     "value": 49428.331125
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-11",
+     "value": 50504.407382
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2016-12",
+     "value": 52225.471818
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-01",
+     "value": 52704.156559
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-02",
+     "value": 53985.144836
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-03",
+     "value": 56209.49004
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-04",
+     "value": 57881.832088
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-05",
+     "value": 59307.389551
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-06",
+     "value": 62409.418357
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-07",
+     "value": 63062.55687200001
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-08",
+     "value": 62265.213218
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-09",
+     "value": 73671.921471
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-10",
+     "value": 72736.60177899999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-11",
+     "value": 72916.33140499999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2017-12",
+     "value": 73223.219265
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-01",
+     "value": 73818.222837
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-02",
+     "value": 73378.67045800001
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-03",
+     "value": 74036.36056300001
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-04",
+     "value": 74429.34786
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-05",
+     "value": 76067.873842
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-06",
+     "value": 77266.75021900001
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-07",
+     "value": 78525.01598
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-08",
+     "value": 80748.027194
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-09",
+     "value": 81921.548949
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-10",
+     "value": 83647.08507199999
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-11",
+     "value": 81876.49338699998
+    },
+    {
+     "item": "FDSB_XDC",
+     "ref_period": "2018-12",
+     "value": 83565.547283
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "reserves_fx": {
+   "summary": "72 new (2013-01 to 2018-12)",
+   "new": [
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-01",
+     "value": 12837.26
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-02",
+     "value": 12935.3
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-03",
+     "value": 12906.07
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-04",
+     "value": 12975.61
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-05",
+     "value": 12879.18
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-06",
+     "value": 12812.62
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-07",
+     "value": 13114.32
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-08",
+     "value": 13151.02
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-09",
+     "value": 12951.7
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-10",
+     "value": 14139.64
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-11",
+     "value": 14016.06
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2013-12",
+     "value": 13672.71
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-01",
+     "value": 13523.81
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-02",
+     "value": 13464.23
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-03",
+     "value": 13823.7
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-04",
+     "value": 13648.68
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-05",
+     "value": 13486.44
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-06",
+     "value": 13435.07
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-07",
+     "value": 13746.26
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-08",
+     "value": 13445.75
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-09",
+     "value": 13396.49
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-10",
+     "value": 13337.69
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-11",
+     "value": 13174.5
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2014-12",
+     "value": 13161.29
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-01",
+     "value": 13051.19
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-02",
+     "value": 13352.81
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-03",
+     "value": 13622.9
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-04",
+     "value": 13519.52
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-05",
+     "value": 13319.83
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-06",
+     "value": 13300.92
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-07",
+     "value": 13059.76
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-08",
+     "value": 12981.23
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-09",
+     "value": 13201.23
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-10",
+     "value": 13380.3
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-11",
+     "value": 13035.16
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2015-12",
+     "value": 13297.41
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-01",
+     "value": 13479.36
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-02",
+     "value": 13426.99
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-03",
+     "value": 13264.69
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-04",
+     "value": 13645.3
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-05",
+     "value": 13451.49
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-06",
+     "value": 13342.95
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-07",
+     "value": 13597.78
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-08",
+     "value": 13765.06
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-09",
+     "value": 13690.82
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-10",
+     "value": 13842.54
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-11",
+     "value": 13948.59
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2016-12",
+     "value": 13814.55
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-01",
+     "value": 13595.47
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-02",
+     "value": 13333.94
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-03",
+     "value": 13506.21
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-04",
+     "value": 13744.02
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-05",
+     "value": 13973.71
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-06",
+     "value": 13363.76
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-07",
+     "value": 13564.47
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-08",
+     "value": 13849.25
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-09",
+     "value": 13959.7
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-10",
+     "value": 14377.94
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-11",
+     "value": 14253.93
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2017-12",
+     "value": 13663.87
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-01",
+     "value": 14388.19
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-02",
+     "value": 14330.71
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-03",
+     "value": 14130.3
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-04",
+     "value": 14033.25
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-05",
+     "value": 13627.78
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-06",
+     "value": 13443.99
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-07",
+     "value": 13223.79
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-08",
+     "value": 12554.31
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-09",
+     "value": 12083.1
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-10",
+     "value": 11478.35
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-11",
+     "value": 10647.95
+    },
+    {
+     "item": "UZB_ORA_RAFAFX_USD",
+     "ref_period": "2018-12",
+     "value": 12070.56
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "reserves_gold": {
+   "summary": "72 new (2013-01 to 2018-12)",
+   "new": [
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-01",
+     "value": 9165.15
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-02",
+     "value": 8964.64
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-03",
+     "value": 9306.3
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-04",
+     "value": 9203.16
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-05",
+     "value": 9161.24
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-06",
+     "value": 8108.36
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-07",
+     "value": 8862.36
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-08",
+     "value": 8831.41
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-09",
+     "value": 8876.24
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-10",
+     "value": 8428.3
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-11",
+     "value": 8175.2
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2013-12",
+     "value": 8398.92
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-01",
+     "value": 9001.21
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-02",
+     "value": 9874.43
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-03",
+     "value": 9502.63
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-04",
+     "value": 9792.26
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-05",
+     "value": 9807.84
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-06",
+     "value": 10577.35
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-07",
+     "value": 10328.15
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-08",
+     "value": 10254.34
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-09",
+     "value": 10226.04
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-10",
+     "value": 10194.22
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-11",
+     "value": 10564.48
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2014-12",
+     "value": 10592.85
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-01",
+     "value": 11441.86
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-02",
+     "value": 10778.07
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-03",
+     "value": 10440.95
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-04",
+     "value": 10944.37
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-05",
+     "value": 11102.56
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-06",
+     "value": 11232.75
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-07",
+     "value": 10585.34
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-08",
+     "value": 11030.75
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-09",
+     "value": 11174.75
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-10",
+     "value": 11329.01
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-11",
+     "value": 10663.81
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2015-12",
+     "value": 10640.67
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-01",
+     "value": 11051.5
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-02",
+     "value": 12526.09
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-03",
+     "value": 12814.93
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-04",
+     "value": 13114.82
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-05",
+     "value": 12743.61
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-06",
+     "value": 14173.22
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-07",
+     "value": 14232.15
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-08",
+     "value": 13933.19
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-09",
+     "value": 14386.56
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-10",
+     "value": 13696.67
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-11",
+     "value": 12655.21
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2016-12",
+     "value": 12256.58
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-01",
+     "value": 12962.43
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-02",
+     "value": 13807.51
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-03",
+     "value": 13592.89
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-04",
+     "value": 13741.71
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-05",
+     "value": 13619.43
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-06",
+     "value": 13687.26
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-07",
+     "value": 13838.17
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-08",
+     "value": 13429.63
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-09",
+     "value": 13130.01
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-10",
+     "value": 13193.65
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-11",
+     "value": 13572.26
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2017-12",
+     "value": 14034.06
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-01",
+     "value": 13998.65
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-02",
+     "value": 13621.27
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-03",
+     "value": 13976.84
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-04",
+     "value": 13936.07
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-05",
+     "value": 14118.86
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-06",
+     "value": 13842.18
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-07",
+     "value": 13792.28
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-08",
+     "value": 13943.63
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-09",
+     "value": 13952.96
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-10",
+     "value": 14647.99
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-11",
+     "value": 14966.94
+    },
+    {
+     "item": "UZB_ORA_RAFAGOLD_USD",
+     "ref_period": "2018-12",
+     "value": 14640.75
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "gold_price": {
+   "summary": "708 new (1960-01 to 2018-12)",
+   "new": [
+    {
+     "item": "GOLD",
+     "ref_period": "1960-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1960-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1961-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1962-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1963-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1964-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1965-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1966-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-04",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-05",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-09",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-10",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-11",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1967-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-01",
+     "value": 36.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-02",
+     "value": 36.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-03",
+     "value": 37.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-04",
+     "value": 38.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-05",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-06",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-07",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-08",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-09",
+     "value": 40.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-10",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-11",
+     "value": 40.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1968-12",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-01",
+     "value": 42.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-02",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-03",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-04",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-05",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-06",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-07",
+     "value": 42.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-08",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-09",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-10",
+     "value": 40.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-11",
+     "value": 37.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1969-12",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-01",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-02",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-03",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-04",
+     "value": 36.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-05",
+     "value": 36.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-06",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-07",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-08",
+     "value": 35.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-09",
+     "value": 36.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-10",
+     "value": 38.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-11",
+     "value": 37.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1970-12",
+     "value": 37.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-01",
+     "value": 38.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-02",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-03",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-04",
+     "value": 39.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-05",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-06",
+     "value": 40.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-07",
+     "value": 41.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-08",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-09",
+     "value": 42.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-10",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-11",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1971-12",
+     "value": 43.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-01",
+     "value": 46.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-02",
+     "value": 48.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-03",
+     "value": 48.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-04",
+     "value": 49.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-05",
+     "value": 55.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-06",
+     "value": 62.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-07",
+     "value": 66.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-08",
+     "value": 67.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-09",
+     "value": 65.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-10",
+     "value": 65.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-11",
+     "value": 63.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1972-12",
+     "value": 64.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-01",
+     "value": 65.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-02",
+     "value": 74.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-03",
+     "value": 84.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-04",
+     "value": 91.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-05",
+     "value": 102.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-06",
+     "value": 120.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-07",
+     "value": 120.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-08",
+     "value": 107.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-09",
+     "value": 103.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-10",
+     "value": 100.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-11",
+     "value": 95.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1973-12",
+     "value": 107.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-01",
+     "value": 129.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-02",
+     "value": 150.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-03",
+     "value": 168.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-04",
+     "value": 172.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-05",
+     "value": 163.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-06",
+     "value": 154.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-07",
+     "value": 143.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-08",
+     "value": 155.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-09",
+     "value": 152.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-10",
+     "value": 159.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-11",
+     "value": 182.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1974-12",
+     "value": 184.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-01",
+     "value": 176.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-02",
+     "value": 180.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-03",
+     "value": 178.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-04",
+     "value": 170.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-05",
+     "value": 167.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-06",
+     "value": 164.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-07",
+     "value": 165.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-08",
+     "value": 163.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-09",
+     "value": 144.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-10",
+     "value": 143.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-11",
+     "value": 142.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1975-12",
+     "value": 139.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-01",
+     "value": 131.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-02",
+     "value": 131.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-03",
+     "value": 133.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-04",
+     "value": 128.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-05",
+     "value": 127.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-06",
+     "value": 126.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-07",
+     "value": 118.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-08",
+     "value": 110.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-09",
+     "value": 114.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-10",
+     "value": 116.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-11",
+     "value": 130.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1976-12",
+     "value": 134.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-01",
+     "value": 132.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-02",
+     "value": 136.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-03",
+     "value": 148.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-04",
+     "value": 149.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-05",
+     "value": 147.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-06",
+     "value": 141.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-07",
+     "value": 143.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-08",
+     "value": 145.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-09",
+     "value": 150.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-10",
+     "value": 159.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-11",
+     "value": 162.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1977-12",
+     "value": 160.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-01",
+     "value": 173.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-02",
+     "value": 178.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-03",
+     "value": 184.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-04",
+     "value": 175.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-05",
+     "value": 176.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-06",
+     "value": 184.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-07",
+     "value": 189.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-08",
+     "value": 206.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-09",
+     "value": 212.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-10",
+     "value": 227.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-11",
+     "value": 206.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1978-12",
+     "value": 208.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-01",
+     "value": 227.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-02",
+     "value": 246.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-03",
+     "value": 242.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-04",
+     "value": 239.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-05",
+     "value": 258.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-06",
+     "value": 279.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-07",
+     "value": 295.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-08",
+     "value": 301.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-09",
+     "value": 355.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-10",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-11",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1979-12",
+     "value": 455.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-01",
+     "value": 675.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-02",
+     "value": 665.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-03",
+     "value": 554.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-04",
+     "value": 517.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-05",
+     "value": 514.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-06",
+     "value": 601.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-07",
+     "value": 643.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-08",
+     "value": 627.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-09",
+     "value": 674.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-10",
+     "value": 661.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-11",
+     "value": 625.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1980-12",
+     "value": 538.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-01",
+     "value": 557.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-02",
+     "value": 500.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-03",
+     "value": 499.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-04",
+     "value": 496.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-05",
+     "value": 480.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-06",
+     "value": 461.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-07",
+     "value": 409.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-08",
+     "value": 410.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-09",
+     "value": 444.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-10",
+     "value": 438.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-11",
+     "value": 413.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1981-12",
+     "value": 410.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-01",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-02",
+     "value": 374.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-03",
+     "value": 330.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-04",
+     "value": 350.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-05",
+     "value": 334.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-06",
+     "value": 315.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-07",
+     "value": 339.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-08",
+     "value": 364.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-09",
+     "value": 437.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-10",
+     "value": 422.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-11",
+     "value": 415.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1982-12",
+     "value": 445.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-01",
+     "value": 481.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-02",
+     "value": 491.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-03",
+     "value": 420.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-04",
+     "value": 433.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-05",
+     "value": 438.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-06",
+     "value": 413.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-07",
+     "value": 403.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-08",
+     "value": 416.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-09",
+     "value": 412.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-10",
+     "value": 394.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-11",
+     "value": 382.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1983-12",
+     "value": 388.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-01",
+     "value": 371.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-02",
+     "value": 386.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-03",
+     "value": 394.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-04",
+     "value": 381.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-05",
+     "value": 377.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-06",
+     "value": 378.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-07",
+     "value": 348.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-08",
+     "value": 348.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-09",
+     "value": 340.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-10",
+     "value": 341.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-11",
+     "value": 342.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1984-12",
+     "value": 320.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-01",
+     "value": 303.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-02",
+     "value": 299.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-03",
+     "value": 314.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-04",
+     "value": 327.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-05",
+     "value": 316.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-06",
+     "value": 317.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-07",
+     "value": 317.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-08",
+     "value": 330.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-09",
+     "value": 323.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-10",
+     "value": 326.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-11",
+     "value": 322.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1985-12",
+     "value": 322.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-01",
+     "value": 347.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-02",
+     "value": 339.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-03",
+     "value": 346.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-04",
+     "value": 340.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-05",
+     "value": 342.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-06",
+     "value": 343.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-07",
+     "value": 348.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-08",
+     "value": 377.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-09",
+     "value": 418.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-10",
+     "value": 424.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-11",
+     "value": 398.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1986-12",
+     "value": 391.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-01",
+     "value": 408.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-02",
+     "value": 401.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-03",
+     "value": 409.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-04",
+     "value": 438.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-05",
+     "value": 460.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-06",
+     "value": 450.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-07",
+     "value": 451.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-08",
+     "value": 461.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-09",
+     "value": 460.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-10",
+     "value": 465.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-11",
+     "value": 468.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1987-12",
+     "value": 486.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-01",
+     "value": 477.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-02",
+     "value": 442.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-03",
+     "value": 444.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-04",
+     "value": 452.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-05",
+     "value": 451.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-06",
+     "value": 451.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-07",
+     "value": 438.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-08",
+     "value": 431.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-09",
+     "value": 413.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-10",
+     "value": 407.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-11",
+     "value": 420.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1988-12",
+     "value": 419.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-01",
+     "value": 404.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-02",
+     "value": 388.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-03",
+     "value": 390.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-04",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-05",
+     "value": 371.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-06",
+     "value": 368.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-07",
+     "value": 375.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-08",
+     "value": 365.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-09",
+     "value": 362.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-10",
+     "value": 367.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-11",
+     "value": 394.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1989-12",
+     "value": 409.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-01",
+     "value": 410.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-02",
+     "value": 417.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-03",
+     "value": 393.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-04",
+     "value": 374.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-05",
+     "value": 369.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-06",
+     "value": 352.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-07",
+     "value": 363.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-08",
+     "value": 395.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-09",
+     "value": 389.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-10",
+     "value": 381.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-11",
+     "value": 382.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1990-12",
+     "value": 377.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-01",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-02",
+     "value": 364.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-03",
+     "value": 363.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-04",
+     "value": 358.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-05",
+     "value": 357.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-06",
+     "value": 367.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-07",
+     "value": 368.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-08",
+     "value": 356.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-09",
+     "value": 349.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-10",
+     "value": 359.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-11",
+     "value": 360.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1991-12",
+     "value": 362.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-01",
+     "value": 354.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-02",
+     "value": 354.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-03",
+     "value": 344.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-04",
+     "value": 339.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-05",
+     "value": 337.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-06",
+     "value": 341.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-07",
+     "value": 353.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-08",
+     "value": 343.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-09",
+     "value": 345.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-10",
+     "value": 344.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-11",
+     "value": 335.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1992-12",
+     "value": 335.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-01",
+     "value": 329.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-02",
+     "value": 329.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-03",
+     "value": 330.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-04",
+     "value": 342.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-05",
+     "value": 367.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-06",
+     "value": 372.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-07",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-08",
+     "value": 379.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-09",
+     "value": 355.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-10",
+     "value": 364.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-11",
+     "value": 374.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1993-12",
+     "value": 383.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-01",
+     "value": 387.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-02",
+     "value": 382.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-03",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-04",
+     "value": 377.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-05",
+     "value": 381.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-06",
+     "value": 386.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-07",
+     "value": 385.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-08",
+     "value": 380.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-09",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-10",
+     "value": 390.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-11",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1994-12",
+     "value": 379.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-01",
+     "value": 379.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-02",
+     "value": 377.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-03",
+     "value": 382.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-04",
+     "value": 391.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-05",
+     "value": 385.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-06",
+     "value": 388.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-07",
+     "value": 386.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-08",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-09",
+     "value": 383.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-10",
+     "value": 383.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-11",
+     "value": 385.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1995-12",
+     "value": 387.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-01",
+     "value": 399.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-02",
+     "value": 405.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-03",
+     "value": 396.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-04",
+     "value": 393.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-05",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-06",
+     "value": 385.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-07",
+     "value": 383.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-08",
+     "value": 387.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-09",
+     "value": 383.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-10",
+     "value": 381.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-11",
+     "value": 378.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1996-12",
+     "value": 369.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-01",
+     "value": 355.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-02",
+     "value": 347.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-03",
+     "value": 352.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-04",
+     "value": 344.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-05",
+     "value": 344.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-06",
+     "value": 341.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-07",
+     "value": 324.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-08",
+     "value": 324.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-09",
+     "value": 323.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-10",
+     "value": 325.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-11",
+     "value": 306.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1997-12",
+     "value": 289.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-01",
+     "value": 289.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-02",
+     "value": 297.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-03",
+     "value": 296.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-04",
+     "value": 308.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-05",
+     "value": 299.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-06",
+     "value": 292.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-07",
+     "value": 293.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-08",
+     "value": 284.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-09",
+     "value": 289.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-10",
+     "value": 296.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-11",
+     "value": 294.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1998-12",
+     "value": 292.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-01",
+     "value": 287.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-02",
+     "value": 287.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-03",
+     "value": 286.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-04",
+     "value": 283.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-05",
+     "value": 276.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-06",
+     "value": 261.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-07",
+     "value": 256.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-08",
+     "value": 257.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-09",
+     "value": 265.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-10",
+     "value": 311.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-11",
+     "value": 293.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "1999-12",
+     "value": 283.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-01",
+     "value": 284.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-02",
+     "value": 300.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-03",
+     "value": 286.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-04",
+     "value": 280.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-05",
+     "value": 275.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-06",
+     "value": 286.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-07",
+     "value": 282.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-08",
+     "value": 274.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-09",
+     "value": 274.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-10",
+     "value": 270.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-11",
+     "value": 266.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2000-12",
+     "value": 271.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-01",
+     "value": 265.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-02",
+     "value": 262.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-03",
+     "value": 263.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-04",
+     "value": 260.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-05",
+     "value": 272.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-06",
+     "value": 270.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-07",
+     "value": 268.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-08",
+     "value": 272.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-09",
+     "value": 283.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-10",
+     "value": 283.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-11",
+     "value": 276.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2001-12",
+     "value": 276.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-01",
+     "value": 282.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-02",
+     "value": 296.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-03",
+     "value": 294.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-04",
+     "value": 303.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-05",
+     "value": 314.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-06",
+     "value": 321.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-07",
+     "value": 313.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-08",
+     "value": 310.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-09",
+     "value": 319.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-10",
+     "value": 317.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-11",
+     "value": 319.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2002-12",
+     "value": 332.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-01",
+     "value": 357.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-02",
+     "value": 359.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-03",
+     "value": 341.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-04",
+     "value": 328.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-05",
+     "value": 356.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-06",
+     "value": 356.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-07",
+     "value": 351.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-08",
+     "value": 360.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-09",
+     "value": 379.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-10",
+     "value": 379.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-11",
+     "value": 390.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2003-12",
+     "value": 407.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-01",
+     "value": 414.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-02",
+     "value": 405.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-03",
+     "value": 407.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-04",
+     "value": 403.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-05",
+     "value": 384.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-06",
+     "value": 392.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-07",
+     "value": 398.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-08",
+     "value": 401.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-09",
+     "value": 405.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-10",
+     "value": 420.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-11",
+     "value": 439.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2004-12",
+     "value": 442.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-01",
+     "value": 424.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-02",
+     "value": 423.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-03",
+     "value": 434.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-04",
+     "value": 429.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-05",
+     "value": 422.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-06",
+     "value": 431.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-07",
+     "value": 424.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-08",
+     "value": 438.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-09",
+     "value": 456.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-10",
+     "value": 470.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-11",
+     "value": 477.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2005-12",
+     "value": 510.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-01",
+     "value": 550.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-02",
+     "value": 555.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-03",
+     "value": 557.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-04",
+     "value": 611.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-05",
+     "value": 675.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-06",
+     "value": 596.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-07",
+     "value": 634.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-08",
+     "value": 633.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-09",
+     "value": 598.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-10",
+     "value": 586.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-11",
+     "value": 628.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2006-12",
+     "value": 630.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-01",
+     "value": 631.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-02",
+     "value": 665.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-03",
+     "value": 655.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-04",
+     "value": 679.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-05",
+     "value": 667.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-06",
+     "value": 656.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-07",
+     "value": 665.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-08",
+     "value": 665.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-09",
+     "value": 713.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-10",
+     "value": 755.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-11",
+     "value": 806.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2007-12",
+     "value": 803.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-01",
+     "value": 890.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-02",
+     "value": 922.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-03",
+     "value": 968.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-04",
+     "value": 910.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-05",
+     "value": 889.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-06",
+     "value": 889.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-07",
+     "value": 940.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-08",
+     "value": 839.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-09",
+     "value": 830.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-10",
+     "value": 807.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-11",
+     "value": 761.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2008-12",
+     "value": 816.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-01",
+     "value": 859.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-02",
+     "value": 943.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-03",
+     "value": 924.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-04",
+     "value": 890.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-05",
+     "value": 929.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-06",
+     "value": 946.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-07",
+     "value": 934.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-08",
+     "value": 949.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-09",
+     "value": 997.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-10",
+     "value": 1043.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-11",
+     "value": 1127.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2009-12",
+     "value": 1135.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-01",
+     "value": 1118.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-02",
+     "value": 1095.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-03",
+     "value": 1113.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-04",
+     "value": 1149.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-05",
+     "value": 1205.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-06",
+     "value": 1233.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-07",
+     "value": 1193.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-08",
+     "value": 1216.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-09",
+     "value": 1271.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-10",
+     "value": 1342.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-11",
+     "value": 1370.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2010-12",
+     "value": 1391.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-01",
+     "value": 1360.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-02",
+     "value": 1375.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-03",
+     "value": 1423.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-04",
+     "value": 1481.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-05",
+     "value": 1513.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-06",
+     "value": 1529.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-07",
+     "value": 1573.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-08",
+     "value": 1759.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-09",
+     "value": 1772.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-10",
+     "value": 1666.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-11",
+     "value": 1739.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2011-12",
+     "value": 1640.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-01",
+     "value": 1654.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-02",
+     "value": 1745.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-03",
+     "value": 1676.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-04",
+     "value": 1649.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-05",
+     "value": 1589.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-06",
+     "value": 1599.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-07",
+     "value": 1594.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-08",
+     "value": 1630.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-09",
+     "value": 1745.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-10",
+     "value": 1747.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-11",
+     "value": 1722.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2012-12",
+     "value": 1685.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-01",
+     "value": 1672.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-02",
+     "value": 1628.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-03",
+     "value": 1593.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-04",
+     "value": 1488.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-05",
+     "value": 1414.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-06",
+     "value": 1343.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-07",
+     "value": 1286.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-08",
+     "value": 1352.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-09",
+     "value": 1349.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-10",
+     "value": 1317.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-11",
+     "value": 1276.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2013-12",
+     "value": 1222.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-01",
+     "value": 1244.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-02",
+     "value": 1300.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-03",
+     "value": 1336.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-04",
+     "value": 1298.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-05",
+     "value": 1289.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-06",
+     "value": 1279.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-07",
+     "value": 1311.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-08",
+     "value": 1295.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-09",
+     "value": 1237.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-10",
+     "value": 1222.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-11",
+     "value": 1175.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2014-12",
+     "value": 1201.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-01",
+     "value": 1251.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-02",
+     "value": 1227.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-03",
+     "value": 1179.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-04",
+     "value": 1199.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-05",
+     "value": 1199.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-06",
+     "value": 1182.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-07",
+     "value": 1128.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-08",
+     "value": 1118.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-09",
+     "value": 1125.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-10",
+     "value": 1159.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-11",
+     "value": 1086.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2015-12",
+     "value": 1076.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-01",
+     "value": 1098.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-02",
+     "value": 1200.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-03",
+     "value": 1245.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-04",
+     "value": 1242.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-05",
+     "value": 1261.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-06",
+     "value": 1276.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-07",
+     "value": 1337.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-08",
+     "value": 1340.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-09",
+     "value": 1327.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-10",
+     "value": 1267.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-11",
+     "value": 1238.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2016-12",
+     "value": 1157.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-01",
+     "value": 1192.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-02",
+     "value": 1234.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-03",
+     "value": 1231.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-04",
+     "value": 1267.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-05",
+     "value": 1246.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-06",
+     "value": 1260.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-07",
+     "value": 1237.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-08",
+     "value": 1283.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-09",
+     "value": 1314.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-10",
+     "value": 1280.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-11",
+     "value": 1282.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2017-12",
+     "value": 1264.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-01",
+     "value": 1331.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-02",
+     "value": 1331.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-03",
+     "value": 1325.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-04",
+     "value": 1335.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-05",
+     "value": 1303.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-06",
+     "value": 1282.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-07",
+     "value": 1238.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-08",
+     "value": 1202.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-09",
+     "value": 1198.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-10",
+     "value": 1215.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-11",
+     "value": 1221.0
+    },
+    {
+     "item": "GOLD",
+     "ref_period": "2018-12",
+     "value": 1250.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "rate_deposit_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_deposit_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "policy_rate": {
+   "summary": "164 new (2013-01 to 2026-08)",
+   "new": [
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-01",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-02",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-03",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-04",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-05",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-06",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-07",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-08",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-09",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-10",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-11",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2013-12",
+     "value": 12.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-01",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-02",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-03",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-04",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-05",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-06",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-07",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-08",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-09",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-10",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-11",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2014-12",
+     "value": 10.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-01",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-02",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-03",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-04",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-05",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-06",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-07",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-08",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-09",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-10",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-11",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2015-12",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-01",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-02",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-03",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-04",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-05",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-06",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-07",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-08",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-09",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-10",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-11",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2016-12",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-01",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-02",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-03",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-04",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-05",
+     "value": 9.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-08",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-09",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-10",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-11",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2017-12",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-01",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-02",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-08",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-09",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-10",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-11",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2018-12",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-01",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-02",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-03",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-04",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-05",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-06",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-07",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-08",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-09",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-10",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-11",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2019-12",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-01",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-02",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-03",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-04",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-05",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-06",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-07",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-08",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-09",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-10",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-11",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2020-12",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-01",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-02",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-08",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-09",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-10",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-11",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2021-12",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-01",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-02",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-03",
+     "value": 17.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-04",
+     "value": 17.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-05",
+     "value": 17.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-06",
+     "value": 16.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-07",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-08",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-09",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-10",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-11",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2022-12",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-01",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-02",
+     "value": 15.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-08",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-09",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-10",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-11",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2023-12",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-01",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-02",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-07",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-08",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-09",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-10",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-11",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2024-12",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-01",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-02",
+     "value": 13.5
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-08",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-09",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-10",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-11",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2025-12",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-01",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-02",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-03",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-04",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-05",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-06",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-07",
+     "value": 14.0
+    },
+    {
+     "item": "FPOLM_PA",
+     "ref_period": "2026-08",
+     "value": 14.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "new_small_business": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 66311.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 56
+  },
+  "operating_enterprises": {
+   "summary": "1 new (2026-10)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-10",
+     "value": 528848.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "wages_q": {
+   "summary": "8 new (2017Q1 to 2018Q4)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2017Q1",
+     "value": 1288929.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2017Q2",
+     "value": 1325856.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2017Q3",
+     "value": 1370554.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2017Q4",
+     "value": 1457778.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q1",
+     "value": 1549916.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q2",
+     "value": 1608471.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q3",
+     "value": 1687150.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q4",
+     "value": 1822687.4
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 30
+  },
+  "invest_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_fdi_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 22
+  },
+  "income_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "4 new (2018Q1 to 2018Q4)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2018Q1",
+     "value": 105.9
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q2",
+     "value": 106.2
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q3",
+     "value": 106.0
+    },
+    {
+     "item": "1700",
+     "ref_period": "2018Q4",
+     "value": 105.7
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 30
+  }
+ }
+}

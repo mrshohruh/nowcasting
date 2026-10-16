@@ -1,0 +1,14 @@
+{
+ "items": [
+  "other_services.G",
+  "other_services.N",
+  "other_services.R",
+  "trade_accommodation.G",
+  "trade_accommodation.N",
+  "trade_accommodation.R",
+  "transport_ict.G",
+  "transport_ict.N",
+  "transport_ict.R"
+ ],
+ "unit": "N: bn UZS current prices; R: bn UZS previous-year prices; G: % (all cumulative)"
+}

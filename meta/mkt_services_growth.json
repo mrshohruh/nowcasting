@@ -1,0 +1,36 @@
+{
+ "items": [
+  "100",
+  "493-494",
+  "71",
+  "77",
+  "95",
+  "96",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "P",
+  "Q"
+ ],
+ "labels": {
+  "100": "Other services",
+  "493-494": "of which: motor transport",
+  "71": "Architectural and engineering activities, technical testing and analysis",
+  "77": "Renting and leasing",
+  "95": "Repair of computers and household goods",
+  "96": "Personal",
+  "G": "Trade",
+  "H": "Transport activities",
+  "I": "Accommodation and food service activities",
+  "J": "Information and communication",
+  "K": "Financial activities",
+  "L": "Real estate activities",
+  "P": "Education",
+  "Q": "Human health activities"
+ },
+ "unit": "as a percentage of the previous year",
+ "updated_at": "2026-09-30T18:16:08.048785+05:00"
+}

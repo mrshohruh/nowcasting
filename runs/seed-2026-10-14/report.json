@@ -1,0 +1,200 @@
+{
+ "run_id": "seed-2026-10-14",
+ "vintage_date": "2026-10-14",
+ "trigger": "seed",
+ "files": {
+  "workbook": "8d41008ac0650ff4f15825179c95d02a102521ef086952005bf0891514fc4a36",
+  "nag": "23a831e25b6494b8735a187d2d3e128ae1b3d02e09d0fcca9025c0e3e82ef547"
+ },
+ "series": {
+  "ind_total_nom": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "constr_nom": {
+   "status": "ok",
+   "source": "seed",
+   "points": 68,
+   "first": "2021-01",
+   "last": "2026-08"
+  },
+  "retail_nom": {
+   "status": "ok",
+   "source": "seed",
+   "points": 80,
+   "first": "2020-01",
+   "last": "2026-08"
+  },
+  "wholesale_nom": {
+   "status": "ok",
+   "source": "seed",
+   "points": 80,
+   "first": "2020-01",
+   "last": "2026-08"
+  },
+  "cpi_mm": {
+   "status": "ok",
+   "source": "seed",
+   "points": 69,
+   "first": "2021-01",
+   "last": "2026-09"
+  },
+  "ppi_mm": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "exports_usd": {
+   "status": "ok",
+   "source": "seed",
+   "points": 68,
+   "first": "2021-01",
+   "last": "2026-08"
+  },
+  "imports_usd": {
+   "status": "ok",
+   "source": "seed",
+   "points": 68,
+   "first": "2021-01",
+   "last": "2026-08"
+  },
+  "gold_price": {
+   "status": "ok",
+   "source": "seed",
+   "points": 93,
+   "first": "2019-01",
+   "last": "2026-09"
+  },
+  "m2": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "reserves_fx": {
+   "status": "ok",
+   "source": "seed",
+   "points": 93,
+   "first": "2019-01",
+   "last": "2026-09"
+  },
+  "reserves_gold": {
+   "status": "ok",
+   "source": "seed",
+   "points": 93,
+   "first": "2019-01",
+   "last": "2026-09"
+  },
+  "new_small_business": {
+   "status": "ok",
+   "source": "seed",
+   "points": 56,
+   "first": "2022-01",
+   "last": "2026-08"
+  },
+  "operating_enterprises": {
+   "status": "ok",
+   "source": "seed",
+   "points": 57,
+   "first": "2022-01",
+   "last": "2026-09"
+  },
+  "rate_deposit_hh": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "rate_deposit_firms": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "rate_loan_hh": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "rate_loan_firms": {
+   "status": "ok",
+   "source": "seed",
+   "points": 92,
+   "first": "2019-01",
+   "last": "2026-08"
+  },
+  "remittances_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 30,
+   "first": "2019Q1",
+   "last": "2026Q2"
+  },
+  "wages_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 30,
+   "first": "2019Q1",
+   "last": "2026Q2"
+  },
+  "invest_growth_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 26,
+   "first": "2020Q1",
+   "last": "2026Q2"
+  },
+  "invest_fdi_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 22,
+   "first": "2021Q1",
+   "last": "2026Q2"
+  },
+  "income_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 26,
+   "first": "2020Q1",
+   "last": "2026Q2"
+  },
+  "gdp_growth_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 30,
+   "first": "2019Q1",
+   "last": "2026Q2"
+  },
+  "mkt_services_growth": {
+   "status": "ok",
+   "source": "seed",
+   "points": 448,
+   "first": "2024-01",
+   "last": "2026-08"
+  },
+  "gdp_nag": {
+   "status": "ok",
+   "source": "seed",
+   "points": 1734,
+   "first": "2018Q1",
+   "last": "2026Q2"
+  },
+  "gva_services_q": {
+   "status": "ok",
+   "source": "seed",
+   "points": 306,
+   "first": "2018Q1",
+   "last": "2026Q2"
+  }
+ }
+}

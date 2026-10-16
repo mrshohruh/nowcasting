@@ -1,0 +1,17 @@
+{
+ "run_id": "seed-2026-10-16",
+ "vintage_date": "2026-10-16",
+ "trigger": "seed",
+ "files": {
+  "usd": "dc86f87b1a979549762db289f56f929080bea3154672d41f8773a527c7bdee0f"
+ },
+ "series": {
+  "usd_rate": {
+   "status": "ok",
+   "source": "seed",
+   "points": 105,
+   "first": "2018-01",
+   "last": "2026-09"
+  }
+ }
+}
