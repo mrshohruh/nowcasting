@@ -1,0 +1,7 @@
+link: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+xlsx: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx 586099 bytes
+unit: ($/troy oz) | points: 801 1960-01 to 2026-09
+item ref_period  value
+GOLD    2026-07   4073
+GOLD    2026-08   4411
+GOLD    2026-09   4319
