@@ -25,14 +25,6 @@ on:
         description: "Accept failed checks for these series (after confirming the change is real)"
         required: false
         default: ""
-  # Development only: a push to the phase-1 branch runs the full pipeline against the throwaway
-  # data-dev2 branch. Removed when phase-1 is merged.
-  push:
-    branches: [phase-1]
-    paths:
-      - .github/workflows/monthly.yml
-      - nowcast/ingest/**
-      - nowcast/store/**
 
 permissions:
   contents: write
@@ -47,8 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      DATA_BRANCH: ${{ github.event_name == 'push' && 'data-dev2' || 'data' }}
-      NO_ISSUES: ${{ github.event_name == 'push' && '--no-issues' || '' }}
+      DATA_BRANCH: data
     steps:
       - uses: actions/checkout@v4
 
@@ -79,7 +70,7 @@ jobs:
           CATCH_UP: ${{ github.event.schedule == '0 1 2 * *' || inputs.catch_up }}
           SERIES: ${{ inputs.series }}
           ACCEPT: ${{ inputs.accept }}
-          TRIGGER: ${{ github.event_name == 'schedule' && 'scheduled' || github.event_name == 'push' && 'dev' || 'manual' }}
+          TRIGGER: ${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }}
         run: |
           args=(--store store --trigger "$TRIGGER")
           if [ "$CATCH_UP" = "true" ]; then args+=(--catch-up); fi
@@ -102,7 +93,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: python -m nowcast.ingest.alerts --store store --run-id "${{ steps.run.outputs.run_id }}" $NO_ISSUES
+        run: python -m nowcast.ingest.alerts --store store --run-id "${{ steps.run.outputs.run_id }}"
 
       - name: Alert that the run crashed
         if: failure() && steps.run.outcome != 'success'
@@ -110,4 +101,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: python -m nowcast.ingest.alerts --store store --crashed $NO_ISSUES
+        run: python -m nowcast.ingest.alerts --store store --crashed
