@@ -20,6 +20,12 @@
 | 16 Oct 2026 | Phase 1: the monthly UZS/USD rate is the mean over calendar days of the official rate in force each day, for complete months only; daily rates since 2018 were back-filled once (seed vintage 2026-10-16). |
 | 16 Oct 2026 | Phase 1: a failed data check (unit changed, index out of range) can be accepted for one run with the manual-run input `accept`, after the change is confirmed on the publisher's site. It never overrides download or parse errors, and it does not touch model output. |
 | 16 Oct 2026 | Phase 1, task 1.9 skipped: a GitHub-hosted runner reaches every source, so no self-hosted runner is needed. |
+| 16 Oct 2026 | Phase 2: construction and market-services growth are cumulative from January (implied deflators 4-6x smoother than the discrete reading; match the NAG cumulative sector growth within 0.8-1.2 pp). Average wages are averages from January (new form `average_ytd`). |
+| 16 Oct 2026 | Phase 2: real terms come from Uzstat's cumulative real growth wherever it exists (industry and sub-sectors, construction, retail, wholesale, market services, investment), turned into discrete growth with last year's nominal weights. Deflating nominal output by PPI or CPI is not used. CPI deflation remains for M2, wages, income, FDI investment and remittances (after UZS conversion). |
+| 16 Oct 2026 | Phase 2: three weight series added to the catalogue: industry sub-sector output (codes B, C, D of SIAT 590), investment in current prices (SIAT 1561), market-service volumes (SIAT 3217). Without them the code falls back to total-industry or equal weights and flags it. |
+| 16 Oct 2026 | Phase 2: real levels chain each month (quarter) to the same period a year earlier, as the plan says for GDP, also for monthly indicators; annual-overlap chain-linking was tested and was noisier. |
+| 16 Oct 2026 | Phase 2: the plan's test "deflated growth within 1 pp of Uzstat's real growth" is applied to wages (the deflated series with an official real figure): 9.35% vs 9.3% (2025), 10.88% vs 10.9% (Jan-Jun 2026). For series where Uzstat's real growth is used directly, the test is that re-cumulating our discrete growth gives Uzstat's figure back exactly. |
+| 16 Oct 2026 | Phase 2: panels start in 2013 (central bank series); interest rates enter as levels' changes in pp; exchange rate, reserves, gold price and rates are not seasonally adjusted. The monthly workflow rebuilds the panels into `panels/` on the data branch after each run. |
 
 ## Open
 

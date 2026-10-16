@@ -63,6 +63,7 @@ Do not edit by hand, except `inbox/`.
 | `latest.csv` | current value of every series, item and period |
 | `meta/<series>.json` | unit, items and labels last accepted (used by the checks) |
 | `inbox/<series>/` | manual fallback: see `docs/runbook_ingest.md` on `main` |
+| `panels/` | model-ready y/y and SA panels built after every run (`docs/transformations.md` on `main`) |
 
 Read it in Python with `nowcast.store.vintages.Store("<this folder>")`: `.latest()`, `.as_of("2026-12-01")`.
 """
@@ -79,7 +80,7 @@ SDMX XML, xlsx; for usd_rate a CSV with columns date,rate). See docs/runbook_ing
 def ensure_readmes(store: Store) -> None:
     files = {store.root / "README.md": STORE_README, store.inbox_dir / "README.md": INBOX_README}
     for path, text in files.items():
-        if not path.exists():
+        if not path.exists() or path.read_text(encoding="utf-8") != text:
             path.write_text(text, encoding="utf-8")
 
 

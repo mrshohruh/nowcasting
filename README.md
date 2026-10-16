@@ -5,7 +5,8 @@ Uzstat's cumulative year-to-date figure with the discrete quarter beside it. Eve
 in the nowcast is explained by the data releases that caused it.
 
 Built in six phases (see the project plan). Phase 0: data audit and GDP target. Phase 1: monthly
-ingestion into a vintage store, with checks and alerts.
+ingestion into a vintage store, with checks and alerts. Phase 2: transformations into two
+model-ready panels (y/y and seasonally adjusted), as the data stood on any date.
 
 ## Layout
 
@@ -14,8 +15,11 @@ ingestion into a vintage store, with checks and alerts.
 | `config/series_catalogue.yaml` | every input series: publisher, URL, form, unit, model block |
 | `nowcast/ingest/` | fetch framework (`base.py`, `http.py`), one adapter per source (`adapters.py`), quality checks (`quality.py`), one run (`run.py`), alerts (`alerts.py`) |
 | `nowcast/store/` | vintage store (`vintages.py`: raw files, observations, `latest`, `as_of`), change detector (`changes.py`), seed history (`seed.py`) |
-| `.github/workflows/monthly.yml` | scheduled run on the 1st, catch-up on the 2nd, manual run; commits each vintage to the `data` branch |
+| `.github/workflows/monthly.yml` | scheduled run on the 1st, catch-up on the 2nd, manual run; commits each vintage and the rebuilt panels to the `data` branch |
 | `nowcast/transform/target.py` | GDP target: discrete-quarter and cumulative real growth |
+| `nowcast/transform/` | decumulation, prices and real levels, seasonal adjustment, growth and outliers, as-of inputs, `build_panels(as_of)` in `panels.py` (method: `docs/transformations.md`) |
+| `config/transforms.yaml` | every panel variable and how it is built |
+| `notebooks/transform_report.ipynb` | one chart per panel variable, choices and flags (`tools/make_transform_report.py`) |
 | `nowcast/catalogue.py` | catalogue loader and validator |
 | `tools/` | one-off scripts: source inventory, reachability check, data audit |
 | `data/seed/` | the two workbooks the project started from (14 Oct 2026), daily USD rates since 2018 |
@@ -29,4 +33,6 @@ uv venv && uv pip install -e ".[dev]"
 pytest -m "not network"
 python -m nowcast.transform.target          # rebuild the GDP target from the seed NAG file
 python -m nowcast.ingest.run --store store  # one ingestion run into ./store (the workflow uses the data branch)
+python -m nowcast.transform.panels --store store --out store/panels            # panels as of today
+python -m nowcast.transform.panels --store store --as-of 2025-11-01 --out tmp  # as they stood then
 ```

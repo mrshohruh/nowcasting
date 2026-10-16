@@ -14,9 +14,17 @@ dependencies = [
     "lxml>=5.2",
     "pyarrow>=16.0",
     "duckdb>=1.1",
+    "scipy>=1.11",
+    "statsmodels>=0.14",
 ]
 
 [project.optional-dependencies]
+report = [
+    "matplotlib>=3.8",
+    "nbformat>=5.9",
+    "nbconvert>=7.16",
+    "ipykernel>=6.29",
+]
 dev = [
     "pytest>=8.2",
     "ruff>=0.5",

@@ -1,0 +1,142 @@
+# Panel variables (Phase 2). One entry per variable the models can use.
+#
+# Every input names a catalogue series and item; how it is turned into discrete periods follows
+# its catalogue form (cumulative_ytd, average_ytd, discrete, level, index_mm, growth_yoy_cum).
+#
+# Recipes
+#   real_growth  Uzstat's cumulative real growth -> discrete y/y with last year's nominal weights
+#                (weights: own nominal series first, then fallbacks) -> real level chained y/y on
+#                the first full year of the first weight series that has one.
+#                `level: false` keeps the variable in the y/y panel only (series too short, or
+#                with no nominal values to start a level from).
+#   nominal      a value series made discrete; optional `minus` (another series subtracted,
+#                e.g. gold exports), `to_uzs` (times the official UZS/USD rate, period mean),
+#                `deflate: cpi` (divided by the CPI level, 2021 = 100).
+#   price_index  m/m indices chained into a level (2021 = 100); several inputs are joined in order.
+#   rate         % per year: y/y panel = change on a year earlier in pp; SA panel = change in pp.
+#   nag          one item of the NAG GDP file: discrete-quarter growth from nowcast/transform/target.py,
+#                level chained on 2018 nominal quarters (2018 prices).
+#
+# sa: true = seasonally adjusted (robust STL on logs) for the SA panel; false = the level is used
+# as it is (financial prices and stocks without a seasonal pattern) ; `panel_sa: false` leaves
+# the variable out of the SA panel entirely.
+
+monthly:
+  # ------------------------------------------------------------ real activity
+  - {id: ind_total, block: real, recipe: real_growth, sa: true,
+     input: [ind_total_real, "B, C, D, E"], weights: [[ind_total_nom, "B, C, D, E"]]}
+  - {id: ind_mining, block: real, recipe: real_growth, sa: true,
+     input: [ind_mining_real, B], weights: [[ind_total_nom, B], [ind_total_nom, "B, C, D, E"]]}
+  - {id: ind_manuf, block: real, recipe: real_growth, sa: true,
+     input: [ind_manuf_real, C], weights: [[ind_total_nom, C], [ind_total_nom, "B, C, D, E"]]}
+  - {id: ind_elec, block: real, recipe: real_growth, sa: true,
+     input: [ind_elec_real, D], weights: [[ind_total_nom, D], [ind_total_nom, "B, C, D, E"]]}
+  - {id: constr, block: real, recipe: real_growth, sa: true,
+     input: [constr_real, "1700"], weights: [[constr_nom, "1700"]]}
+  - {id: retail, block: real, recipe: real_growth, sa: true,
+     input: [retail_real, "1700"], weights: [[retail_nom, "1700"]]}
+  - {id: wholesale, block: real, recipe: real_growth, sa: true,
+     input: [wholesale_real, "1700"], weights: [[wholesale_nom, "1700"]]}
+
+  # ------------------------------------------------------------ market services (from 2024, y/y only)
+  - {id: mkt_trade, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, G], weights: [[mkt_services_nom, G]]}
+  - {id: mkt_ict, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, J], weights: [[mkt_services_nom, J]]}
+  - {id: mkt_transport, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, H], weights: [[mkt_services_nom, H]]}
+  - {id: mkt_motor_transport, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "493-494"], weights: [[mkt_services_nom, "493-494"]]}
+  - {id: mkt_accommodation, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, I], weights: [[mkt_services_nom, I]]}
+  - {id: mkt_finance, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, K], weights: [[mkt_services_nom, K]]}
+  - {id: mkt_real_estate, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, L], weights: [[mkt_services_nom, L]]}
+  - {id: mkt_engineering, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "71"], weights: [[mkt_services_nom, "71"]]}
+  - {id: mkt_renting, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "77"], weights: [[mkt_services_nom, "77"]]}
+  - {id: mkt_education, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, P], weights: [[mkt_services_nom, P]]}
+  - {id: mkt_health, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, Q], weights: [[mkt_services_nom, Q]]}
+  - {id: mkt_repair, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "95"], weights: [[mkt_services_nom, "95"]]}
+  - {id: mkt_personal, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "96"], weights: [[mkt_services_nom, "96"]]}
+  - {id: mkt_other, block: services, recipe: real_growth, level: false,
+     input: [mkt_services_growth, "100"], weights: [[mkt_services_nom, "100"]]}
+
+  # ------------------------------------------------------------ external (USD, not deflated)
+  - {id: exports_nogold, block: external, recipe: nominal, sa: true,
+     input: [exports_usd, "1700"], minus: [exports_gold_usd, "71", 0.001]}
+  - {id: exports_gold, block: external, recipe: nominal, sa: true,
+     input: [exports_gold_usd, "71", 0.001]}
+  - {id: exports_total, block: external, recipe: nominal, sa: true,
+     input: [exports_usd, "1700"]}
+  - {id: imports, block: external, recipe: nominal, sa: true,
+     input: [imports_usd, "1700"]}
+  - {id: usd_rate, block: external, recipe: nominal, sa: false,
+     input: [usd_rate, USD]}
+
+  # ------------------------------------------------------------ prices and finance
+  - {id: cpi, block: prices_finance, recipe: price_index, sa: true,
+     inputs: [[cpi_mm_old, "1"], [cpi_mm, "1"]]}
+  - {id: ppi, block: prices_finance, recipe: price_index, sa: true,
+     inputs: [[ppi_mm, "1000"]]}
+  - {id: m2_real, block: prices_finance, recipe: nominal, sa: true, deflate: cpi,
+     input: [m2, FDSB_XDC]}
+  - {id: reserves_fx, block: prices_finance, recipe: nominal, sa: false,
+     input: [reserves_fx, UZB_ORA_RAFAFX_USD]}
+  - {id: reserves_gold, block: prices_finance, recipe: nominal, sa: false,
+     input: [reserves_gold, UZB_ORA_RAFAGOLD_USD]}
+  - {id: gold_price, block: prices_finance, recipe: nominal, sa: false,
+     input: [gold_price, GOLD]}
+  - {id: rate_deposit_hh, block: prices_finance, recipe: rate, input: [rate_deposit_hh, FITD_NC_HH_WA_PA]}
+  - {id: rate_deposit_firms, block: prices_finance, recipe: rate, input: [rate_deposit_firms, FITD_NC_B_WA_PA]}
+  - {id: rate_loan_hh, block: prices_finance, recipe: rate, input: [rate_loan_hh, FILR_NC_HH_WA_PA]}
+  - {id: rate_loan_firms, block: prices_finance, recipe: rate, input: [rate_loan_firms, FILR_NC_B_WA_PA]}
+  - {id: policy_rate, block: prices_finance, recipe: rate, input: [policy_rate, FPOLM_PA]}
+
+  # ------------------------------------------------------------ firms
+  - {id: new_small_business, block: firms, recipe: nominal, sa: true,
+     input: [new_small_business, "1700"]}
+  - {id: operating_enterprises, block: firms, recipe: nominal, sa: true,
+     input: [operating_enterprises, "1700"]}
+
+quarterly:
+  # ------------------------------------------------------------ GDP and its production side (target + services block)
+  - {id: gdp, block: target, recipe: nag, item: gdp}
+  - {id: gva, block: target, recipe: nag, item: gva}
+  - {id: gva_agriculture, block: target, recipe: nag, item: agriculture}
+  - {id: gva_industry, block: target, recipe: nag, item: industry}
+  - {id: gva_mining, block: target, recipe: nag, item: mining}
+  - {id: gva_manufacturing, block: target, recipe: nag, item: manufacturing}
+  - {id: gva_electricity, block: target, recipe: nag, item: electricity}
+  - {id: gva_water, block: target, recipe: nag, item: water}
+  - {id: gva_construction, block: target, recipe: nag, item: construction}
+  - {id: gva_trade_accommodation, block: target, recipe: nag, item: trade_accommodation}
+  - {id: gva_trade, block: target, recipe: nag, item: trade}
+  - {id: gva_accommodation, block: target, recipe: nag, item: accommodation}
+  - {id: gva_transport_ict, block: target, recipe: nag, item: transport_ict}
+  - {id: gva_transport, block: target, recipe: nag, item: transport}
+  - {id: gva_ict, block: target, recipe: nag, item: ict}
+  - {id: gva_other_services, block: target, recipe: nag, item: other_services}
+  - {id: net_taxes, block: target, recipe: nag, item: net_taxes}
+
+  # ------------------------------------------------------------ other quarterly indicators
+  - {id: remittances_real, block: quarterly, recipe: nominal, sa: true, to_uzs: true, deflate: cpi,
+     input: [remittances_q, secondary_income_credits]}
+  - {id: wages_real, block: quarterly, recipe: nominal, sa: true, deflate: cpi,
+     input: [wages_q, "1700"]}
+  - {id: income_real, block: quarterly, recipe: nominal, sa: true, deflate: cpi,
+     input: [income_q, "1700"]}
+  - {id: invest, block: quarterly, recipe: real_growth, sa: true,
+     input: [invest_growth_q, "1700"], weights: [[invest_nom_q, "1700"]]}
+  - {id: invest_fdi_real, block: quarterly, recipe: nominal, sa: true, deflate: cpi,
+     input: [invest_fdi_q, "1700"]}
+  - {id: agri_output, block: quarterly, recipe: real_growth, level: false,
+     input: [agri_real_q, "1700"], weights: [[gdp_nag, agriculture.N]]}
+  - {id: freight, block: quarterly, recipe: real_growth, level: false,
+     input: [freight_q, "1700"], weights: []}

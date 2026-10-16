@@ -1,7 +1,8 @@
 name: monthly
 
 # Phase 1, task 1.8. Downloads every catalogue series, stores the run as a dated vintage on the
-# `data` branch, checks it, and sends alerts. What to do when something fails:
+# `data` branch, checks it, rebuilds the model-ready panels (store/panels/, Phase 2), and sends
+# alerts. What to do when something fails:
 # docs/runbook_ingest.md.
 #
 # - 1st of the month, 06:00 Tashkent (01:00 UTC): full run.
@@ -78,6 +79,12 @@ jobs:
           if [ -n "$ACCEPT" ]; then args+=(--accept "$ACCEPT"); fi
           python -m nowcast.ingest.run "${args[@]}"
 
+      - name: Build the panels (Phase 2)
+        id: panels
+        if: steps.run.outcome == 'success' && steps.run.outputs.skipped != 'true'
+        continue-on-error: true
+        run: python -m nowcast.transform.panels --store store --out store/panels
+
       - name: Commit the vintage to the data branch
         if: steps.run.outcome == 'success' && steps.run.outputs.skipped != 'true'
         run: |
@@ -94,6 +101,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python -m nowcast.ingest.alerts --store store --run-id "${{ steps.run.outputs.run_id }}"
+
+      - name: Alert that the panels could not be built
+        if: always() && steps.panels.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Panels not built in run ${{ steps.run.outputs.run_id }}" \
+            --body "The vintage was stored, but \`python -m nowcast.transform.panels\` failed. Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       - name: Alert that the run crashed
         if: failure() && steps.run.outcome != 'success'
