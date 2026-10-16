@@ -26,7 +26,7 @@ on:
         required: false
         default: ""
   # Development only: a push to the phase-1 branch runs the full pipeline against the throwaway
-  # data-dev branch. Removed when phase-1 is merged.
+  # data-dev2 branch. Removed when phase-1 is merged.
   push:
     branches: [phase-1]
     paths:
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      DATA_BRANCH: ${{ github.event_name == 'push' && 'data-dev' || 'data' }}
+      DATA_BRANCH: ${{ github.event_name == 'push' && 'data-dev2' || 'data' }}
       NO_ISSUES: ${{ github.event_name == 'push' && '--no-issues' || '' }}
     steps:
       - uses: actions/checkout@v4
