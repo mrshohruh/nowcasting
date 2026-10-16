@@ -1,0 +1,7 @@
+series,first,last,n,share_of_years_rising_Q1_to_Q4,Q1..Q4 of last full year
+"Remittance — Secondary income, credits (million USD) ",2019Q1,2026Q2,30,0.29,"[np.float64(1930.5), np.float64(3191.8), np.float64(4452.3), np.float64(4016.9)]"
+Average Nominal Wages (UZS) ,2019Q1,2026Q2,30,0.86,"[np.float64(5815612.2), np.float64(5990057.5), np.float64(6166196.5), np.float64(6376725.4)]"
+Investments in fixed assets (%) ,2020Q1,2026Q2,26,0.0,"[np.float64(107.9), np.float64(105.5), np.float64(115.2), np.float64(110.5)]"
+Investment financed through FDI (million UZS),2021Q1,2026Q2,22,1.0,"[np.float64(78599736.3), np.float64(179047393.1), np.float64(295111307.4), np.float64(389589618.7)]"
+Total income of the population (billion UZS),2020Q1,2026Q2,26,1.0,"[np.float64(227793.7), np.float64(530396.0), np.float64(825308.7), np.float64(1134252.7)]"
+Growth rates of Gross domestic product (production method) (as a percentage of the corresponding period of the previous year),2019Q1,2026Q2,30,0.14,"[np.float64(106.8), np.float64(107.2), np.float64(107.6), np.float64(107.7)]"

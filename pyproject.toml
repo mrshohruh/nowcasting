@@ -1,0 +1,41 @@
+[project]
+name = "nowcast-uz"
+version = "0.1.0"
+description = "Monthly nowcasts of Uzbekistan's real GDP growth with explained revisions"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "pyyaml>=6.0",
+    "requests>=2.32",
+    "lxml>=5.2",
+    "pyarrow>=16.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "ruff>=0.5",
+    "pre-commit>=3.7",
+]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["nowcast*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: tests that download from live sources (deselect with -m 'not network')"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

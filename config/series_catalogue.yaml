@@ -1,0 +1,634 @@
+# Series catalogue (Phase 0, task 0.9). One entry per input series.
+#
+# Fields
+#   id            short name used everywhere in the code
+#   name          what it is
+#   publisher     Uzstat | Central Bank of Uzbekistan | World Bank   (official primary publishers only)
+#   source        adapter: siat | cbu_sdmx | cbu_xlsx | cbu_rate_json | worldbank_xlsx | stat_nag_xlsx
+#   url           where the file is downloaded from (checked from a GitHub runner on 16 Oct 2026)
+#   key           what to pick inside the file: SIAT item label, SDMX INDICATOR code, column or row label
+#   frequency     M | Q
+#   unit          as published
+#   form          cumulative_ytd   values add up from January (or Q1) and restart each year
+#                 discrete         one value per period
+#                 level            stock or average for the period (M2, reserves, rates, prices)
+#                 index_mm         % of previous month (100 = no change)
+#                 growth_yoy_cum   % of the same period last year, cumulative from January
+#                 growth_yoy       % of the same month/quarter last year
+#   prices        nominal | real | price | none
+#   block         real | services | external | prices_finance | firms | quarterly | target
+#   first_period  first period available in the source
+#   months_after  backtest rule: a period is used from the 1st of the month this many months after
+#                 the period ends (2 = August data from 1 October)
+#   status        core (enters the models) | candidate (tested in Phase 3) | reference (checks only)
+#   notes         anything the transformations must know
+
+series:
+  # ---------------------------------------------------------------- real activity
+  - id: ind_total_real
+    name: Industrial production, physical volume index
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
+    key: Industrial production
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2019-01
+    months_after: 2
+    status: core
+    notes: Uzstat's own real growth; replaces deflating nominal output. Same table has 28 sub-sectors.
+  - id: ind_mining_real
+    name: Mining and quarrying, physical volume index
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
+    key: Mining and quarrying
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: ind_manuf_real
+    name: Manufacturing, physical volume index
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
+    key: Manufacturing industry
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: ind_elec_real
+    name: Electricity, gas, steam and air conditioning, physical volume index
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
+    key: Electricity, gas, steam and air conditioning
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2019-01
+    months_after: 2
+    status: core
+    notes: Stands in for electricity output; SIAT has electricity production in kWh only annually.
+  - id: ind_total_nom
+    name: Industrial production by activity, current prices
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json
+    key: Industrial production
+    frequency: M
+    unit: billion UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: real
+    first_period: 2019-01
+    months_after: 2
+    status: reference
+    notes: >-
+      Weights for turning cumulative real growth into monthly growth. Eight sub-sectors fall within
+      a year at least once (e.g. computers 2023-05, wholesale 2023-11), so sub-sector decumulation
+      can go negative; use the real index for sub-sectors.
+  - id: constr_real
+    name: Construction works, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2406/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2021-01
+    months_after: 2
+    status: core
+    notes: Cumulative form to confirm in Phase 2 against nominal works and the construction price index (SIAT 1301).
+  - id: constr_nom
+    name: Construction works, current prices
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2403/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: billion UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: real
+    first_period: 2021-01
+    months_after: 2
+    status: reference
+  - id: retail_real
+    name: Retail trade turnover, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2700/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2020-01
+    months_after: 2
+    status: core
+  - id: retail_nom
+    name: Retail trade turnover, current prices
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2699/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: million UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: real
+    first_period: 2020-01
+    months_after: 2
+    status: reference
+  - id: wholesale_real
+    name: Wholesale trade turnover, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2696/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: real
+    first_period: 2020-01
+    months_after: 2
+    status: core
+  - id: wholesale_nom
+    name: Wholesale trade turnover, current prices
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/964/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: million UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: real
+    first_period: 2020-01
+    months_after: 2
+    status: reference
+    notes: Cumulative value falls in 2023-11 and 2025-09 (revisions not carried back).
+  - id: agri_real_q
+    name: Agriculture, forestry and fishing output, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2944/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: quarterly
+    first_period: 2022-Q4
+    months_after: 2
+    status: candidate
+    notes: >-
+      No monthly agriculture series exists on SIAT or NSDP. Quarterly, and published with GDP, so it
+      adds little early signal; agriculture is carried by the NAG sector GVA in the target.
+
+  # ---------------------------------------------------------------- services
+  - id: mkt_services_growth
+    name: Market services by type, growth rates (14 types)
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/3218/table/download/?download_format=json
+    key: all items (Trade, Information and communication, Transport activities, Financial activities, ...)
+    frequency: M
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: services
+    first_period: 2024-01
+    months_after: 2
+    status: core
+    notes: >-
+      History starts 2024-01 in both 3218 and the level table 3217; no older monthly series found.
+      Method break from 2024-09 (informal economy included, per the 3217 note). Cumulative form to confirm.
+  - id: gva_services_q
+    name: GVA of trade and accommodation, transport and ICT, other services (quarterly)
+    publisher: Uzstat
+    source: stat_nag_xlsx
+    url: https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx
+    key: production block rows trade_accommodation, transport_ict, other_services
+    frequency: Q
+    unit: billion UZS
+    form: cumulative_ytd
+    prices: real
+    block: quarterly
+    first_period: 2018-Q1
+    months_after: 2
+    status: core
+    notes: Quarterly series in the services block of the factor model (user request, 16 Oct).
+  - id: freight_q
+    name: Freight turnover, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/3290/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: quarterly
+    first_period: 2024-Q1
+    months_after: 2
+    status: candidate
+    notes: Only quarterly and only from 2024; monthly freight is not published on SIAT.
+
+  # ---------------------------------------------------------------- external
+  - id: exports_usd
+    name: Exports of goods and services
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1103/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: million USD
+    form: cumulative_ytd
+    prices: nominal
+    block: external
+    first_period: 2021-01
+    months_after: 2
+    status: core
+    notes: Used net of gold (exports_gold_usd).
+  - id: exports_gold_usd
+    name: Exports of HS 71 (precious stones and metals, mainly gold)
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/3080/table/download/?download_format=json
+    key: Natural or cultured pearls, precious or semi-precious stones, precious metals ...
+    frequency: M
+    unit: thousand USD
+    form: discrete
+    prices: nominal
+    block: external
+    first_period: 2023-01
+    months_after: 2
+    status: core
+    notes: >-
+      Gold was 45.5% of goods exports in Q1 2025 and 4.0% in Q1 2026, which explains the Q1 2026
+      collapse in real exports (58.0% of a year earlier). Period columns arrive unsorted; sort them.
+  - id: imports_usd
+    name: Imports of goods and services
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1162/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: million USD
+    form: cumulative_ytd
+    prices: nominal
+    block: external
+    first_period: 2021-01
+    months_after: 2
+    status: core
+  - id: usd_rate
+    name: Official UZS per USD rate, monthly average of daily rates
+    publisher: Central Bank of Uzbekistan
+    source: cbu_rate_json
+    url: https://cbu.uz/en/arkhiv-kursov-valyut/json/USD/{YYYY-MM-DD}/
+    key: Rate
+    frequency: M
+    unit: UZS per USD
+    form: level
+    prices: price
+    block: external
+    first_period: 2018-01
+    months_after: 1
+    status: core
+    notes: >-
+      One call per day; back-fill once and cache. The file the NSDP page labels as exchange rates
+      (cbu.uz/sdmx/EXR_Uzbekistan_STA.xml) actually holds external debt, so it is not used.
+  - id: remittances_q
+    name: Secondary income, credits (remittances)
+    publisher: Central Bank of Uzbekistan
+    source: cbu_xlsx
+    url: https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx
+    key: Secondary income, credits
+    frequency: Q
+    unit: million USD
+    form: discrete
+    prices: nominal
+    block: quarterly
+    first_period: 2005-Q1
+    months_after: 4
+    status: core
+    notes: Revised back to 2020 Q1 on 29 Sep 2026 (travellers' income estimates).
+
+  # ---------------------------------------------------------------- prices and finance
+  - id: cpi_mm
+    name: Consumer price index, COICOP-2018
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1286/table/download/?download_format=json
+    key: Cumulative index
+    frequency: M
+    unit: "% of previous month"
+    form: index_mm
+    prices: price
+    block: prices_finance
+    first_period: 2021-01
+    months_after: 2
+    status: core
+    notes: Spliced with cpi_mm_old for 2019-2020.
+  - id: cpi_mm_old
+    name: Consumer price index (old basket), no longer updated
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1285/table/download/?download_format=json
+    key: Cumulative index
+    frequency: M
+    unit: "% of previous month"
+    form: index_mm
+    prices: price
+    block: prices_finance
+    first_period: 2010-01
+    months_after: 2
+    status: reference
+    notes: Period labels use a Cyrillic 'М' (2010-М01); normalise before parsing.
+  - id: ppi_mm
+    name: Producer price index of industrial goods
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1581/table/download/?download_format=json
+    key: Composite index
+    frequency: M
+    unit: "% of previous month"
+    form: index_mm
+    prices: price
+    block: prices_finance
+    first_period: 2013-01
+    months_after: 2
+    status: core
+    notes: >-
+      January 2019 jumps (composite 108.8, metallurgy 171.9) after the price liberalisation; treat
+      as an outlier. The 'mining of metal ores' item is 0 for all of 2019 (missing, not zero).
+  - id: m2
+    name: Broad money (M2)
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml
+    key: FDSB_XDC
+    frequency: M
+    unit: billion UZS
+    form: level
+    prices: nominal
+    block: prices_finance
+    first_period: 2013-01
+    months_after: 2
+    status: core
+    notes: Matches the seed file exactly.
+  - id: reserves_fx
+    name: International reserves, foreign currency
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml
+    key: UZB_ORA_RAFAFX_USD
+    frequency: M
+    unit: million USD
+    form: level
+    prices: nominal
+    block: prices_finance
+    first_period: 2013-01
+    months_after: 2
+    status: core
+  - id: reserves_gold
+    name: International reserves, monetary gold
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml
+    key: UZB_ORA_RAFAGOLD_USD
+    frequency: M
+    unit: million USD
+    form: level
+    prices: nominal
+    block: prices_finance
+    first_period: 2013-01
+    months_after: 2
+    status: candidate
+    notes: Gold volume is UZB_ORA_RAFAGOLDV_OZT; value / volume gives an official gold price if the World Bank file fails.
+  - id: gold_price
+    name: Gold price
+    publisher: World Bank
+    source: worldbank_xlsx
+    url: https://www.worldbank.org/en/research/commodity-markets
+    key: Monthly Prices sheet, Gold column
+    frequency: M
+    unit: USD per troy ounce
+    form: level
+    prices: price
+    block: prices_finance
+    first_period: 1960-01
+    months_after: 2
+    status: core
+    notes: The monthly xlsx link is read from this page (its URL changes every month). The page is updated about the 3rd, so a 1st-of-month run sees the month before last.
+  - id: rate_deposit_hh
+    name: Time deposit rate, individuals, national currency
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml
+    key: FITD_NC_HH_WA_PA
+    frequency: M
+    unit: "% per year"
+    form: level
+    prices: none
+    block: prices_finance
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: rate_deposit_firms
+    name: Time deposit rate, legal entities, national currency
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml
+    key: FITD_NC_B_WA_PA
+    frequency: M
+    unit: "% per year"
+    form: level
+    prices: none
+    block: prices_finance
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: rate_loan_hh
+    name: Loan rate, individuals, national currency
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml
+    key: FILR_NC_HH_WA_PA
+    frequency: M
+    unit: "% per year"
+    form: level
+    prices: none
+    block: prices_finance
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: rate_loan_firms
+    name: Loan rate, legal entities, national currency
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml
+    key: FILR_NC_B_WA_PA
+    frequency: M
+    unit: "% per year"
+    form: level
+    prices: none
+    block: prices_finance
+    first_period: 2019-01
+    months_after: 2
+    status: core
+  - id: policy_rate
+    name: Central bank policy rate
+    publisher: Central Bank of Uzbekistan
+    source: cbu_sdmx
+    url: https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml
+    key: FPOLM_PA
+    frequency: M
+    unit: "% per year"
+    form: level
+    prices: none
+    block: prices_finance
+    first_period: 2013-01
+    months_after: 2
+    status: candidate
+
+  # ---------------------------------------------------------------- firms
+  - id: new_small_business
+    name: Newly created small business entities
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2117/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: units
+    form: cumulative_ytd
+    prices: none
+    block: firms
+    first_period: 2022-01
+    months_after: 2
+    status: core
+  - id: operating_enterprises
+    name: Operating enterprises and organisations
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2138/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: M
+    unit: units
+    form: level
+    prices: none
+    block: firms
+    first_period: 2022-01
+    months_after: 2
+    status: candidate
+
+  # ---------------------------------------------------------------- quarterly
+  - id: wages_q
+    name: Average nominal monthly wage
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/522/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: UZS
+    form: level
+    prices: nominal
+    block: quarterly
+    first_period: 2017-Q1
+    months_after: 2
+    status: core
+    notes: Matches the seed file; replaces scraping the stat.uz labour-market page.
+  - id: invest_growth_q
+    name: Investment in fixed assets, growth rate
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/1331/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: quarterly
+    first_period: 2020-Q1
+    months_after: 2
+    status: core
+  - id: invest_fdi_q
+    name: Investment in fixed assets financed by FDI and foreign loans
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/2643/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: million UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: quarterly
+    first_period: 2021-Q1
+    months_after: 2
+    status: candidate
+  - id: income_q
+    name: Total income of the population
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/3973/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: billion UZS
+    form: cumulative_ytd
+    prices: nominal
+    block: quarterly
+    first_period: 2020-Q1
+    months_after: 2
+    status: candidate
+
+  # ---------------------------------------------------------------- target
+  - id: gdp_nag
+    name: GDP and GVA by industry, current and previous-year prices (cumulative)
+    publisher: Uzstat
+    source: stat_nag_xlsx
+    url: https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx
+    key: sheet Quarterly_2018-2026, production blocks (see nowcast/transform/target.py)
+    frequency: Q
+    unit: billion UZS
+    form: cumulative_ytd
+    prices: real
+    block: target
+    first_period: 2018-Q1
+    months_after: 2
+    status: core
+    notes: Also available as SDMX XML at https://stat.uz/img/uploads/download_xml/nag_uzbekistan_mcd.xml
+  - id: gdp_growth_q
+    name: GDP growth, production method
+    publisher: Uzstat
+    source: siat
+    url: https://api.siat.stat.uz/sdmx/3698/table/download/?download_format=json
+    key: Republic of Uzbekistan
+    frequency: Q
+    unit: "% of same period last year"
+    form: growth_yoy_cum
+    prices: real
+    block: target
+    first_period: 2018-Q1
+    months_after: 2
+    status: reference
+    notes: Same numbers as the NAG file; used as a cross-check.
