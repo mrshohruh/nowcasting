@@ -1,0 +1,36 @@
+name: reachability
+
+# Phase 0, task 0.4: check which source hosts a GitHub-hosted runner can reach.
+# Runs on a push that changes this file or the script, or by hand from the Actions tab.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/reachability.yml
+      - tools/reachability.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reachability-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: python tools/reachability.py docs/reachability_github_runner.md
+      - name: Commit the result back to this branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/reachability_github_runner.md
+          git commit -m "Reachability result from GitHub runner [skip ci]" || echo "no change"
+          git push
