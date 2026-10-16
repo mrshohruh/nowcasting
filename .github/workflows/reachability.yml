@@ -38,4 +38,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/reachability_github_runner.md docs/catalogue_check.md
           git commit -m "Reachability result from GitHub runner [skip ci]" || echo "no change"
-          git push
+          # the branch may have moved while this ran (another push): put the result on top of it
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
