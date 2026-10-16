@@ -1,4 +1,4 @@
-Checked 2026-10-16 05:04 UTC.
+Checked 2026-10-16 06:44 UTC.
 
 | Series | Source | Result | Coverage |
 | --- | --- | --- | --- |
@@ -15,6 +15,7 @@ Checked 2026-10-16 05:04 UTC.
 | wholesale_nom | siat | ok | 2020-M01 to 2026-M08, updated 2026-09-24 |
 | agri_real_q | siat | ok | 2022-Q4 to 2026-Q2, updated 2026-08-01 |
 | mkt_services_growth | siat | ok | 2024-M01 to 2026-M08, updated 2026-09-30 |
+| mkt_services_nom | siat | ok | 2024-M01 to 2026-M08, updated 2026-09-30 |
 | gva_services_q | stat_nag_xlsx | ok | Quarterly_2018-2026 |
 | freight_q | siat | ok | 2024-Q1 to 2026-Q2, updated 2026-07-22 |
 | exports_usd | siat | ok | 2021-M01 to 2026-M08, updated 2026-09-26 |
@@ -38,6 +39,7 @@ Checked 2026-10-16 05:04 UTC.
 | operating_enterprises | siat | ok | 2022-M01 to 2026-M10, updated 2026-10-14 |
 | wages_q | siat | ok | 2017-Q1 to 2026-Q2, updated 2026-07-24 |
 | invest_growth_q | siat | ok | 2020-Q1 to 2026-Q2, updated 2026-07-25 |
+| invest_nom_q | siat | ok | 2020-Q1 to 2026-Q2, updated 2026-07-25 |
 | invest_fdi_q | siat | ok | 2021-Q1 to 2026-Q2, updated 2026-07-25 |
 | income_q | siat | ok | 2020-Q1 to 2026-Q2, updated 2026-07-29 |
 | gdp_nag | stat_nag_xlsx | ok | Quarterly_2018-2026 |
