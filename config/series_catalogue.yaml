@@ -7,6 +7,8 @@
 #   source        adapter: siat | cbu_sdmx | cbu_xlsx | cbu_rate_json | worldbank_xlsx | stat_nag_xlsx
 #   url           where the file is downloaded from (checked from a GitHub runner on 16 Oct 2026)
 #   key           what to pick inside the file: SIAT item label, SDMX INDICATOR code, column or row label
+#   codes         (siat, stat_nag_xlsx) what the adapter selects: SIAT classifier codes, or NAG item ids;
+#                 ["*"] = every row. SIAT rows are selected by code, never by label; key is only checked.
 #   frequency     M | Q
 #   unit          as published
 #   form          cumulative_ytd   values add up from January (or Q1) and restart each year
@@ -18,6 +20,7 @@
 #   prices        nominal | real | price | none
 #   block         real | services | external | prices_finance | firms | quarterly | target
 #   first_period  first period available in the source
+#   last_period   (optional) last period ever published, for a discontinued series; no lag check
 #   months_after  backtest rule: a period is used from the 1st of the month this many months after
 #                 the period ends (2 = August data from 1 October)
 #   status        core (enters the models) | candidate (tested in Phase 3) | reference (checks only)
@@ -31,6 +34,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
     key: Industrial production
+    codes: ["B, C, D, E"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -46,6 +50,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
     key: Mining and quarrying
+    codes: ["B"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -60,6 +65,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
     key: Manufacturing industry
+    codes: ["C"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -74,6 +80,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json
     key: Electricity, gas, steam and air conditioning
+    codes: ["D"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -89,6 +96,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json
     key: Industrial production
+    codes: ["B, C, D, E"]
     frequency: M
     unit: billion UZS
     form: cumulative_ytd
@@ -107,6 +115,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2406/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -122,6 +131,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2403/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: billion UZS
     form: cumulative_ytd
@@ -136,6 +146,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2700/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -150,6 +161,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2699/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: million UZS
     form: cumulative_ytd
@@ -164,6 +176,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2696/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -178,6 +191,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/964/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: million UZS
     form: cumulative_ytd
@@ -193,6 +207,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2944/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -212,6 +227,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/3218/table/download/?download_format=json
     key: all items (Trade, Information and communication, Transport activities, Financial activities, ...)
+    codes: ["*"]
     frequency: M
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -229,6 +245,7 @@ series:
     source: stat_nag_xlsx
     url: https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx
     key: production block rows trade_accommodation, transport_ict, other_services
+    codes: [trade_accommodation, transport_ict, other_services]
     frequency: Q
     unit: billion UZS
     form: cumulative_ytd
@@ -244,6 +261,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/3290/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -261,6 +279,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1103/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: million USD
     form: cumulative_ytd
@@ -276,6 +295,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/3080/table/download/?download_format=json
     key: Natural or cultured pearls, precious or semi-precious stones, precious metals ...
+    codes: ["71"]
     frequency: M
     unit: thousand USD
     form: discrete
@@ -293,6 +313,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1162/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: million USD
     form: cumulative_ytd
@@ -341,6 +362,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1286/table/download/?download_format=json
     key: Cumulative index
+    codes: ["1"]
     frequency: M
     unit: "% of previous month"
     form: index_mm
@@ -356,12 +378,14 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1285/table/download/?download_format=json
     key: Cumulative index
+    codes: ["1"]
     frequency: M
     unit: "% of previous month"
     form: index_mm
     prices: price
     block: prices_finance
     first_period: 2010-01
+    last_period: 2020-12
     months_after: 2
     status: reference
     notes: Period labels use a Cyrillic 'М' (2010-М01); normalise before parsing.
@@ -371,6 +395,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1581/table/download/?download_format=json
     key: Composite index
+    codes: ["1000"]
     frequency: M
     unit: "% of previous month"
     form: index_mm
@@ -519,6 +544,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2117/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: units
     form: cumulative_ytd
@@ -533,6 +559,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2138/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: M
     unit: units
     form: level
@@ -549,6 +576,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/522/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: UZS
     form: level
@@ -564,6 +592,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/1331/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: "% of same period last year"
     form: growth_yoy_cum
@@ -578,6 +607,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/2643/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: million UZS
     form: cumulative_ytd
@@ -592,6 +622,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/3973/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: billion UZS
     form: cumulative_ytd
@@ -608,6 +639,7 @@ series:
     source: stat_nag_xlsx
     url: https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx
     key: sheet Quarterly_2018-2026, production blocks (see nowcast/transform/target.py)
+    codes: ["*"]
     frequency: Q
     unit: billion UZS
     form: cumulative_ytd
@@ -623,6 +655,7 @@ series:
     source: siat
     url: https://api.siat.stat.uz/sdmx/3698/table/download/?download_format=json
     key: Republic of Uzbekistan
+    codes: ["1700"]
     frequency: Q
     unit: "% of same period last year"
     form: growth_yoy_cum

@@ -11,3 +11,5 @@ dist/
 # downloaded raw files live on the data branch, not on main
 raw/
 cache/
+# a local ingestion store (python -m nowcast.ingest.run --store store)
+store/

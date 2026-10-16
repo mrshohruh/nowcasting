@@ -46,4 +46,8 @@ def validate(series: list[dict]) -> list[str]:
             problems.append(f"{sid}: months_after must be an integer 1-6")
         if not str(s.get("url", "")).startswith("https://"):
             problems.append(f"{sid}: url must be https")
+        if s.get("source") in ("siat", "stat_nag_xlsx"):
+            codes = s.get("codes")
+            if not isinstance(codes, list) or not codes or not all(isinstance(c, str) and c for c in codes):
+                problems.append(f"{sid}: codes must be a non-empty list of strings for source {s['source']}")
     return problems

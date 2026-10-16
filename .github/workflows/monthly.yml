@@ -1,0 +1,104 @@
+name: monthly
+
+# Phase 1, task 1.8. Downloads every catalogue series, stores the run as a dated vintage on the
+# `data` branch, checks it, and sends alerts. What to do when something fails:
+# docs/runbook_ingest.md.
+#
+# - 1st of the month, 06:00 Tashkent (01:00 UTC): full run.
+# - 2nd of the month, 06:00 Tashkent: catch-up, retries only the series that failed on the 1st.
+# - Manual run any time: Actions tab > monthly > Run workflow. Same pipeline as the scheduled run.
+on:
+  schedule:
+    - cron: "0 1 1 * *"
+    - cron: "0 1 2 * *"
+  workflow_dispatch:
+    inputs:
+      series:
+        description: "Only these series (comma-separated ids). Leave empty for every series."
+        required: false
+        default: ""
+      catch_up:
+        description: "Catch-up: retry only the series that failed in this month's last run"
+        type: boolean
+        default: false
+      accept:
+        description: "Accept failed checks for these series (after confirming the change is real)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monthly-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      DATA_BRANCH: data
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -e .
+
+      - name: Check out the data branch into store/
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin "$DATA_BRANCH" > /dev/null; then
+            git fetch --depth=1 origin "$DATA_BRANCH"
+            git worktree add -B "$DATA_BRANCH" store FETCH_HEAD
+          else
+            echo "Branch $DATA_BRANCH does not exist yet: starting it (the run seeds the history)."
+            git worktree add --detach store
+            git -C store checkout -q --orphan "$DATA_BRANCH"
+            git -C store rm -rf -q .
+          fi
+
+      - name: Download, check and store
+        id: run
+        env:
+          CATCH_UP: ${{ github.event.schedule == '0 1 2 * *' || inputs.catch_up }}
+          SERIES: ${{ inputs.series }}
+          ACCEPT: ${{ inputs.accept }}
+          TRIGGER: ${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }}
+        run: |
+          args=(--store store --trigger "$TRIGGER")
+          if [ "$CATCH_UP" = "true" ]; then args+=(--catch-up); fi
+          if [ -n "$SERIES" ]; then args+=(--series "$SERIES"); fi
+          if [ -n "$ACCEPT" ]; then args+=(--accept "$ACCEPT"); fi
+          python -m nowcast.ingest.run "${args[@]}"
+
+      - name: Commit the vintage to the data branch
+        if: steps.run.outcome == 'success' && steps.run.outputs.skipped != 'true'
+        run: |
+          cd store
+          git add -A
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "Vintage ${{ steps.run.outputs.run_id }} (${{ github.event_name }})"
+          git push origin "HEAD:$DATA_BRANCH"
+
+      - name: Alerts (Telegram, GitHub issues)
+        if: always() && steps.run.outcome == 'success'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m nowcast.ingest.alerts --store store --run-id "${{ steps.run.outputs.run_id }}"
+
+      - name: Alert that the run crashed
+        if: failure() && steps.run.outcome != 'success'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m nowcast.ingest.alerts --store store --crashed
