@@ -17,6 +17,7 @@ Run ``python -m nowcast.transform.target`` to rebuild ``data/derived/gdp_target.
 
 from __future__ import annotations
 
+import io
 from pathlib import Path
 
 import numpy as np
@@ -60,9 +61,13 @@ def _norm(s: object) -> str:
     return " ".join(str(s or "").lower().split())
 
 
-def read_nag(path: Path = SEED_NAG) -> dict[str, pd.DataFrame]:
-    """Return {'N','R','G'}: DataFrames indexed by item id, columns = quarters ('2018Q1'...)."""
-    wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+def read_nag(src: Path | bytes = SEED_NAG) -> dict[str, pd.DataFrame]:
+    """Return {'N','R','G'}: DataFrames indexed by item id, columns = quarters ('2018Q1'...).
+
+    ``src`` is a path or the downloaded bytes of nag_uzbekistan_mcd.xlsx.
+    """
+    wb = openpyxl.load_workbook(io.BytesIO(src) if isinstance(src, bytes) else src,
+                                read_only=True, data_only=True)
     rows = list(wb[SHEET].iter_rows(values_only=True))
     header = next(r for r in rows if r[1] and str(r[1]).startswith("2018-Q1"))
     quarters = [str(c).replace("-", "") for c in header[1:] if c]
