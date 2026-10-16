@@ -1,4 +1,4 @@
-"""Phase 2 tests (task 2.9), on a snapshot of the real store (tests/fixtures/store/).
+"""Phase 2 tests (task 2.9), on a snapshot of the real store (tests/fixtures/snapshot/).
 
 The snapshot is the store's latest values on 16 Oct 2026, plus the three weight series added in
 Phase 2 (industry sub-sector output, investment in current prices, market-service volumes),
@@ -29,7 +29,7 @@ from nowcast.transform.levels import chain_mm, levels_from_yoy, to_quarterly_mea
 from nowcast.transform.panels import build_panels, load_spec
 from nowcast.transform.seasonal import stl_adjust
 
-SNAPSHOT = FIX / "store" / "latest_2026-10-16.csv.gz"
+SNAPSHOT = FIX / "snapshot" / "latest_2026-10-16.csv.gz"
 CAT = {s["id"]: s for s in load_catalogue()}
 
 
