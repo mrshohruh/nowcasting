@@ -1,0 +1,452 @@
+variable,period,flag
+ind_total,2019-01,weights: same_year
+ind_total,2019-02,weights: same_year
+ind_total,2019-03,weights: same_year
+ind_total,2019-04,weights: same_year
+ind_total,2019-05,weights: same_year
+ind_total,2019-06,weights: same_year
+ind_total,2019-07,weights: same_year
+ind_total,2019-08,weights: same_year
+ind_total,2019-09,weights: same_year
+ind_total,2019-10,weights: same_year
+ind_total,2019-11,weights: same_year
+ind_total,2019-12,weights: same_year
+ind_total,2019-04,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2019-05,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2019-07,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2019-09,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2019-11,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2019-12,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2020-05,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2020-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2020-07,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2020-10,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2020-11,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2021-03,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2021-07,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2023-01,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2023-03,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2023-04,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2024-04,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_total,2024-05,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2019-01,weights: same_year
+ind_mining,2019-02,weights: same_year
+ind_mining,2019-03,weights: same_year
+ind_mining,2019-04,weights: same_year
+ind_mining,2019-05,weights: same_year
+ind_mining,2019-06,weights: same_year
+ind_mining,2019-07,weights: same_year
+ind_mining,2019-08,weights: same_year
+ind_mining,2019-09,weights: same_year
+ind_mining,2019-10,weights: same_year
+ind_mining,2019-11,weights: same_year
+ind_mining,2019-12,weights: same_year
+ind_mining,2019-03,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2019-04,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2019-07,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_manuf,2019-01,weights: same_year
+ind_manuf,2019-02,weights: same_year
+ind_manuf,2019-03,weights: same_year
+ind_manuf,2019-04,weights: same_year
+ind_manuf,2019-05,weights: same_year
+ind_manuf,2019-06,weights: same_year
+ind_manuf,2019-07,weights: same_year
+ind_manuf,2019-08,weights: same_year
+ind_manuf,2019-09,weights: same_year
+ind_manuf,2019-10,weights: same_year
+ind_manuf,2019-11,weights: same_year
+ind_manuf,2019-12,weights: same_year
+ind_manuf,2019-03,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_manuf,2019-04,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_manuf,2020-01,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_manuf,2023-01,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_manuf,2023-03,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_elec,2019-01,weights: same_year
+ind_elec,2019-02,weights: same_year
+ind_elec,2019-03,weights: same_year
+ind_elec,2019-04,weights: same_year
+ind_elec,2019-05,weights: same_year
+ind_elec,2019-06,weights: same_year
+ind_elec,2019-07,weights: same_year
+ind_elec,2019-08,weights: same_year
+ind_elec,2019-09,weights: same_year
+ind_elec,2019-10,weights: same_year
+ind_elec,2019-11,weights: same_year
+ind_elec,2019-12,weights: same_year
+ind_elec,2019-12,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_elec,2020-01,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_elec,2023-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_elec,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
+constr,2021-01,weights: same_year
+constr,2021-02,weights: same_year
+constr,2021-03,weights: same_year
+constr,2021-04,weights: same_year
+constr,2021-05,weights: same_year
+constr,2021-06,weights: same_year
+constr,2021-07,weights: same_year
+constr,2021-08,weights: same_year
+constr,2021-09,weights: same_year
+constr,2021-10,weights: same_year
+constr,2021-11,weights: same_year
+constr,2021-12,weights: same_year
+constr,2021-10,outlier in SA panel (> 4 robust SD): value_clean missing
+constr,2023-01,outlier in SA panel (> 4 robust SD): value_clean missing
+constr,2023-02,outlier in SA panel (> 4 robust SD): value_clean missing
+constr,2024-01,outlier in SA panel (> 4 robust SD): value_clean missing
+constr,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2020-01,weights: same_year
+retail,2020-02,weights: same_year
+retail,2020-03,weights: same_year
+retail,2020-04,weights: same_year
+retail,2020-05,weights: same_year
+retail,2020-06,weights: same_year
+retail,2020-07,weights: same_year
+retail,2020-08,weights: same_year
+retail,2020-09,weights: same_year
+retail,2020-10,weights: same_year
+retail,2020-11,weights: same_year
+retail,2020-12,weights: same_year
+retail,2020-04,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2020-06,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2020-12,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2025-10,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2025-11,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2026-03,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2026-04,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2020-01,weights: same_year
+wholesale,2020-02,weights: same_year
+wholesale,2020-03,weights: same_year
+wholesale,2020-04,weights: same_year
+wholesale,2020-05,weights: same_year
+wholesale,2020-06,weights: same_year
+wholesale,2020-07,weights: same_year
+wholesale,2020-08,weights: same_year
+wholesale,2020-09,weights: same_year
+wholesale,2020-10,weights: same_year
+wholesale,2020-11,weights: same_year
+wholesale,2020-12,weights: same_year
+wholesale,2024-11,no discrete growth: previous period missing or last year's nominal value not positive
+wholesale,2024-11,level link bridged by interpolation
+wholesale,2020-05,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2020-06,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2020-12,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2021-01,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2022-10,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2022-11,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2023-11,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2023-12,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2025-11,outlier in SA panel (> 4 robust SD): value_clean missing
+mkt_trade,2024-01,weights: same_year
+mkt_trade,2024-02,weights: same_year
+mkt_trade,2024-03,weights: same_year
+mkt_trade,2024-04,weights: same_year
+mkt_trade,2024-05,weights: same_year
+mkt_trade,2024-06,weights: same_year
+mkt_trade,2024-07,weights: same_year
+mkt_trade,2024-08,weights: same_year
+mkt_trade,2024-09,weights: same_year
+mkt_trade,2024-10,weights: same_year
+mkt_trade,2024-11,weights: same_year
+mkt_trade,2024-12,weights: same_year
+mkt_ict,2024-01,weights: same_year
+mkt_ict,2024-02,weights: same_year
+mkt_ict,2024-03,weights: same_year
+mkt_ict,2024-04,weights: same_year
+mkt_ict,2024-05,weights: same_year
+mkt_ict,2024-06,weights: same_year
+mkt_ict,2024-07,weights: same_year
+mkt_ict,2024-08,weights: same_year
+mkt_ict,2024-09,weights: same_year
+mkt_ict,2024-10,weights: same_year
+mkt_ict,2024-11,weights: same_year
+mkt_ict,2024-12,weights: same_year
+mkt_transport,2024-01,weights: same_year
+mkt_transport,2024-02,weights: same_year
+mkt_transport,2024-03,weights: same_year
+mkt_transport,2024-04,weights: same_year
+mkt_transport,2024-05,weights: same_year
+mkt_transport,2024-06,weights: same_year
+mkt_transport,2024-07,weights: same_year
+mkt_transport,2024-08,weights: same_year
+mkt_transport,2024-09,weights: same_year
+mkt_transport,2024-10,weights: same_year
+mkt_transport,2024-11,weights: same_year
+mkt_transport,2024-12,weights: same_year
+mkt_motor_transport,2024-01,weights: same_year
+mkt_motor_transport,2024-02,weights: same_year
+mkt_motor_transport,2024-03,weights: same_year
+mkt_motor_transport,2024-04,weights: same_year
+mkt_motor_transport,2024-05,weights: same_year
+mkt_motor_transport,2024-06,weights: same_year
+mkt_motor_transport,2024-07,weights: same_year
+mkt_motor_transport,2024-08,weights: same_year
+mkt_motor_transport,2024-09,weights: same_year
+mkt_motor_transport,2024-10,weights: same_year
+mkt_motor_transport,2024-11,weights: same_year
+mkt_motor_transport,2024-12,weights: same_year
+mkt_accommodation,2024-01,weights: same_year
+mkt_accommodation,2024-02,weights: same_year
+mkt_accommodation,2024-03,weights: same_year
+mkt_accommodation,2024-04,weights: same_year
+mkt_accommodation,2024-05,weights: same_year
+mkt_accommodation,2024-06,weights: same_year
+mkt_accommodation,2024-07,weights: same_year
+mkt_accommodation,2024-08,weights: same_year
+mkt_accommodation,2024-09,weights: same_year
+mkt_accommodation,2024-10,weights: same_year
+mkt_accommodation,2024-11,weights: same_year
+mkt_accommodation,2024-12,weights: same_year
+mkt_accommodation,2024-02,no discrete growth: previous period missing or last year's nominal value not positive
+mkt_accommodation,2025-02,no discrete growth: previous period missing or last year's nominal value not positive
+mkt_finance,2024-01,weights: same_year
+mkt_finance,2024-02,weights: same_year
+mkt_finance,2024-03,weights: same_year
+mkt_finance,2024-04,weights: same_year
+mkt_finance,2024-05,weights: same_year
+mkt_finance,2024-06,weights: same_year
+mkt_finance,2024-07,weights: same_year
+mkt_finance,2024-08,weights: same_year
+mkt_finance,2024-09,weights: same_year
+mkt_finance,2024-10,weights: same_year
+mkt_finance,2024-11,weights: same_year
+mkt_finance,2024-12,weights: same_year
+mkt_real_estate,2024-01,weights: same_year
+mkt_real_estate,2024-02,weights: same_year
+mkt_real_estate,2024-03,weights: same_year
+mkt_real_estate,2024-04,weights: same_year
+mkt_real_estate,2024-05,weights: same_year
+mkt_real_estate,2024-06,weights: same_year
+mkt_real_estate,2024-07,weights: same_year
+mkt_real_estate,2024-08,weights: same_year
+mkt_real_estate,2024-09,weights: same_year
+mkt_real_estate,2024-10,weights: same_year
+mkt_real_estate,2024-11,weights: same_year
+mkt_real_estate,2024-12,weights: same_year
+mkt_engineering,2024-01,weights: same_year
+mkt_engineering,2024-02,weights: same_year
+mkt_engineering,2024-03,weights: same_year
+mkt_engineering,2024-04,weights: same_year
+mkt_engineering,2024-05,weights: same_year
+mkt_engineering,2024-06,weights: same_year
+mkt_engineering,2024-07,weights: same_year
+mkt_engineering,2024-08,weights: same_year
+mkt_engineering,2024-09,weights: same_year
+mkt_engineering,2024-10,weights: same_year
+mkt_engineering,2024-11,weights: same_year
+mkt_engineering,2024-12,weights: same_year
+mkt_renting,2024-01,weights: same_year
+mkt_renting,2024-02,weights: same_year
+mkt_renting,2024-03,weights: same_year
+mkt_renting,2024-04,weights: same_year
+mkt_renting,2024-05,weights: same_year
+mkt_renting,2024-06,weights: same_year
+mkt_renting,2024-07,weights: same_year
+mkt_renting,2024-08,weights: same_year
+mkt_renting,2024-09,weights: same_year
+mkt_renting,2024-10,weights: same_year
+mkt_renting,2024-11,weights: same_year
+mkt_renting,2024-12,weights: same_year
+mkt_education,2024-01,weights: same_year
+mkt_education,2024-02,weights: same_year
+mkt_education,2024-03,weights: same_year
+mkt_education,2024-04,weights: same_year
+mkt_education,2024-05,weights: same_year
+mkt_education,2024-06,weights: same_year
+mkt_education,2024-07,weights: same_year
+mkt_education,2024-08,weights: same_year
+mkt_education,2024-09,weights: same_year
+mkt_education,2024-10,weights: same_year
+mkt_education,2024-11,weights: same_year
+mkt_education,2024-12,weights: same_year
+mkt_health,2024-01,weights: same_year
+mkt_health,2024-02,weights: same_year
+mkt_health,2024-03,weights: same_year
+mkt_health,2024-04,weights: same_year
+mkt_health,2024-05,weights: same_year
+mkt_health,2024-06,weights: same_year
+mkt_health,2024-07,weights: same_year
+mkt_health,2024-08,weights: same_year
+mkt_health,2024-09,weights: same_year
+mkt_health,2024-10,weights: same_year
+mkt_health,2024-11,weights: same_year
+mkt_health,2024-12,weights: same_year
+mkt_repair,2024-01,weights: same_year
+mkt_repair,2024-02,weights: same_year
+mkt_repair,2024-03,weights: same_year
+mkt_repair,2024-04,weights: same_year
+mkt_repair,2024-05,weights: same_year
+mkt_repair,2024-06,weights: same_year
+mkt_repair,2024-07,weights: same_year
+mkt_repair,2024-08,weights: same_year
+mkt_repair,2024-09,weights: same_year
+mkt_repair,2024-10,weights: same_year
+mkt_repair,2024-11,weights: same_year
+mkt_repair,2024-12,weights: same_year
+mkt_personal,2024-01,weights: same_year
+mkt_personal,2024-02,weights: same_year
+mkt_personal,2024-03,weights: same_year
+mkt_personal,2024-04,weights: same_year
+mkt_personal,2024-05,weights: same_year
+mkt_personal,2024-06,weights: same_year
+mkt_personal,2024-07,weights: same_year
+mkt_personal,2024-08,weights: same_year
+mkt_personal,2024-09,weights: same_year
+mkt_personal,2024-10,weights: same_year
+mkt_personal,2024-11,weights: same_year
+mkt_personal,2024-12,weights: same_year
+mkt_other,2024-01,weights: same_year
+mkt_other,2024-02,weights: same_year
+mkt_other,2024-03,weights: same_year
+mkt_other,2024-04,weights: same_year
+mkt_other,2024-05,weights: same_year
+mkt_other,2024-06,weights: same_year
+mkt_other,2024-07,weights: same_year
+mkt_other,2024-08,weights: same_year
+mkt_other,2024-09,weights: same_year
+mkt_other,2024-10,weights: same_year
+mkt_other,2024-11,weights: same_year
+mkt_other,2024-12,weights: same_year
+exports_nogold,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-07,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-09,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-10,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-11,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2024-12,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_nogold,2025-01,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2024-01,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2024-03,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2024-08,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2024-12,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2025-01,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_gold,2025-02,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2022-03,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2022-06,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2023-02,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2023-03,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2026-02,outlier in SA panel (> 4 robust SD): value_clean missing
+exports_total,2026-04,outlier in SA panel (> 4 robust SD): value_clean missing
+imports,2023-06,outlier in SA panel (> 4 robust SD): value_clean missing
+imports,2023-07,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2018-06,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2018-10,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2019-09,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2020-04,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2020-05,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2022-03,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2022-05,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2022-06,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2023-08,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2025-06,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2025-09,outlier in SA panel (> 4 robust SD): value_clean missing
+usd_rate,2025-10,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2017-07,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2017-12,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2018-01,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2018-11,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2024-05,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2015-05,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2017-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2017-09,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2017-11,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2018-11,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2018-12,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2019-01,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2019-09,outlier in SA panel (> 4 robust SD): value_clean missing
+ppi,2023-10,outlier in SA panel (> 4 robust SD): value_clean missing
+m2_real,2017-09,outlier in SA panel (> 4 robust SD): value_clean missing
+reserves_fx,2022-12,outlier in SA panel (> 4 robust SD): value_clean missing
+reserves_fx,2024-01,outlier in SA panel (> 4 robust SD): value_clean missing
+reserves_fx,2025-02,outlier in SA panel (> 4 robust SD): value_clean missing
+reserves_fx,2025-06,outlier in SA panel (> 4 robust SD): value_clean missing
+reserves_gold,2026-01,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_deposit_hh,2020-07,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_deposit_hh,2020-08,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_deposit_hh,2021-02,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_hh,2019-02,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_hh,2020-04,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_hh,2021-01,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_firms,2020-07,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_firms,2021-01,outlier in SA panel (> 4 robust SD): value_clean missing
+rate_loan_firms,2022-04,outlier in SA panel (> 4 robust SD): value_clean missing
+new_small_business,2022-09,outlier in SA panel (> 4 robust SD): value_clean missing
+new_small_business,2022-10,outlier in SA panel (> 4 robust SD): value_clean missing
+new_small_business,2023-11,outlier in SA panel (> 4 robust SD): value_clean missing
+new_small_business,2025-08,outlier in SA panel (> 4 robust SD): value_clean missing
+new_small_business,2025-09,outlier in SA panel (> 4 robust SD): value_clean missing
+operating_enterprises,2022-02,outlier in SA panel (> 4 robust SD): value_clean missing
+operating_enterprises,2023-02,outlier in SA panel (> 4 robust SD): value_clean missing
+operating_enterprises,2023-03,outlier in SA panel (> 4 robust SD): value_clean missing
+operating_enterprises,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
+operating_enterprises,2025-01,outlier in SA panel (> 4 robust SD): value_clean missing
+gdp,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gdp,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2021Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2021Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2022Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_industry,2022Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_mining,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_mining,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_mining,2021Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_mining,2021Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_mining,2021Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_manufacturing,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_manufacturing,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_manufacturing,2024Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_electricity,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_electricity,2021Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_water,2021Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade_accommodation,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade,2024Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade,2025Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_trade,2025Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_accommodation,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_accommodation,2022Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_accommodation,2023Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_accommodation,2023Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2022Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2023Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2024Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2024Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2025Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport_ict,2025Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_transport,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_other_services,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+gva_other_services,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+remittances_real,2022Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+remittances_real,2022Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+income_real,2022Q1,outlier in SA panel (> 4 robust SD): value_clean missing
+income_real,2022Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+income_real,2023Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+income_real,2024Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+income_real,2024Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+invest,2020Q1,weights: same_year
+invest,2020Q2,weights: same_year
+invest,2020Q3,weights: same_year
+invest,2020Q4,weights: same_year
+invest,2025Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+agri_output,2022Q4,no discrete growth: previous period missing or last year's nominal value not positive
+freight,2024Q1,weights: equal
+freight,2024Q2,weights: equal
+freight,2024Q3,weights: equal
+freight,2024Q4,weights: equal
+freight,2025Q1,weights: equal
+freight,2025Q2,weights: equal
+freight,2025Q3,weights: equal
+freight,2025Q4,weights: equal
+freight,2026Q1,weights: equal
+freight,2026Q2,weights: equal

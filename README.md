@@ -12,5 +12,6 @@ Do not edit by hand, except `inbox/`.
 | `latest.csv` | current value of every series, item and period |
 | `meta/<series>.json` | unit, items and labels last accepted (used by the checks) |
 | `inbox/<series>/` | manual fallback: see `docs/runbook_ingest.md` on `main` |
+| `panels/` | model-ready y/y and SA panels built after every run (`docs/transformations.md` on `main`) |
 
 Read it in Python with `nowcast.store.vintages.Store("<this folder>")`: `.latest()`, `.as_of("2026-12-01")`.

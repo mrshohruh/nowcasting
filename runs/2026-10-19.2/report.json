@@ -1,0 +1,109 @@
+{
+ "run_id": "2026-10-19.2",
+ "vintage_date": "2026-10-19",
+ "trigger": "manual",
+ "mode": "selected",
+ "previous_run": null,
+ "seeded": [],
+ "started_at": "2026-10-19T04:23:25+00:00",
+ "finished_at": "2026-10-19T04:23:41+00:00",
+ "counts": {
+  "ok": 1,
+  "warn": 2,
+  "fail": 0
+ },
+ "new_points": 750,
+ "revised_points": 0,
+ "removed_points": 0,
+ "series": {
+  "ind_total_nom": {
+   "source": "siat",
+   "file": "siat:590",
+   "url": "https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json",
+   "status": "warn",
+   "messages": [
+    "warn: new items: ['B', 'C', 'D']"
+   ],
+   "seconds": 3.1,
+   "raw": "raw/siat/ind_total_nom/2026-10-19.2.json",
+   "sha256": "8143136341ed080b8584010b7df438f9b49eaf4220ca0bcbd991c6565aaeac4a",
+   "updated_at": "2026-09-29T13:51:35.404348+05:00",
+   "points": 368,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "276 new (2019-01 to 2026-08)",
+   "new": 276,
+   "revised": 0,
+   "removed": 0
+  },
+  "mkt_services_nom": {
+   "source": "siat",
+   "file": "siat:3217",
+   "url": "https://api.siat.stat.uz/sdmx/3217/table/download/?download_format=json",
+   "status": "warn",
+   "messages": [
+    "warn: cumulative value falls within the year at 71:2025-09, G:2025-09, I:2024-02, J:2025-09, L:2025-09"
+   ],
+   "seconds": 1.7,
+   "raw": "raw/siat/mkt_services_nom/2026-10-19.2.json",
+   "sha256": "cd802e6064375e81359461d5fae163a4d1e9496d3ed0d66a36d8c7f510584520",
+   "updated_at": "2026-09-30T18:14:44.214891+05:00",
+   "points": 448,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "changes": "448 new (2024-01 to 2026-08)",
+   "new": 448,
+   "revised": 0,
+   "removed": 0
+  },
+  "invest_nom_q": {
+   "source": "siat",
+   "file": "siat:1561",
+   "url": "https://api.siat.stat.uz/sdmx/1561/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/invest_nom_q/2026-10-19.2.json",
+   "sha256": "b83d44b12100111fdd5b61fa55ad4b5b572e4c6a21fe46974942d876cc1bafdd",
+   "updated_at": "2026-07-25T09:33:51.385424+05:00",
+   "points": 26,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "changes": "26 new (2020Q1 to 2026Q2)",
+   "new": 26,
+   "revised": 0,
+   "removed": 0
+  }
+ },
+ "sources": {
+  "siat:590": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json",
+   "series": [
+    "ind_total_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3217": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3217/table/download/?download_format=json",
+   "series": [
+    "mkt_services_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1561": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1561/table/download/?download_format=json",
+   "series": [
+    "invest_nom_q"
+   ],
+   "failed": [],
+   "errors": []
+  }
+ }
+}

@@ -1,9 +1,15 @@
 {
  "items": [
-  "B, C, D, E"
+  "B",
+  "B, C, D, E",
+  "C",
+  "D"
  ],
  "labels": {
-  "B, C, D, E": "Industrial production"
+  "B": "Mining and quarrying",
+  "B, C, D, E": "Industrial production",
+  "C": "Manufacturing industry",
+  "D": "Electricity, gas, steam and air conditioning"
  },
  "unit": "Billion soums",
  "updated_at": "2026-09-29T13:51:35.404348+05:00"
