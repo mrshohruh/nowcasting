@@ -1,4 +1,4 @@
-Checked 2026-10-16 06:44 UTC.
+Checked 2026-10-19 06:52 UTC.
 
 | Series | Source | Result | Coverage |
 | --- | --- | --- | --- |
@@ -23,6 +23,8 @@ Checked 2026-10-16 06:44 UTC.
 | imports_usd | siat | ok | 2021-M01 to 2026-M08, updated 2026-09-26 |
 | usd_rate | cbu_rate_json | ok | rate on 2026-08-31: 11801.23 |
 | remittances_q | cbu_xlsx | ok |  |
+| bop_goods_exports | cbu_xlsx | ok |  |
+| bop_goods_imports | cbu_xlsx | ok |  |
 | cpi_mm | siat | ok | 2021-M01 to 2026-M09, updated 2026-10-05 |
 | cpi_mm_old | siat | ok | 2010-M01 to 2020-M12, updated 2026-03-30 |
 | ppi_mm | siat | ok | 2013-M01 to 2026-M09, updated 2026-10-15 |
