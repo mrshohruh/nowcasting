@@ -1,0 +1,139 @@
+# Phase 3: model and backtest configuration
+#
+# The variable set below is the approved ~36-variable starting set.
+# Variables come from the existing panel (transforms.yaml) plus new BOP quarterly series.
+
+# ── Variables to include in the models ──────────────────────────────────────
+# Keys match variable ids in transforms.yaml (or new BOP variables below).
+
+variables:
+  monthly:
+    real_activity:
+      - ind_mining      # GVA mining bridge
+      - ind_manuf       # GVA manufacturing bridge
+      - ind_elec        # GVA electricity bridge
+      - constr          # GVA construction bridge
+      - retail          # trade/accommodation bridge
+      - wholesale       # trade/accommodation bridge
+
+    services:           # from 2024, y/y only — short but sector-specific
+      - mkt_trade       # GVA trade bridge
+      - mkt_transport   # GVA transport bridge
+      - mkt_ict         # GVA ICT bridge
+      - mkt_finance     # GVA other services bridge
+      - mkt_accommodation  # GVA accommodation bridge
+
+    external:
+      - exports_nogold  # from 2024-01
+      - exports_gold    # from 2024-01
+      - imports         # from 2022-01
+      - usd_rate        # from 2022-01
+
+    prices_finance:
+      - cpi
+      - ppi
+      - m2_real
+      - reserves_fx
+      - gold_price
+      - rate_deposit_hh
+      - rate_loan_firms
+
+    firms:
+      - new_small_business
+
+  quarterly:
+    indicators:
+      - remittances_real    # extended back to 2005 via BOP secondary income credits
+      - wages_real
+      - invest
+      - bop_exports         # NEW: BOP total goods exports, mn USD, from 2005Q1
+      - bop_imports         # NEW: BOP total goods imports, mn USD, from 2005Q1
+
+    target:
+      - gdp                 # nowcast target
+
+# Variables explicitly excluded (with reason):
+excluded:
+  - {id: ind_total, reason: "aggregate of mining+manuf+elec; multicollinear with components"}
+  - {id: exports_total, reason: "= exports_nogold + exports_gold; redundant"}
+  - {id: reserves_gold, reason: "moves with gold_price; little incremental info"}
+  - {id: policy_rate, reason: "moves in rare discrete steps; rate_loan_firms carries the transmission"}
+  - {id: operating_enterprises, reason: "stock variable, not flow; little cyclical information"}
+  - {id: rate_deposit_firms, reason: "too correlated with rate_loan_firms"}
+  - {id: rate_loan_hh, reason: "too correlated with rate_deposit_hh"}
+
+# ── Bridge equation sector mappings (Model B) ──────────────────────────────
+bridges:
+  gva_agriculture:    {indicators: [], method: AR}      # no monthly indicator
+  gva_mining:         {indicators: [ind_mining]}
+  gva_manufacturing:  {indicators: [ind_manuf]}
+  gva_electricity:    {indicators: [ind_elec]}
+  gva_construction:   {indicators: [constr]}
+  gva_trade_accommodation:
+    indicators: [retail, wholesale, mkt_trade, mkt_accommodation]
+  gva_transport:      {indicators: [mkt_transport]}
+  gva_ict:            {indicators: [mkt_ict]}
+  gva_other_services: {indicators: [mkt_finance]}
+  net_taxes:          {indicators: [], method: AR}      # no direct indicator
+
+# ── DFM settings (Model A) ─────────────────────────────────────────────────
+dfm:
+  panel: sa                # use SA panel (dlog x 100)
+  n_factors: 2             # start with 2 global factors
+  factor_orders: 2         # VAR(2) for the factor transition
+  idiosyncratic_ar1: true  # each series has AR(1) idiosyncratic component
+  em_max_iter: 250         # EM iterations for estimation
+
+# ── U-MIDAS settings (Model C) ─────────────────────────────────────────────
+midas:
+  panel: yoy               # use y/y panel
+  target: gdp              # quarterly GDP y/y
+  alpha_range: [0.1, 0.5, 0.9, 0.95, 0.99]   # elastic net mixing (1=LASSO)
+  n_lags_monthly: 6        # monthly lags in Almon polynomial
+  polynomial_degree: 3     # Almon polynomial degree
+  cv_folds: 5              # time-series CV folds
+  min_train_quarters: 12   # minimum training window
+
+# ── Backtest replay ────────────────────────────────────────────────────────
+replay:
+  start: "2022-01-01"
+  end: "2026-09-01"
+  freq: MS                 # 1st of each month
+  # This produces 57 run dates
+
+# ── Scoring ────────────────────────────────────────────────────────────────
+scoring:
+  horizons:
+    # Horizon classification: based on months remaining in the quarter
+    # Month 1 of quarter (Jan/Apr/Jul/Oct): "forecast" (next quarter) + "nowcast_m1" (current)
+    # Month 2 (Feb/May/Aug/Nov): "nowcast_m2"
+    # Month 3 (Mar/Jun/Sep/Dec): "nowcast_m3"
+    # After quarter ends but before release: "backcast"
+    forecast: "next quarter (no data yet)"
+    nowcast_m1: "current quarter, month 1 available"
+    nowcast_m2: "current quarter, months 1-2 available"
+    nowcast_m3: "current quarter, all 3 months available"
+    backcast: "quarter ended, awaiting official release"
+
+  combinations:
+    - {name: "Model A (DFM)", models: [dfm], weights: equal}
+    - {name: "Equal-weight ABC", models: [dfm, bridges, midas], weights: equal}
+    - {name: "Inverse-MSE ABC", models: [dfm, bridges, midas], weights: inverse_mse}
+
+  targets:
+    - first_release   # RMSE against first-published GDP
+    - latest_vintage  # RMSE against latest GDP revision
+
+# ── Exit check ─────────────────────────────────────────────────────────────
+exit_check:
+  headline_model: "Equal-weight ABC"
+  metric: RMSE
+  target_variable: gdp    # cumulative headline GDP y/y
+  benchmark: ar1
+  threshold: 0.8           # headline RMSE <= 0.8 * AR(1) RMSE
+  eval_period: "2022Q1-2026Q2"
+
+# ── Uncertainty bands ──────────────────────────────────────────────────────
+uncertainty:
+  percentiles: [10, 90]
+  small_sample_factor: 1.2   # widen by 20% for small backtest sample

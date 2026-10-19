@@ -140,3 +140,9 @@ quarterly:
      input: [agri_real_q, "1700"], weights: [[gdp_nag, agriculture.N]]}
   - {id: freight, block: quarterly, recipe: real_growth, level: false,
      input: [freight_q, "1700"], weights: []}
+
+  # ------------------------------------------------------------ BOP quarterly (from 2005, million USD)
+  - {id: bop_exports, block: quarterly, recipe: nominal, sa: true,
+     input: [bop_goods_exports, goods_credits_exports]}
+  - {id: bop_imports, block: quarterly, recipe: nominal, sa: true,
+     input: [bop_goods_imports, goods_debits_imports]}

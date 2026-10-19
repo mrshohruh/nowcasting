@@ -376,6 +376,38 @@ series:
     status: core
     notes: Revised back to 2020 Q1 on 29 Sep 2026 (travellers' income estimates).
 
+  - id: bop_goods_exports
+    name: "Goods, credits (exports) — BOP analytical presentation"
+    publisher: Central Bank of Uzbekistan
+    source: cbu_xlsx
+    url: https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx
+    key: "Goods, credits (exports)"
+    frequency: Q
+    unit: million USD
+    form: discrete
+    prices: nominal
+    block: quarterly
+    first_period: 2005-Q1
+    months_after: 4
+    status: core
+    notes: Total goods exports from BOP analytical presentation. No gold/non-gold split available.
+
+  - id: bop_goods_imports
+    name: "Goods, debits (imports) — BOP analytical presentation"
+    publisher: Central Bank of Uzbekistan
+    source: cbu_xlsx
+    url: https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx
+    key: "Goods, debits (imports)"
+    frequency: Q
+    unit: million USD
+    form: discrete
+    prices: nominal
+    block: quarterly
+    first_period: 2005-Q1
+    months_after: 4
+    status: core
+    notes: Total goods imports from BOP analytical presentation.
+
   # ---------------------------------------------------------------- prices and finance
   - id: cpi_mm
     name: Consumer price index, COICOP-2018
