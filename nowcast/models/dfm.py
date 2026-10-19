@@ -119,7 +119,7 @@ class DFM:
         self.idiosyncratic_ar1 = idiosyncratic_ar1
         self.em_max_iter = em_max_iter
         self.variable_ids = variable_ids
-        self.intercept_correction = intercept_correction
+        self.intercept_correction = intercept_correction  # reserved for future use
 
     def predict(self, panels: Panels, target_quarter: pd.Period) -> dict:
         """Estimate DFM and produce GDP y/y nowcast for target_quarter."""
@@ -203,13 +203,6 @@ class DFM:
 
         # Convert dlog to y/y growth using SA levels
         gdp_yoy = self._dlog_to_yoy(gdp_dlog, panels, target_quarter)
-
-        # Intercept correction: compute DFM's in-sample prediction errors
-        # on known GDP quarters and subtract the mean bias
-        if self.intercept_correction:
-            gdp_yoy = self._apply_intercept_correction(
-                gdp_yoy, pred_mean, meta_dict, panels, target_quarter
-            )
 
         # Winsorise: GDP y/y should be in a plausible range
         # Use last 8 quarters of actual y/y for bounds (±3σ)

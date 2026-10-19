@@ -75,7 +75,7 @@ def main():
         AR1(),
         CarryForward(),
         DFM(n_factors=2, factor_orders=2, em_max_iter=150,
-            variable_ids=dfm_vars, intercept_correction=True),
+            variable_ids=dfm_vars),
         BridgeEquations(),
         UMIDAS(n_lags=6, poly_degree=3, monthly_vars=[
             "ind_mining", "ind_manuf", "ind_elec", "constr", "retail", "wholesale",
