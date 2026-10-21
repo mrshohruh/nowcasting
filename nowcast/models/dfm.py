@@ -217,7 +217,7 @@ class DFM:
                 hi = y_mean + 3 * max(y_std, 1.0)
                 gdp_yoy = float(np.clip(gdp_yoy, lo, hi))
 
-        return {
+        out = {
             "gdp_yoy": float(gdp_yoy),
             "model": self.name,
             "info": {
@@ -229,6 +229,9 @@ class DFM:
                 "gdp_dlog": float(gdp_dlog),
             },
         }
+        # Stash the result object for Phase 4 news decomposition
+        self._last_result = result
+        return out
 
     def _apply_intercept_correction(
         self,

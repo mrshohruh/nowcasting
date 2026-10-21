@@ -1,0 +1,46 @@
+{#- Nowcasting note — English template.
+
+Context variables:
+    run_date         str   "2026-10-01"
+    target_quarter   str   "2026Q3"
+    horizon          str   "nowcast_m3"
+    new_nowcast      float  GDP y/y estimate
+    old_nowcast      float  previous estimate (or None)
+    total_change     float  change in pp (or None)
+    revision_effect  float  pp
+    news_effect      float  pp
+    reest_effect     float  pp
+    top_news         list[NewsItem]  up to 5 top drivers
+    grouped_impacts  dict[str, float]  group -> pp
+    sectors          list[SectorContribution]
+    bridge_gdp       float  bridge-equation GDP (for comparison)
+    has_decomposition bool
+-#}
+{%- set horizon_label = {
+    "forecast": "forecast",
+    "nowcast_m1": "early estimate (month 1)",
+    "nowcast_m2": "estimate (month 2)",
+    "nowcast_m3": "estimate (month 3)",
+    "backcast": "backcast",
+}.get(horizon, horizon) -%}
+
+As of {{ run_date }}, the {{ horizon_label }} for {{ target_quarter }} GDP growth is {{ "%.1f"|format(new_nowcast) }}% y/y.
+{%- if has_decomposition and old_nowcast is not none %} This is {{ "%.1f"|format(total_change) }} pp {{ "higher" if total_change > 0 else "lower" }} than the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.
+{%- endif %}
+
+{%- if has_decomposition and top_news %}
+
+The change reflects
+{%- set pos_groups = grouped_impacts|dictsort|selectattr("1", "gt", 0.05)|list -%}
+{%- set neg_groups = grouped_impacts|dictsort|selectattr("1", "lt", -0.05)|list -%}
+{%- if pos_groups %} upward pressure from {{ pos_groups|map(attribute="0")|join(", ") }}{% endif -%}
+{%- if pos_groups and neg_groups %}, partly offset by{% elif neg_groups %} downward pressure from{% endif -%}
+{%- if neg_groups %} {{ neg_groups|map(attribute="0")|join(", ") }}{% endif -%}
+. The largest single drivers are {{ top_news[:3]|map(attribute="label")|join(", ") }}.
+{%- endif %}
+
+{%- if sectors %}
+
+By sector, the main contributors are
+{%- for s in sectors[:4] %} {{ s.label }} ({{ "%.1f"|format(s.growth_yoy) }}% y/y, {{ "%+.1f"|format(s.contribution_pp) }} pp){{ "," if not loop.last else "." }}{% endfor %}
+{%- endif %}

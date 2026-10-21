@@ -1,0 +1,32 @@
+{#- Nowcasting izoh — O'zbek tilida shablon.
+
+Kontekst o'zgaruvchilari note_en.j2 bilan bir xil.
+-#}
+{%- set horizon_label = {
+    "forecast": "prognoz",
+    "nowcast_m1": "dastlabki baho (1-oy)",
+    "nowcast_m2": "baho (2-oy)",
+    "nowcast_m3": "baho (3-oy)",
+    "backcast": "retrospektiv baho",
+}.get(horizon, horizon) -%}
+
+{{ run_date }} holati bo'yicha {{ target_quarter }} uchun YaIM o'sishi {{ horizon_label }}i {{ "%.1f"|format(new_nowcast) }}% (y/y) ni tashkil etadi.
+{%- if has_decomposition and old_nowcast is not none %} Bu avvalgi {{ "%.1f"|format(old_nowcast) }}% bahoga nisbatan {{ "%.1f"|format(total_change|abs) }} f.b. {{ "yuqori" if total_change > 0 else "past" }}.
+{%- endif %}
+
+{%- if has_decomposition and top_news %}
+
+O'zgarish
+{%- set pos_groups = grouped_impacts|dictsort|selectattr("1", "gt", 0.05)|list -%}
+{%- set neg_groups = grouped_impacts|dictsort|selectattr("1", "lt", -0.05)|list -%}
+{%- if pos_groups %} {{ pos_groups|map(attribute="0")|join(", ") }} tomonidan yuqoriga bosim{% endif -%}
+{%- if pos_groups and neg_groups %}, qisman{% elif neg_groups %} {% endif -%}
+{%- if neg_groups %} {{ neg_groups|map(attribute="0")|join(", ") }} tomonidan pastga bosim{% endif -%}
+ni aks ettiradi. Asosiy omillar: {{ top_news[:3]|map(attribute="label")|join(", ") }}.
+{%- endif %}
+
+{%- if sectors %}
+
+Tarmoqlar bo'yicha asosiy hissa qo'shuvchilar:
+{%- for s in sectors[:4] %} {{ s.label }} ({{ "%.1f"|format(s.growth_yoy) }}% y/y, {{ "%+.1f"|format(s.contribution_pp) }} f.b.){{ "," if not loop.last else "." }}{% endfor %}
+{%- endif %}
