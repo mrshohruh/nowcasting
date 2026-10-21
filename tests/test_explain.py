@@ -1,13 +1,9 @@
 """Tests for Phase 4: news decomposition and narrative generation."""
 
 import datetime as dt
-import json
-from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import pytest
-
 
 # ── State persistence tests ───────────────────────────────────────────────
 
@@ -39,8 +35,9 @@ class TestState:
         assert panel_hash(sa1) != panel_hash(sa2)
 
     def test_save_load_roundtrip(self, tmp_path):
-        from nowcast.explain.state import RunState, load_state, save_state
         from unittest.mock import MagicMock
+
+        from nowcast.explain.state import load_state, save_state
 
         # Build a minimal mock Panels
         panels = MagicMock()

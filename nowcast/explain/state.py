@@ -22,7 +22,7 @@ import datetime as dt
 import hashlib
 import json
 import logging
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import numpy as np
@@ -92,7 +92,7 @@ def extract_dfm_params(result) -> dict[str, np.ndarray]:
 def save_state(
     state_dir: Path,
     run_date: dt.date,
-    panels: "Panels",  # noqa: F821
+    panels: Panels,  # noqa: F821
     nowcast_table: dict[str, float],
     dfm_result=None,
     dfm_config: dict | None = None,

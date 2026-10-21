@@ -76,7 +76,7 @@ def bop_to_observations(
 
     series_dict = parse_bop_excel(path)
     rows = []
-    now = dt.datetime.now(dt.timezone.utc)
+    now = dt.datetime.now(dt.UTC)
     for series_id, s in series_dict.items():
         for period, value in s.items():
             rows.append({

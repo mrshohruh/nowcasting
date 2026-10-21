@@ -52,13 +52,12 @@ def main():
     import os
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    from nowcast.store.vintages import Store
-    from nowcast.transform.panels import build_panels
     from nowcast.models.benchmarks import AR1, CarryForward
-    from nowcast.models.dfm import DFM
     from nowcast.models.bridges import BridgeEquations
+    from nowcast.models.dfm import DFM
     from nowcast.models.midas import UMIDAS
-    from nowcast.models.replay import replay, score, combine_forecasts
+    from nowcast.models.replay import combine_forecasts, replay, score
+    from nowcast.store.vintages import Store
 
     store = Store(DATA_ROOT)
     print(f"Store: {DATA_ROOT}, empty={store.is_empty()}")
@@ -86,7 +85,7 @@ def main():
     ]
 
     # ── run replay ──
-    print(f"\nRunning backtest: Jan 2022 → Sep 2026 (57 monthly dates)")
+    print("\nRunning backtest: Jan 2022 → Sep 2026 (57 monthly dates)")
     print(f"Models: {[m.name for m in models]}")
     t0 = time.time()
 

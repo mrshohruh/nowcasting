@@ -19,7 +19,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
-from nowcast.models.bridges import BridgeEquations, DEFAULT_GVA_WEIGHTS
+from nowcast.models.bridges import DEFAULT_GVA_WEIGHTS, BridgeEquations
 from nowcast.transform.panels import Panels
 
 logger = logging.getLogger(__name__)

@@ -486,8 +486,6 @@ def _panels_with_revised_data(panels_old: Panels, panels_new: Panels) -> Panels:
     new_sa = panels_new.sa
 
     # Keep only (variable, period) pairs that existed in the old panel
-    old_keys = set(zip(old_sa["variable"], old_sa["period"]))
-
     # Use merge for efficiency instead of row-wise apply
     merged = new_sa.merge(
         old_sa[["variable", "period"]].drop_duplicates(),
@@ -497,7 +495,7 @@ def _panels_with_revised_data(panels_old: Panels, panels_new: Panels) -> Panels:
     revised_sa = merged.copy()
 
     # For any old observations missing from the new panel, keep the old value
-    new_keys = set(zip(revised_sa["variable"], revised_sa["period"]))
+    new_keys = set(zip(revised_sa["variable"], revised_sa["period"], strict=False))
     missing = old_sa[
         old_sa.apply(lambda r: (r["variable"], r["period"]) not in new_keys, axis=1)
     ]

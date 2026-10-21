@@ -85,7 +85,11 @@ def render_note(
             "horizon": horizon,
             "new_nowcast": nowcast_val,
             "old_nowcast": decomposition.old_nowcast,
-            "total_change": nowcast_val - decomposition.old_nowcast if decomposition.old_nowcast is not None else decomposition.total_change,
+            "total_change": (
+                nowcast_val - decomposition.old_nowcast
+                if decomposition.old_nowcast is not None
+                else decomposition.total_change
+            ),
             "revision_effect": decomposition.revision_effect,
             "news_effect": decomposition.news_effect,
             "reest_effect": decomposition.reestimation_effect,

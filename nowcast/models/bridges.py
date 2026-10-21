@@ -193,7 +193,7 @@ def _bridge_ols(
         "n_obs": len(y),
         "r2": float(1 - np.var(resid) / np.var(y)) if np.var(y) > 0 else 0,
         "rmse_in": rmse,
-        "coefficients": dict(zip(["const"] + col_names, beta.tolist())),
+        "coefficients": dict(zip(["const"] + col_names, beta.tolist(), strict=False)),
     }
 
 

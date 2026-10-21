@@ -24,7 +24,6 @@ The 6 samples are chosen to cover:
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import json
 import logging
 import shutil
@@ -41,14 +40,14 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from nowcast.explain.narrative import number_check, render_note
-from nowcast.explain.news import decompose
-from nowcast.explain.sectors import sector_contributions
-from nowcast.explain.state import panel_hash, save_state
-from nowcast.models.dfm import DFM
-from nowcast.models.replay import _classify_horizon, _target_quarters
-from nowcast.store.vintages import Store
-from nowcast.transform.panels import build_panels
+from nowcast.explain.narrative import number_check, render_note  # noqa: E402
+from nowcast.explain.news import decompose  # noqa: E402
+from nowcast.explain.sectors import sector_contributions  # noqa: E402
+from nowcast.explain.state import save_state  # noqa: E402
+from nowcast.models.dfm import DFM  # noqa: E402
+from nowcast.models.replay import _classify_horizon, _target_quarters  # noqa: E402
+from nowcast.store.vintages import Store  # noqa: E402
+from nowcast.transform.panels import build_panels  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
@@ -134,8 +133,6 @@ def run_replay_notes(
             gdp_yoy = pred.get("gdp_yoy", np.nan)
             if np.isnan(gdp_yoy):
                 continue
-
-            nowcast_table = {str(tq): gdp_yoy}
 
             # Run decomposition against previous state
             try:

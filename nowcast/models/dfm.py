@@ -36,7 +36,7 @@ def _build_endog(
     """
     sa = panels.sa
     meta = panels.meta
-    freq_map = dict(zip(meta["variable"], meta["freq"]))
+    freq_map = dict(zip(meta["variable"], meta["freq"], strict=False))
     sa_vars = meta[meta["sa_n"].notna()]["variable"].tolist()
 
     if variable_ids is not None:
@@ -176,8 +176,6 @@ class DFM:
         # but represent the quarterly variable. Sum the three months of the quarter
         # to get the quarterly prediction.
         target_start = target_quarter.asfreq("M", how="start").to_timestamp()
-        target_end = target_quarter.asfreq("M", how="end").to_timestamp(how="end")
-
         # Get GDP z-score for the target quarter's last month (that's where quarterly
         # data is placed in the DFM internal representation)
         target_month_end = target_quarter.asfreq("M", how="end").to_timestamp(how="end")
