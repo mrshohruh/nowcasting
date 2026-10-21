@@ -1,0 +1,7 @@
+# Sample 1: First run (no prior comparison)
+# Run date: 2022-01-01, Target: 2022Q1, Horizon: nowcast_m1
+# GDP y/y: 5.3%
+# WARNINGS: Suspiciously large percentage: 30.6
+
+As of 2022-01-01, the early estimate (month 1) for 2022Q1 GDP growth is 5.3% y/y.
+By sector, the main contributors are Mining (30.6% y/y, +2.4 pp), Trade & accommodation (14.4% y/y, +1.4 pp), Transport (18.6% y/y, +0.9 pp), ICT (20.5% y/y, +0.8 pp).

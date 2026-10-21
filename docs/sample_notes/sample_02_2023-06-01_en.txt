@@ -1,0 +1,6 @@
+# Sample 2: Largest upward revision (+0.24 pp)
+# Run date: 2023-06-01, Target: 2023Q2, Horizon: nowcast_m3
+# GDP y/y: 6.9%
+
+As of 2023-06-01, the estimate (month 3) for 2023Q2 GDP growth is 6.9% y/y. This is 0.2 pp higher than the previous estimate of 6.6%.
+By sector, the main contributors are Manufacturing (8.0% y/y, +1.0 pp), Other services (5.7% y/y, +0.8 pp), ICT (19.5% y/y, +0.8 pp), Trade & accommodation (6.5% y/y, +0.7 pp).

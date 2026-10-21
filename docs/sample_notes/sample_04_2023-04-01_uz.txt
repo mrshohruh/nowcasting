@@ -1,0 +1,6 @@
+# Namuna 4: Month-1 early nowcast
+# Sana: 2023-04-01, Chorak: 2023Q2, Gorizont: nowcast_m1
+# YaIM: 6.4%
+
+2023-04-01 holati bo'yicha 2023Q2 uchun YaIM o'sishi dastlabki baho (1-oy)i 6.4% (y/y) ni tashkil etadi. Bu avvalgi 6.4% bahoga nisbatan 0.0 f.b. yuqori.
+Tarmoqlar bo'yicha asosiy hissa qo'shuvchilar: AKT (23.9% y/y, +1.0 f.b.), Boshqa xizmatlar (5.6% y/y, +0.8 f.b.), Qishloq xo'jaligi (2.9% y/y, +0.6 f.b.), Transport (10.1% y/y, +0.5 f.b.).

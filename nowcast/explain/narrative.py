@@ -16,7 +16,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from nowcast.explain.news import Decomposition
-from nowcast.explain.sectors import SectorContribution
+from nowcast.explain.sectors import SECTOR_LABELS_UZ, SectorContribution
 
 logger = logging.getLogger(__name__)
 
@@ -76,13 +76,16 @@ def render_note(
 
     # Build context
     if decomposition is not None:
+        # Prefer the caller-supplied new_nowcast (winsorised) over the
+        # decomposition's raw value, which may not be clipped.
+        nowcast_val = new_nowcast if new_nowcast is not None else decomposition.new_nowcast
         ctx = {
             "run_date": decomposition.run_date,
             "target_quarter": decomposition.target_quarter,
             "horizon": horizon,
-            "new_nowcast": decomposition.new_nowcast,
+            "new_nowcast": nowcast_val,
             "old_nowcast": decomposition.old_nowcast,
-            "total_change": decomposition.total_change,
+            "total_change": nowcast_val - decomposition.old_nowcast if decomposition.old_nowcast is not None else decomposition.total_change,
             "revision_effect": decomposition.revision_effect,
             "news_effect": decomposition.news_effect,
             "reest_effect": decomposition.reestimation_effect,
@@ -106,9 +109,24 @@ def render_note(
             "has_decomposition": False,
         }
 
-    # Add sector contributions
+    # Add sector contributions (with translated labels for Uzbek)
     if sectors:
-        ctx["sectors"] = sectors
+        if lang == "uz":
+            translated = []
+            for s in sectors:
+                translated.append(SectorContribution(
+                    sector=s.sector,
+                    label=SECTOR_LABELS_UZ.get(s.sector, s.label),
+                    weight=s.weight,
+                    growth_yoy=s.growth_yoy,
+                    contribution_pp=s.contribution_pp,
+                    method=s.method,
+                    n_obs=s.n_obs,
+                    r2=s.r2,
+                ))
+            ctx["sectors"] = translated
+        else:
+            ctx["sectors"] = sectors
         total_bridge = sum(s.contribution_pp for s in sectors)
         ctx["bridge_gdp"] = total_bridge
     else:

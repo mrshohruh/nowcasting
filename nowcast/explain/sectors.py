@@ -39,6 +39,20 @@ SECTOR_LABELS: dict[str, str] = {
     "net_taxes": "Net taxes on products",
 }
 
+SECTOR_LABELS_UZ: dict[str, str] = {
+    "gva_agriculture": "Qishloq xo'jaligi",
+    "gva_mining": "Tog'-kon sanoati",
+    "gva_manufacturing": "Qayta ishlash sanoati",
+    "gva_electricity": "Elektr energiyasi",
+    "gva_water": "Suv ta'minoti",
+    "gva_construction": "Qurilish",
+    "gva_trade_accommodation": "Savdo va turar joy",
+    "gva_transport": "Transport",
+    "gva_ict": "AKT",
+    "gva_other_services": "Boshqa xizmatlar",
+    "net_taxes": "Mahsulotlarga sof soliqlar",
+}
+
 
 @dataclass
 class SectorContribution:

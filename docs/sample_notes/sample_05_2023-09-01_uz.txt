@@ -1,0 +1,6 @@
+# Namuna 5: Month-3 full-data nowcast
+# Sana: 2023-09-01, Chorak: 2023Q3, Gorizont: nowcast_m3
+# YaIM: 6.2%
+
+2023-09-01 holati bo'yicha 2023Q3 uchun YaIM o'sishi baho (3-oy)i 6.2% (y/y) ni tashkil etadi. Bu avvalgi 6.2% bahoga nisbatan 0.0 f.b. yuqori.
+Tarmoqlar bo'yicha asosiy hissa qo'shuvchilar: AKT (27.0% y/y, +1.1 f.b.), Qayta ishlash sanoati (8.1% y/y, +1.1 f.b.), Savdo va turar joy (8.5% y/y, +0.8 f.b.), Mahsulotlarga sof soliqlar (6.1% y/y, +0.8 f.b.).

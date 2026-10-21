@@ -1,0 +1,6 @@
+# Sample 5: Month-3 full-data nowcast
+# Run date: 2023-09-01, Target: 2023Q3, Horizon: nowcast_m3
+# GDP y/y: 6.2%
+
+As of 2023-09-01, the estimate (month 3) for 2023Q3 GDP growth is 6.2% y/y. This is 0.0 pp higher than the previous estimate of 6.2%.
+By sector, the main contributors are ICT (27.0% y/y, +1.1 pp), Manufacturing (8.1% y/y, +1.1 pp), Trade & accommodation (8.5% y/y, +0.8 pp), Net taxes on products (6.1% y/y, +0.8 pp).

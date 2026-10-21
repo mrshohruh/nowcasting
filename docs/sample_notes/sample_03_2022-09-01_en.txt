@@ -1,0 +1,6 @@
+# Sample 3: Largest downward revision (-42.17 pp)
+# Run date: 2022-09-01, Target: 2022Q3, Horizon: nowcast_m3
+# GDP y/y: -6.4%
+
+As of 2022-09-01, the estimate (month 3) for 2022Q3 GDP growth is -6.4% y/y. This is -11.4 pp lower than the previous estimate of 5.0%.
+By sector, the main contributors are Trade & accommodation (15.1% y/y, +1.5 pp), Manufacturing (7.9% y/y, +1.0 pp), ICT (20.4% y/y, +0.8 pp), Other services (5.4% y/y, +0.8 pp).

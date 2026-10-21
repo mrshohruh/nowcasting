@@ -1,0 +1,7 @@
+# Namuna 1: First run (no prior comparison)
+# Sana: 2022-01-01, Chorak: 2022Q1, Gorizont: nowcast_m1
+# YaIM: 5.3%
+# OGOHLANTIRISHLAR: Suspiciously large percentage: 30.6
+
+2022-01-01 holati bo'yicha 2022Q1 uchun YaIM o'sishi dastlabki baho (1-oy)i 5.3% (y/y) ni tashkil etadi.
+Tarmoqlar bo'yicha asosiy hissa qo'shuvchilar: Tog'-kon sanoati (30.6% y/y, +2.4 f.b.), Savdo va turar joy (14.4% y/y, +1.4 f.b.), Transport (18.6% y/y, +0.9 f.b.), AKT (20.5% y/y, +0.8 f.b.).
