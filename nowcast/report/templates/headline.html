@@ -32,6 +32,7 @@
 <div class="card">
   <h2 class="section-title">{{ t.headline_chart_title }}</h2>
   <div class="chart-container" id="chart-headline"></div>
+  {% if t.headline_chart_note %}<p class="headline-meta mt-16">{{ t.headline_chart_note }}</p>{% endif %}
 </div>
 {% endif %}
 

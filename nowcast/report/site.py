@@ -63,6 +63,12 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "as_of_label": "As of",
         "headline_subtitle": "GDP growth, year-on-year",
         "headline_chart_title": "Nowcast Timeline",
+        "headline_chart_note": (
+            "Past nowcasts are model replays (backtest), not forecasts published at the time: "
+            "each uses only the observations that would have been released by that date, "
+            "but with today's revised values. Official GDP is the latest release. "
+            "Months 1 and 2 can be switched on in the legend."
+        ),
         "pp_label": "pp",
         "vs_previous": "vs previous",
         "band_label": "80% band",
@@ -170,6 +176,13 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "as_of_label": "Sana",
         "headline_subtitle": "YaIM o'sishi, yillik",
         "headline_chart_title": "Nowkast vaqt chizig'i",
+        "headline_chart_note": (
+            "Oldingi nowkastlar o'sha paytda e'lon qilingan prognozlar emas, balki modelning "
+            "qayta hisob-kitoblaridir (backtest): ular faqat o'sha sanagacha e'lon qilinishi "
+            "mumkin bo'lgan kuzatuvlardan foydalanadi, ammo qiymatlar bugungi qayta ko'rilgan "
+            "qiymatlardir. Rasmiy YaIM - oxirgi e'lon qilingan qiymat. 1- va 2-oy "
+            "nowkastlarini afsonadan yoqish mumkin."
+        ),
         "pp_label": "f.b.",
         "vs_previous": "avvalgisiga nisbatan",
         "band_label": "80% oraliq",
@@ -291,6 +304,9 @@ class SiteContext:
 
     # Model performance  [{model, horizon, rmse, ratio_vs_ar1}, ...]
     backtest_results: list[dict] = field(default_factory=list)
+
+    # Past nowcasts next to GDP actuals (backtest history rows), for the headline chart
+    nowcast_vs_actual: list[dict] = field(default_factory=list)
 
     # Quarters published alongside this one, for the quarter selector  ["2026Q3", "2026Q4"]
     available_quarters: list[str] = field(default_factory=list)
@@ -630,7 +646,13 @@ def _generate_charts(ctx: SiteContext) -> dict[str, dict | None]:
     c: dict[str, dict | None] = {}
 
     # Headline
-    if ctx.nowcast_history:
+    if ctx.nowcast_vs_actual:
+        c["headline"] = charts.nowcast_vs_actual_chart(
+            ctx.nowcast_vs_actual,
+            current=dict(quarter=ctx.target_quarter, value=ctx.new_nowcast,
+                         band_lo=ctx.band_lo, band_hi=ctx.band_hi),
+        )
+    elif ctx.nowcast_history:
         c["headline"] = charts.headline_chart(ctx.nowcast_history)
     else:
         # Single-point fallback

@@ -163,6 +163,91 @@ def headline_chart(nowcast_history: list[dict], bands: dict | None = None) -> di
     return dict(data=data, layout=layout, config=_CONFIG)
 
 
+def nowcast_vs_actual_chart(
+    history: list[dict],
+    current: dict | None = None,
+    model: str = "dfm",
+) -> dict:
+    """Past nowcasts against official GDP, one point per target quarter.
+
+    Parameters
+    ----------
+    history : list of dict
+        Backtest rows ``[{model, horizon, target_quarter, forecast, actual}, ...]``.
+        ``actual`` is None while the quarter is still open.
+    current : dict, optional
+        The live nowcast ``{quarter, value, band_lo, band_hi}``, drawn with its band.
+    model : str
+        Which model's past nowcasts to draw (default: the headline DFM).
+    """
+    horizons = {"nowcast_m1": "Month 1", "nowcast_m2": "Month 2", "nowcast_m3": "Month 3"}
+    by_q: dict[str, dict] = {}
+    for r in history:
+        if r.get("model") != model or r.get("horizon") not in horizons:
+            continue
+        slot = by_q.setdefault(r["target_quarter"], {})
+        slot[r["horizon"]] = r["forecast"]
+        if r.get("actual") is not None:
+            slot["actual"] = r["actual"]
+
+    quarters = set(by_q)
+    if current:
+        quarters.add(current["quarter"])
+    quarters = sorted(quarters)
+
+    def series(key: str) -> list:
+        return [by_q.get(q, {}).get(key) for q in quarters]
+
+    data: list[dict] = [
+        dict(
+            x=quarters, y=series("actual"), mode="lines+markers", name="Official GDP",
+            line=dict(color=BLUE, width=2.5),
+            marker=dict(size=8, color=BLUE, symbol="diamond"),
+            type="scatter", hovertemplate="%{y:.1f}%<extra>Official GDP</extra>",
+        ),
+        dict(
+            x=quarters, y=series("nowcast_m3"), mode="lines+markers",
+            name="Nowcast (month 3, end of quarter)",
+            line=dict(color=RED, width=2.5), marker=dict(size=6, color=RED),
+            type="scatter", hovertemplate="%{y:.1f}%<extra>Nowcast, month 3</extra>",
+        ),
+    ]
+    # Earlier-in-the-quarter nowcasts: available from the legend
+    for key, label, dash in (("nowcast_m2", "Nowcast (month 2)", "dot"),
+                             ("nowcast_m1", "Nowcast (month 1)", "dot")):
+        data.append(dict(
+            x=quarters, y=series(key), mode="lines+markers", name=label, visible="legendonly",
+            line=dict(color=RED, width=1.5, dash=dash), marker=dict(size=4, color=RED),
+            opacity=0.6, type="scatter",
+            hovertemplate="%{y:.1f}%<extra>" + label + "</extra>",
+        ))
+
+    if current:
+        v = current["value"]
+        lo, hi = current.get("band_lo"), current.get("band_hi")
+        trace = dict(
+            x=[current["quarter"]], y=[v], mode="markers+text",
+            name=f"Current nowcast {current['quarter']}",
+            marker=dict(size=13, color=RED, line=dict(color=WHITE, width=2)),
+            text=[f"{v:.1f}%"], textposition="top center",
+            textfont=dict(size=13, color=RED, family="Inter, system-ui, sans-serif"),
+            type="scatter", hovertemplate="%{y:.1f}%<extra>Current nowcast</extra>",
+        )
+        if lo is not None and hi is not None:
+            trace["error_y"] = dict(
+                type="data", symmetric=False, array=[hi - v], arrayminus=[v - lo],
+                color=RED, thickness=1.5, width=6,
+            )
+        data.append(trace)
+
+    layout = _merge_layout(dict(
+        title=dict(text="Nowcast vs official GDP (y/y %)", font=dict(size=15)),
+        xaxis=dict(type="category", title="Target quarter"),
+        yaxis=dict(title="y/y %", ticksuffix="%"),
+    ))
+    return dict(data=data, layout=layout, config=_CONFIG)
+
+
 # ---------------------------------------------------------------------------
 # 2.  Nowcast path — one line per target quarter
 # ---------------------------------------------------------------------------

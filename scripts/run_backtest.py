@@ -251,9 +251,21 @@ def main(argv=None):
         for m, h, q, f, a in zip(scored["model"], scored["horizon"],
                                  scored["target_quarter"], scored["gdp_yoy"], scored["actual"])
     ]
+    # "history": every past nowcast next to the GDP actual (None while the quarter is still open),
+    # for the Nowcast Timeline chart.
+    hist = results.copy()
+    hist["actual"] = hist["target_quarter"].map(actuals_dict)
+    hist = hist.dropna(subset=["gdp_yoy"])
+    history_rows = [
+        dict(model=m, horizon=h, target_quarter=q, run_date=str(d), forecast=float(f),
+             actual=(None if pd.isna(a) else float(a)))
+        for m, h, q, d, f, a in zip(hist["model"], hist["horizon"], hist["target_quarter"],
+                                    hist["run_date"], hist["gdp_yoy"], hist["actual"])
+    ]
     import json
     with open(f"{OUT_DIR}/backtest_summary.json", "w") as f:
-        json.dump({"scores": score_rows, "errors": error_rows}, f, indent=2, default=str)
+        json.dump({"scores": score_rows, "errors": error_rows, "history": history_rows},
+                  f, indent=2, default=str)
     print(f"Wrote {OUT_DIR}/backtest_summary.json "
           f"({len(score_rows)} score rows, {len(error_rows)} errors)")
 

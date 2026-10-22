@@ -321,10 +321,13 @@ def run_pipeline(
     # Written by scripts/run_backtest.py into the state directory.
     bt_file = Path(backtest_path) if backtest_path else state_path / "backtest_summary.json"
     backtest: list = []
+    past_nowcasts: list = []
     band_half = 1.2  # default ±1.2 pp, used only when no backtest is available
     if bt_file.exists():
         bt = json.loads(bt_file.read_text())
         backtest = bt.get("scores", [])
+        # Headline model's past nowcasts next to GDP actuals (Nowcast Timeline chart)
+        past_nowcasts = [r for r in bt.get("history", []) if r.get("model") == "dfm"]
         # Empirical band from backtest errors at this horizon
         errors = [r["error"] for r in bt.get("errors", [])
                   if r.get("horizon") == horizon and r.get("error") is not None]
@@ -377,6 +380,7 @@ def run_pipeline(
         backtest_results=backtest,
         narrative_en=narrative_en,
         narrative_uz=narrative_uz,
+        nowcast_vs_actual=past_nowcasts,
         available_quarters=available_quarters or [str(target_quarter)],
     )
 
