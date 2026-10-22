@@ -127,6 +127,42 @@ def build_nowcast_history(state_dir: Path) -> list[dict]:
     return history
 
 
+def build_nowcast_paths(
+    past_nowcasts: list[dict],
+    current_quarter: str,
+    live_points: list[dict],
+    n_past: int = 6,
+) -> dict[str, list[dict]]:
+    """Nowcast evolution per target quarter, for the Nowcast Path page.
+
+    Past quarters come from the backtest replays (one point per monthly run, ending with an
+    ``official`` marker when GDP has been published); the current quarter takes the live runs.
+    """
+    horizons = {"forecast", "nowcast_m1", "nowcast_m2", "nowcast_m3"}
+    by_q: dict[str, list[dict]] = {}
+    actual: dict[str, float] = {}
+    for r in past_nowcasts:
+        if r.get("horizon") not in horizons:
+            continue
+        by_q.setdefault(r["target_quarter"], []).append(
+            {"run_date": r["run_date"], "gdp_yoy": r["forecast"], "horizon": r["horizon"]})
+        if r.get("actual") is not None:
+            actual[r["target_quarter"]] = r["actual"]
+
+    paths: dict[str, list[dict]] = {}
+    for q in [q for q in sorted(by_q) if q != current_quarter][-n_past:]:
+        pts = sorted(by_q[q], key=lambda p: p["run_date"])
+        if q in actual:
+            pts.append({"run_date": pts[-1]["run_date"], "gdp_yoy": actual[q], "official": True})
+        paths[q] = pts
+
+    # Current quarter: any early replays plus the live runs (a live run replaces a replay of that date)
+    live = {p["run_date"]: p for p in live_points}
+    earlier = [p for p in by_q.get(current_quarter, []) if p["run_date"] not in live]
+    paths[current_quarter] = sorted(earlier + list(live.values()), key=lambda p: p["run_date"])
+    return paths
+
+
 # ── downloads ──────────────────────────────────────────────────────────────
 
 
@@ -381,6 +417,11 @@ def run_pipeline(
         narrative_en=narrative_en,
         narrative_uz=narrative_uz,
         nowcast_vs_actual=past_nowcasts,
+        nowcast_paths=build_nowcast_paths(
+            past_nowcasts, str(target_quarter),
+            [{"run_date": h["run_date"], "gdp_yoy": h["gdp_yoy"], "horizon": horizon}
+             for h in nowcast_history if h["target_quarter"] == str(target_quarter)],
+        ),
         available_quarters=available_quarters or [str(target_quarter)],
     )
 
@@ -467,9 +508,9 @@ def run_pipeline(
 
 
 def default_quarters(today: dt.date) -> list[pd.Period]:
-    """The previous and the current quarter, oldest first."""
-    cur = pd.Period(today, freq="Q")
-    return [cur - 1, cur]
+    """The quarter being nowcast. Earlier quarters appear in the Nowcast Timeline chart, so they
+    do not need a page of their own. Add more quarters to this list to publish them with a selector."""
+    return [pd.Period(today, freq="Q")]
 
 
 def as_of_for_quarter(quarter: pd.Period, today: dt.date) -> dt.date:
@@ -524,7 +565,7 @@ def main():
             "Examples:\n"
             "  python scripts/produce.py --store store --state-dir store/state --out _site\n"
             "  python scripts/produce.py --store store --state-dir state --out _site --as-of 2026-10-22 -v\n"
-            "\nBuilds the previous and the current quarter, each in _site/<quarter>/.\n"
+            "\nBuilds the current quarter in _site/<quarter>/ (see default_quarters).\n"
         ),
     )
     parser.add_argument("--store", default="store",

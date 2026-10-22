@@ -155,7 +155,7 @@ jobs:
         continue-on-error: true
         run: python scripts/run_backtest.py --store store --out store/state
 
-      - name: Run nowcasting pipeline (Q-1 and Q)
+      - name: Run nowcasting pipeline (current quarter)
         id: produce
         run: python scripts/produce.py --store store --state-dir store/state --out _site -v
 

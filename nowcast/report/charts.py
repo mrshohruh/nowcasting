@@ -242,7 +242,8 @@ def nowcast_vs_actual_chart(
 
     # No in-chart title: the card heading already names the chart, and a title collides with the legend
     layout = _merge_layout(dict(
-        xaxis=dict(type="category", title="Target quarter"),
+        # -45 degrees puts the END of each label under its tick; positive angles shift labels right
+        xaxis=dict(type="category", title="Target quarter", tickangle=-45),
         yaxis=dict(title="y/y %", ticksuffix="%"),
     ))
     return dict(data=data, layout=layout, config=_CONFIG)
@@ -263,8 +264,9 @@ def nowcast_path_chart(paths: dict[str, list[dict]]) -> dict:
     data: list[dict] = []
     for i, (qtr, pts) in enumerate(sorted(paths.items())):
         colour = PALETTE[i % len(PALETTE)]
-        dates = [p["run_date"] for p in pts]
-        vals = [p["gdp_yoy"] for p in pts]
+        line_pts = [p for p in pts if not p.get("official")]
+        dates = [p["run_date"] for p in line_pts]
+        vals = [p["gdp_yoy"] for p in line_pts]
         data.append(dict(
             x=dates,
             y=vals,
@@ -289,8 +291,8 @@ def nowcast_path_chart(paths: dict[str, list[dict]]) -> dict:
                 hovertemplate=f"{qtr} official: " + "%{y:.1f}%<extra></extra>",
             ))
 
+    # No in-chart title: the card heading names the chart, and a title collides with the legend
     layout = _merge_layout(dict(
-        title=dict(text="Nowcast Evolution by Quarter", font=dict(size=15)),
         yaxis=dict(title="GDP y/y %", ticksuffix="%"),
         xaxis=dict(title="Run date"),
     ))

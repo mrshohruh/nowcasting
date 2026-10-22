@@ -352,6 +352,10 @@ PAGES = [
 # ---------------------------------------------------------------------------
 
 
+# Horizon codes as shown in the Nowcast Path table
+_HORIZON_SHORT = {"forecast": "ahead", "nowcast_m1": "m1", "nowcast_m2": "m2", "nowcast_m3": "m3"}
+
+
 def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     """Build the complete static dashboard site.
 
@@ -407,12 +411,14 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     for quarter, points in sorted(ctx.nowcast_paths.items()):
         prev_val = None
         for pt in points:
+            if pt.get("official"):  # the official GDP marker is not a nowcast run
+                continue
             val = pt.get("gdp_yoy", pt.get("nowcast"))
             change = (val - prev_val) if prev_val is not None else None
             path_table.append(dict(
                 run_date=pt.get("run_date", ""),
                 target_quarter=quarter,
-                horizon="",
+                horizon=_HORIZON_SHORT.get(pt.get("horizon", ""), pt.get("horizon", "")),
                 nowcast=val,
                 change=change,
             ))
