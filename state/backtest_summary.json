@@ -3,8 +3,8 @@
     {
       "model": "ar1",
       "horizon": "forecast",
-      "rmse": 1.5181594755500458,
-      "mae": 1.3237418276926043,
+      "rmse": 1.5181594755500454,
+      "mae": 1.323741827692604,
       "n": 17,
       "ratio_vs_ar1": 1.0
     },
@@ -35,34 +35,34 @@
     {
       "model": "bridges",
       "horizon": "forecast",
-      "rmse": 2.0348968362588042,
-      "mae": 1.5504404769151718,
+      "rmse": 2.0348968362588007,
+      "mae": 1.5504404769151652,
       "n": 17,
-      "ratio_vs_ar1": 1.3403709353535067
+      "ratio_vs_ar1": 1.340370935353505
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
-      "rmse": 1.991922904443129,
-      "mae": 1.5079153861507513,
+      "rmse": 1.9919229044431264,
+      "mae": 1.507915386150745,
       "n": 18,
-      "ratio_vs_ar1": 1.420476259531223
+      "ratio_vs_ar1": 1.420476259531221
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
-      "rmse": 1.3658263990338497,
-      "mae": 1.0715177384542838,
+      "rmse": 1.3658263990338508,
+      "mae": 1.0715177384542847,
       "n": 18,
-      "ratio_vs_ar1": 1.2713661228843092
+      "ratio_vs_ar1": 1.2713661228843103
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
-      "rmse": 1.7919340789160918,
-      "mae": 1.4547832606315028,
+      "rmse": 1.7919340789160862,
+      "mae": 1.4547832606314945,
       "n": 18,
-      "ratio_vs_ar1": 1.6680042822333498
+      "ratio_vs_ar1": 1.6680042822333447
     },
     {
       "model": "carry_forward",
@@ -70,7 +70,7 @@
       "rmse": 1.7723400468374562,
       "mae": 1.3218023676765522,
       "n": 17,
-      "ratio_vs_ar1": 1.1674267923633768
+      "ratio_vs_ar1": 1.167426792363377
     },
     {
       "model": "carry_forward",
@@ -99,162 +99,162 @@
     {
       "model": "dfm",
       "horizon": "forecast",
-      "rmse": 1.2219409647108308,
-      "mae": 1.043920073303795,
+      "rmse": 1.2128021573292838,
+      "mae": 1.0425746737396302,
       "n": 17,
-      "ratio_vs_ar1": 0.8048831393474708
+      "ratio_vs_ar1": 0.798863477033513
     },
     {
       "model": "dfm",
       "horizon": "nowcast_m1",
-      "rmse": 1.7429978492490923,
-      "mae": 1.236644650092042,
-      "n": 17,
-      "ratio_vs_ar1": 1.2429632993072528
+      "rmse": 3.678022265307533,
+      "mae": 2.059242231734807,
+      "n": 18,
+      "ratio_vs_ar1": 2.622864217406646
     },
     {
       "model": "dfm",
       "horizon": "nowcast_m2",
-      "rmse": 1.0908514802974412,
-      "mae": 0.8706521930381024,
+      "rmse": 0.9426637994344093,
+      "mae": 0.7514557438419807,
       "n": 18,
-      "ratio_vs_ar1": 1.015408413638369
+      "ratio_vs_ar1": 0.8774693626643066
     },
     {
       "model": "dfm",
       "horizon": "nowcast_m3",
-      "rmse": 1.756695722342246,
-      "mae": 1.136911162095592,
-      "n": 17,
-      "ratio_vs_ar1": 1.6352030032378668
+      "rmse": 0.9632820694636126,
+      "mae": 0.770498369329244,
+      "n": 18,
+      "ratio_vs_ar1": 0.8966616773290054
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "rmse": 2.4923637281114317,
-      "mae": 1.6206213385577208,
+      "mae": 1.620621338557721,
       "n": 17,
-      "ratio_vs_ar1": 1.6417008675642728
+      "ratio_vs_ar1": 1.6417008675642732
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
-      "rmse": 2.554324334646594,
-      "mae": 1.6164958671450178,
+      "rmse": 2.5543243346465947,
+      "mae": 1.6164958671450185,
       "n": 18,
-      "ratio_vs_ar1": 1.8215348939535054
+      "ratio_vs_ar1": 1.821534893953506
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
-      "rmse": 1.1371621375996157,
-      "mae": 0.9045751921196492,
+      "rmse": 1.1371621375996162,
+      "mae": 0.9045751921196497,
       "n": 18,
-      "ratio_vs_ar1": 1.0585162352942823
+      "ratio_vs_ar1": 1.0585162352942827
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
-      "rmse": 1.8765684624048673,
-      "mae": 1.334884314171174,
+      "rmse": 1.8765684624048695,
+      "mae": 1.3348843141711748,
       "n": 18,
-      "ratio_vs_ar1": 1.7467853689621924
+      "ratio_vs_ar1": 1.7467853689621944
     },
     {
       "model": "combo_equal",
       "horizon": "forecast",
-      "rmse": 1.717469875374292,
-      "mae": 1.3591496535871832,
+      "rmse": 1.710694660452259,
+      "mae": 1.351261942944065,
       "n": 17,
-      "ratio_vs_ar1": 1.131284231356547
+      "ratio_vs_ar1": 1.126821449263396
     },
     {
       "model": "combo_equal",
       "horizon": "nowcast_m1",
-      "rmse": 1.7654053003640517,
-      "mae": 1.363713924439917,
+      "rmse": 2.4039496550274473,
+      "mae": 1.6524318768485036,
       "n": 18,
-      "ratio_vs_ar1": 1.258942458076103
+      "ratio_vs_ar1": 1.7142999894513518
     },
     {
       "model": "combo_equal",
       "horizon": "nowcast_m2",
-      "rmse": 1.074482700669292,
-      "mae": 0.8359516359376193,
+      "rmse": 1.0764802817825576,
+      "mae": 0.8330508831130456,
       "n": 18,
-      "ratio_vs_ar1": 1.0001716954823072
+      "ratio_vs_ar1": 1.0020311242917925
     },
     {
       "model": "combo_equal",
       "horizon": "nowcast_m3",
-      "rmse": 1.4680420655155166,
-      "mae": 1.2039157592534127,
+      "rmse": 1.2369748382886647,
+      "mae": 1.0558198316723872,
       "n": 18,
-      "ratio_vs_ar1": 1.3665125746476947
+      "ratio_vs_ar1": 1.1514259098908584
     },
     {
       "model": "combo_fixed_weights",
       "horizon": "forecast",
-      "rmse": 1.4437567848198403,
-      "mae": 1.205414360636289,
+      "rmse": 1.4331813641175115,
+      "mae": 1.1912164814786792,
       "n": 17,
-      "ratio_vs_ar1": 0.9509915183954909
+      "ratio_vs_ar1": 0.9440255699080985
     },
     {
       "model": "combo_fixed_weights",
       "horizon": "nowcast_m1",
-      "rmse": 1.6034327416696519,
-      "mae": 1.2953211653389198,
+      "rmse": 2.8287286896523725,
+      "mae": 1.815013479674377,
       "n": 18,
-      "ratio_vs_ar1": 1.1434368961852706
+      "ratio_vs_ar1": 2.0172176038255807
     },
     {
       "model": "combo_fixed_weights",
       "horizon": "nowcast_m2",
-      "rmse": 1.0296724790053313,
-      "mae": 0.8269605998627739,
+      "rmse": 0.9962649324851639,
+      "mae": 0.7772056521213317,
       "n": 18,
-      "ratio_vs_ar1": 0.958460539640836
+      "ratio_vs_ar1": 0.9273634522478358
     },
     {
       "model": "combo_fixed_weights",
       "horizon": "nowcast_m3",
-      "rmse": 1.5578864069059497,
-      "mae": 1.2033102820551886,
+      "rmse": 1.0388591238319922,
+      "mae": 0.8990736098217295,
       "n": 18,
-      "ratio_vs_ar1": 1.450143299648653
+      "ratio_vs_ar1": 0.9670118379784935
     },
     {
       "model": "combo_inverse_mse",
       "horizon": "forecast",
-      "rmse": 1.656142021749655,
-      "mae": 1.3156082291545874,
+      "rmse": 1.7776454600564424,
+      "mae": 1.3728542219073494,
       "n": 17,
-      "ratio_vs_ar1": 1.0908880446499973
+      "ratio_vs_ar1": 1.1709214273503004
     },
     {
       "model": "combo_inverse_mse",
       "horizon": "nowcast_m1",
-      "rmse": 1.6627669402628635,
-      "mae": 1.3372320843636127,
+      "rmse": 3.3875877273832615,
+      "mae": 1.9547181013655788,
       "n": 18,
-      "ratio_vs_ar1": 1.1857491866318381
+      "ratio_vs_ar1": 2.4157500940893657
     },
     {
       "model": "combo_inverse_mse",
       "horizon": "nowcast_m2",
-      "rmse": 0.9690311740512707,
-      "mae": 0.7618379804791516,
+      "rmse": 1.0260665928299715,
+      "mae": 0.7820252365078705,
       "n": 18,
-      "ratio_vs_ar1": 0.9020131750119009
+      "ratio_vs_ar1": 0.9551040358204587
     },
     {
       "model": "combo_inverse_mse",
       "horizon": "nowcast_m3",
-      "rmse": 1.5700122144602482,
-      "mae": 1.2130602448155254,
+      "rmse": 1.2259692716167783,
+      "mae": 1.0163033662604333,
       "n": 18,
-      "ratio_vs_ar1": 1.461430488817097
+      "ratio_vs_ar1": 1.1411814859730907
     }
   ],
   "errors": [
@@ -262,7 +262,7 @@
       "model": "ar1",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
-      "error": 1.7757475865636607
+      "error": 1.7757475865636572
     },
     {
       "model": "carry_forward",
@@ -274,13 +274,13 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
-      "error": 0.3628579405933783
+      "error": 0.4051466552287195
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
-      "error": 4.434130890316711
+      "error": 4.434130890316709
     },
     {
       "model": "midas",
@@ -292,7 +292,7 @@
       "model": "ar1",
       "horizon": "forecast",
       "target_quarter": "2022Q2",
-      "error": 2.205040074901812
+      "error": 2.2050400749018086
     },
     {
       "model": "carry_forward",
@@ -304,7 +304,7 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2022Q2",
-      "error": 1.6962159978000066
+      "error": 1.6361040462773166
     },
     {
       "model": "bridges",
@@ -334,19 +334,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
-      "error": 0.19091594616013374
+      "error": 0.18364442907087586
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
-      "error": 2.7474261720606235
+      "error": 2.7474261720606252
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
-      "error": 2.0221329764137588
+      "error": 2.0221329764137597
     },
     {
       "model": "ar1",
@@ -364,19 +364,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
-      "error": 0.16218217114573363
+      "error": 0.1621821711570579
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
-      "error": 2.1329953570190066
+      "error": 2.1329953570190083
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
-      "error": 4.112895906003057
+      "error": 4.1128959060030645
     },
     {
       "model": "ar1",
@@ -394,19 +394,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
-      "error": 1.6250870484349997
+      "error": 12.986729874294102
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
-      "error": 2.4538631009144067
+      "error": 2.4538631009144094
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
-      "error": 5.027318413854218
+      "error": 5.027318413854228
     },
     {
       "model": "ar1",
@@ -424,19 +424,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2022Q3",
-      "error": -0.4007717966263691
+      "error": -0.4007717966357838
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2022Q3",
-      "error": -0.03853670122341857
+      "error": -0.03853670122341768
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2022Q3",
-      "error": 2.6551454962743435
+      "error": 2.655145496274354
     },
     {
       "model": "ar1",
@@ -454,19 +454,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
-      "error": 1.2032717873169583
+      "error": 1.2032717873506646
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
-      "error": 1.336384778847136
+      "error": 1.3363847788471368
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
-      "error": 1.5952924729130578
+      "error": 1.5952924729130595
     },
     {
       "model": "ar1",
@@ -484,7 +484,7 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q2",
-      "error": 1.1735769139443706
+      "error": 1.183621977389767
     },
     {
       "model": "bridges",
@@ -496,7 +496,7 @@
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q2",
-      "error": 1.9471519354929194
+      "error": 1.9471519354929212
     },
     {
       "model": "ar1",
@@ -514,19 +514,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
-      "error": -0.780691117097736
+      "error": -0.7806911171072617
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
-      "error": -1.189286331224186
+      "error": -1.189286331224185
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
-      "error": -0.7726315560496548
+      "error": -0.7726315560496531
     },
     {
       "model": "ar1",
@@ -544,19 +544,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2022Q4",
-      "error": -1.7282997795572346
+      "error": -1.7282997795580783
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2022Q4",
-      "error": -2.3286992855522035
+      "error": -2.3286992855522026
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2022Q4",
-      "error": -1.9649142168975207
+      "error": -1.9649142168975189
     },
     {
       "model": "ar1",
@@ -574,19 +574,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
-      "error": -1.532953400478414
+      "error": -1.5423626588254402
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
-      "error": -2.0557087614816822
+      "error": -2.0557087614816805
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
-      "error": -2.2550091973453217
+      "error": -2.255009197345321
     },
     {
       "model": "ar1",
@@ -604,19 +604,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
-      "error": -1.5507586037300891
+      "error": -1.55794893491497
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
-      "error": 0.06379314759235033
+      "error": 0.0637931475923521
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
-      "error": -1.816984665488393
+      "error": -1.816984665488392
     },
     {
       "model": "ar1",
@@ -634,13 +634,13 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q4",
-      "error": -2.622208664445485
+      "error": -2.6222086644455738
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q4",
-      "error": -1.7833090969306573
+      "error": -1.7833090969306564
     },
     {
       "model": "midas",
@@ -664,13 +664,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2023Q1",
-      "error": -0.8888295683469964
+      "error": -0.8679424087626924
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2023Q1",
-      "error": -0.45714685123961196
+      "error": -0.4571468512396111
     },
     {
       "model": "midas",
@@ -694,19 +694,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
-      "error": -2.2914666639750108
+      "error": -2.3636903410926218
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
-      "error": -2.266160164595873
+      "error": -2.266160164595872
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
-      "error": -1.8058114465459711
+      "error": -1.805811446545972
     },
     {
       "model": "ar1",
@@ -724,13 +724,13 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q4",
-      "error": -2.3995208922606253
+      "error": -2.4150372240774924
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q4",
-      "error": -2.782889814939697
+      "error": -2.782889814939696
     },
     {
       "model": "midas",
@@ -751,10 +751,16 @@
       "error": 0.08817023869940499
     },
     {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "error": -0.993323068214405
+    },
+    {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q1",
-      "error": -1.4321783768871477
+      "error": -1.4321783768871468
     },
     {
       "model": "midas",
@@ -778,13 +784,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2023Q2",
-      "error": -1.899104970474765
+      "error": -1.8790531003207063
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2023Q2",
-      "error": -2.4681656984113767
+      "error": -2.468165698411375
     },
     {
       "model": "midas",
@@ -808,19 +814,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
-      "error": -0.14423634044105338
+      "error": -0.17321237580601156
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
-      "error": -0.029974109983477604
+      "error": -0.029974109983475827
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
-      "error": 0.7479546178687979
+      "error": 0.7479546178687997
     },
     {
       "model": "ar1",
@@ -838,19 +844,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
-      "error": -0.24210709658745433
+      "error": -0.2719606631526066
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
-      "error": -4.519515621130711
+      "error": -4.51951562113071
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
-      "error": 1.6890520883692215
+      "error": 1.6890520883692322
     },
     {
       "model": "ar1",
@@ -868,19 +874,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
-      "error": -1.2338476904958613
+      "error": -1.2338476904931746
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
-      "error": -4.6885830956363845
+      "error": -4.688583095636384
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
-      "error": -2.4476635046002224
+      "error": -2.447663504600218
     },
     {
       "model": "ar1",
@@ -898,19 +904,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2023Q3",
-      "error": -0.05711622596330734
+      "error": 0.18970072509293168
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2023Q3",
-      "error": -2.8388333648678272
+      "error": -2.838833364867827
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2023Q3",
-      "error": -0.5421530624028117
+      "error": -0.5421530624028073
     },
     {
       "model": "ar1",
@@ -928,7 +934,7 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q2",
-      "error": -0.7651614121575907
+      "error": -0.7651614121587897
     },
     {
       "model": "bridges",
@@ -958,13 +964,13 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q2",
-      "error": -0.9263495627289915
+      "error": -0.926349562728503
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q2",
-      "error": -1.7792864894455622
+      "error": -1.7792864894455631
     },
     {
       "model": "midas",
@@ -988,13 +994,13 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q3",
-      "error": 0.9363573407876169
+      "error": 0.9671190846268196
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q3",
-      "error": 0.21113601933202641
+      "error": 0.21113601933202464
     },
     {
       "model": "midas",
@@ -1018,13 +1024,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2023Q4",
-      "error": 0.9667770258963868
+      "error": 0.966777025895099
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2023Q4",
-      "error": -0.022717203864041302
+      "error": -0.02271720386404219
     },
     {
       "model": "midas",
@@ -1048,13 +1054,13 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q3",
-      "error": 0.6166783309089796
+      "error": 0.6166783309120882
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q3",
-      "error": 0.5835658235905061
+      "error": 0.5835658235905052
     },
     {
       "model": "midas",
@@ -1078,19 +1084,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
-      "error": 0.63658319984504
+      "error": 0.6365831998452176
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
-      "error": 0.6298505692014089
+      "error": 0.629850569201408
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
-      "error": 0.518600328340149
+      "error": 0.5186003283401481
     },
     {
       "model": "ar1",
@@ -1108,19 +1114,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
-      "error": 0.1801715058998674
+      "error": 0.25272472380711264
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
-      "error": 0.40525602826653895
+      "error": 0.40525602826653806
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
-      "error": -0.535050194419064
+      "error": -0.5350501944190622
     },
     {
       "model": "ar1",
@@ -1138,19 +1144,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2024Q1",
-      "error": -0.44330065026569976
+      "error": -0.40889089524909306
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2024Q1",
-      "error": -0.3710378061884789
+      "error": -0.3710378061884798
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2024Q1",
-      "error": -1.1427238061029712
+      "error": -1.1427238061029694
     },
     {
       "model": "ar1",
@@ -1168,19 +1174,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
-      "error": 0.6625982175710918
+      "error": 0.6573309001259684
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
-      "error": 0.274703981439151
+      "error": 0.2747039814391501
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
-      "error": -0.023037020985432477
+      "error": -0.02303702098543159
     },
     {
       "model": "ar1",
@@ -1198,7 +1204,7 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q4",
-      "error": 0.663997686215084
+      "error": 0.6280179181457566
     },
     {
       "model": "bridges",
@@ -1210,13 +1216,13 @@
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q4",
-      "error": -0.33029453377293194
+      "error": -0.33029453377293105
     },
     {
       "model": "ar1",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
-      "error": -0.713322792565835
+      "error": -0.7133227925658341
     },
     {
       "model": "carry_forward",
@@ -1228,25 +1234,25 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
-      "error": -0.0114553452056807
+      "error": -0.011455345206413448
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
-      "error": -0.12191601614166103
+      "error": -0.12191601614166014
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
-      "error": -0.9274956958610527
+      "error": -0.9274956958610536
     },
     {
       "model": "ar1",
       "horizon": "forecast",
       "target_quarter": "2024Q2",
-      "error": -0.972307570432573
+      "error": -0.9723075704325721
     },
     {
       "model": "carry_forward",
@@ -1258,7 +1264,7 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2024Q2",
-      "error": -0.5812193667082983
+      "error": -0.5979931759895214
     },
     {
       "model": "bridges",
@@ -1270,7 +1276,7 @@
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2024Q2",
-      "error": -1.1977317646137475
+      "error": -1.1977317646137484
     },
     {
       "model": "ar1",
@@ -1288,7 +1294,7 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q1",
-      "error": -0.8087974474167545
+      "error": -0.8087974474168433
     },
     {
       "model": "bridges",
@@ -1300,7 +1306,7 @@
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q1",
-      "error": -0.6169987889476074
+      "error": -0.6169987889476083
     },
     {
       "model": "ar1",
@@ -1318,13 +1324,13 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q1",
-      "error": -0.7270862541419074
+      "error": -0.708641036774261
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q1",
-      "error": 0.4923214417467472
+      "error": 0.4923214417467463
     },
     {
       "model": "midas",
@@ -1348,19 +1354,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
-      "error": -1.0920593407262276
+      "error": -5.96430635685199
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
-      "error": 0.2746126849791475
+      "error": 0.2746126849791466
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
-      "error": -0.250891825144274
+      "error": -0.2508918251442749
     },
     {
       "model": "ar1",
@@ -1378,19 +1384,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2024Q3",
-      "error": -0.8466412439782776
+      "error": -0.8207659117736164
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2024Q3",
-      "error": 0.44353997186124605
+      "error": 0.4435399718612443
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2024Q3",
-      "error": -0.06551405698116675
+      "error": -0.06551405698116763
     },
     {
       "model": "ar1",
@@ -1408,19 +1414,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
-      "error": -0.2987006349035388
+      "error": -0.2987006348949901
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
-      "error": -0.11946058623397349
+      "error": -0.11946058623397526
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
-      "error": -0.09681057703903662
+      "error": -0.0968105770390375
     },
     {
       "model": "ar1",
@@ -1438,19 +1444,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
-      "error": 5.993918638685329
+      "error": -0.3492519197886308
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
-      "error": -0.8331601341294173
+      "error": -0.833160134129387
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
-      "error": -0.014279924091944451
+      "error": -0.01427992409194534
     },
     {
       "model": "ar1",
@@ -1468,13 +1474,13 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q3",
-      "error": -5.361942712159389
+      "error": 0.0032071303945748753
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q3",
-      "error": -1.1190403051595643
+      "error": -1.1190403051594071
     },
     {
       "model": "midas",
@@ -1498,13 +1504,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2024Q4",
-      "error": 0.18665174617132685
+      "error": 0.1866517461730366
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2024Q4",
-      "error": -1.5907494825489348
+      "error": -1.5907494825487767
     },
     {
       "model": "midas",
@@ -1528,19 +1534,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
-      "error": 0.1722931278062747
+      "error": 0.17229312780583061
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
-      "error": -0.6115873917584933
+      "error": -0.6115873917584969
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
-      "error": 0.020148775088312476
+      "error": 0.020148775088313364
     },
     {
       "model": "ar1",
@@ -1555,16 +1561,22 @@
       "error": 0.18537776816310725
     },
     {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "error": 0.1976484783571566
+    },
+    {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q3",
-      "error": -2.508752462151567
+      "error": -2.508752462151582
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q3",
-      "error": -5.158345216738858
+      "error": -5.158345216738861
     },
     {
       "model": "ar1",
@@ -1582,13 +1594,13 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q4",
-      "error": -0.355384379571535
+      "error": -4.385039072174199
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q4",
-      "error": -2.950384241156733
+      "error": -2.950384241156765
     },
     {
       "model": "midas",
@@ -1612,13 +1624,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2025Q1",
-      "error": -0.48830146595153234
+      "error": -0.4883146721950977
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2025Q1",
-      "error": -2.857078688086612
+      "error": -2.857078688086644
     },
     {
       "model": "midas",
@@ -1642,7 +1654,7 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q4",
-      "error": 2.42791173586207
+      "error": -0.10877360276814407
     },
     {
       "model": "bridges",
@@ -1672,13 +1684,13 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q4",
-      "error": -0.06268369818704045
+      "error": -0.06268369818675179
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q4",
-      "error": -1.5137567862663142
+      "error": -1.5137567862661854
     },
     {
       "model": "midas",
@@ -1708,7 +1720,7 @@
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q1",
-      "error": -0.44428768439580857
+      "error": -0.4442876843958352
     },
     {
       "model": "midas",
@@ -1732,13 +1744,13 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2025Q2",
-      "error": -1.0738173457689593
+      "error": -1.0773904800165957
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2025Q2",
-      "error": -1.2786937511100138
+      "error": -1.2786937511100414
     },
     {
       "model": "midas",
@@ -1762,13 +1774,13 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q1",
-      "error": -0.6078781241137339
+      "error": -0.603736810132502
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q1",
-      "error": -0.30473030849231275
+      "error": -0.30473030849231453
     },
     {
       "model": "midas",
@@ -1792,19 +1804,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
-      "error": -0.5778143670529285
+      "error": -0.5778143670364528
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
-      "error": -0.4901367832835124
+      "error": -0.49013678328351595
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
-      "error": -0.08377188603980734
+      "error": -0.08377188603980645
     },
     {
       "model": "ar1",
@@ -1822,19 +1834,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
-      "error": -1.4141063962959244
+      "error": -1.414106396297612
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
-      "error": -1.433665475952143
+      "error": -1.43366547595215
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
-      "error": -1.1129916745970814
+      "error": -1.1129916745970805
     },
     {
       "model": "ar1",
@@ -1852,19 +1864,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2025Q3",
-      "error": -2.2829783921614366
+      "error": -2.27802769640316
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2025Q3",
-      "error": -2.267878566759034
+      "error": -2.267878566759042
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2025Q3",
-      "error": -1.8653398181816794
+      "error": -1.8653398181816785
     },
     {
       "model": "ar1",
@@ -1882,13 +1894,13 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q2",
-      "error": -0.8937423544052825
+      "error": -0.9232289492351464
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q2",
-      "error": -1.5551028858056162
+      "error": -1.5551028858056277
     },
     {
       "model": "midas",
@@ -1912,13 +1924,13 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q2",
-      "error": -1.0193543864970867
+      "error": -1.0193543864914467
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q2",
-      "error": -0.9767785348432296
+      "error": -0.9767785348432163
     },
     {
       "model": "midas",
@@ -1942,19 +1954,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
-      "error": -1.791134993458141
+      "error": -1.7911349934550769
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
-      "error": -1.1565777872629663
+      "error": -1.1565777872629548
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
-      "error": -1.190064540233153
+      "error": -1.190064540233152
     },
     {
       "model": "ar1",
@@ -1972,19 +1984,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2025Q4",
-      "error": -1.13314007280165
+      "error": -1.1331400728020053
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2025Q4",
-      "error": -0.7841158622358062
+      "error": -0.7841158622357929
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2025Q4",
-      "error": -0.7304364990909287
+      "error": -0.7304364990909278
     },
     {
       "model": "ar1",
@@ -2002,19 +2014,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
-      "error": -0.9986807798119868
+      "error": -0.9986807798462927
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
-      "error": -0.893827879567044
+      "error": -0.8938278795670476
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
-      "error": -1.2374912704550827
+      "error": -1.2374912704550836
     },
     {
       "model": "ar1",
@@ -2032,19 +2044,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
-      "error": -1.0533285135276271
+      "error": -1.0497690027270057
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
-      "error": -1.9513563344904474
+      "error": -1.9513563344904563
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
-      "error": -1.4043645271709062
+      "error": -1.404364527170907
     },
     {
       "model": "ar1",
@@ -2062,19 +2074,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
-      "error": -0.49893144323906746
+      "error": -0.49893144324541794
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
-      "error": -1.3401958940705194
+      "error": -1.3401958940705239
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
-      "error": -0.860028267562333
+      "error": -0.8600282675623347
     },
     {
       "model": "ar1",
@@ -2092,19 +2104,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2026Q1",
-      "error": -1.7891600898997844
+      "error": -1.7829981867576077
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2026Q1",
-      "error": -2.2290494007132295
+      "error": -2.229049400713234
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2026Q1",
-      "error": -1.6861537107295899
+      "error": -1.6861537107295916
     },
     {
       "model": "ar1",
@@ -2122,19 +2134,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
-      "error": 0.4322677153708181
+      "error": 0.43226771536004804
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
-      "error": -0.7453726123096684
+      "error": -0.7453726123096649
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
-      "error": 0.010793394075183649
+      "error": 0.01079339407518276
     },
     {
       "model": "ar1",
@@ -2152,19 +2164,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
-      "error": 0.3748564645952115
+      "error": 0.377204115549004
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
-      "error": -1.3130475666486223
+      "error": -1.3130475666486188
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
-      "error": -0.5928662311119561
+      "error": -0.5928662311119579
     },
     {
       "model": "ar1",
@@ -2182,19 +2194,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
-      "error": -1.0256095434111394
+      "error": -1.0256146343980381
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
-      "error": -0.9342847104864838
+      "error": -0.9342847104864767
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
-      "error": -0.26668347630482003
+      "error": -0.2666834763048218
     },
     {
       "model": "ar1",
@@ -2212,19 +2224,19 @@
       "model": "dfm",
       "horizon": "forecast",
       "target_quarter": "2026Q2",
-      "error": -1.284315507792483
+      "error": -1.2809477336713728
     },
     {
       "model": "bridges",
       "horizon": "forecast",
       "target_quarter": "2026Q2",
-      "error": -0.7472893187821672
+      "error": -0.7472893187821601
     },
     {
       "model": "midas",
       "horizon": "forecast",
       "target_quarter": "2026Q2",
-      "error": -0.008210936932684376
+      "error": -0.008210936932686153
     },
     {
       "model": "ar1",
@@ -2242,19 +2254,19 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
-      "error": -1.345585084814667
+      "error": -1.3529358810133356
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
-      "error": -1.1163040478587014
+      "error": -1.1163040478587032
     },
     {
       "model": "midas",
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
-      "error": -0.8817514656029584
+      "error": -0.8817514656029601
     },
     {
       "model": "ar1",
@@ -2272,19 +2284,19 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
-      "error": -1.3793270698612874
+      "error": -1.3608577549589622
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
-      "error": -1.0865501662246153
+      "error": -1.086550166224617
     },
     {
       "model": "midas",
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
-      "error": -0.5893963521745995
+      "error": -0.5893963521745977
     },
     {
       "model": "ar1",
@@ -2302,19 +2314,19 @@
       "model": "dfm",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
-      "error": -1.5290962539302901
+      "error": -1.5287565851736575
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
-      "error": -0.7697692116004369
+      "error": -0.7697692116004413
     },
     {
       "model": "midas",
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
-      "error": 0.6713292666064863
+      "error": 0.6713292666064881
     },
     {
       "model": "ar1",
@@ -2332,13 +2344,13 @@
       "model": "dfm",
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q2",
-      "error": -0.27860037117148373
+      "error": -0.3214362053400599
     },
     {
       "model": "bridges",
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q2",
-      "error": -0.5811698548550721
+      "error": -0.5811698548550703
     },
     {
       "model": "midas",
@@ -2362,7 +2374,7 @@
       "model": "dfm",
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q2",
-      "error": -0.3840442366192569
+      "error": -0.38404423664534804
     },
     {
       "model": "bridges",
@@ -2383,7 +2395,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
       "run_date": "2022-01-01",
-      "forecast": 6.850142892929533,
+      "forecast": 6.850142892929529,
       "actual": 5.074395306365872
     },
     {
@@ -2399,7 +2411,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
       "run_date": "2022-01-01",
-      "forecast": 5.4372532469592505,
+      "forecast": 5.479541961594592,
       "actual": 5.074395306365872
     },
     {
@@ -2407,7 +2419,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q1",
       "run_date": "2022-01-01",
-      "forecast": 9.508526196682583,
+      "forecast": 9.508526196682581,
       "actual": 5.074395306365872
     },
     {
@@ -2423,7 +2435,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q2",
       "run_date": "2022-01-01",
-      "forecast": 6.36142256456625,
+      "forecast": 6.361422564566246,
       "actual": 4.156382489664438
     },
     {
@@ -2439,7 +2451,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q2",
       "run_date": "2022-01-01",
-      "forecast": 5.852598487464444,
+      "forecast": 5.792486535941754,
       "actual": 4.156382489664438
     },
     {
@@ -2479,7 +2491,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
       "run_date": "2022-02-01",
-      "forecast": 5.265311252526006,
+      "forecast": 5.258039735436748,
       "actual": 5.074395306365872
     },
     {
@@ -2487,7 +2499,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
       "run_date": "2022-02-01",
-      "forecast": 7.821821478426496,
+      "forecast": 7.821821478426497,
       "actual": 5.074395306365872
     },
     {
@@ -2495,7 +2507,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q1",
       "run_date": "2022-02-01",
-      "forecast": 7.096528282779631,
+      "forecast": 7.096528282779632,
       "actual": 5.074395306365872
     },
     {
@@ -2519,7 +2531,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
       "run_date": "2022-03-01",
-      "forecast": 5.236577477511606,
+      "forecast": 5.23657747752293,
       "actual": 5.074395306365872
     },
     {
@@ -2527,7 +2539,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
       "run_date": "2022-03-01",
-      "forecast": 7.207390663384879,
+      "forecast": 7.2073906633848805,
       "actual": 5.074395306365872
     },
     {
@@ -2535,7 +2547,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q1",
       "run_date": "2022-03-01",
-      "forecast": 9.18729121236893,
+      "forecast": 9.187291212368937,
       "actual": 5.074395306365872
     },
     {
@@ -2559,7 +2571,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
       "run_date": "2022-04-01",
-      "forecast": 5.781469538099437,
+      "forecast": 17.14311236395854,
       "actual": 4.156382489664438
     },
     {
@@ -2567,7 +2579,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
       "run_date": "2022-04-01",
-      "forecast": 6.610245590578844,
+      "forecast": 6.610245590578847,
       "actual": 4.156382489664438
     },
     {
@@ -2575,7 +2587,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q2",
       "run_date": "2022-04-01",
-      "forecast": 9.183700903518655,
+      "forecast": 9.183700903518666,
       "actual": 4.156382489664438
     },
     {
@@ -2599,7 +2611,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q3",
       "run_date": "2022-04-01",
-      "forecast": 6.127783610617943,
+      "forecast": 6.127783610608528,
       "actual": 6.528555407244312
     },
     {
@@ -2607,7 +2619,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q3",
       "run_date": "2022-04-01",
-      "forecast": 6.490018706020893,
+      "forecast": 6.490018706020894,
       "actual": 6.528555407244312
     },
     {
@@ -2615,7 +2627,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q3",
       "run_date": "2022-04-01",
-      "forecast": 9.183700903518655,
+      "forecast": 9.183700903518666,
       "actual": 6.528555407244312
     },
     {
@@ -2639,7 +2651,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
       "run_date": "2022-05-01",
-      "forecast": 5.359654276981396,
+      "forecast": 5.359654277015102,
       "actual": 4.156382489664438
     },
     {
@@ -2647,7 +2659,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
       "run_date": "2022-05-01",
-      "forecast": 5.492767268511574,
+      "forecast": 5.4927672685115745,
       "actual": 4.156382489664438
     },
     {
@@ -2655,7 +2667,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q2",
       "run_date": "2022-05-01",
-      "forecast": 5.751674962577495,
+      "forecast": 5.751674962577497,
       "actual": 4.156382489664438
     },
     {
@@ -2679,7 +2691,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q2",
       "run_date": "2022-06-01",
-      "forecast": 5.329959403608808,
+      "forecast": 5.340004467054205,
       "actual": 4.156382489664438
     },
     {
@@ -2695,7 +2707,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q2",
       "run_date": "2022-06-01",
-      "forecast": 6.103534425157357,
+      "forecast": 6.103534425157359,
       "actual": 4.156382489664438
     },
     {
@@ -2719,7 +2731,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
       "run_date": "2022-07-01",
-      "forecast": 5.747864290146576,
+      "forecast": 5.74786429013705,
       "actual": 6.528555407244312
     },
     {
@@ -2727,7 +2739,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
       "run_date": "2022-07-01",
-      "forecast": 5.339269076020126,
+      "forecast": 5.339269076020127,
       "actual": 6.528555407244312
     },
     {
@@ -2735,7 +2747,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q3",
       "run_date": "2022-07-01",
-      "forecast": 5.755923851194657,
+      "forecast": 5.755923851194659,
       "actual": 6.528555407244312
     },
     {
@@ -2759,7 +2771,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q4",
       "run_date": "2022-07-01",
-      "forecast": 5.992538288534943,
+      "forecast": 5.992538288534099,
       "actual": 7.720838068092178
     },
     {
@@ -2767,7 +2779,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q4",
       "run_date": "2022-07-01",
-      "forecast": 5.392138782539974,
+      "forecast": 5.392138782539975,
       "actual": 7.720838068092178
     },
     {
@@ -2775,7 +2787,7 @@
       "horizon": "forecast",
       "target_quarter": "2022Q4",
       "run_date": "2022-07-01",
-      "forecast": 5.755923851194657,
+      "forecast": 5.755923851194659,
       "actual": 7.720838068092178
     },
     {
@@ -2799,7 +2811,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
       "run_date": "2022-08-01",
-      "forecast": 4.995602006765898,
+      "forecast": 4.986192748418872,
       "actual": 6.528555407244312
     },
     {
@@ -2807,7 +2819,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
       "run_date": "2022-08-01",
-      "forecast": 4.47284664576263,
+      "forecast": 4.4728466457626315,
       "actual": 6.528555407244312
     },
     {
@@ -2815,7 +2827,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q3",
       "run_date": "2022-08-01",
-      "forecast": 4.27354620989899,
+      "forecast": 4.273546209898991,
       "actual": 6.528555407244312
     },
     {
@@ -2839,7 +2851,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
       "run_date": "2022-09-01",
-      "forecast": 4.977796803514223,
+      "forecast": 4.970606472329342,
       "actual": 6.528555407244312
     },
     {
@@ -2847,7 +2859,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
       "run_date": "2022-09-01",
-      "forecast": 6.592348554836662,
+      "forecast": 6.592348554836664,
       "actual": 6.528555407244312
     },
     {
@@ -2855,7 +2867,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q3",
       "run_date": "2022-09-01",
-      "forecast": 4.711570741755919,
+      "forecast": 4.71157074175592,
       "actual": 6.528555407244312
     },
     {
@@ -2879,7 +2891,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q4",
       "run_date": "2022-10-01",
-      "forecast": 5.098629403646693,
+      "forecast": 5.098629403646604,
       "actual": 7.720838068092178
     },
     {
@@ -2887,7 +2899,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2022Q4",
       "run_date": "2022-10-01",
-      "forecast": 5.9375289711615205,
+      "forecast": 5.937528971161521,
       "actual": 7.720838068092178
     },
     {
@@ -2919,7 +2931,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q1",
       "run_date": "2022-10-01",
-      "forecast": 5.5515556001979105,
+      "forecast": 5.572442759782215,
       "actual": 6.440385168544907
     },
     {
@@ -2927,7 +2939,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q1",
       "run_date": "2022-10-01",
-      "forecast": 5.983238317305295,
+      "forecast": 5.983238317305296,
       "actual": 6.440385168544907
     },
     {
@@ -2959,7 +2971,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
       "run_date": "2022-11-01",
-      "forecast": 5.429371404117167,
+      "forecast": 5.357147726999556,
       "actual": 7.720838068092178
     },
     {
@@ -2967,7 +2979,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
       "run_date": "2022-11-01",
-      "forecast": 5.454677903496305,
+      "forecast": 5.4546779034963055,
       "actual": 7.720838068092178
     },
     {
@@ -2975,7 +2987,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2022Q4",
       "run_date": "2022-11-01",
-      "forecast": 5.915026621546207,
+      "forecast": 5.915026621546206,
       "actual": 7.720838068092178
     },
     {
@@ -2999,7 +3011,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q4",
       "run_date": "2022-12-01",
-      "forecast": 5.3213171758315525,
+      "forecast": 5.305800844014685,
       "actual": 7.720838068092178
     },
     {
@@ -3007,7 +3019,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2022Q4",
       "run_date": "2022-12-01",
-      "forecast": 4.937948253152481,
+      "forecast": 4.937948253152482,
       "actual": 7.720838068092178
     },
     {
@@ -3035,11 +3047,19 @@
       "actual": 6.440385168544907
     },
     {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-01-01",
+      "forecast": 5.447062100330502,
+      "actual": 6.440385168544907
+    },
+    {
       "model": "bridges",
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q1",
       "run_date": "2023-01-01",
-      "forecast": 5.008206791657759,
+      "forecast": 5.00820679165776,
       "actual": 6.440385168544907
     },
     {
@@ -3071,7 +3091,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q2",
       "run_date": "2023-01-01",
-      "forecast": 5.661163977274741,
+      "forecast": 5.6812158474288,
       "actual": 7.560268947749506
     },
     {
@@ -3079,7 +3099,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q2",
       "run_date": "2023-01-01",
-      "forecast": 5.0921032493381295,
+      "forecast": 5.092103249338131,
       "actual": 7.560268947749506
     },
     {
@@ -3111,7 +3131,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
       "run_date": "2023-02-01",
-      "forecast": 6.296148828103854,
+      "forecast": 6.267172792738895,
       "actual": 6.440385168544907
     },
     {
@@ -3119,7 +3139,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
       "run_date": "2023-02-01",
-      "forecast": 6.410411058561429,
+      "forecast": 6.410411058561431,
       "actual": 6.440385168544907
     },
     {
@@ -3127,7 +3147,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q1",
       "run_date": "2023-02-01",
-      "forecast": 7.188339786413705,
+      "forecast": 7.188339786413707,
       "actual": 6.440385168544907
     },
     {
@@ -3151,7 +3171,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
       "run_date": "2023-03-01",
-      "forecast": 6.198278071957453,
+      "forecast": 6.1684245053923,
       "actual": 6.440385168544907
     },
     {
@@ -3159,7 +3179,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
       "run_date": "2023-03-01",
-      "forecast": 1.9208695474141966,
+      "forecast": 1.9208695474141975,
       "actual": 6.440385168544907
     },
     {
@@ -3167,7 +3187,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q1",
       "run_date": "2023-03-01",
-      "forecast": 8.129437256914128,
+      "forecast": 8.129437256914139,
       "actual": 6.440385168544907
     },
     {
@@ -3191,7 +3211,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
       "run_date": "2023-04-01",
-      "forecast": 6.326421257253645,
+      "forecast": 6.326421257256332,
       "actual": 7.560268947749506
     },
     {
@@ -3199,7 +3219,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
       "run_date": "2023-04-01",
-      "forecast": 2.8716858521131217,
+      "forecast": 2.8716858521131226,
       "actual": 7.560268947749506
     },
     {
@@ -3207,7 +3227,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q2",
       "run_date": "2023-04-01",
-      "forecast": 5.112605443149284,
+      "forecast": 5.112605443149288,
       "actual": 7.560268947749506
     },
     {
@@ -3231,7 +3251,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q3",
       "run_date": "2023-04-01",
-      "forecast": 5.597642279588788,
+      "forecast": 5.844459230645027,
       "actual": 5.6547585055520955
     },
     {
@@ -3239,7 +3259,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q3",
       "run_date": "2023-04-01",
-      "forecast": 2.8159251406842682,
+      "forecast": 2.8159251406842687,
       "actual": 5.6547585055520955
     },
     {
@@ -3247,7 +3267,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q3",
       "run_date": "2023-04-01",
-      "forecast": 5.112605443149284,
+      "forecast": 5.112605443149288,
       "actual": 5.6547585055520955
     },
     {
@@ -3271,7 +3291,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q2",
       "run_date": "2023-05-01",
-      "forecast": 6.7951075355919155,
+      "forecast": 6.7951075355907165,
       "actual": 7.560268947749506
     },
     {
@@ -3311,7 +3331,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q2",
       "run_date": "2023-06-01",
-      "forecast": 6.633919385020515,
+      "forecast": 6.633919385021003,
       "actual": 7.560268947749506
     },
     {
@@ -3319,7 +3339,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q2",
       "run_date": "2023-06-01",
-      "forecast": 5.780982458303944,
+      "forecast": 5.780982458303943,
       "actual": 7.560268947749506
     },
     {
@@ -3351,7 +3371,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q3",
       "run_date": "2023-07-01",
-      "forecast": 6.591115846339712,
+      "forecast": 6.621877590178915,
       "actual": 5.6547585055520955
     },
     {
@@ -3359,7 +3379,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q3",
       "run_date": "2023-07-01",
-      "forecast": 5.865894524884122,
+      "forecast": 5.86589452488412,
       "actual": 5.6547585055520955
     },
     {
@@ -3391,7 +3411,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q4",
       "run_date": "2023-07-01",
-      "forecast": 6.791545632984675,
+      "forecast": 6.791545632983387,
       "actual": 5.824768607088288
     },
     {
@@ -3399,7 +3419,7 @@
       "horizon": "forecast",
       "target_quarter": "2023Q4",
       "run_date": "2023-07-01",
-      "forecast": 5.8020514032242465,
+      "forecast": 5.802051403224246,
       "actual": 5.824768607088288
     },
     {
@@ -3431,7 +3451,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q3",
       "run_date": "2023-08-01",
-      "forecast": 6.271436836461075,
+      "forecast": 6.271436836464184,
       "actual": 5.6547585055520955
     },
     {
@@ -3439,7 +3459,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q3",
       "run_date": "2023-08-01",
-      "forecast": 6.238324329142602,
+      "forecast": 6.238324329142601,
       "actual": 5.6547585055520955
     },
     {
@@ -3471,7 +3491,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
       "run_date": "2023-09-01",
-      "forecast": 6.291341705397135,
+      "forecast": 6.291341705397313,
       "actual": 5.6547585055520955
     },
     {
@@ -3479,7 +3499,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
       "run_date": "2023-09-01",
-      "forecast": 6.284609074753504,
+      "forecast": 6.2846090747535035,
       "actual": 5.6547585055520955
     },
     {
@@ -3487,7 +3507,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q3",
       "run_date": "2023-09-01",
-      "forecast": 6.1733588338922445,
+      "forecast": 6.173358833892244,
       "actual": 5.6547585055520955
     },
     {
@@ -3511,7 +3531,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
       "run_date": "2023-10-01",
-      "forecast": 6.004940112988155,
+      "forecast": 6.0774933308954004,
       "actual": 5.824768607088288
     },
     {
@@ -3519,7 +3539,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
       "run_date": "2023-10-01",
-      "forecast": 6.230024635354827,
+      "forecast": 6.230024635354826,
       "actual": 5.824768607088288
     },
     {
@@ -3527,7 +3547,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2023Q4",
       "run_date": "2023-10-01",
-      "forecast": 5.289718412669224,
+      "forecast": 5.289718412669226,
       "actual": 5.824768607088288
     },
     {
@@ -3551,7 +3571,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q1",
       "run_date": "2023-10-01",
-      "forecast": 5.989141568506495,
+      "forecast": 6.023551323523102,
       "actual": 6.432442218772195
     },
     {
@@ -3559,7 +3579,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q1",
       "run_date": "2023-10-01",
-      "forecast": 6.061404412583716,
+      "forecast": 6.061404412583715,
       "actual": 6.432442218772195
     },
     {
@@ -3567,7 +3587,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q1",
       "run_date": "2023-10-01",
-      "forecast": 5.289718412669224,
+      "forecast": 5.289718412669226,
       "actual": 6.432442218772195
     },
     {
@@ -3591,7 +3611,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
       "run_date": "2023-11-01",
-      "forecast": 6.48736682465938,
+      "forecast": 6.482099507214256,
       "actual": 5.824768607088288
     },
     {
@@ -3599,7 +3619,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
       "run_date": "2023-11-01",
-      "forecast": 6.099472588527439,
+      "forecast": 6.099472588527438,
       "actual": 5.824768607088288
     },
     {
@@ -3607,7 +3627,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2023Q4",
       "run_date": "2023-11-01",
-      "forecast": 5.801731586102855,
+      "forecast": 5.801731586102856,
       "actual": 5.824768607088288
     },
     {
@@ -3631,7 +3651,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q4",
       "run_date": "2023-12-01",
-      "forecast": 6.488766293303372,
+      "forecast": 6.452786525234044,
       "actual": 5.824768607088288
     },
     {
@@ -3647,7 +3667,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2023Q4",
       "run_date": "2023-12-01",
-      "forecast": 5.494474073315356,
+      "forecast": 5.494474073315357,
       "actual": 5.824768607088288
     },
     {
@@ -3655,7 +3675,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
       "run_date": "2024-01-01",
-      "forecast": 5.71911942620636,
+      "forecast": 5.719119426206361,
       "actual": 6.432442218772195
     },
     {
@@ -3671,7 +3691,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
       "run_date": "2024-01-01",
-      "forecast": 6.420986873566514,
+      "forecast": 6.420986873565782,
       "actual": 6.432442218772195
     },
     {
@@ -3679,7 +3699,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
       "run_date": "2024-01-01",
-      "forecast": 6.310526202630534,
+      "forecast": 6.310526202630535,
       "actual": 6.432442218772195
     },
     {
@@ -3687,7 +3707,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q1",
       "run_date": "2024-01-01",
-      "forecast": 5.504946522911142,
+      "forecast": 5.504946522911141,
       "actual": 6.432442218772195
     },
     {
@@ -3695,7 +3715,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q2",
       "run_date": "2024-01-01",
-      "forecast": 5.730370717092317,
+      "forecast": 5.730370717092318,
       "actual": 6.70267828752489
     },
     {
@@ -3711,7 +3731,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q2",
       "run_date": "2024-01-01",
-      "forecast": 6.1214589208165915,
+      "forecast": 6.104685111535368,
       "actual": 6.70267828752489
     },
     {
@@ -3727,7 +3747,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q2",
       "run_date": "2024-01-01",
-      "forecast": 5.504946522911142,
+      "forecast": 5.504946522911141,
       "actual": 6.70267828752489
     },
     {
@@ -3751,7 +3771,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q1",
       "run_date": "2024-02-01",
-      "forecast": 5.6236447713554405,
+      "forecast": 5.623644771355352,
       "actual": 6.432442218772195
     },
     {
@@ -3767,7 +3787,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q1",
       "run_date": "2024-02-01",
-      "forecast": 5.815443429824588,
+      "forecast": 5.815443429824587,
       "actual": 6.432442218772195
     },
     {
@@ -3791,7 +3811,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q1",
       "run_date": "2024-03-01",
-      "forecast": 5.705355964630288,
+      "forecast": 5.723801181997934,
       "actual": 6.432442218772195
     },
     {
@@ -3799,7 +3819,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q1",
       "run_date": "2024-03-01",
-      "forecast": 6.924763660518942,
+      "forecast": 6.924763660518941,
       "actual": 6.432442218772195
     },
     {
@@ -3831,7 +3851,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
       "run_date": "2024-04-01",
-      "forecast": 5.610618946798662,
+      "forecast": 0.7383719306728995,
       "actual": 6.70267828752489
     },
     {
@@ -3839,7 +3859,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
       "run_date": "2024-04-01",
-      "forecast": 6.977290972504037,
+      "forecast": 6.977290972504036,
       "actual": 6.70267828752489
     },
     {
@@ -3847,7 +3867,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q2",
       "run_date": "2024-04-01",
-      "forecast": 6.451786462380616,
+      "forecast": 6.451786462380615,
       "actual": 6.70267828752489
     },
     {
@@ -3871,7 +3891,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q3",
       "run_date": "2024-04-01",
-      "forecast": 5.670659275383505,
+      "forecast": 5.696534607588166,
       "actual": 6.517300519361783
     },
     {
@@ -3879,7 +3899,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q3",
       "run_date": "2024-04-01",
-      "forecast": 6.960840491223029,
+      "forecast": 6.960840491223027,
       "actual": 6.517300519361783
     },
     {
@@ -3887,7 +3907,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q3",
       "run_date": "2024-04-01",
-      "forecast": 6.451786462380616,
+      "forecast": 6.451786462380615,
       "actual": 6.517300519361783
     },
     {
@@ -3911,7 +3931,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
       "run_date": "2024-05-01",
-      "forecast": 6.403977652621351,
+      "forecast": 6.4039776526299,
       "actual": 6.70267828752489
     },
     {
@@ -3919,7 +3939,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
       "run_date": "2024-05-01",
-      "forecast": 6.583217701290916,
+      "forecast": 6.5832177012909145,
       "actual": 6.70267828752489
     },
     {
@@ -3927,7 +3947,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q2",
       "run_date": "2024-05-01",
-      "forecast": 6.605867710485853,
+      "forecast": 6.605867710485852,
       "actual": 6.70267828752489
     },
     {
@@ -3951,7 +3971,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
       "run_date": "2024-06-01",
-      "forecast": 12.69659692621022,
+      "forecast": 6.353426367736259,
       "actual": 6.70267828752489
     },
     {
@@ -3959,7 +3979,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
       "run_date": "2024-06-01",
-      "forecast": 5.869518153395473,
+      "forecast": 5.869518153395503,
       "actual": 6.70267828752489
     },
     {
@@ -3967,7 +3987,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q2",
       "run_date": "2024-06-01",
-      "forecast": 6.688398363432945,
+      "forecast": 6.6883983634329445,
       "actual": 6.70267828752489
     },
     {
@@ -3991,7 +4011,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q3",
       "run_date": "2024-07-01",
-      "forecast": 1.1553578072023933,
+      "forecast": 6.520507649756357,
       "actual": 6.517300519361783
     },
     {
@@ -3999,7 +4019,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q3",
       "run_date": "2024-07-01",
-      "forecast": 5.398260214202218,
+      "forecast": 5.3982602142023755,
       "actual": 6.517300519361783
     },
     {
@@ -4031,7 +4051,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q4",
       "run_date": "2024-07-01",
-      "forecast": 7.096507033592436,
+      "forecast": 7.096507033594146,
       "actual": 6.909855287421109
     },
     {
@@ -4039,7 +4059,7 @@
       "horizon": "forecast",
       "target_quarter": "2024Q4",
       "run_date": "2024-07-01",
-      "forecast": 5.319105804872175,
+      "forecast": 5.319105804872333,
       "actual": 6.909855287421109
     },
     {
@@ -4071,7 +4091,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
       "run_date": "2024-08-01",
-      "forecast": 6.689593647168057,
+      "forecast": 6.689593647167613,
       "actual": 6.517300519361783
     },
     {
@@ -4079,7 +4099,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
       "run_date": "2024-08-01",
-      "forecast": 5.905713127603289,
+      "forecast": 5.905713127603286,
       "actual": 6.517300519361783
     },
     {
@@ -4087,7 +4107,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q3",
       "run_date": "2024-08-01",
-      "forecast": 6.537449294450095,
+      "forecast": 6.537449294450096,
       "actual": 6.517300519361783
     },
     {
@@ -4107,11 +4127,19 @@
       "actual": 6.517300519361783
     },
     {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-09-01",
+      "forecast": 6.714948997718939,
+      "actual": 6.517300519361783
+    },
+    {
       "model": "bridges",
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q3",
       "run_date": "2024-09-01",
-      "forecast": 4.0085480572102155,
+      "forecast": 4.0085480572102,
       "actual": 6.517300519361783
     },
     {
@@ -4119,7 +4147,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q3",
       "run_date": "2024-09-01",
-      "forecast": 1.3589553026229249,
+      "forecast": 1.3589553026229213,
       "actual": 6.517300519361783
     },
     {
@@ -4143,7 +4171,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q4",
       "run_date": "2024-10-01",
-      "forecast": 6.554470907849574,
+      "forecast": 2.5248162152469105,
       "actual": 6.909855287421109
     },
     {
@@ -4151,7 +4179,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2024Q4",
       "run_date": "2024-10-01",
-      "forecast": 3.9594710462643765,
+      "forecast": 3.9594710462643445,
       "actual": 6.909855287421109
     },
     {
@@ -4183,7 +4211,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q1",
       "run_date": "2024-10-01",
-      "forecast": 6.342986965303443,
+      "forecast": 6.342973759059878,
       "actual": 6.8312884312549755
     },
     {
@@ -4191,7 +4219,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q1",
       "run_date": "2024-10-01",
-      "forecast": 3.9742097431683634,
+      "forecast": 3.9742097431683314,
       "actual": 6.8312884312549755
     },
     {
@@ -4223,7 +4251,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2024Q4",
       "run_date": "2024-11-01",
-      "forecast": 9.33776702328318,
+      "forecast": 6.801081684652965,
       "actual": 6.909855287421109
     },
     {
@@ -4263,7 +4291,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q4",
       "run_date": "2024-12-01",
-      "forecast": 6.847171589234069,
+      "forecast": 6.847171589234358,
       "actual": 6.909855287421109
     },
     {
@@ -4271,7 +4299,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2024Q4",
       "run_date": "2024-12-01",
-      "forecast": 5.396098501154795,
+      "forecast": 5.396098501154924,
       "actual": 6.909855287421109
     },
     {
@@ -4311,7 +4339,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q1",
       "run_date": "2025-01-01",
-      "forecast": 6.387000746859167,
+      "forecast": 6.38700074685914,
       "actual": 6.8312884312549755
     },
     {
@@ -4343,7 +4371,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q2",
       "run_date": "2025-01-01",
-      "forecast": 6.465929663834102,
+      "forecast": 6.462356529586466,
       "actual": 7.539747009603062
     },
     {
@@ -4351,7 +4379,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q2",
       "run_date": "2025-01-01",
-      "forecast": 6.261053258493048,
+      "forecast": 6.26105325849302,
       "actual": 7.539747009603062
     },
     {
@@ -4383,7 +4411,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q1",
       "run_date": "2025-02-01",
-      "forecast": 6.223410307141242,
+      "forecast": 6.2275516211224735,
       "actual": 6.8312884312549755
     },
     {
@@ -4391,7 +4419,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q1",
       "run_date": "2025-02-01",
-      "forecast": 6.526558122762663,
+      "forecast": 6.526558122762661,
       "actual": 6.8312884312549755
     },
     {
@@ -4423,7 +4451,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
       "run_date": "2025-03-01",
-      "forecast": 6.253474064202047,
+      "forecast": 6.253474064218523,
       "actual": 6.8312884312549755
     },
     {
@@ -4431,7 +4459,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
       "run_date": "2025-03-01",
-      "forecast": 6.341151647971463,
+      "forecast": 6.34115164797146,
       "actual": 6.8312884312549755
     },
     {
@@ -4439,7 +4467,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q1",
       "run_date": "2025-03-01",
-      "forecast": 6.747516545215168,
+      "forecast": 6.747516545215169,
       "actual": 6.8312884312549755
     },
     {
@@ -4463,7 +4491,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
       "run_date": "2025-04-01",
-      "forecast": 6.125640613307137,
+      "forecast": 6.12564061330545,
       "actual": 7.539747009603062
     },
     {
@@ -4471,7 +4499,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
       "run_date": "2025-04-01",
-      "forecast": 6.106081533650919,
+      "forecast": 6.1060815336509116,
       "actual": 7.539747009603062
     },
     {
@@ -4479,7 +4507,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q2",
       "run_date": "2025-04-01",
-      "forecast": 6.42675533500598,
+      "forecast": 6.426755335005981,
       "actual": 7.539747009603062
     },
     {
@@ -4503,7 +4531,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q3",
       "run_date": "2025-04-01",
-      "forecast": 6.009116761026223,
+      "forecast": 6.0140674567845,
       "actual": 8.29209515318766
     },
     {
@@ -4511,7 +4539,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q3",
       "run_date": "2025-04-01",
-      "forecast": 6.024216586428626,
+      "forecast": 6.024216586428618,
       "actual": 8.29209515318766
     },
     {
@@ -4519,7 +4547,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q3",
       "run_date": "2025-04-01",
-      "forecast": 6.42675533500598,
+      "forecast": 6.426755335005981,
       "actual": 8.29209515318766
     },
     {
@@ -4543,7 +4571,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q2",
       "run_date": "2025-05-01",
-      "forecast": 6.646004655197779,
+      "forecast": 6.616518060367915,
       "actual": 7.539747009603062
     },
     {
@@ -4551,7 +4579,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q2",
       "run_date": "2025-05-01",
-      "forecast": 5.9846441237974455,
+      "forecast": 5.984644123797434,
       "actual": 7.539747009603062
     },
     {
@@ -4583,7 +4611,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q2",
       "run_date": "2025-06-01",
-      "forecast": 6.520392623105975,
+      "forecast": 6.520392623111615,
       "actual": 7.539747009603062
     },
     {
@@ -4591,7 +4619,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q2",
       "run_date": "2025-06-01",
-      "forecast": 6.562968474759832,
+      "forecast": 6.562968474759845,
       "actual": 7.539747009603062
     },
     {
@@ -4623,7 +4651,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
       "run_date": "2025-07-01",
-      "forecast": 6.500960159729519,
+      "forecast": 6.500960159732583,
       "actual": 8.29209515318766
     },
     {
@@ -4631,7 +4659,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
       "run_date": "2025-07-01",
-      "forecast": 7.135517365924693,
+      "forecast": 7.135517365924705,
       "actual": 8.29209515318766
     },
     {
@@ -4639,7 +4667,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q3",
       "run_date": "2025-07-01",
-      "forecast": 7.102030612954507,
+      "forecast": 7.102030612954508,
       "actual": 8.29209515318766
     },
     {
@@ -4663,7 +4691,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q4",
       "run_date": "2025-07-01",
-      "forecast": 6.699327039243785,
+      "forecast": 6.69932703924343,
       "actual": 7.832467112045435
     },
     {
@@ -4671,7 +4699,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q4",
       "run_date": "2025-07-01",
-      "forecast": 7.048351249809629,
+      "forecast": 7.048351249809643,
       "actual": 7.832467112045435
     },
     {
@@ -4679,7 +4707,7 @@
       "horizon": "forecast",
       "target_quarter": "2025Q4",
       "run_date": "2025-07-01",
-      "forecast": 7.102030612954507,
+      "forecast": 7.102030612954508,
       "actual": 7.832467112045435
     },
     {
@@ -4703,7 +4731,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
       "run_date": "2025-08-01",
-      "forecast": 7.293414373375673,
+      "forecast": 7.293414373341367,
       "actual": 8.29209515318766
     },
     {
@@ -4711,7 +4739,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
       "run_date": "2025-08-01",
-      "forecast": 7.398267273620616,
+      "forecast": 7.398267273620612,
       "actual": 8.29209515318766
     },
     {
@@ -4719,7 +4747,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q3",
       "run_date": "2025-08-01",
-      "forecast": 7.054603882732577,
+      "forecast": 7.054603882732576,
       "actual": 8.29209515318766
     },
     {
@@ -4743,7 +4771,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
       "run_date": "2025-09-01",
-      "forecast": 7.2387666396600325,
+      "forecast": 7.242326150460654,
       "actual": 8.29209515318766
     },
     {
@@ -4751,7 +4779,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
       "run_date": "2025-09-01",
-      "forecast": 6.340738818697212,
+      "forecast": 6.340738818697203,
       "actual": 8.29209515318766
     },
     {
@@ -4759,7 +4787,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q3",
       "run_date": "2025-09-01",
-      "forecast": 6.8877306260167535,
+      "forecast": 6.887730626016753,
       "actual": 8.29209515318766
     },
     {
@@ -4783,7 +4811,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
       "run_date": "2025-10-01",
-      "forecast": 7.333535668806368,
+      "forecast": 7.3335356688000175,
       "actual": 7.832467112045435
     },
     {
@@ -4791,7 +4819,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
       "run_date": "2025-10-01",
-      "forecast": 6.492271217974916,
+      "forecast": 6.492271217974912,
       "actual": 7.832467112045435
     },
     {
@@ -4799,7 +4827,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2025Q4",
       "run_date": "2025-10-01",
-      "forecast": 6.9724388444831025,
+      "forecast": 6.972438844483101,
       "actual": 7.832467112045435
     },
     {
@@ -4823,7 +4851,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q1",
       "run_date": "2025-10-01",
-      "forecast": 6.869432465312908,
+      "forecast": 6.875594368455085,
       "actual": 8.658592555212692
     },
     {
@@ -4831,7 +4859,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q1",
       "run_date": "2025-10-01",
-      "forecast": 6.429543154499463,
+      "forecast": 6.429543154499458,
       "actual": 8.658592555212692
     },
     {
@@ -4839,7 +4867,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q1",
       "run_date": "2025-10-01",
-      "forecast": 6.9724388444831025,
+      "forecast": 6.972438844483101,
       "actual": 8.658592555212692
     },
     {
@@ -4863,7 +4891,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
       "run_date": "2025-11-01",
-      "forecast": 8.264734827416254,
+      "forecast": 8.264734827405483,
       "actual": 7.832467112045435
     },
     {
@@ -4871,7 +4899,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
       "run_date": "2025-11-01",
-      "forecast": 7.087094499735767,
+      "forecast": 7.0870944997357705,
       "actual": 7.832467112045435
     },
     {
@@ -4879,7 +4907,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2025Q4",
       "run_date": "2025-11-01",
-      "forecast": 7.843260506120619,
+      "forecast": 7.843260506120618,
       "actual": 7.832467112045435
     },
     {
@@ -4903,7 +4931,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
       "run_date": "2025-12-01",
-      "forecast": 8.207323576640647,
+      "forecast": 8.20967122759444,
       "actual": 7.832467112045435
     },
     {
@@ -4911,7 +4939,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
       "run_date": "2025-12-01",
-      "forecast": 6.519419545396813,
+      "forecast": 6.519419545396817,
       "actual": 7.832467112045435
     },
     {
@@ -4919,7 +4947,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2025Q4",
       "run_date": "2025-12-01",
-      "forecast": 7.239600880933479,
+      "forecast": 7.2396008809334775,
       "actual": 7.832467112045435
     },
     {
@@ -4943,7 +4971,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
       "run_date": "2026-01-01",
-      "forecast": 7.632983011801553,
+      "forecast": 7.632977920814654,
       "actual": 8.658592555212692
     },
     {
@@ -4951,7 +4979,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
       "run_date": "2026-01-01",
-      "forecast": 7.724307844726209,
+      "forecast": 7.724307844726216,
       "actual": 8.658592555212692
     },
     {
@@ -4959,7 +4987,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q1",
       "run_date": "2026-01-01",
-      "forecast": 8.391909078907872,
+      "forecast": 8.39190907890787,
       "actual": 8.658592555212692
     },
     {
@@ -4983,7 +5011,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q2",
       "run_date": "2026-01-01",
-      "forecast": 7.115804508048074,
+      "forecast": 7.119172282169184,
       "actual": 8.400120015840557
     },
     {
@@ -4991,7 +5019,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q2",
       "run_date": "2026-01-01",
-      "forecast": 7.6528306970583895,
+      "forecast": 7.652830697058397,
       "actual": 8.400120015840557
     },
     {
@@ -4999,7 +5027,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q2",
       "run_date": "2026-01-01",
-      "forecast": 8.391909078907872,
+      "forecast": 8.39190907890787,
       "actual": 8.400120015840557
     },
     {
@@ -5023,7 +5051,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
       "run_date": "2026-02-01",
-      "forecast": 7.313007470398025,
+      "forecast": 7.305656674199357,
       "actual": 8.658592555212692
     },
     {
@@ -5031,7 +5059,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
       "run_date": "2026-02-01",
-      "forecast": 7.542288507353991,
+      "forecast": 7.542288507353989,
       "actual": 8.658592555212692
     },
     {
@@ -5039,7 +5067,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q1",
       "run_date": "2026-02-01",
-      "forecast": 7.776841089609734,
+      "forecast": 7.776841089609732,
       "actual": 8.658592555212692
     },
     {
@@ -5063,7 +5091,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
       "run_date": "2026-03-01",
-      "forecast": 7.279265485351405,
+      "forecast": 7.29773480025373,
       "actual": 8.658592555212692
     },
     {
@@ -5071,7 +5099,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
       "run_date": "2026-03-01",
-      "forecast": 7.572042388988077,
+      "forecast": 7.572042388988075,
       "actual": 8.658592555212692
     },
     {
@@ -5079,7 +5107,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q1",
       "run_date": "2026-03-01",
-      "forecast": 8.069196203038093,
+      "forecast": 8.069196203038095,
       "actual": 8.658592555212692
     },
     {
@@ -5103,7 +5131,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
       "run_date": "2026-04-01",
-      "forecast": 6.8710237619102665,
+      "forecast": 6.871363430666899,
       "actual": 8.400120015840557
     },
     {
@@ -5111,7 +5139,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
       "run_date": "2026-04-01",
-      "forecast": 7.63035080424012,
+      "forecast": 7.630350804240115,
       "actual": 8.400120015840557
     },
     {
@@ -5119,7 +5147,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q2",
       "run_date": "2026-04-01",
-      "forecast": 9.071449282447043,
+      "forecast": 9.071449282447045,
       "actual": 8.400120015840557
     },
     {
@@ -5143,7 +5171,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q3",
       "run_date": "2026-04-01",
-      "forecast": 6.3737406812296005,
+      "forecast": 6.4136786134305845,
       "actual": null
     },
     {
@@ -5151,7 +5179,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q3",
       "run_date": "2026-04-01",
-      "forecast": 7.495351165273977,
+      "forecast": 7.495351165273974,
       "actual": null
     },
     {
@@ -5159,7 +5187,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q3",
       "run_date": "2026-04-01",
-      "forecast": 9.071449282447043,
+      "forecast": 9.071449282447045,
       "actual": null
     },
     {
@@ -5183,7 +5211,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q2",
       "run_date": "2026-05-01",
-      "forecast": 8.121519644669073,
+      "forecast": 8.078683810500497,
       "actual": 8.400120015840557
     },
     {
@@ -5191,7 +5219,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q2",
       "run_date": "2026-05-01",
-      "forecast": 7.818950160985485,
+      "forecast": 7.818950160985486,
       "actual": 8.400120015840557
     },
     {
@@ -5223,7 +5251,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q2",
       "run_date": "2026-06-01",
-      "forecast": 8.0160757792213,
+      "forecast": 8.016075779195209,
       "actual": 8.400120015840557
     },
     {
@@ -5263,7 +5291,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q3",
       "run_date": "2026-07-01",
-      "forecast": 7.412237916499387,
+      "forecast": 7.412237916468367,
       "actual": null
     },
     {
@@ -5271,7 +5299,7 @@
       "horizon": "nowcast_m1",
       "target_quarter": "2026Q3",
       "run_date": "2026-07-01",
-      "forecast": 8.769155927550344,
+      "forecast": 8.769155927550345,
       "actual": null
     },
     {
@@ -5303,7 +5331,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q4",
       "run_date": "2026-07-01",
-      "forecast": 4.063021886231141,
+      "forecast": 7.54114035298441,
       "actual": null
     },
     {
@@ -5311,7 +5339,7 @@
       "horizon": "forecast",
       "target_quarter": "2026Q4",
       "run_date": "2026-07-01",
-      "forecast": 8.654167918957562,
+      "forecast": 8.654167918957564,
       "actual": null
     },
     {
@@ -5343,7 +5371,7 @@
       "horizon": "nowcast_m2",
       "target_quarter": "2026Q3",
       "run_date": "2026-08-01",
-      "forecast": 7.868479380047111,
+      "forecast": 7.820226155569032,
       "actual": null
     },
     {
@@ -5383,7 +5411,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q3",
       "run_date": "2026-09-01",
-      "forecast": 7.929562838468773,
+      "forecast": 7.849764509903645,
       "actual": null
     },
     {
@@ -5391,7 +5419,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q3",
       "run_date": "2026-09-01",
-      "forecast": 6.31840817217748,
+      "forecast": 6.318408172177483,
       "actual": null
     },
     {
@@ -5399,7 +5427,7 @@
       "horizon": "nowcast_m3",
       "target_quarter": "2026Q3",
       "run_date": "2026-09-01",
-      "forecast": 8.422241693310308,
+      "forecast": 8.422241693310312,
       "actual": null
     }
   ]
