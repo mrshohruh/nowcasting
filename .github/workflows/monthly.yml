@@ -54,7 +54,7 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - run: pip install -e .
+      - run: pip install -c constraints.txt -e .
 
       - name: Check out the data branch into store/
         run: |
@@ -140,7 +140,7 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - run: pip install -e ".[report]"
+      - run: pip install -c constraints.txt -e ".[report]"
 
       - name: Check out the data branch into store/
         run: |

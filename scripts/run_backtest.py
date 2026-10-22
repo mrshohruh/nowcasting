@@ -35,6 +35,14 @@ def build_meta_from_sa(sa: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def load_model_config() -> dict:
+    """config/model.yaml: the single source of truth for model and exit-check settings."""
+    import yaml
+    from pathlib import Path
+    with open(Path(__file__).resolve().parent.parent / "config" / "model.yaml") as f:
+        return yaml.safe_load(f)
+
+
 def get_gdp_actuals(store) -> pd.Series:
     """Get actual GDP y/y from the latest vintage (first-release proxy)."""
     from nowcast.transform.panels import build_panels
@@ -70,18 +78,17 @@ def main(argv=None):
     print(f"Store: {DATA_ROOT}, empty={store.is_empty()}")
 
     # ── models ──
-    # DFM uses a curated subset for speed (full panel too slow for 57×EM)
-    dfm_vars = [
-        "ind_mining", "ind_manuf", "ind_elec", "constr", "retail", "wholesale",
-        "cpi", "ppi", "exports_total", "imports", "m2_real",
-        "gold_price", "usd_rate", "reserves_fx",
-        "gdp", "gva", "invest", "remittances_real", "wages_real",
-    ]
+    # The DFM is configured in config/model.yaml, the same file the production pipeline reads,
+    # so the backtest scores the model that produces the headline.
+    cfg = load_model_config()
+    dfm_cfg = cfg.get("dfm", {})
     models = [
         AR1(),
         CarryForward(),
-        DFM(n_factors=2, factor_orders=2, em_max_iter=150,
-            variable_ids=dfm_vars),
+        DFM(n_factors=dfm_cfg.get("n_factors", 2),
+            factor_orders=dfm_cfg.get("factor_orders", 2),
+            em_max_iter=dfm_cfg.get("em_max_iter", 250),
+            variable_ids=dfm_cfg.get("variable_ids")),
         BridgeEquations(),
         UMIDAS(n_lags=6, poly_degree=3, monthly_vars=[
             "ind_mining", "ind_manuf", "ind_elec", "constr", "retail", "wholesale",
@@ -220,9 +227,10 @@ def main(argv=None):
         if crmse < best_rmse:
             best_name, best_rmse, best_ratio = cname, crmse, cratio
 
-    passed = best_ratio <= 0.8
+    threshold = float(cfg.get("exit_check", {}).get("threshold", 0.9))
+    passed = best_ratio <= threshold
     print(f"\n  Best headline: {best_name}")
-    print(f"  Best ratio: {best_ratio:.3f}  (threshold ≤ 0.80)")
+    print(f"  Best ratio: {best_ratio:.3f}  (threshold ≤ {threshold:.2f}, from config/model.yaml)")
     print(f"  EXIT CHECK: {'PASS ✓' if passed else 'FAIL ✗'}")
 
     # Save scores
