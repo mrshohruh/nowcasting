@@ -15,11 +15,9 @@ import pandas as pd
 warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.WARNING, format="%(name)s: %(message)s")
 
-# ── paths ──
-DATA_ROOT = "/tmp/data-wt/observations"
-PANEL_SA = "/tmp/data-wt/panels/panel_sa.parquet"
-PANEL_YOY = "/tmp/data-wt/panels/panel_yoy.parquet"
-OUT_DIR = "/tmp/data-wt/backtest"
+# ── paths (set from the command line in main) ──
+DATA_ROOT = "store"
+OUT_DIR = "store/state"
 
 # ── helpers ──
 
@@ -48,8 +46,17 @@ def get_gdp_actuals(store) -> pd.Series:
     return gdp["value"].rename_axis("quarter").rename("actual")
 
 
-def main():
+def main(argv=None):
+    global DATA_ROOT, OUT_DIR
+    import argparse
     import os
+
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--store", default="store", help="Store directory (data branch checkout)")
+    p.add_argument("--out", default="store/state",
+                   help="Directory for backtest_summary.json (the pipeline's state dir)")
+    args = p.parse_args(argv)
+    DATA_ROOT, OUT_DIR = args.store, args.out
     os.makedirs(OUT_DIR, exist_ok=True)
 
     from nowcast.models.benchmarks import AR1, CarryForward
@@ -221,6 +228,34 @@ def main():
     # Save scores
     all_scores = pd.concat([scores_df, combo_scores], ignore_index=True)
     all_scores.to_csv(f"{OUT_DIR}/scores.csv", index=False)
+
+    # ── file read by the production pipeline (scripts/produce.py) ──
+    # "scores": one row per model and horizon, for the Models page.
+    # "errors": one row per scored prediction (forecast minus actual), for the 80% bands.
+    ar1_rmse_by_h = scores_df[scores_df["model"] == "ar1"].set_index("horizon")["rmse"].to_dict()
+    score_rows = []
+    for _, r in all_scores.iterrows():
+        h_ar1 = ar1_rmse_by_h.get(r["horizon"])
+        score_rows.append(dict(
+            model=r["model"], horizon=r["horizon"], rmse=float(r["rmse"]),
+            mae=float(r["mae"]), n=int(r["n"]),
+            ratio_vs_ar1=float(r["rmse"] / h_ar1) if h_ar1 else None,
+        ))
+    scored = results.merge(
+        pd.DataFrame({"target_quarter": list(actuals_dict.keys()),
+                      "actual": list(actuals_dict.values())}),
+        on="target_quarter",
+    ).dropna(subset=["gdp_yoy", "actual"])
+    error_rows = [
+        dict(model=m, horizon=h, target_quarter=q, error=float(f - a))
+        for m, h, q, f, a in zip(scored["model"], scored["horizon"],
+                                 scored["target_quarter"], scored["gdp_yoy"], scored["actual"])
+    ]
+    import json
+    with open(f"{OUT_DIR}/backtest_summary.json", "w") as f:
+        json.dump({"scores": score_rows, "errors": error_rows}, f, indent=2, default=str)
+    print(f"Wrote {OUT_DIR}/backtest_summary.json "
+          f"({len(score_rows)} score rows, {len(error_rows)} errors)")
 
     # Summary
     summary = {

@@ -221,6 +221,8 @@ def run_pipeline(
     state_dir: str = "state",
     out_dir: str = "_site",
     as_of: dt.date | None = None,
+    backtest_path: str | Path | None = None,
+    available_quarters: list[str] | None = None,
 ) -> dict:
     """Execute the full production pipeline and return a summary dict."""
     from nowcast.explain.narrative import render_note
@@ -315,14 +317,16 @@ def run_pipeline(
     percentiles = unc.get("percentiles", [10, 90])
     ssf = unc.get("small_sample_factor", 1.2)
 
-    # Load backtest errors if available to compute bands
-    backtest_path = state_path / "backtest_summary.json"
+    # Backtest scores (Models page) and per-prediction errors (bands).
+    # Written by scripts/run_backtest.py into the state directory.
+    bt_file = Path(backtest_path) if backtest_path else state_path / "backtest_summary.json"
     backtest: list = []
-    band_half = 1.2  # default ±1.2 pp
-    if backtest_path.exists():
-        backtest = json.loads(backtest_path.read_text())
-        # Compute empirical band from horizon-matched errors
-        errors = [r.get("error", 0) for r in backtest
+    band_half = 1.2  # default ±1.2 pp, used only when no backtest is available
+    if bt_file.exists():
+        bt = json.loads(bt_file.read_text())
+        backtest = bt.get("scores", [])
+        # Empirical band from backtest errors at this horizon
+        errors = [r["error"] for r in bt.get("errors", [])
                   if r.get("horizon") == horizon and r.get("error") is not None]
         if len(errors) >= 5:
             lo_pct = percentiles[0] if len(percentiles) >= 2 else 10
@@ -331,6 +335,10 @@ def run_pipeline(
                 abs(np.percentile(errors, lo_pct)),
                 abs(np.percentile(errors, hi_pct)),
             ) * ssf
+        else:
+            logger.warning("Only %d backtest errors at %s; using default band", len(errors), horizon)
+    else:
+        logger.warning("No backtest file at %s; Models page empty and default band used", bt_file)
 
     band_lo = gdp_yoy - band_half
     band_hi = gdp_yoy + band_half
@@ -369,6 +377,7 @@ def run_pipeline(
         backtest_results=backtest,
         narrative_en=narrative_en,
         narrative_uz=narrative_uz,
+        available_quarters=available_quarters or [str(target_quarter)],
     )
 
     # ── 10. Downloads ─────────────────────────────────────────────────────
@@ -450,6 +459,56 @@ def run_pipeline(
     return summary
 
 
+# ── multi-quarter driver ───────────────────────────────────────────────────
+
+
+def default_quarters(today: dt.date) -> list[pd.Period]:
+    """The previous and the current quarter, oldest first."""
+    cur = pd.Period(today, freq="Q")
+    return [cur - 1, cur]
+
+
+def as_of_for_quarter(quarter: pd.Period, today: dt.date) -> dt.date:
+    """Run date for a quarter's nowcast: today, or the quarter's last day if it has already ended."""
+    return min(today, quarter.end_time.date())
+
+
+def run_all(
+    store_dir: str,
+    state_dir: str,
+    out_dir: str,
+    quarters: list[pd.Period],
+    today: dt.date,
+    backtest_path: str | Path | None = None,
+) -> dict[str, dict]:
+    """Run the pipeline once per quarter, each into its own folder, and write a root index."""
+    out_root = Path(out_dir)
+    state_root = Path(state_dir)
+    names = [str(q) for q in quarters]
+    results: dict[str, dict] = {}
+    for q in quarters:
+        as_of = as_of_for_quarter(q, today)
+        logger.info("=== Quarter %s, as of %s ===", q, as_of)
+        results[str(q)] = run_pipeline(
+            store_dir=store_dir,
+            state_dir=str(state_root / str(q)),
+            out_dir=str(out_root / str(q)),
+            as_of=as_of,
+            backtest_path=backtest_path or state_root / "backtest_summary.json",
+            available_quarters=names,
+        )
+
+    # Root page: open the latest quarter
+    latest = names[-1]
+    (out_root / "index.html").write_text(
+        '<!DOCTYPE html>\n<html><head>\n'
+        f'<meta http-equiv="refresh" content="0;url={latest}/en/headline.html">\n'
+        '</head><body></body></html>\n',
+        encoding="utf-8",
+    )
+    return results
+
+
 # ── CLI entry point ────────────────────────────────────────────────────────
 
 
@@ -459,18 +518,21 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Examples:\n"
-            "  python scripts/produce.py --store store --state-dir state --out _site\n"
-            "  python scripts/produce.py --store store --out _site --as-of 2026-10-01 -v\n"
+            "  python scripts/produce.py --store store --state-dir store/state --out _site\n"
+            "  python scripts/produce.py --store store --state-dir state --out _site --as-of 2026-10-22 -v\n"
+            "\nBuilds the previous and the current quarter, each in _site/<quarter>/.\n"
         ),
     )
     parser.add_argument("--store", default="store",
                         help="Vintage store directory (default: store)")
     parser.add_argument("--state-dir", default="state",
-                        help="Run state directory (default: state)")
+                        help="Run state directory; each quarter uses a subfolder (default: state)")
     parser.add_argument("--out", default="_site",
                         help="Output directory for the site (default: _site)")
     parser.add_argument("--as-of",
-                        help="As-of date YYYY-MM-DD (default: today)")
+                        help="Pretend today is this date YYYY-MM-DD (default: today)")
+    parser.add_argument("--backtest",
+                        help="Backtest file (default: <state-dir>/backtest_summary.json)")
     parser.add_argument("-v", "--verbose", action="store_true",
                         help="DEBUG-level logging")
     args = parser.parse_args()
@@ -481,16 +543,17 @@ def main():
         datefmt="%H:%M:%S",
     )
 
-    as_of = dt.date.fromisoformat(args.as_of) if args.as_of else None
-
-    result = run_pipeline(
+    today = dt.date.fromisoformat(args.as_of) if args.as_of else dt.date.today()
+    results = run_all(
         store_dir=args.store,
         state_dir=args.state_dir,
         out_dir=args.out,
-        as_of=as_of,
+        quarters=default_quarters(today),
+        today=today,
+        backtest_path=args.backtest,
     )
 
-    print(json.dumps(result, indent=2))
+    print(json.dumps(results, indent=2))
 
 
 if __name__ == "__main__":

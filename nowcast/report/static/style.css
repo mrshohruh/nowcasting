@@ -163,6 +163,28 @@ img, svg { max-width: 100%; height: auto; }
   color: var(--c-white);
 }
 
+/* Quarter selector (right of the language switch) */
+.nav__quarter {
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.nav__quarter select {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--c-white);
+  border: 0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav__quarter select option {
+  color: #1a2744;
+}
+
 /* Hamburger (mobile) */
 .nav__toggle {
   display: none;

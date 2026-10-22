@@ -37,6 +37,16 @@
         <a href="{{ root }}en/{{ page }}.html"{% if lang == 'en' %} class="active"{% endif %}>EN</a>
         <a href="{{ root }}uz/{{ page }}.html"{% if lang == 'uz' %} class="active"{% endif %}>UZ</a>
       </div>
+
+      {% if quarter_options and quarter_options|length > 1 %}
+      <div class="nav__quarter">
+        <select aria-label="{{ t.nav_quarter }}" onchange="location.href=this.value">
+          {% for q in quarter_options %}
+          <option value="{{ q.href }}"{% if q.selected %} selected{% endif %}>{{ q.quarter }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      {% endif %}
     </div>
   </nav>
 

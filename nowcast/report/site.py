@@ -52,6 +52,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav_sectors": "Sectors",
         "nav_monitor": "Data Monitor",
         "nav_models": "Models",
+        "nav_quarter": "Quarter",
         "nav_downloads": "Downloads",
         "nav_methodology": "Methodology",
         # Footer
@@ -158,6 +159,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav_sectors": "Tarmoqlar",
         "nav_monitor": "Ma'lumotlar monitori",
         "nav_models": "Modellar",
+        "nav_quarter": "Chorak",
         "nav_downloads": "Yuklab olish",
         "nav_methodology": "Metodologiya",
         # Footer
@@ -289,6 +291,9 @@ class SiteContext:
 
     # Model performance  [{model, horizon, rmse, ratio_vs_ar1}, ...]
     backtest_results: list[dict] = field(default_factory=list)
+
+    # Quarters published alongside this one, for the quarter selector  ["2026Q3", "2026Q4"]
+    available_quarters: list[str] = field(default_factory=list)
 
     # Downloads  [{group, label, filename, format, description}, ...]
     download_files: list[dict] = field(default_factory=list)
@@ -578,7 +583,14 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
                 logger.warning("Template %s not found — skipping", template_name)
                 continue
 
-            html = tmpl.render(page=page_id, **common)
+            # Quarter selector: the same page in each published quarter's folder
+            quarter_options = [
+                dict(quarter=q,
+                     href=f"../../{q}/{lang}/{page_id}.html",
+                     selected=(q == ctx.target_quarter))
+                for q in sorted(ctx.available_quarters or [ctx.target_quarter], reverse=True)
+            ]
+            html = tmpl.render(page=page_id, quarter_options=quarter_options, **common)
             (lang_dir / f"{page_id}.html").write_text(html, encoding="utf-8")
             logger.info("Rendered %s/%s.html", lang, page_id)
 
