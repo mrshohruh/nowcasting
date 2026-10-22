@@ -1,0 +1,315 @@
+{
+ "run_id": "2026-10-22.3",
+ "vintage_date": "2026-10-22",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_mining_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_manuf_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_elec_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_total_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 368
+  },
+  "constr_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "constr_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "retail_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "retail_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "agri_real_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 15
+  },
+  "mkt_services_growth": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "mkt_services_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 10
+  },
+  "exports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "exports_gold_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 44
+  },
+  "imports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "usd_rate": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 2
+  },
+  "remittances_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 86
+  },
+  "bop_goods_exports": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 86
+  },
+  "bop_goods_imports": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 86
+  },
+  "cpi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm_old": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 132
+  },
+  "ppi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "m2": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 164
+  },
+  "reserves_fx": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "reserves_gold": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "gold_price": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 801
+  },
+  "rate_deposit_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_deposit_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "policy_rate": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 164
+  },
+  "new_small_business": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "operating_enterprises": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 58
+  },
+  "wages_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 38
+  },
+  "invest_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_nom_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_fdi_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 22
+  },
+  "income_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 34
+  }
+ }
+}
