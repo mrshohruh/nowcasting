@@ -83,6 +83,30 @@ dfm:
   factor_orders: 2         # VAR(2) for the factor transition
   idiosyncratic_ar1: true  # each series has AR(1) idiosyncratic component
   em_max_iter: 250         # EM iterations for estimation
+  # Variables the DFM uses. Read by BOTH the production pipeline and the backtest, so the
+  # backtest scores the model that produces the headline. Chosen by backtest (22 Oct 2026,
+  # pinned libraries): beats AR(1) at m1/m2/m3 (ratios 0.82/0.88/0.90) and passes the m3 exit
+  # check. The full panel (m3 0.92) and the approved set above (m2 1.34) did not.
+  variable_ids:
+    - ind_mining
+    - ind_manuf
+    - ind_elec
+    - constr
+    - retail
+    - wholesale
+    - cpi
+    - ppi
+    - exports_total
+    - imports
+    - m2_real
+    - gold_price
+    - usd_rate
+    - reserves_fx
+    - gdp
+    - gva
+    - invest
+    - remittances_real
+    - wages_real
 
 # ── U-MIDAS settings (Model C) ─────────────────────────────────────────────
 midas:
