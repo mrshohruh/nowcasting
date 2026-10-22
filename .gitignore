@@ -13,3 +13,4 @@ raw/
 cache/
 # a local ingestion store (python -m nowcast.ingest.run --store store)
 /store/
+_site/

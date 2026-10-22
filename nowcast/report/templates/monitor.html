@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_monitor }}{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ t.nav_monitor }}</h1>
+
+<div class="card">
+  <p class="headline-meta">{{ t.monitor_description }}</p>
+</div>
+
+{% if monitor_table %}
+<div class="card">
+  <h2 class="section-title">{{ t.monitor_availability }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_variable }}</th>
+          <th>{{ t.col_source }}</th>
+          <th>{{ t.col_frequency }}</th>
+          {% for col in monitor_columns %}
+          <th class="num">{{ col }}</th>
+          {% endfor %}
+          <th>{{ t.col_last_available }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in monitor_table %}
+        <tr>
+          <td>{{ row.label }}</td>
+          <td>{{ row.source }}</td>
+          <td>{{ row.frequency }}</td>
+          {% for col in monitor_columns %}
+          {% set status = row.availability[col] if col in row.availability else 'not_due' %}
+          <td class="cell-{{ status }}">
+            {% if status == 'available' %}&#10003;{% elif status == 'missing' %}&#10007;{% else %}&middot;{% endif %}
+          </td>
+          {% endfor %}
+          <td>{{ row.last_available or '—' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="mt-16" style="display:flex; gap:16px; font-size:0.8125rem;">
+    <span><span class="cell-available" style="display:inline-block;width:20px;text-align:center;">&#10003;</span> {{ t.legend_available }}</span>
+    <span><span class="cell-missing" style="display:inline-block;width:20px;text-align:center;">&#10007;</span> {{ t.legend_missing }}</span>
+    <span><span class="cell-pending" style="display:inline-block;width:20px;text-align:center;">&middot;</span> {{ t.legend_pending }}</span>
+  </div>
+</div>
+{% endif %}
+
+{% if series_metadata %}
+<div class="card">
+  <h2 class="section-title">{{ t.monitor_series_detail }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_series_id }}</th>
+          <th>{{ t.col_variable }}</th>
+          <th>{{ t.col_source }}</th>
+          <th>{{ t.col_frequency }}</th>
+          <th>{{ t.col_first_period }}</th>
+          <th>{{ t.col_expected_lag }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in series_metadata %}
+        <tr>
+          <td><code>{{ s.series_id }}</code></td>
+          <td>{{ s.label }}</td>
+          <td>{{ s.source }}</td>
+          <td>{{ s.frequency }}</td>
+          <td>{{ s.first_period }}</td>
+          <td>{{ s.expected_lag }} {{ t.months_label }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_headline }}{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Hero card -->
+<div class="card card--hero">
+  <div class="headline-meta">{{ t.target_quarter_label }}: {{ target_quarter }} &middot; {{ t.as_of_label }}: {{ run_date }} &middot; {{ horizon_label }}</div>
+  <div class="headline-number">
+    {{ "%.1f" | format(new_nowcast) }}<span class="unit">% y/y</span>
+  </div>
+  <div class="headline-meta">{{ t.headline_subtitle }}</div>
+
+  {% if has_decomposition and old_nowcast is not none %}
+  <div class="change-badge change-badge--{{ 'up' if total_change > 0.05 else ('down' if total_change < -0.05 else 'flat') }}">
+    {% if total_change > 0 %}&#9650;{% elif total_change < 0 %}&#9660;{% else %}&#9644;{% endif %}
+    {{ "%+.1f" | format(total_change) }} {{ t.pp_label }} {{ t.vs_previous }}
+  </div>
+  {% endif %}
+
+  {% if band_lo is defined and band_hi is defined %}
+  <div class="headline-band">{{ t.band_label }}: {{ "%.1f" | format(band_lo) }}% &ndash; {{ "%.1f" | format(band_hi) }}%</div>
+  {% endif %}
+</div>
+
+<!-- Headline chart -->
+{% if chart_headline %}
+<div class="card">
+  <h2 class="section-title">{{ t.headline_chart_title }}</h2>
+  <div class="chart-container" id="chart-headline"></div>
+</div>
+{% endif %}
+
+<!-- Narrative -->
+{% if narrative_text %}
+<div class="card">
+  <h2 class="section-title">{{ t.key_messages }}</h2>
+  <div class="narrative">{{ narrative_text }}</div>
+</div>
+{% endif %}
+
+<!-- Quick sector summary -->
+{% if sectors %}
+<div class="card">
+  <h2 class="section-title">{{ t.sector_summary }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_sector }}</th>
+          <th class="num">{{ t.col_weight }}</th>
+          <th class="num">{{ t.col_growth }}</th>
+          <th class="num">{{ t.col_contribution }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in sectors[:6] %}
+        <tr>
+          <td>{{ s.label }}</td>
+          <td class="num">{{ "%.0f" | format(s.weight * 100) }}%</td>
+          <td class="num">{{ "%.1f" | format(s.growth_yoy) }}%</td>
+          <td class="num {{ 'val-pos' if s.contribution_pp > 0.05 else ('val-neg' if s.contribution_pp < -0.05 else '') }}">{{ "%+.2f" | format(s.contribution_pp) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if chart_headline %}
+<script>
+(function() {
+  var spec = {{ chart_headline | tojson }};
+  Plotly.newPlot('chart-headline', spec.data, spec.layout, {responsive: true, displayModeBar: false});
+})();
+</script>
+{% endif %}
+{% endblock %}

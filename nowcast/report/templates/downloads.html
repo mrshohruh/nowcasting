@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_downloads }}{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ t.nav_downloads }}</h1>
+
+<div class="card">
+  <p class="headline-meta">{{ t.downloads_description }}</p>
+</div>
+
+{% if download_groups %}
+{% for group in download_groups %}
+<div class="card download-group">
+  <h3>{{ group.title }}</h3>
+  {% if group.description %}
+  <p class="headline-meta" style="margin-bottom:12px;">{{ group.description }}</p>
+  {% endif %}
+  <ul class="download-list">
+    {% for file in group.files %}
+    <li>
+      <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+      </svg>
+      <div>
+        <a href="{{ root }}downloads/{{ file.filename }}">{{ file.label }}</a>
+        <div class="meta">{{ file.format }} &middot; {{ file.size or '' }}{% if file.date %} &middot; {{ file.date }}{% endif %}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+{% else %}
+<div class="card">
+  <p class="headline-meta">{{ t.no_downloads }}</p>
+</div>
+{% endif %}
+{% endblock %}

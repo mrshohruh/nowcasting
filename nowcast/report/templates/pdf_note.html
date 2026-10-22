@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ t.pdf_title }} — {{ target_quarter }}</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 20mm 18mm 18mm 18mm;
+      @bottom-center {
+        content: counter(page);
+        font-size: 8pt;
+        color: #999;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #1a2744;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #e31e24;
+      padding-bottom: 8pt;
+      margin-bottom: 14pt;
+    }
+
+    .header img {
+      height: 36pt;
+    }
+
+    .header-text {
+      text-align: right;
+      font-size: 8pt;
+      color: #4a5568;
+    }
+
+    .header-text .title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #1a2744;
+    }
+
+    /* Headline */
+    .headline {
+      text-align: center;
+      margin: 16pt 0 12pt;
+    }
+
+    .headline .number {
+      font-size: 36pt;
+      font-weight: 700;
+      color: #1a2744;
+      line-height: 1.1;
+    }
+
+    .headline .number .unit {
+      font-size: 16pt;
+      font-weight: 400;
+      color: #4a5568;
+    }
+
+    .headline .meta {
+      font-size: 9pt;
+      color: #4a5568;
+      margin-top: 4pt;
+    }
+
+    .headline .change {
+      display: inline-block;
+      font-size: 10pt;
+      font-weight: 600;
+      padding: 2pt 10pt;
+      border-radius: 10pt;
+      margin-top: 6pt;
+    }
+
+    .change-up { color: #22763d; background: #c6f6d5; }
+    .change-down { color: #c62828; background: #fed7d7; }
+    .change-flat { color: #6b7280; background: #e2e8f0; }
+
+    .headline .band {
+      font-size: 8pt;
+      color: #6b7280;
+      margin-top: 4pt;
+    }
+
+    /* Narrative */
+    .narrative {
+      background: #f7fafc;
+      border-left: 3pt solid #e31e24;
+      padding: 8pt 12pt;
+      margin: 12pt 0;
+      font-size: 9pt;
+      line-height: 1.6;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      margin: 10pt 0;
+    }
+
+    thead th {
+      background: #1a2744;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+      padding: 5pt 6pt;
+    }
+
+    tbody td {
+      padding: 4pt 6pt;
+      border-bottom: 0.5pt solid #e2e8f0;
+    }
+
+    tbody tr:nth-child(even) { background: #f7fafc; }
+
+    th.num, td.num { text-align: right; }
+
+    .val-pos { color: #22763d; font-weight: 600; }
+    .val-neg { color: #c62828; font-weight: 600; }
+
+    /* Sections */
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a2744;
+      margin: 14pt 0 6pt;
+      border-bottom: 1pt solid #e2e8f0;
+      padding-bottom: 3pt;
+    }
+
+    /* Sector bars (pure HTML/CSS) */
+    .bar-chart {
+      margin: 8pt 0;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3pt;
+      font-size: 8pt;
+    }
+
+    .bar-label {
+      width: 110pt;
+      text-align: right;
+      padding-right: 6pt;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 14pt;
+      position: relative;
+      background: #f0f0f0;
+    }
+
+    .bar-fill {
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+
+    .bar-fill--pos {
+      background: #68d391;
+      left: 50%;
+    }
+
+    .bar-fill--neg {
+      background: #fc8181;
+      right: 50%;
+    }
+
+    .bar-center {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1pt;
+      background: #1a2744;
+    }
+
+    .bar-value {
+      width: 50pt;
+      text-align: right;
+      padding-left: 4pt;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 16pt;
+      padding-top: 6pt;
+      border-top: 1pt solid #e2e8f0;
+      font-size: 7pt;
+      color: #999;
+      text-align: center;
+    }
+
+    .disclaimer {
+      font-size: 7pt;
+      color: #999;
+      margin-top: 8pt;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.svg" alt="IMRS">
+    <div class="header-text">
+      <div class="title">{{ t.pdf_title }}</div>
+      <div>{{ target_quarter }} &middot; {{ run_date }}</div>
+    </div>
+  </div>
+
+  <!-- Headline -->
+  <div class="headline">
+    <div class="meta">{{ t.target_quarter_label }}: {{ target_quarter }} &middot; {{ horizon_label }}</div>
+    <div class="number">{{ "%.1f" | format(new_nowcast) }}<span class="unit">% y/y</span></div>
+
+    {% if has_decomposition and old_nowcast is not none %}
+    <div class="change change-{{ 'up' if total_change > 0.05 else ('down' if total_change < -0.05 else 'flat') }}">
+      {{ "%+.1f" | format(total_change) }} {{ t.pp_label }} {{ t.vs_previous }}
+    </div>
+    {% endif %}
+
+    {% if band_lo is defined and band_hi is defined %}
+    <div class="band">{{ t.band_label }}: {{ "%.1f" | format(band_lo) }}% – {{ "%.1f" | format(band_hi) }}%</div>
+    {% endif %}
+  </div>
+
+  <!-- Narrative -->
+  {% if narrative_text %}
+  <div class="narrative">{{ narrative_text }}</div>
+  {% endif %}
+
+  <!-- Sector chart (HTML bars for WeasyPrint) -->
+  {% if sectors %}
+  <div class="section-title">{{ t.sector_summary }}</div>
+  <div class="bar-chart">
+    {% set max_abs = sectors | map(attribute='contribution_pp') | map('abs') | max %}
+    {% set scale = 45.0 / (max_abs if max_abs > 0 else 1) %}
+    {% for s in sectors %}
+    <div class="bar-row">
+      <div class="bar-label">{{ s.label }}</div>
+      <div class="bar-track">
+        <div class="bar-center"></div>
+        {% if s.contribution_pp >= 0 %}
+        <div class="bar-fill bar-fill--pos" style="width: {{ (s.contribution_pp * scale) | round(1) }}%;"></div>
+        {% else %}
+        <div class="bar-fill bar-fill--neg" style="width: {{ (s.contribution_pp | abs * scale) | round(1) }}%;"></div>
+        {% endif %}
+      </div>
+      <div class="bar-value {{ 'val-pos' if s.contribution_pp > 0.05 else ('val-neg' if s.contribution_pp < -0.05 else '') }}">
+        {{ "%+.2f" | format(s.contribution_pp) }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Sector table -->
+  <table>
+    <thead>
+      <tr>
+        <th>{{ t.col_sector }}</th>
+        <th class="num">{{ t.col_weight }}</th>
+        <th class="num">{{ t.col_growth }}</th>
+        <th class="num">{{ t.col_contribution }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in sectors %}
+      <tr>
+        <td>{{ s.label }}</td>
+        <td class="num">{{ "%.0f" | format(s.weight * 100) }}%</td>
+        <td class="num">{{ "%.1f" | format(s.growth_yoy) }}%</td>
+        <td class="num {{ 'val-pos' if s.contribution_pp > 0.05 else ('val-neg' if s.contribution_pp < -0.05 else '') }}">{{ "%+.2f" | format(s.contribution_pp) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <!-- Disclaimer & footer -->
+  <div class="disclaimer">{{ t.pdf_disclaimer }}</div>
+  <div class="footer">{{ t.footer_org }} &middot; {{ generated_at }}</div>
+</body>
+</html>

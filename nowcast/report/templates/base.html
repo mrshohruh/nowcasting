@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ t.site_title }}{% endblock %} — {{ t.site_name }}</title>
+  <meta name="description" content="{{ t.site_description }}">
+  <link rel="icon" href="{{ root }}static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ root }}static/style.css">
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="{{ t.nav_label }}">
+    <div class="nav__inner">
+      <a href="{{ root }}{{ lang }}/headline.html" class="nav__logo" aria-label="{{ t.site_name }}">
+        <img src="{{ root }}static/logo.svg" alt="{{ t.site_name }}" height="32">
+      </a>
+
+      <button class="nav__toggle" aria-label="{{ t.nav_toggle }}" aria-expanded="false" onclick="this.nextElementSibling.classList.toggle('open'); this.setAttribute('aria-expanded', this.nextElementSibling.classList.contains('open'))">&#9776;</button>
+
+      <div class="nav__links">
+        <a href="{{ root }}{{ lang }}/headline.html"{% if page == 'headline' %} class="active"{% endif %}>{{ t.nav_headline }}</a>
+        <a href="{{ root }}{{ lang }}/path.html"{% if page == 'path' %} class="active"{% endif %}>{{ t.nav_path }}</a>
+        <a href="{{ root }}{{ lang }}/whatchanged.html"{% if page == 'whatchanged' %} class="active"{% endif %}>{{ t.nav_whatchanged }}</a>
+        <a href="{{ root }}{{ lang }}/sectors.html"{% if page == 'sectors' %} class="active"{% endif %}>{{ t.nav_sectors }}</a>
+        <a href="{{ root }}{{ lang }}/monitor.html"{% if page == 'monitor' %} class="active"{% endif %}>{{ t.nav_monitor }}</a>
+        <a href="{{ root }}{{ lang }}/models.html"{% if page == 'models' %} class="active"{% endif %}>{{ t.nav_models }}</a>
+        <a href="{{ root }}{{ lang }}/downloads.html"{% if page == 'downloads' %} class="active"{% endif %}>{{ t.nav_downloads }}</a>
+        <a href="{{ root }}{{ lang }}/methodology.html"{% if page == 'methodology' %} class="active"{% endif %}>{{ t.nav_methodology }}</a>
+      </div>
+
+      <div class="nav__lang">
+        <a href="{{ root }}en/{{ page }}.html"{% if lang == 'en' %} class="active"{% endif %}>EN</a>
+        <a href="{{ root }}uz/{{ page }}.html"{% if lang == 'uz' %} class="active"{% endif %}>UZ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="main" id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>&copy; {{ year }} {{ t.footer_org }}</div>
+      <div class="footer__generated">{{ t.footer_generated }} {{ generated_at }}</div>
+    </div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_models }}{% endblock %}
+
+{% block head_extra %}
+{% if chart_backtest %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ t.nav_models }}</h1>
+
+<div class="card">
+  <p class="headline-meta">{{ t.models_description }}</p>
+</div>
+
+{% if backtest_summary %}
+<div class="card">
+  <h2 class="section-title">{{ t.backtest_summary_title }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_model }}</th>
+          <th>{{ t.col_horizon }}</th>
+          <th class="num">{{ t.col_rmse }}</th>
+          <th class="num">{{ t.col_mae }}</th>
+          <th class="num">{{ t.col_ratio_ar1 }}</th>
+          <th class="num">{{ t.col_n_runs }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in backtest_summary %}
+        <tr{% if row.is_headline %} style="font-weight:700; background:rgba(227,30,36,0.05);"{% endif %}>
+          <td>{{ row.model }}</td>
+          <td>{{ row.horizon }}</td>
+          <td class="num">{{ "%.3f" | format(row.rmse) }}</td>
+          <td class="num">{{ "%.3f" | format(row.mae) }}</td>
+          <td class="num {{ 'val-pos' if row.ratio < 1.0 else 'val-neg' }}">{{ "%.3f" | format(row.ratio) }}</td>
+          <td class="num">{{ row.n_runs }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="headline-meta mt-16">{{ t.ratio_note }}</p>
+</div>
+{% endif %}
+
+{% if chart_backtest %}
+<div class="card">
+  <h2 class="section-title">{{ t.backtest_chart_title }}</h2>
+  <div class="chart-container" id="chart-backtest"></div>
+</div>
+{% endif %}
+
+{% if model_details %}
+<div class="card">
+  <h2 class="section-title">{{ t.model_specs_title }}</h2>
+  {% for model in model_details %}
+  <div style="margin-bottom:20px;">
+    <h3 style="font-size:1rem; font-weight:600; margin-bottom:8px;">{{ model.name }}</h3>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          {% for key, value in model.params.items() %}
+          <tr>
+            <td style="width:200px; font-weight:500;">{{ key }}</td>
+            <td>{{ value }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if chart_backtest %}
+<script>
+(function() {
+  var spec = {{ chart_backtest | tojson }};
+  Plotly.newPlot('chart-backtest', spec.data, spec.layout, {responsive: true, displayModeBar: false});
+})();
+</script>
+{% endif %}
+{% endblock %}

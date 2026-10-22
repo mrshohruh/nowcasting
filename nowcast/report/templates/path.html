@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_path }}{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ t.nav_path }}</h1>
+
+<div class="card">
+  <p class="headline-meta">{{ t.path_description }}</p>
+</div>
+
+{% if chart_path %}
+<div class="card">
+  <h2 class="section-title">{{ t.path_chart_title }}</h2>
+  <div class="chart-container" id="chart-path"></div>
+</div>
+{% endif %}
+
+{% if path_table %}
+<div class="card">
+  <h2 class="section-title">{{ t.path_table_title }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_run_date }}</th>
+          <th>{{ t.col_target }}</th>
+          <th>{{ t.col_horizon }}</th>
+          <th class="num">{{ t.col_nowcast }}</th>
+          <th class="num">{{ t.col_change }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in path_table %}
+        <tr>
+          <td>{{ row.run_date }}</td>
+          <td>{{ row.target_quarter }}</td>
+          <td>{{ row.horizon }}</td>
+          <td class="num">{{ "%.1f" | format(row.nowcast) }}%</td>
+          <td class="num {{ 'val-pos' if row.change is not none and row.change > 0.05 else ('val-neg' if row.change is not none and row.change < -0.05 else '') }}">
+            {% if row.change is not none %}{{ "%+.1f" | format(row.change) }}{% else %}&mdash;{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if chart_path %}
+<script>
+(function() {
+  var spec = {{ chart_path | tojson }};
+  Plotly.newPlot('chart-path', spec.data, spec.layout, {responsive: true, displayModeBar: false});
+})();
+</script>
+{% endif %}
+{% endblock %}

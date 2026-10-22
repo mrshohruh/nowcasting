@@ -30,6 +30,8 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: monthly-ingest
@@ -39,6 +41,9 @@ jobs:
   ingest:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    outputs:
+      skipped: ${{ steps.run.outputs.skipped }}
+      run_id: ${{ steps.run.outputs.run_id }}
     env:
       DATA_BRANCH: data
     steps:
@@ -118,3 +123,79 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python -m nowcast.ingest.alerts --store store --crashed
+
+  # ── Phase 5: Nowcasting pipeline and dashboard deployment ─────────────────
+  nowcast:
+    needs: ingest
+    if: needs.ingest.outputs.skipped != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DATA_BRANCH: data
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -e ".[report]"
+
+      - name: Check out the data branch into store/
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch --depth=1 origin "$DATA_BRANCH"
+          git worktree add -B "$DATA_BRANCH" store FETCH_HEAD
+
+      - name: Run nowcasting pipeline
+        id: produce
+        run: python scripts/produce.py --store store --state-dir store/state --out _site -v
+
+      - name: Commit state to data branch
+        run: |
+          cd store
+          git add -A
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "Run state $(date +%Y-%m-%d)"
+          git push origin "HEAD:$DATA_BRANCH"
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Upload PDF notes
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-notes
+          path: _site/pdf/
+
+  deploy-staging:
+    needs: nowcast
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: staging
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages (staging)
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-production:
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages (production)
+        id: deployment
+        uses: actions/deploy-pages@v4
