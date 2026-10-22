@@ -450,3 +450,9 @@ freight,2025Q3,weights: equal
 freight,2025Q4,weights: equal
 freight,2026Q1,weights: equal
 freight,2026Q2,weights: equal
+bop_exports,2018Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+bop_exports,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
+bop_exports,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+bop_exports,2021Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+bop_exports,2021Q4,outlier in SA panel (> 4 robust SD): value_clean missing
+bop_imports,2015Q4,outlier in SA panel (> 4 robust SD): value_clean missing

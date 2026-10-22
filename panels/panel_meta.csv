@@ -62,3 +62,5 @@ invest,Q,quarterly,real_growth,core,"invest_growth_q, 1700","prev_year 22, same_
 invest_fdi_real,Q,quarterly,nominal,candidate,"invest_fdi_q, 1700",,,invest_fdi_q (cumulative_ytd); / CPI (2021 = 100),STL robust,,2022Q1,2026Q2,18,36.83458279576196,35.48193775974792,2021Q2,2026Q2,21.0,0.0,6.9893709430908,11.398002234221128,0
 agri_output,Q,quarterly,real_growth,candidate,"agri_real_q, 1700",prev_year 15,,,,,2023Q1,2026Q2,14,4.114684682653492,0.7544334619465695,,,,,,,1
 freight,Q,quarterly,real_growth,candidate,"freight_q, 1700",equal 10,,,,,2024Q1,2026Q2,10,3.840000000000002,3.317696657488627,,,,,,,10
+bop_exports,Q,quarterly,nominal,core,"bop_goods_exports, goods_credits_exports",,,bop_goods_exports (discrete),STL robust,,2013Q1,2026Q2,54,11.33540157144754,45.22364246951256,2013Q1,2026Q2,54.0,5.0,-2.63097214179215,20.786113214193573,5
+bop_imports,Q,quarterly,nominal,core,"bop_goods_imports, goods_debits_imports",,,bop_goods_imports (discrete),STL robust,,2013Q1,2026Q2,54,10.854492460716962,20.178992079407273,2013Q1,2026Q2,54.0,1.0,3.069171900735567,9.996852606471528,1

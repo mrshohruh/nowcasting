@@ -1,0 +1,1177 @@
+{
+ "run_id": "2026-10-22",
+ "vintage_date": "2026-10-22",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_mining_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_manuf_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_elec_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_total_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 368
+  },
+  "constr_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "constr_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "retail_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "retail_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "agri_real_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 15
+  },
+  "mkt_services_growth": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "mkt_services_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 10
+  },
+  "exports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "exports_gold_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 44
+  },
+  "imports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "usd_rate": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 2
+  },
+  "remittances_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 86
+  },
+  "bop_goods_exports": {
+   "summary": "86 new (2005Q1 to 2026Q2)",
+   "new": [
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2005Q1",
+     "value": 1182.5753592824908
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2005Q2",
+     "value": 1328.004570230297
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2005Q3",
+     "value": 890.0835722607651
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2005Q4",
+     "value": 1361.0040114285296
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2006Q1",
+     "value": 1214.4778485931095
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2006Q2",
+     "value": 1209.3530908729247
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2006Q3",
+     "value": 1415.5993518543555
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2006Q4",
+     "value": 1822.6079657634687
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2007Q1",
+     "value": 1479.6193485816245
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2007Q2",
+     "value": 2194.740969831216
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2007Q3",
+     "value": 1778.2832322333372
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2007Q4",
+     "value": 2523.724211667038
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2008Q1",
+     "value": 2139.1747859939924
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2008Q2",
+     "value": 3162.8328758030602
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2008Q3",
+     "value": 3658.3567216744345
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2008Q4",
+     "value": 1282.547766933118
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2009Q1",
+     "value": 1948.3658881508131
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2009Q2",
+     "value": 2972.3377119683664
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2009Q3",
+     "value": 2976.0386556968265
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2009Q4",
+     "value": 2871.551059039299
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2010Q1",
+     "value": 2245.7463004280326
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2010Q2",
+     "value": 2607.9274382045774
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2010Q3",
+     "value": 2888.054988016732
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2010Q4",
+     "value": 2906.2109203855375
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2011Q1",
+     "value": 2618.9087006684017
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2011Q2",
+     "value": 2984.2256379323558
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2011Q3",
+     "value": 4323.32278293309
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2011Q4",
+     "value": 2478.632597898476
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2012Q1",
+     "value": 2327.869426102297
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2012Q2",
+     "value": 2495.95653162691
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2012Q3",
+     "value": 3091.7124970079853
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2012Q4",
+     "value": 2933.012176262407
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2013Q1",
+     "value": 2068.387639345807
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2013Q2",
+     "value": 2632.962784216366
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2013Q3",
+     "value": 3367.91117009921
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2013Q4",
+     "value": 3080.696746913525
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2014Q1",
+     "value": 2331.2213812224436
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2014Q2",
+     "value": 2207.863249771435
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2014Q3",
+     "value": 2861.040108379827
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2014Q4",
+     "value": 3156.1001345486898
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2015Q1",
+     "value": 2628.6789995346057
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2015Q2",
+     "value": 1776.08935313979
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2015Q3",
+     "value": 2204.591140507158
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2015Q4",
+     "value": 2872.1035858327414
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2016Q1",
+     "value": 1682.6230760665894
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2016Q2",
+     "value": 1837.4044565215013
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2016Q3",
+     "value": 2169.8576194950306
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2016Q4",
+     "value": 2955.283245297488
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2017Q1",
+     "value": 1727.7454298880302
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2017Q2",
+     "value": 2371.5175353793143
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2017Q3",
+     "value": 3392.0722994834114
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2017Q4",
+     "value": 2670.197632496925
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2018Q1",
+     "value": 2956.990031780819
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2018Q2",
+     "value": 2350.8049295908295
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2018Q3",
+     "value": 1976.5081026470802
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2018Q4",
+     "value": 4101.286994225318
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2019Q1",
+     "value": 3045.0242858215556
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2019Q2",
+     "value": 3414.123147248677
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2019Q3",
+     "value": 4146.597534429133
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2019Q4",
+     "value": 3292.881692783554
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2020Q1",
+     "value": 2609.287974100156
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2020Q2",
+     "value": 2579.245190689913
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2020Q3",
+     "value": 5616.154639386219
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2020Q4",
+     "value": 2027.4784608832476
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2021Q1",
+     "value": 1947.71789695734
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2021Q2",
+     "value": 4025.1545864982236
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2021Q3",
+     "value": 2536.1475749168812
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2021Q4",
+     "value": 5632.993948847214
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2022Q1",
+     "value": 5225.459212125375
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2022Q2",
+     "value": 3236.292888611172
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2022Q3",
+     "value": 3649.474560206407
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2022Q4",
+     "value": 4537.98424075728
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2023Q1",
+     "value": 4981.77254601144
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2023Q2",
+     "value": 5096.883660612253
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2023Q3",
+     "value": 4191.3378545313035
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2023Q4",
+     "value": 5346.589343702175
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2024Q1",
+     "value": 5331.365069753708
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2024Q2",
+     "value": 4574.390900398123
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2024Q3",
+     "value": 4975.714144691041
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2024Q4",
+     "value": 4744.605594751954
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2025Q1",
+     "value": 6241.32642540175
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2025Q2",
+     "value": 6431.936544211379
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2025Q3",
+     "value": 6878.8546214996895
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2025Q4",
+     "value": 3472.7447187009075
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2026Q1",
+     "value": 3444.4958252195606
+    },
+    {
+     "item": "goods_credits_exports",
+     "ref_period": "2026Q2",
+     "value": 5906.071759184183
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "bop_goods_imports": {
+   "summary": "86 new (2005Q1 to 2026Q2)",
+   "new": [
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2005Q1",
+     "value": 819.1538153452012
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2005Q2",
+     "value": 787.7535854919083
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2005Q3",
+     "value": 881.39522532967
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2005Q4",
+     "value": 914.6057936192042
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2006Q1",
+     "value": 875.3090734835633
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2006Q2",
+     "value": 1103.0354610850904
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2006Q3",
+     "value": 1100.6909369114655
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2006Q4",
+     "value": 1104.6451419872178
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2007Q1",
+     "value": 1420.5504784762982
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2007Q2",
+     "value": 1559.0427539941961
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2007Q3",
+     "value": 1600.042568943918
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2007Q4",
+     "value": 1697.0287722612188
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2008Q1",
+     "value": 1774.159007605463
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2008Q2",
+     "value": 2080.98499144663
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2008Q3",
+     "value": 2302.9396503697544
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2008Q4",
+     "value": 2768.3018136519645
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2009Q1",
+     "value": 2101.7213333143122
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2009Q2",
+     "value": 2224.6132059171578
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2009Q3",
+     "value": 2124.2518292159225
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2009Q4",
+     "value": 2675.1668052674645
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2010Q1",
+     "value": 2022.0524365728972
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2010Q2",
+     "value": 2511.520600215299
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2010Q3",
+     "value": 2492.1005873274516
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2010Q4",
+     "value": 2959.3040561133903
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2011Q1",
+     "value": 2441.6566120323528
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2011Q2",
+     "value": 3159.521763469551
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2011Q3",
+     "value": 3212.95201315357
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2011Q4",
+     "value": 3658.900391647701
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2012Q1",
+     "value": 2877.455328002491
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2012Q2",
+     "value": 3062.39645246029
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2012Q3",
+     "value": 3935.9060013438457
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2012Q4",
+     "value": 3469.883777050187
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2013Q1",
+     "value": 2960.1280329688016
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2013Q2",
+     "value": 3882.2118222183685
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2013Q3",
+     "value": 3699.329550222147
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2013Q4",
+     "value": 3420.3732775383974
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2014Q1",
+     "value": 3239.3378348881283
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2014Q2",
+     "value": 3294.470682652382
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2014Q3",
+     "value": 3265.9982417765905
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2014Q4",
+     "value": 3714.287566676449
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2015Q1",
+     "value": 2952.933862489471
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2015Q2",
+     "value": 3050.402998508089
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2015Q3",
+     "value": 3232.5112667280932
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2015Q4",
+     "value": 2340.1156631290196
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2016Q1",
+     "value": 2307.1348871456657
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2016Q2",
+     "value": 2699.667931404052
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2016Q3",
+     "value": 2923.6101739532664
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2016Q4",
+     "value": 3106.8603558484515
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2017Q1",
+     "value": 2627.4486646157116
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2017Q2",
+     "value": 3150.5920761562957
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2017Q3",
+     "value": 3379.2460920650437
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2017Q4",
+     "value": 3220.032878677964
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2018Q1",
+     "value": 3727.85102705343
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2018Q2",
+     "value": 4519.692648455614
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2018Q3",
+     "value": 4488.89620265977
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2018Q4",
+     "value": 5516.005440810215
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2019Q1",
+     "value": 4741.76787073683
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2019Q2",
+     "value": 5291.6800310359695
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2019Q3",
+     "value": 5528.639972843323
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2019Q4",
+     "value": 5627.8640860967425
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2020Q1",
+     "value": 4291.356875295735
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2020Q2",
+     "value": 4290.122987079513
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2020Q3",
+     "value": 4998.2832086964345
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2020Q4",
+     "value": 5468.5516375331545
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2021Q1",
+     "value": 4708.65498766947
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2021Q2",
+     "value": 5925.224544816989
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2021Q3",
+     "value": 5865.511640934997
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2021Q4",
+     "value": 6409.29892659733
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2022Q1",
+     "value": 6518.159751727838
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2022Q2",
+     "value": 6370.4776166463935
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2022Q3",
+     "value": 7205.272459011279
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2022Q4",
+     "value": 8215.24843185319
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2023Q1",
+     "value": 7687.165438385378
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2023Q2",
+     "value": 8490.408164817452
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2023Q3",
+     "value": 7760.572900991807
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2023Q4",
+     "value": 10537.410174853934
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2024Q1",
+     "value": 8063.43888123633
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2024Q2",
+     "value": 7991.520242792541
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2024Q3",
+     "value": 8217.795459138359
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2024Q4",
+     "value": 8887.210661026606
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2025Q1",
+     "value": 7669.419505140198
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2025Q2",
+     "value": 9039.955139446001
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2025Q3",
+     "value": 10407.29339934743
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2025Q4",
+     "value": 11429.810030305238
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2026Q1",
+     "value": 10195.33996751953
+    },
+    {
+     "item": "goods_debits_imports",
+     "ref_period": "2026Q2",
+     "value": 10583.57838671409
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 0
+  },
+  "cpi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm_old": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 132
+  },
+  "ppi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "m2": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 164
+  },
+  "reserves_fx": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "reserves_gold": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "gold_price": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 801
+  },
+  "rate_deposit_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_deposit_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_hh": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "rate_loan_firms": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "policy_rate": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 164
+  },
+  "new_small_business": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "operating_enterprises": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 58
+  },
+  "wages_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 38
+  },
+  "invest_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_nom_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_fdi_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 22
+  },
+  "income_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 34
+  }
+ }
+}
