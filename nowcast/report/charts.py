@@ -229,7 +229,7 @@ def nowcast_vs_actual_chart(
             x=[current["quarter"]], y=[v], mode="markers+text",
             name=f"Current nowcast {current['quarter']}",
             marker=dict(size=13, color=RED, line=dict(color=WHITE, width=2)),
-            text=[f"{v:.1f}%"], textposition="top center",
+            text=[f"  {v:.1f}%"], textposition="middle right",
             textfont=dict(size=13, color=RED, family="Inter, system-ui, sans-serif"),
             type="scatter", hovertemplate="%{y:.1f}%<extra>Current nowcast</extra>",
         )
@@ -240,8 +240,8 @@ def nowcast_vs_actual_chart(
             )
         data.append(trace)
 
+    # No in-chart title: the card heading already names the chart, and a title collides with the legend
     layout = _merge_layout(dict(
-        title=dict(text="Nowcast vs official GDP (y/y %)", font=dict(size=15)),
         xaxis=dict(type="category", title="Target quarter"),
         yaxis=dict(title="y/y %", ticksuffix="%"),
     ))
