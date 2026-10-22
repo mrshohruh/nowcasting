@@ -2376,5 +2376,3031 @@
       "target_quarter": "2026Q2",
       "error": 1.2142780656809506
     }
+  ],
+  "history": [
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-01-01",
+      "forecast": 6.850142892929533,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-01-01",
+      "forecast": 9.339401876157993,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-01-01",
+      "forecast": 5.4372532469592505,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-01-01",
+      "forecast": 9.508526196682583,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-01-01",
+      "forecast": 9.170110911497702,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-01-01",
+      "forecast": 6.36142256456625,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-01-01",
+      "forecast": 9.339401876157993,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-01-01",
+      "forecast": 5.852598487464444,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-01-01",
+      "forecast": 9.29610294524879,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-01-01",
+      "forecast": 9.170110911497702,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-02-01",
+      "forecast": 6.410572364028919,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-02-01",
+      "forecast": 7.065284085480059,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-02-01",
+      "forecast": 5.265311252526006,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-02-01",
+      "forecast": 7.821821478426496,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-02-01",
+      "forecast": 7.096528282779631,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-03-01",
+      "forecast": 6.410572364028919,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-03-01",
+      "forecast": 7.065284085480059,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-03-01",
+      "forecast": 5.236577477511606,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-03-01",
+      "forecast": 7.207390663384879,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "run_date": "2022-03-01",
+      "forecast": 9.18729121236893,
+      "actual": 5.074395306365872
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-04-01",
+      "forecast": 6.05949355811558,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-04-01",
+      "forecast": 7.065284085480059,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-04-01",
+      "forecast": 5.781469538099437,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-04-01",
+      "forecast": 6.610245590578844,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-04-01",
+      "forecast": 9.183700903518655,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-04-01",
+      "forecast": 5.8712331009966165,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-04-01",
+      "forecast": 7.065284085480059,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-04-01",
+      "forecast": 6.127783610617943,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-04-01",
+      "forecast": 6.490018706020893,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-04-01",
+      "forecast": 9.183700903518655,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-05-01",
+      "forecast": 5.265542201643743,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-05-01",
+      "forecast": 5.074395306365872,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-05-01",
+      "forecast": 5.359654276981396,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-05-01",
+      "forecast": 5.492767268511574,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-05-01",
+      "forecast": 5.751674962577495,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-06-01",
+      "forecast": 5.265542201643743,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-06-01",
+      "forecast": 5.074395306365872,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-06-01",
+      "forecast": 5.329959403608808,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-06-01",
+      "forecast": 5.26425642593384,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "run_date": "2022-06-01",
+      "forecast": 6.103534425157357,
+      "actual": 4.156382489664438
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-07-01",
+      "forecast": 5.365764059866509,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-07-01",
+      "forecast": 5.074395306365872,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-07-01",
+      "forecast": 5.747864290146576,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-07-01",
+      "forecast": 5.339269076020126,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-07-01",
+      "forecast": 5.755923851194657,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-07-01",
+      "forecast": 5.418312236759586,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-07-01",
+      "forecast": 5.074395306365872,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-07-01",
+      "forecast": 5.992538288534943,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-07-01",
+      "forecast": 5.392138782539974,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-07-01",
+      "forecast": 5.755923851194657,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-08-01",
+      "forecast": 4.714507597838016,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-08-01",
+      "forecast": 4.156382489664438,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-08-01",
+      "forecast": 4.995602006765898,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-08-01",
+      "forecast": 4.47284664576263,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-08-01",
+      "forecast": 4.27354620989899,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-09-01",
+      "forecast": 4.714507597838016,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-09-01",
+      "forecast": 4.156382489664438,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-09-01",
+      "forecast": 4.977796803514223,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-09-01",
+      "forecast": 6.592348554836662,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "run_date": "2022-09-01",
+      "forecast": 4.711570741755919,
+      "actual": 6.528555407244312
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-10-01",
+      "forecast": 5.00892435724961,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-10-01",
+      "forecast": 4.156382489664438,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-10-01",
+      "forecast": 5.098629403646693,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-10-01",
+      "forecast": 5.9375289711615205,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-10-01",
+      "forecast": 5.562691873540376,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "run_date": "2022-10-01",
+      "forecast": 5.164232238857162,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "run_date": "2022-10-01",
+      "forecast": 4.156382489664438,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "run_date": "2022-10-01",
+      "forecast": 5.5515556001979105,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "run_date": "2022-10-01",
+      "forecast": 5.983238317305295,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "run_date": "2022-10-01",
+      "forecast": 5.562691873540376,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-11-01",
+      "forecast": 6.051659469799121,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-11-01",
+      "forecast": 6.528555407244312,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-11-01",
+      "forecast": 5.429371404117167,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-11-01",
+      "forecast": 5.454677903496305,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-11-01",
+      "forecast": 5.915026621546207,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-12-01",
+      "forecast": 6.051659469799121,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-12-01",
+      "forecast": 6.528555407244312,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-12-01",
+      "forecast": 5.3213171758315525,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-12-01",
+      "forecast": 4.937948253152481,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "run_date": "2022-12-01",
+      "forecast": 7.014630189187445,
+      "actual": 7.720838068092178
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-01-01",
+      "forecast": 5.806874761057001,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-01-01",
+      "forecast": 6.528555407244312,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-01-01",
+      "forecast": 5.008206791657759,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-01-01",
+      "forecast": 6.980128687814224,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-01-01",
+      "forecast": 5.681229837439149,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-01-01",
+      "forecast": 6.528555407244312,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-01-01",
+      "forecast": 5.661163977274741,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-01-01",
+      "forecast": 5.0921032493381295,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-01-01",
+      "forecast": 6.980128687814224,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-02-01",
+      "forecast": 6.773024773298191,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-02-01",
+      "forecast": 7.720838068092178,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-02-01",
+      "forecast": 6.296148828103854,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-02-01",
+      "forecast": 6.410411058561429,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-02-01",
+      "forecast": 7.188339786413705,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-03-01",
+      "forecast": 6.773024773298191,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-03-01",
+      "forecast": 7.720838068092178,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-03-01",
+      "forecast": 6.198278071957453,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-03-01",
+      "forecast": 1.9208695474141966,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "run_date": "2023-03-01",
+      "forecast": 8.129437256914128,
+      "actual": 6.440385168544907
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-04-01",
+      "forecast": 6.277204797450157,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-04-01",
+      "forecast": 7.720838068092178,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-04-01",
+      "forecast": 6.326421257253645,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-04-01",
+      "forecast": 2.8716858521131217,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-04-01",
+      "forecast": 5.112605443149284,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-04-01",
+      "forecast": 6.017831511803874,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-04-01",
+      "forecast": 7.720838068092178,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-04-01",
+      "forecast": 5.597642279588788,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-04-01",
+      "forecast": 2.8159251406842682,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-04-01",
+      "forecast": 5.112605443149284,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-05-01",
+      "forecast": 6.083379731531317,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-05-01",
+      "forecast": 6.440385168544907,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-05-01",
+      "forecast": 6.7951075355919155,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-05-01",
+      "forecast": 4.76351103674029,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-05-01",
+      "forecast": 6.116304113411778,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-06-01",
+      "forecast": 6.083379731531317,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-06-01",
+      "forecast": 6.440385168544907,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-06-01",
+      "forecast": 6.633919385020515,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-06-01",
+      "forecast": 5.780982458303944,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "run_date": "2023-06-01",
+      "forecast": 5.803562465495068,
+      "actual": 7.560268947749506
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-07-01",
+      "forecast": 5.898043809122355,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-07-01",
+      "forecast": 6.440385168544907,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-07-01",
+      "forecast": 6.591115846339712,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-07-01",
+      "forecast": 5.865894524884122,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-07-01",
+      "forecast": 5.747956138706011,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-07-01",
+      "forecast": 5.8018284561503695,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-07-01",
+      "forecast": 6.440385168544907,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-07-01",
+      "forecast": 6.791545632984675,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-07-01",
+      "forecast": 5.8020514032242465,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-07-01",
+      "forecast": 5.747956138706011,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-08-01",
+      "forecast": 6.747214924105821,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-08-01",
+      "forecast": 7.560268947749506,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-08-01",
+      "forecast": 6.271436836461075,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-08-01",
+      "forecast": 6.238324329142602,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-08-01",
+      "forecast": 6.362663996026946,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-09-01",
+      "forecast": 6.747214924105821,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-09-01",
+      "forecast": 7.560268947749506,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-09-01",
+      "forecast": 6.291341705397135,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-09-01",
+      "forecast": 6.284609074753504,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "run_date": "2023-09-01",
+      "forecast": 6.1733588338922445,
+      "actual": 5.6547585055520955
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-10-01",
+      "forecast": 6.319884090506174,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-10-01",
+      "forecast": 7.560268947749506,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-10-01",
+      "forecast": 6.004940112988155,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-10-01",
+      "forecast": 6.230024635354827,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-10-01",
+      "forecast": 5.289718412669224,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "run_date": "2023-10-01",
+      "forecast": 6.095284450095321,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "run_date": "2023-10-01",
+      "forecast": 7.560268947749506,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "run_date": "2023-10-01",
+      "forecast": 5.989141568506495,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "run_date": "2023-10-01",
+      "forecast": 6.061404412583716,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "run_date": "2023-10-01",
+      "forecast": 5.289718412669224,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-11-01",
+      "forecast": 5.697253412430237,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-11-01",
+      "forecast": 5.6547585055520955,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-11-01",
+      "forecast": 6.48736682465938,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-11-01",
+      "forecast": 6.099472588527439,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-11-01",
+      "forecast": 5.801731586102855,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-12-01",
+      "forecast": 5.697253412430237,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-12-01",
+      "forecast": 5.6547585055520955,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-12-01",
+      "forecast": 6.488766293303372,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-12-01",
+      "forecast": 6.175790148799762,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "run_date": "2023-12-01",
+      "forecast": 5.494474073315356,
+      "actual": 5.824768607088288
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-01-01",
+      "forecast": 5.71911942620636,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-01-01",
+      "forecast": 5.6547585055520955,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-01-01",
+      "forecast": 6.420986873566514,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-01-01",
+      "forecast": 6.310526202630534,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-01-01",
+      "forecast": 5.504946522911142,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-01-01",
+      "forecast": 5.730370717092317,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-01-01",
+      "forecast": 5.6547585055520955,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-01-01",
+      "forecast": 6.1214589208165915,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-01-01",
+      "forecast": 6.208442588995327,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-01-01",
+      "forecast": 5.504946522911142,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-02-01",
+      "forecast": 5.790272385506535,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-02-01",
+      "forecast": 5.824768607088288,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-02-01",
+      "forecast": 5.6236447713554405,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-02-01",
+      "forecast": 5.775430789628926,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-02-01",
+      "forecast": 5.815443429824588,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-03-01",
+      "forecast": 5.790272385506535,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-03-01",
+      "forecast": 5.824768607088288,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-03-01",
+      "forecast": 5.705355964630288,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-03-01",
+      "forecast": 6.924763660518942,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "run_date": "2024-03-01",
+      "forecast": 5.814273990206248,
+      "actual": 6.432442218772195
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-04-01",
+      "forecast": 5.772524733518656,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-04-01",
+      "forecast": 5.824768607088288,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-04-01",
+      "forecast": 5.610618946798662,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-04-01",
+      "forecast": 6.977290972504037,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-04-01",
+      "forecast": 6.451786462380616,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-04-01",
+      "forecast": 5.76339390304969,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-04-01",
+      "forecast": 5.824768607088288,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-04-01",
+      "forecast": 5.670659275383505,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-04-01",
+      "forecast": 6.960840491223029,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-04-01",
+      "forecast": 6.451786462380616,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-05-01",
+      "forecast": 6.129817427545482,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-05-01",
+      "forecast": 6.432442218772195,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-05-01",
+      "forecast": 6.403977652621351,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-05-01",
+      "forecast": 6.583217701290916,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-05-01",
+      "forecast": 6.605867710485853,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-06-01",
+      "forecast": 6.129817427545482,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-06-01",
+      "forecast": 6.432442218772195,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-06-01",
+      "forecast": 12.69659692621022,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-06-01",
+      "forecast": 5.869518153395473,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "run_date": "2024-06-01",
+      "forecast": 6.688398363432945,
+      "actual": 6.70267828752489
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-07-01",
+      "forecast": 5.9740543452970645,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-07-01",
+      "forecast": 6.432442218772195,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-07-01",
+      "forecast": 1.1553578072023933,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-07-01",
+      "forecast": 5.398260214202218,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-07-01",
+      "forecast": 6.030114750108902,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-07-01",
+      "forecast": 5.893882004844787,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-07-01",
+      "forecast": 6.432442218772195,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-07-01",
+      "forecast": 7.096507033592436,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-07-01",
+      "forecast": 5.319105804872175,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-07-01",
+      "forecast": 6.030114750108902,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-08-01",
+      "forecast": 6.293712937431629,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-08-01",
+      "forecast": 6.70267828752489,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-08-01",
+      "forecast": 6.689593647168057,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-08-01",
+      "forecast": 5.905713127603289,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-08-01",
+      "forecast": 6.537449294450095,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-09-01",
+      "forecast": 6.293712937431629,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-09-01",
+      "forecast": 6.70267828752489,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-09-01",
+      "forecast": 4.0085480572102155,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "run_date": "2024-09-01",
+      "forecast": 1.3589553026229249,
+      "actual": 6.517300519361783
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-10-01",
+      "forecast": 6.082370243838916,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-10-01",
+      "forecast": 6.70267828752489,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-10-01",
+      "forecast": 6.554470907849574,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-10-01",
+      "forecast": 3.9594710462643765,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-10-01",
+      "forecast": -0.7376552899001494,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "run_date": "2024-10-01",
+      "forecast": 5.973153817252073,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "run_date": "2024-10-01",
+      "forecast": 6.70267828752489,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "run_date": "2024-10-01",
+      "forecast": 6.342986965303443,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "run_date": "2024-10-01",
+      "forecast": 3.9742097431683634,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "run_date": "2024-10-01",
+      "forecast": -0.7376552899001494,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-11-01",
+      "forecast": 6.207274184217308,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-11-01",
+      "forecast": 6.517300519361783,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-11-01",
+      "forecast": 9.33776702328318,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-11-01",
+      "forecast": 6.297784694275817,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-11-01",
+      "forecast": 6.455666294542491,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-12-01",
+      "forecast": 6.207274184217308,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-12-01",
+      "forecast": 6.517300519361783,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-12-01",
+      "forecast": 6.847171589234069,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-12-01",
+      "forecast": 5.396098501154795,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "run_date": "2024-12-01",
+      "forecast": 6.580078051771615,
+      "actual": 6.909855287421109
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-01-01",
+      "forecast": 6.046720619177222,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-01-01",
+      "forecast": 6.517300519361783,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-01-01",
+      "forecast": 6.6292710954426015,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-01-01",
+      "forecast": 6.387000746859167,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-01-01",
+      "forecast": 6.844566325951934,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-01-01",
+      "forecast": 5.963574626966372,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-01-01",
+      "forecast": 6.517300519361783,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-01-01",
+      "forecast": 6.465929663834102,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-01-01",
+      "forecast": 6.261053258493048,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-01-01",
+      "forecast": 6.844566325951934,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-02-01",
+      "forecast": 6.4393565511952175,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-02-01",
+      "forecast": 6.909855287421109,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-02-01",
+      "forecast": 6.223410307141242,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-02-01",
+      "forecast": 6.526558122762663,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-02-01",
+      "forecast": 7.122520077646556,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-03-01",
+      "forecast": 6.4393565511952175,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-03-01",
+      "forecast": 6.909855287421109,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-03-01",
+      "forecast": 6.253474064202047,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-03-01",
+      "forecast": 6.341151647971463,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "run_date": "2025-03-01",
+      "forecast": 6.747516545215168,
+      "actual": 6.8312884312549755
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-04-01",
+      "forecast": 6.194470351732514,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-04-01",
+      "forecast": 6.909855287421109,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-04-01",
+      "forecast": 6.125640613307137,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-04-01",
+      "forecast": 6.106081533650919,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-04-01",
+      "forecast": 6.42675533500598,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-04-01",
+      "forecast": 6.067011453185133,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-04-01",
+      "forecast": 6.909855287421109,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-04-01",
+      "forecast": 6.009116761026223,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-04-01",
+      "forecast": 6.024216586428626,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-04-01",
+      "forecast": 6.42675533500598,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-05-01",
+      "forecast": 6.414553949112612,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-05-01",
+      "forecast": 6.8312884312549755,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-05-01",
+      "forecast": 6.646004655197779,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-05-01",
+      "forecast": 5.9846441237974455,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-05-01",
+      "forecast": 6.4215229566576415,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-06-01",
+      "forecast": 6.414553949112612,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-06-01",
+      "forecast": 6.8312884312549755,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-06-01",
+      "forecast": 6.520392623105975,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-06-01",
+      "forecast": 6.562968474759832,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "run_date": "2025-06-01",
+      "forecast": 6.39497084037224,
+      "actual": 7.539747009603062
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-07-01",
+      "forecast": 6.19672697023919,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-07-01",
+      "forecast": 6.8312884312549755,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-07-01",
+      "forecast": 6.500960159729519,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-07-01",
+      "forecast": 7.135517365924693,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-07-01",
+      "forecast": 7.102030612954507,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-07-01",
+      "forecast": 6.082868878916397,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-07-01",
+      "forecast": 6.8312884312549755,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-07-01",
+      "forecast": 6.699327039243785,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-07-01",
+      "forecast": 7.048351249809629,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-07-01",
+      "forecast": 7.102030612954507,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-08-01",
+      "forecast": 6.832810922259759,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-08-01",
+      "forecast": 7.539747009603062,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-08-01",
+      "forecast": 7.293414373375673,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-08-01",
+      "forecast": 7.398267273620616,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-08-01",
+      "forecast": 7.054603882732577,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-09-01",
+      "forecast": 6.832810922259759,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-09-01",
+      "forecast": 7.539747009603062,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-09-01",
+      "forecast": 7.2387666396600325,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-09-01",
+      "forecast": 6.340738818697212,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "run_date": "2025-09-01",
+      "forecast": 6.8877306260167535,
+      "actual": 8.29209515318766
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-10-01",
+      "forecast": 6.459303314262537,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-10-01",
+      "forecast": 7.539747009603062,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-10-01",
+      "forecast": 7.333535668806368,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-10-01",
+      "forecast": 6.492271217974916,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-10-01",
+      "forecast": 6.9724388444831025,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "run_date": "2025-10-01",
+      "forecast": 6.2619616652372585,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "run_date": "2025-10-01",
+      "forecast": 7.539747009603062,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "run_date": "2025-10-01",
+      "forecast": 6.869432465312908,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "run_date": "2025-10-01",
+      "forecast": 6.429543154499463,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "run_date": "2025-10-01",
+      "forecast": 6.9724388444831025,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-11-01",
+      "forecast": 7.307724891507298,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-11-01",
+      "forecast": 8.29209515318766,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-11-01",
+      "forecast": 8.264734827416254,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-11-01",
+      "forecast": 7.087094499735767,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-11-01",
+      "forecast": 7.843260506120619,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-12-01",
+      "forecast": 7.307724891507298,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-12-01",
+      "forecast": 8.29209515318766,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-12-01",
+      "forecast": 8.207323576640647,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-12-01",
+      "forecast": 6.519419545396813,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "run_date": "2025-12-01",
+      "forecast": 7.239600880933479,
+      "actual": 7.832467112045435
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-01-01",
+      "forecast": 6.775417545425979,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-01-01",
+      "forecast": 8.29209515318766,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-01-01",
+      "forecast": 7.632983011801553,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-01-01",
+      "forecast": 7.724307844726209,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-01-01",
+      "forecast": 8.391909078907872,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-01-01",
+      "forecast": 6.487567412480633,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-01-01",
+      "forecast": 8.29209515318766,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-01-01",
+      "forecast": 7.115804508048074,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-01-01",
+      "forecast": 7.6528306970583895,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-01-01",
+      "forecast": 8.391909078907872,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-02-01",
+      "forecast": 7.087196117288869,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-02-01",
+      "forecast": 7.832467112045435,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-02-01",
+      "forecast": 7.313007470398025,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-02-01",
+      "forecast": 7.542288507353991,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-02-01",
+      "forecast": 7.776841089609734,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-03-01",
+      "forecast": 7.087196117288869,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-03-01",
+      "forecast": 7.832467112045435,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-03-01",
+      "forecast": 7.279265485351405,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-03-01",
+      "forecast": 7.572042388988077,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "run_date": "2026-03-01",
+      "forecast": 8.069196203038093,
+      "actual": 8.658592555212692
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-04-01",
+      "forecast": 6.6795488251321995,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-04-01",
+      "forecast": 7.832467112045435,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-04-01",
+      "forecast": 6.8710237619102665,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-04-01",
+      "forecast": 7.63035080424012,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-04-01",
+      "forecast": 9.071449282447043,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-04-01",
+      "forecast": 6.456574476241908,
+      "actual": null
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-04-01",
+      "forecast": 7.832467112045435,
+      "actual": null
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-04-01",
+      "forecast": 6.3737406812296005,
+      "actual": null
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-04-01",
+      "forecast": 7.495351165273977,
+      "actual": null
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-04-01",
+      "forecast": 9.071449282447043,
+      "actual": null
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-05-01",
+      "forecast": 7.6242249855512,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-05-01",
+      "forecast": 8.658592555212692,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-05-01",
+      "forecast": 8.121519644669073,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-05-01",
+      "forecast": 7.818950160985485,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-05-01",
+      "forecast": 9.353726453685523,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-06-01",
+      "forecast": 7.6242249855512,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-06-01",
+      "forecast": 8.658592555212692,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-06-01",
+      "forecast": 8.0160757792213,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-06-01",
+      "forecast": 10.053132020113518,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "run_date": "2026-06-01",
+      "forecast": 9.614398081521507,
+      "actual": 8.400120015840557
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-07-01",
+      "forecast": 7.0438472951847375,
+      "actual": null
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-07-01",
+      "forecast": 8.658592555212692,
+      "actual": null
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-07-01",
+      "forecast": 7.412237916499387,
+      "actual": null
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-07-01",
+      "forecast": 8.769155927550344,
+      "actual": null
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-07-01",
+      "forecast": 9.098042594244875,
+      "actual": null
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q4",
+      "run_date": "2026-07-01",
+      "forecast": 6.718200713297659,
+      "actual": null
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q4",
+      "run_date": "2026-07-01",
+      "forecast": 8.658592555212692,
+      "actual": null
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q4",
+      "run_date": "2026-07-01",
+      "forecast": 4.063021886231141,
+      "actual": null
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q4",
+      "run_date": "2026-07-01",
+      "forecast": 8.654167918957562,
+      "actual": null
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q4",
+      "run_date": "2026-07-01",
+      "forecast": 9.098042594244875,
+      "actual": null
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-08-01",
+      "forecast": 7.524162452476906,
+      "actual": null
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-08-01",
+      "forecast": 8.400120015840557,
+      "actual": null
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-08-01",
+      "forecast": 7.868479380047111,
+      "actual": null
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-08-01",
+      "forecast": 8.002758274886848,
+      "actual": null
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-08-01",
+      "forecast": 8.34652809136434,
+      "actual": null
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-09-01",
+      "forecast": 7.524162452476906,
+      "actual": null
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-09-01",
+      "forecast": 8.400120015840557,
+      "actual": null
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-09-01",
+      "forecast": 7.929562838468773,
+      "actual": null
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-09-01",
+      "forecast": 6.31840817217748,
+      "actual": null
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q3",
+      "run_date": "2026-09-01",
+      "forecast": 8.422241693310308,
+      "actual": null
+    }
   ]
 }
