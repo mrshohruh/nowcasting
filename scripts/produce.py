@@ -263,7 +263,7 @@ def run_pipeline(
     """Execute the full production pipeline and return a summary dict."""
     from nowcast.explain.narrative import render_note
     from nowcast.explain.news import decompose
-    from nowcast.explain.sectors import sector_contributions
+    from nowcast.explain.dfm_inputs import dfm_inputs
     from nowcast.explain.state import load_state, save_state
     from nowcast.models.dfm import DFM
     from nowcast.report.pdf import NoteContext, generate_pdf_note
@@ -291,7 +291,6 @@ def run_pipeline(
     # ── 2. Model config ───────────────────────────────────────────────────
     config = load_model_config()
     dfm_cfg = config.get("dfm", {})
-    bridge_cfg = config.get("bridges", {})
 
     # ── 3. Run DFM ────────────────────────────────────────────────────────
     logger.info("Step 2/9: Running DFM...")
@@ -308,10 +307,14 @@ def run_pipeline(
         sys.exit(1)
     logger.info("  DFM GDP y/y: %.2f%%", gdp_yoy)
 
-    # ── 4. Bridge equations ───────────────────────────────────────────────
-    logger.info("Step 3/9: Running bridge equations...")
-    sectors = sector_contributions(
-        panels, target_quarter, bridge_map=bridge_cfg,
+    # ── 4. DFM inputs (what the headline rests on) ────────────────────────
+    # The sector bridge view is no longer published: every number on the dashboard comes from
+    # the DFM. The bridge code stays in nowcast/models/bridges.py for research use.
+    logger.info("Step 3/9: Reading DFM inputs...")
+    sectors: list = []
+    dfm_input_rows = dfm_inputs(
+        dfm._last_result, panels, dfm_cfg.get("variable_ids"),
+        n_factors=dfm_cfg.get("n_factors", 2),
     )
 
     # ── 5. News decomposition ─────────────────────────────────────────────
@@ -406,11 +409,7 @@ def run_pipeline(
         decomposition=(
             _serialize_decomposition(decomposition) if decomposition else None
         ),
-        sectors=[{
-            "sector": s.sector, "label": s.label, "weight": s.weight,
-            "growth_yoy": s.growth_yoy, "contribution_pp": s.contribution_pp,
-            "method": s.method,
-        } for s in sectors],
+        dfm_inputs=dfm_input_rows,
         nowcast_history=nowcast_history,
         monitor_data=monitor,
         backtest_results=backtest,

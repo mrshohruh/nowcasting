@@ -49,7 +49,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav_headline": "Headline",
         "nav_path": "Nowcast Path",
         "nav_whatchanged": "What Changed",
-        "nav_sectors": "Sectors",
+        "nav_dfm": "DFM Inputs",
         "nav_monitor": "Data Monitor",
         "nav_models": "Models",
         "nav_quarter": "Quarter",
@@ -110,10 +110,19 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "col_variable": "Variable",
         "col_period": "Period",
         "col_surprise": "Surprise",
-        # Sectors page
-        "sectors_description": "GVA sector contributions to headline GDP growth from bridge equations.",
-        "sectors_chart_title": "Sector Contributions",
-        "sectors_table_title": "Sector Detail",
+        # DFM page
+        "dfm_description": "The headline nowcast comes from a dynamic factor model (DFM). It does not split GDP into sectors: it compresses its input variables into a few common factors and reads GDP off them.",
+        "dfm_step1": "%d monthly and quarterly variables enter the model (listed below).",
+        "dfm_step2": "Two common factors summarise what the variables have in common; the model tracks how the factors evolve over time.",
+        "dfm_step3": "GDP growth is estimated from the factors, updated each time a new release arrives.",
+        "dfm_see_news": "Which releases moved the nowcast, and by how much, is on the page",
+        "dfm_chart_title": "How closely each variable moves with the factors",
+        "dfm_chart_note": "R\u00b2 of each variable on each factor alone (0 = unrelated, 1 = identical). Variables with a high value carry the most information about that factor. Low values mean the variable adds little to the common signal.",
+        "dfm_table_title": "Model inputs",
+        "dfm_table_note": "R\u00b2 F1 and F2 are measured against each factor separately, so they cannot be added. y/y growth is the latest available observation, shown for context.",
+        "col_block": "Block",
+        "col_last_obs": "Last observation",
+        "col_last_yoy": "Latest y/y",
         "bridge_sum": "bridge sum",
         "dfm_comparison": "DFM headline comparison",
         # Monitor page
@@ -162,7 +171,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav_headline": "Asosiy",
         "nav_path": "Nowkast yo'li",
         "nav_whatchanged": "Nima o'zgardi",
-        "nav_sectors": "Tarmoqlar",
+        "nav_dfm": "DFM kirishlari",
         "nav_monitor": "Ma'lumotlar monitori",
         "nav_models": "Modellar",
         "nav_quarter": "Chorak",
@@ -224,10 +233,19 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "col_variable": "O'zgaruvchi",
         "col_period": "Davr",
         "col_surprise": "Kutilmagan",
-        # Sectors page
-        "sectors_description": "YaIM o'sishiga QQQ tarmoqlarining bridge tenglamalar orqali hissasi.",
-        "sectors_chart_title": "Tarmoqlar hissasi",
-        "sectors_table_title": "Tarmoqlar tafsiloti",
+        # DFM page
+        "dfm_description": "Asosiy nowkast dinamik omil modeli (DFM) asosida hisoblanadi. U YaIMni tarmoqlarga ajratmaydi: kirish o'zgaruvchilarini bir nechta umumiy omillarga jamlab, YaIMni shu omillardan baholaydi.",
+        "dfm_step1": "Modelga %d ta oylik va choraklik o'zgaruvchi kiradi (quyida keltirilgan).",
+        "dfm_step2": "Ikkita umumiy omil o'zgaruvchilarning umumiy harakatini ifodalaydi; model omillarning vaqt bo'yicha o'zgarishini kuzatadi.",
+        "dfm_step3": "YaIM o'sishi omillardan baholanadi va har yangi ma'lumot kelganda yangilanadi.",
+        "dfm_see_news": "Qaysi ma'lumotlar nowkastni qanchaga o'zgartirgani sahifada ko'rsatilgan:",
+        "dfm_chart_title": "Har bir o'zgaruvchi omillar bilan qanchalik bog'liq",
+        "dfm_chart_note": "Har bir o'zgaruvchining har bir omilga alohida R\u00b2 qiymati (0 = bog'liq emas, 1 = bir xil). Yuqori qiymat o'zgaruvchi omil haqida ko'proq ma'lumot berishini bildiradi.",
+        "dfm_table_title": "Model kirishlari",
+        "dfm_table_note": "R\u00b2 F1 va F2 har bir omilga alohida o'lchanadi, shuning uchun ularni qo'shib bo'lmaydi. Yillik o'sish — mavjud so'nggi kuzatuv.",
+        "col_block": "Blok",
+        "col_last_obs": "So'nggi kuzatuv",
+        "col_last_yoy": "So'nggi yillik o'sish",
         "bridge_sum": "bridge yig'indisi",
         "dfm_comparison": "DFM bosh baho taqqoslash",
         # Monitor page
@@ -290,8 +308,11 @@ class SiteContext:
     # Decomposition (serialised dict — see nowcast.explain.news.Decomposition)
     decomposition: dict | None = None
 
-    # Sectors  [{sector, label, weight, growth_yoy, contribution_pp, method}, ...]
+    # Sector bridge view (no longer shown: the dashboard displays the DFM only)
     sectors: list[dict] = field(default_factory=list)
+
+    # DFM inputs  [{variable, label, block, freq, last_period, last_yoy, r2_f1, r2_f2}, ...]
+    dfm_inputs: list[dict] = field(default_factory=list)
 
     # Nowcast history  [{run_date, target_quarter, gdp_yoy, band_lo, band_hi}, ...]
     nowcast_history: list[dict] = field(default_factory=list)
@@ -339,7 +360,7 @@ PAGES = [
     ("headline", "nav_headline"),
     ("path", "nav_path"),
     ("whatchanged", "nav_whatchanged"),
-    ("sectors", "nav_sectors"),
+    ("dfm", "nav_dfm"),
     ("monitor", "nav_monitor"),
     ("models", "nav_models"),
     ("downloads", "nav_downloads"),
@@ -483,10 +504,6 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             "Factors": "2", "VAR order": "2",
             "Idiosyncratic": "AR(1)", "EM iterations": "250",
         }),
-        dict(name="Bridge equations", params={
-            "Method": "Ridge regression", "Sectors": "10 GVA",
-            "Fallback": "AR(1)", "Frequency": "Quarterly",
-        }),
     ]
 
     # -- Downloads: group by category --
@@ -511,10 +528,6 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             size="",
             date=ctx.run_date,
         ))
-
-    # -- Sectors: compute total weight and bridge sum --
-    total_weight = sum(s.get("weight", 0) for s in ctx.sectors)
-    bridge_gdp = sum(s.get("contribution_pp", 0) for s in ctx.sectors)
 
     # -- Footer --
     year = ctx.run_date[:4] if ctx.run_date else str(datetime.now().year)
@@ -570,7 +583,8 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             chart_headline=chart_specs.get("headline"),
             chart_path=chart_specs.get("path"),
             chart_waterfall=chart_specs.get("waterfall"),
-            chart_sectors=chart_specs.get("sectors"),
+            dfm_inputs=ctx.dfm_inputs,
+            chart_dfm_inputs=chart_specs.get("dfm_inputs"),
             chart_backtest=chart_specs.get("models"),
             # What changed
             revision_effect=revision_effect,
@@ -591,10 +605,6 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             download_groups=download_groups,
             # Methodology
             methodology_content=methodology_content,
-            # Sectors extra
-            total_weight=total_weight,
-            bridge_gdp=bridge_gdp,
-            dfm_nowcast=ctx.new_nowcast,
         )
 
         for page_id, _nav_key in PAGES:
@@ -682,11 +692,11 @@ def _generate_charts(ctx: SiteContext) -> dict[str, dict | None]:
     else:
         c["waterfall"] = None
 
-    # Sectors
-    if ctx.sectors:
-        c["sectors"] = charts.sector_chart(ctx.sectors)
+    # DFM inputs
+    if ctx.dfm_inputs:
+        c["dfm_inputs"] = charts.dfm_inputs_chart(ctx.dfm_inputs)
     else:
-        c["sectors"] = None
+        c["dfm_inputs"] = None
 
     # Data monitor — rendered as HTML table, not chart
     c["monitor"] = None
@@ -887,10 +897,9 @@ where applicable. Missing values are handled by the EM algorithm inside the Dyna
 the panel of monthly indicators and uses them to nowcast quarterly GDP growth.
 Key parameters: VAR(2) factor dynamics, AR(1) idiosyncratic components, 250 EM iterations.</p>
 
-<h3>Bridge Equations</h3>
-<p>10 GVA sector bridge equations map monthly indicators to quarterly sectoral growth using
-ridge regression. Sectors with insufficient monthly data fall back to an AR(1) process.
-Weighted sector contributions are summed to produce an alternative GDP growth estimate.</p>
+<p>The model uses 19 monthly and quarterly variables, chosen by out-of-sample backtest
+(see the <em>DFM Inputs</em> page for the list and how closely each moves with the factors).
+It produces one headline number and does not split GDP by sector.</p>
 
 <h2>Uncertainty Bands</h2>
 <p>The 80% uncertainty band is computed from the empirical distribution of

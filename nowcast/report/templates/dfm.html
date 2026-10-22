@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.nav_dfm }}{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ t.nav_dfm }}</h1>
+
+<div class="card">
+  <p class="headline-meta">{{ t.dfm_description }}</p>
+  <ol>
+    <li>{{ t.dfm_step1 | format(dfm_inputs | length) }}</li>
+    <li>{{ t.dfm_step2 }}</li>
+    <li>{{ t.dfm_step3 }}</li>
+  </ol>
+  <p class="headline-meta mt-16">{{ t.dfm_see_news }}
+    <a href="{{ root }}{{ lang }}/whatchanged.html">{{ t.nav_whatchanged }}</a>.</p>
+</div>
+
+{% if chart_dfm_inputs %}
+<div class="card">
+  <h2 class="section-title">{{ t.dfm_chart_title }}</h2>
+  <p class="headline-meta">{{ t.dfm_chart_note }}</p>
+  <div class="chart-container" id="chart-dfm-inputs"></div>
+</div>
+{% endif %}
+
+{% if dfm_inputs %}
+<div class="card">
+  <h2 class="section-title">{{ t.dfm_table_title }}</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ t.col_variable }}</th>
+          <th>{{ t.col_block }}</th>
+          <th>{{ t.col_frequency }}</th>
+          <th>{{ t.col_last_obs }}</th>
+          <th class="num">{{ t.col_last_yoy }}</th>
+          <th class="num">R&sup2; F1</th>
+          <th class="num">R&sup2; F2</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in dfm_inputs %}
+        <tr>
+          <td>{{ r.label }}</td>
+          <td>{{ r.block }}</td>
+          <td>{{ r.freq }}</td>
+          <td>{{ r.last_period }}</td>
+          <td class="num">{% if r.last_yoy is not none %}{{ "%.1f" | format(r.last_yoy) }}%{% endif %}</td>
+          <td class="num">{{ "%.2f" | format(r.r2_f1) }}</td>
+          <td class="num">{{ "%.2f" | format(r.r2_f2) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="headline-meta mt-16">{{ t.dfm_table_note }}</p>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if chart_dfm_inputs %}
+<script>
+(function() {
+  var spec = {{ chart_dfm_inputs | tojson }};
+  Plotly.newPlot('chart-dfm-inputs', spec.data, spec.layout, {responsive: true, displayModeBar: false});
+})();
+</script>
+{% endif %}
+{% endblock %}

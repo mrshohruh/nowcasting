@@ -403,6 +403,31 @@ def sector_chart(sectors: list[dict]) -> dict:
     return dict(data=data, layout=layout, config=_CONFIG)
 
 
+def dfm_inputs_chart(rows: list[dict]) -> dict:
+    """Grouped horizontal bars: how tightly each DFM input moves with each of the two factors."""
+    ordered = list(reversed(rows))  # strongest at the top
+    labels = [r["label"] for r in ordered]
+    data = [
+        dict(type="bar", orientation="h", name="Factor 1", y=labels,
+             x=[r["r2_f1"] for r in ordered], marker=dict(color=BLUE),
+             hovertemplate="%{y}: R\u00b2 %{x:.2f} with factor 1<extra></extra>"),
+        dict(type="bar", orientation="h", name="Factor 2", y=labels,
+             x=[r["r2_f2"] for r in ordered], marker=dict(color=TEAL),
+             hovertemplate="%{y}: R\u00b2 %{x:.2f} with factor 2<extra></extra>"),
+    ]
+    layout = _merge_layout(dict(
+        barmode="group",
+        xaxis=dict(title="R\u00b2 of the variable on the factor",
+                   range=[0, min(1.0, round(max([r["r2_f1"] for r in rows] + [r["r2_f2"] for r in rows] + [0.1]) + 0.1, 1))],
+                   showgrid=True, gridcolor="rgba(226,232,240,0.5)"),
+        yaxis=dict(showgrid=False, automargin=True),
+        legend=dict(orientation="h", y=1.04, x=0),
+        margin=dict(l=170, r=30, t=30, b=50),
+        height=max(360, 30 * len(rows) + 110),
+    ))
+    return dict(data=data, layout=layout, config=_CONFIG)
+
+
 # ---------------------------------------------------------------------------
 # 5.  Data monitor — HTML table, no chart (returns None)
 # ---------------------------------------------------------------------------

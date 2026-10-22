@@ -43,35 +43,6 @@
   <div class="narrative">{{ narrative_text }}</div>
 </div>
 {% endif %}
-
-<!-- Quick sector summary -->
-{% if sectors %}
-<div class="card">
-  <h2 class="section-title">{{ t.sector_summary }}</h2>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>{{ t.col_sector }}</th>
-          <th class="num">{{ t.col_weight }}</th>
-          <th class="num">{{ t.col_growth }}</th>
-          <th class="num">{{ t.col_contribution }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for s in sectors[:6] %}
-        <tr>
-          <td>{{ s.label }}</td>
-          <td class="num">{{ "%.0f" | format(s.weight * 100) }}%</td>
-          <td class="num">{{ "%.1f" | format(s.growth_yoy) }}%</td>
-          <td class="num {{ 'val-pos' if s.contribution_pp > 0.05 else ('val-neg' if s.contribution_pp < -0.05 else '') }}">{{ "%+.2f" | format(s.contribution_pp) }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-</div>
-{% endif %}
 {% endblock %}
 
 {% block scripts %}

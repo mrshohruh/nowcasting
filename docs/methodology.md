@@ -2,7 +2,7 @@
 
 ## Overview
 
-The IMRS GDP Nowcasting Platform produces monthly estimates of Uzbekistan's real GDP growth (year-on-year) before official statistics are released. The headline estimate comes from a Dynamic Factor Model (DFM) that extracts common trends from a mixed-frequency panel of macroeconomic indicators. Sector-level contributions are derived from bridge equations linking monthly indicators to quarterly GVA components. Each release includes a news decomposition that attributes the change in the nowcast to data revisions, new data releases, and model re-estimation.
+The IMRS GDP Nowcasting Platform produces monthly estimates of Uzbekistan's real GDP growth (year-on-year) before official statistics are released. The headline estimate comes from a Dynamic Factor Model (DFM) that extracts common trends from a mixed-frequency panel of macroeconomic indicators. Each release includes a news decomposition that attributes the change in the nowcast to data revisions, new data releases, and model re-estimation.
 
 The platform is fully automated: data is downloaded from official sources on the 1st of each month, models are estimated, and a dashboard with all results is generated for review before publication.
 
