@@ -1,10 +1,10 @@
 {
   "ar1_rmse_m3": 1.0742982485133719,
   "best_headline": "dfm",
-  "best_rmse_m3": 0.9632820694636126,
-  "best_ratio": 0.8966616773290054,
-  "dfm_rmse_m3": 0.9632820694636126,
-  "exit_check": "FAIL",
+  "best_rmse_m3": 0.9621271937722348,
+  "best_ratio": 0.8955866726057118,
+  "dfm_rmse_m3": 0.9621271937722348,
+  "exit_check": "PASS",
   "n_run_dates": 57,
   "n_predictions": 380,
   "eval_quarters": [
