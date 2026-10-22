@@ -1,0 +1,14 @@
+{
+  "run_date": "2026-09-30",
+  "panel_hash": "7782c2b4de36440a",
+  "nowcast_table": {
+    "2026Q3": 7.875975115756284
+  },
+  "dfm_params_path": "dfm_params.npz",
+  "panel_sa_path": "panel_sa.parquet",
+  "n_factors": 2,
+  "factor_orders": 2,
+  "n_monthly_vars": 25,
+  "n_quarterly_vars": 24,
+  "em_iterations": 250
+}

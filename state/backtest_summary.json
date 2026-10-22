@@ -1,0 +1,2380 @@
+{
+  "scores": [
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "rmse": 1.5181594755500458,
+      "mae": 1.3237418276926043,
+      "n": 17,
+      "ratio_vs_ar1": 1.0
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "rmse": 1.4022922882924431,
+      "mae": 1.2458260707446829,
+      "n": 18,
+      "ratio_vs_ar1": 1.0
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "rmse": 1.0742982485133719,
+      "mae": 0.9415392138963001,
+      "n": 18,
+      "ratio_vs_ar1": 1.0
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "rmse": 1.0742982485133719,
+      "mae": 0.9415392138963001,
+      "n": 18,
+      "ratio_vs_ar1": 1.0
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "rmse": 2.0348968362588042,
+      "mae": 1.5504404769151718,
+      "n": 17,
+      "ratio_vs_ar1": 1.3403709353535067
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "rmse": 1.991922904443129,
+      "mae": 1.5079153861507513,
+      "n": 18,
+      "ratio_vs_ar1": 1.420476259531223
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "rmse": 1.3658263990338497,
+      "mae": 1.0715177384542838,
+      "n": 18,
+      "ratio_vs_ar1": 1.2713661228843092
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "rmse": 1.7919340789160918,
+      "mae": 1.4547832606315028,
+      "n": 18,
+      "ratio_vs_ar1": 1.6680042822333498
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "rmse": 1.7723400468374562,
+      "mae": 1.3218023676765522,
+      "n": 17,
+      "ratio_vs_ar1": 1.1674267923633768
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "rmse": 1.662191089452272,
+      "mae": 1.141198648112383,
+      "n": 18,
+      "ratio_vs_ar1": 1.185338537000945
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "rmse": 1.0820280067362247,
+      "mae": 0.8604809008426836,
+      "n": 18,
+      "ratio_vs_ar1": 1.007195169715253
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "rmse": 1.0820280067362247,
+      "mae": 0.8604809008426836,
+      "n": 18,
+      "ratio_vs_ar1": 1.007195169715253
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "rmse": 1.2219409647108308,
+      "mae": 1.043920073303795,
+      "n": 17,
+      "ratio_vs_ar1": 0.8048831393474708
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "rmse": 1.7429978492490923,
+      "mae": 1.236644650092042,
+      "n": 17,
+      "ratio_vs_ar1": 1.2429632993072528
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "rmse": 1.0908514802974412,
+      "mae": 0.8706521930381024,
+      "n": 18,
+      "ratio_vs_ar1": 1.015408413638369
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "rmse": 1.756695722342246,
+      "mae": 1.136911162095592,
+      "n": 17,
+      "ratio_vs_ar1": 1.6352030032378668
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "rmse": 2.4923637281114317,
+      "mae": 1.6206213385577208,
+      "n": 17,
+      "ratio_vs_ar1": 1.6417008675642728
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "rmse": 2.554324334646594,
+      "mae": 1.6164958671450178,
+      "n": 18,
+      "ratio_vs_ar1": 1.8215348939535054
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "rmse": 1.1371621375996157,
+      "mae": 0.9045751921196492,
+      "n": 18,
+      "ratio_vs_ar1": 1.0585162352942823
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "rmse": 1.8765684624048673,
+      "mae": 1.334884314171174,
+      "n": 18,
+      "ratio_vs_ar1": 1.7467853689621924
+    },
+    {
+      "model": "combo_equal",
+      "horizon": "forecast",
+      "rmse": 1.717469875374292,
+      "mae": 1.3591496535871832,
+      "n": 17,
+      "ratio_vs_ar1": 1.131284231356547
+    },
+    {
+      "model": "combo_equal",
+      "horizon": "nowcast_m1",
+      "rmse": 1.7654053003640517,
+      "mae": 1.363713924439917,
+      "n": 18,
+      "ratio_vs_ar1": 1.258942458076103
+    },
+    {
+      "model": "combo_equal",
+      "horizon": "nowcast_m2",
+      "rmse": 1.074482700669292,
+      "mae": 0.8359516359376193,
+      "n": 18,
+      "ratio_vs_ar1": 1.0001716954823072
+    },
+    {
+      "model": "combo_equal",
+      "horizon": "nowcast_m3",
+      "rmse": 1.4680420655155166,
+      "mae": 1.2039157592534127,
+      "n": 18,
+      "ratio_vs_ar1": 1.3665125746476947
+    },
+    {
+      "model": "combo_fixed_weights",
+      "horizon": "forecast",
+      "rmse": 1.4437567848198403,
+      "mae": 1.205414360636289,
+      "n": 17,
+      "ratio_vs_ar1": 0.9509915183954909
+    },
+    {
+      "model": "combo_fixed_weights",
+      "horizon": "nowcast_m1",
+      "rmse": 1.6034327416696519,
+      "mae": 1.2953211653389198,
+      "n": 18,
+      "ratio_vs_ar1": 1.1434368961852706
+    },
+    {
+      "model": "combo_fixed_weights",
+      "horizon": "nowcast_m2",
+      "rmse": 1.0296724790053313,
+      "mae": 0.8269605998627739,
+      "n": 18,
+      "ratio_vs_ar1": 0.958460539640836
+    },
+    {
+      "model": "combo_fixed_weights",
+      "horizon": "nowcast_m3",
+      "rmse": 1.5578864069059497,
+      "mae": 1.2033102820551886,
+      "n": 18,
+      "ratio_vs_ar1": 1.450143299648653
+    },
+    {
+      "model": "combo_inverse_mse",
+      "horizon": "forecast",
+      "rmse": 1.656142021749655,
+      "mae": 1.3156082291545874,
+      "n": 17,
+      "ratio_vs_ar1": 1.0908880446499973
+    },
+    {
+      "model": "combo_inverse_mse",
+      "horizon": "nowcast_m1",
+      "rmse": 1.6627669402628635,
+      "mae": 1.3372320843636127,
+      "n": 18,
+      "ratio_vs_ar1": 1.1857491866318381
+    },
+    {
+      "model": "combo_inverse_mse",
+      "horizon": "nowcast_m2",
+      "rmse": 0.9690311740512707,
+      "mae": 0.7618379804791516,
+      "n": 18,
+      "ratio_vs_ar1": 0.9020131750119009
+    },
+    {
+      "model": "combo_inverse_mse",
+      "horizon": "nowcast_m3",
+      "rmse": 1.5700122144602482,
+      "mae": 1.2130602448155254,
+      "n": 18,
+      "ratio_vs_ar1": 1.461430488817097
+    }
+  ],
+  "errors": [
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "error": 1.7757475865636607
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "error": 4.265006569792121
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "error": 0.3628579405933783
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "error": 4.434130890316711
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q1",
+      "error": 4.095715605131829
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "error": 2.205040074901812
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "error": 5.183019386493555
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "error": 1.6962159978000066
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "error": 5.139720455584353
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q2",
+      "error": 5.013728421833264
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "error": 1.336177057663047
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "error": 1.9908887791141865
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "error": 0.19091594616013374
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "error": 2.7474261720606235
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q1",
+      "error": 2.0221329764137588
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "error": 1.336177057663047
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "error": 1.9908887791141865
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "error": 0.16218217114573363
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "error": 2.1329953570190066
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q1",
+      "error": 4.112895906003057
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "error": 1.9031110684511425
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "error": 2.908901595815621
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "error": 1.6250870484349997
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "error": 2.4538631009144067
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q2",
+      "error": 5.027318413854218
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "error": -0.6573223062476954
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "error": 0.5367286782357468
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "error": -0.4007717966263691
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "error": -0.03853670122341857
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q3",
+      "error": 2.6551454962743435
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "error": 1.1091597119793057
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "error": 0.9180128167014345
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "error": 1.2032717873169583
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "error": 1.336384778847136
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q2",
+      "error": 1.5952924729130578
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "error": 1.1091597119793057
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "error": 0.9180128167014345
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "error": 1.1735769139443706
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "error": 1.1078739362694021
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q2",
+      "error": 1.9471519354929194
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "error": -1.1627913473778033
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "error": -1.4541601008784397
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "error": -0.780691117097736
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "error": -1.189286331224186
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q3",
+      "error": -0.7726315560496548
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "error": -2.3025258313325914
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "error": -2.6464427617263055
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "error": -1.7282997795572346
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "error": -2.3286992855522035
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2022Q4",
+      "error": -1.9649142168975207
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "error": -1.8140478094062962
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "error": -2.3721729175798743
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "error": -1.532953400478414
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "error": -2.0557087614816822
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q3",
+      "error": -2.2550091973453217
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "error": -1.8140478094062962
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "error": -2.3721729175798743
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "error": -1.5507586037300891
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "error": 0.06379314759235033
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q3",
+      "error": -1.816984665488393
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "error": -2.711913710842568
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "error": -3.56445557842774
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "error": -2.622208664445485
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "error": -1.7833090969306573
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2022Q4",
+      "error": -2.1581461945518017
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "error": -1.2761529296877452
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "error": -2.2840026788804693
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "error": -0.8888295683469964
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "error": -0.45714685123961196
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q1",
+      "error": -0.8776932950045309
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "error": -1.6691785982930565
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "error": -1.1922826608478658
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "error": -2.2914666639750108
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "error": -2.266160164595873
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2022Q4",
+      "error": -1.8058114465459711
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "error": -1.6691785982930565
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "error": -1.1922826608478658
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "error": -2.3995208922606253
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "error": -2.782889814939697
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2022Q4",
+      "error": -0.706207878904733
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "error": -0.6335104074879059
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "error": 0.08817023869940499
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "error": -1.4321783768871477
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q1",
+      "error": 0.539743519269317
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "error": -1.879039110310357
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "error": -1.0317135405051943
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "error": -1.899104970474765
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "error": -2.4681656984113767
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q2",
+      "error": -0.5801402599352823
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "error": 0.33263960475328425
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "error": 1.2804528995472708
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "error": -0.14423634044105338
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "error": -0.029974109983477604
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q1",
+      "error": 0.7479546178687979
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "error": 0.33263960475328425
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "error": 1.2804528995472708
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "error": -0.24210709658745433
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "error": -4.519515621130711
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q1",
+      "error": 1.6890520883692215
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "error": -1.2830641502993494
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "error": 0.16056912034267157
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "error": -1.2338476904958613
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "error": -4.6885830956363845
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q2",
+      "error": -2.4476635046002224
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "error": 0.36307300625177863
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "error": 2.0660795625400823
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "error": -0.05711622596330734
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "error": -2.8388333648678272
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q3",
+      "error": -0.5421530624028117
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "error": -1.476889216218189
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "error": -1.1198837792045993
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "error": -0.7651614121575907
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "error": -2.796757911009216
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q2",
+      "error": -1.443964834337728
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "error": -1.476889216218189
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "error": -1.1198837792045993
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "error": -0.9263495627289915
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "error": -1.7792864894455622
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q2",
+      "error": -1.7567064822544385
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "error": 0.2432853035702598
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "error": 0.7856266629928115
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "error": 0.9363573407876169
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "error": 0.21113601933202641
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q3",
+      "error": 0.09319763315391594
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "error": -0.022940150937918347
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "error": 0.6156165614566191
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "error": 0.9667770258963868
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "error": -0.022717203864041302
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2023Q4",
+      "error": -0.0768124683822764
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "error": 1.0924564185537253
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "error": 1.9055104421974107
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "error": 0.6166783309089796
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "error": 0.5835658235905061
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q3",
+      "error": 0.7079054904748503
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "error": 1.0924564185537253
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "error": 1.9055104421974107
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "error": 0.63658319984504
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "error": 0.6298505692014089
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q3",
+      "error": 0.518600328340149
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "error": 0.49511548341788636
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "error": 1.7355003406612184
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "error": 0.1801715058998674
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "error": 0.40525602826653895
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2023Q4",
+      "error": -0.535050194419064
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "error": -0.33715776867687364
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "error": 1.1278267289773112
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "error": -0.44330065026569976
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "error": -0.3710378061884789
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q1",
+      "error": -1.1427238061029712
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "error": -0.1275151946580504
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "error": -0.17001010153619234
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "error": 0.6625982175710918
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "error": 0.274703981439151
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2023Q4",
+      "error": -0.023037020985432477
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "error": -0.1275151946580504
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "error": -0.17001010153619234
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "error": 0.663997686215084
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "error": 0.35102154171147415
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2023Q4",
+      "error": -0.33029453377293194
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "error": -0.713322792565835
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "error": -0.7776837132200995
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "error": -0.0114553452056807
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "error": -0.12191601614166103
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q1",
+      "error": -0.9274956958610527
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "error": -0.972307570432573
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "error": -1.0479197819727943
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "error": -0.5812193667082983
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "error": -0.49423569852956284
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q2",
+      "error": -1.1977317646137475
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "error": -0.64216983326566
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "error": -0.6076736116839072
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "error": -0.8087974474167545
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "error": -0.6570114291432692
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q1",
+      "error": -0.6169987889476074
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "error": -0.64216983326566
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "error": -0.6076736116839072
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "error": -0.7270862541419074
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "error": 0.4923214417467472
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q1",
+      "error": -0.6181682285659473
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "error": -0.9301535540062336
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "error": -0.877909680436602
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "error": -1.0920593407262276
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "error": 0.2746126849791475
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q2",
+      "error": -0.250891825144274
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "error": -0.7539066163120927
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "error": -0.6925319122734948
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "error": -0.8466412439782776
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "error": 0.44353997186124605
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q3",
+      "error": -0.06551405698116675
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "error": -0.572860859979408
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "error": -0.2702360687526948
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "error": -0.2987006349035388
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "error": -0.11946058623397349
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q2",
+      "error": -0.09681057703903662
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "error": -0.572860859979408
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "error": -0.2702360687526948
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "error": 5.993918638685329
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "error": -0.8331601341294173
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q2",
+      "error": -0.014279924091944451
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "error": -0.5432461740647181
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "error": -0.08485830058958754
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "error": -5.361942712159389
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "error": -1.1190403051595643
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q3",
+      "error": -0.48718576925288026
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "error": -1.0159732825763221
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "error": -0.4774130686489144
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "error": 0.18665174617132685
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "error": -1.5907494825489348
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2024Q4",
+      "error": -0.8797405373122071
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "error": -0.22358758193015316
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "error": 0.18537776816310725
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "error": 0.1722931278062747
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "error": -0.6115873917584933
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q3",
+      "error": 0.020148775088312476
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "error": -0.22358758193015316
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "error": 0.18537776816310725
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "error": -2.508752462151567
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q3",
+      "error": -5.158345216738858
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "error": -0.8274850435821932
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "error": -0.20717699989621963
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "error": -0.355384379571535
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "error": -2.950384241156733
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2024Q4",
+      "error": -7.647510577321259
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "error": -0.8581346140029025
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "error": -0.12861014373008572
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "error": -0.48830146595153234
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "error": -2.857078688086612
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q1",
+      "error": -7.568943721155125
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "error": -0.7025811032038014
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "error": -0.3925547680593269
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "error": 2.42791173586207
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "error": -0.6120705931452921
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2024Q4",
+      "error": -0.4541889928786187
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "error": -0.7025811032038014
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "error": -0.3925547680593269
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "error": -0.06268369818704045
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "error": -1.5137567862663142
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2024Q4",
+      "error": -0.32977723564949457
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "error": -0.7845678120777535
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "error": -0.313987911893193
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "error": -0.20201733581237402
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "error": -0.44428768439580857
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q1",
+      "error": 0.013277894696958725
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "error": -1.57617238263669
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "error": -1.022446490241279
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "error": -1.0738173457689593
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "error": -1.2786937511100138
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q2",
+      "error": -0.6951806836511274
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "error": -0.391931880059758
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "error": 0.0785668561661339
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "error": -0.6078781241137339
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "error": -0.30473030849231275
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q1",
+      "error": 0.29123164639158006
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "error": -0.391931880059758
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "error": 0.0785668561661339
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "error": -0.5778143670529285
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "error": -0.4901367832835124
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q1",
+      "error": -0.08377188603980734
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "error": -1.3452766578705475
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "error": -0.6298917221819522
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "error": -1.4141063962959244
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "error": -1.433665475952143
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q2",
+      "error": -1.1129916745970814
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "error": -2.2250837000025268
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "error": -1.3822398657665502
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "error": -2.2829783921614366
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "error": -2.267878566759034
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q3",
+      "error": -1.8653398181816794
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "error": -1.1251930604904494
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "error": -0.7084585783480861
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "error": -0.8937423544052825
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "error": -1.5551028858056162
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q2",
+      "error": -1.1182240529454202
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "error": -1.1251930604904494
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "error": -0.7084585783480861
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "error": -1.0193543864970867
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "error": -0.9767785348432296
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q2",
+      "error": -1.1447761692308216
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "error": -2.0953681829484694
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "error": -1.4608067219326841
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "error": -1.791134993458141
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "error": -1.1565777872629663
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q3",
+      "error": -1.190064540233153
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "error": -1.7495982331290385
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "error": -1.00117868079046
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "error": -1.13314007280165
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "error": -0.7841158622358062
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2025Q4",
+      "error": -0.7304364990909287
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "error": -1.459284230927901
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "error": -0.752348143584598
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "error": -0.9986807798119868
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "error": -0.893827879567044
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q3",
+      "error": -1.2374912704550827
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "error": -1.459284230927901
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "error": -0.752348143584598
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "error": -1.0533285135276271
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "error": -1.9513563344904474
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q3",
+      "error": -1.4043645271709062
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "error": -1.3731637977828983
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "error": -0.2927201024423738
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "error": -0.49893144323906746
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "error": -1.3401958940705194
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2025Q4",
+      "error": -0.860028267562333
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "error": -2.396630889975434
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "error": -1.1188455456096307
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "error": -1.7891600898997844
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "error": -2.2290494007132295
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q1",
+      "error": -1.6861537107295899
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "error": -0.5247422205381378
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "error": 0.4596280411422242
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "error": 0.4322677153708181
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "error": -0.7453726123096684
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2025Q4",
+      "error": 0.010793394075183649
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "error": -0.5247422205381378
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "error": 0.4596280411422242
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "error": 0.3748564645952115
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "error": -1.3130475666486223
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2025Q4",
+      "error": -0.5928662311119561
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "error": -1.8831750097867133
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "error": -0.36649740202503267
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "error": -1.0256095434111394
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "error": -0.9342847104864838
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q1",
+      "error": -0.26668347630482003
+    },
+    {
+      "model": "ar1",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "error": -1.9125526033599236
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "error": -0.10802486265289701
+    },
+    {
+      "model": "dfm",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "error": -1.284315507792483
+    },
+    {
+      "model": "bridges",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "error": -0.7472893187821672
+    },
+    {
+      "model": "midas",
+      "horizon": "forecast",
+      "target_quarter": "2026Q2",
+      "error": -0.008210936932684376
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "error": -1.5713964379238234
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "error": -0.8261254431672569
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "error": -1.345585084814667
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "error": -1.1163040478587014
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q1",
+      "error": -0.8817514656029584
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "error": -1.5713964379238234
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "error": -0.8261254431672569
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "error": -1.3793270698612874
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "error": -1.0865501662246153
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q1",
+      "error": -0.5893963521745995
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "error": -1.7205711907083572
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "error": -0.5676529037951212
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "error": -1.5290962539302901
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "error": -0.7697692116004369
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m1",
+      "target_quarter": "2026Q2",
+      "error": 0.6713292666064863
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "error": -0.775895030289357
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "error": 0.25847253937213566
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "error": -0.27860037117148373
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "error": -0.5811698548550721
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m2",
+      "target_quarter": "2026Q2",
+      "error": 0.9536064378449662
+    },
+    {
+      "model": "ar1",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "error": -0.775895030289357
+    },
+    {
+      "model": "carry_forward",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "error": 0.25847253937213566
+    },
+    {
+      "model": "dfm",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "error": -0.3840442366192569
+    },
+    {
+      "model": "bridges",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "error": 1.653012004272961
+    },
+    {
+      "model": "midas",
+      "horizon": "nowcast_m3",
+      "target_quarter": "2026Q2",
+      "error": 1.2142780656809506
+    }
+  ]
+}
