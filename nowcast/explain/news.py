@@ -201,34 +201,13 @@ def _fit_model(model, params=None, em_max_iter: int = 250):
 
 
 def _extract_gdp_yoy(result, meta_dict: dict, panels: Panels, target_quarter: pd.Period) -> float:
-    """Extract GDP y/y from a DFM result, same logic as DFM.predict."""
-    from nowcast.models.dfm import DFM
+    """GDP y/y from a DFM result, with the same conversion as DFM.predict (before winsorising)."""
+    from nowcast.models.dfm import dlog_path_to_yoy, quarterly_gdp_dlog
 
-    pred = result.get_prediction()
-    pred_mean = pred.predicted_mean
-
-    if "gdp" not in pred_mean.columns:
+    dlog_q = quarterly_gdp_dlog(result, meta_dict)
+    if dlog_q is None or not np.isfinite(dlog_q.get(target_quarter, np.nan)):
         return np.nan
-
-    gdp_z = pred_mean["gdp"]
-    gdp_meta = meta_dict.get("gdp", {"mu": 0, "sd": 1})
-    mu, sd = gdp_meta["mu"], gdp_meta["sd"]
-
-    target_month_end = target_quarter.asfreq("M", how="end").to_timestamp(how="end")
-    if target_month_end in gdp_z.index:
-        gdp_z_val = gdp_z[target_month_end]
-    else:
-        close = gdp_z.index[gdp_z.index >= target_quarter.start_time]
-        if len(close) == 0:
-            return np.nan
-        gdp_z_val = gdp_z[close[-1]]
-
-    if np.isnan(gdp_z_val):
-        return np.nan
-
-    gdp_dlog = gdp_z_val * sd + mu
-    gdp_dlog = float(np.clip(gdp_dlog, -50.0, 50.0))
-    return DFM._dlog_to_yoy(gdp_dlog, panels, target_quarter)
+    return dlog_path_to_yoy(dlog_q, panels, target_quarter)
 
 
 def _extract_news_items(

@@ -25,7 +25,7 @@ Context variables:
 }.get(horizon, horizon) -%}
 
 As of {{ run_date }}, the {{ horizon_label }} for {{ target_quarter }} GDP growth is {{ "%.1f"|format(new_nowcast) }}% y/y.
-{%- if has_decomposition and old_nowcast is not none %} This is {{ "%.1f"|format(total_change) }} pp {{ "higher" if total_change > 0 else "lower" }} than the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.
+{%- if has_decomposition and old_nowcast is not none %} {% if total_change|round(1) == 0 %}This is unchanged from the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.{% else %}This is {{ "%.1f"|format(total_change|abs) }} pp {{ "higher" if total_change > 0 else "lower" }} than the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.{% endif %}
 {%- endif %}
 
 {%- if has_decomposition and top_news %}

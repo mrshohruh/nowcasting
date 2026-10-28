@@ -29,7 +29,6 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import shutil
 import subprocess
 import sys
 from datetime import datetime
@@ -55,7 +54,6 @@ def run_shadow(as_of: str, store: str, state_dir: str, out: str, verbose: bool =
     out_path.mkdir(parents=True, exist_ok=True)
 
     site_dir = out_path / "site"
-    pdf_dir = out_path / "pdf"
     shadow_state = out_path / "state"
     shadow_state.mkdir(exist_ok=True)
 
@@ -170,7 +168,8 @@ def run_shadow(as_of: str, store: str, state_dir: str, out: str, verbose: bool =
 
     report_lines.extend([
         "",
-        f"## Files: {diag.get('html_count', 0)} HTML, {diag.get('pdf_count', 0)} PDF, {diag.get('download_count', 0)} downloads",
+        f"## Files: {diag.get('html_count', 0)} HTML, {diag.get('pdf_count', 0)} PDF, "
+        f"{diag.get('download_count', 0)} downloads",
     ])
 
     report_path = out_path / "report.txt"
@@ -193,7 +192,7 @@ def compare_runs(dir1: str, dir2: str) -> None:
     d2 = json.loads(d2_path.read_text())
 
     print(f"\n{'='*60}")
-    print(f"Shadow Run Comparison")
+    print("Shadow Run Comparison")
     print(f"{'='*60}")
     print(f"  Run 1: {d1['as_of']}  ({d1['summary']})")
     print(f"  Run 2: {d2['as_of']}  ({d2['summary']})")

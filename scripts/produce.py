@@ -61,48 +61,87 @@ def load_model_config() -> dict:
 # ── monitor ────────────────────────────────────────────────────────────────
 
 
-def build_monitor_data(panels, as_of: dt.date) -> list[dict]:
-    """Build data-availability monitor rows (one per variable)."""
-    from nowcast.explain.news import VARIABLE_LABELS
+def _variable_series(transforms: dict) -> dict[str, str]:
+    """Panel variable -> the catalogue series its (first) input comes from."""
+    out: dict[str, str] = {}
+    for freq in ("monthly", "quarterly"):
+        for v in transforms.get(freq, []) or []:
+            if v.get("recipe") == "nag":
+                out[v["id"]] = "gdp_nag"
+                continue
+            # price indices list their inputs oldest first: the last one is the current series
+            inp = v.get("input") or (v.get("inputs") or [None])[-1]
+            while isinstance(inp, list) and inp:
+                inp = inp[0]
+            if isinstance(inp, str):
+                out[v["id"]] = inp
+    return out
 
-    cat_path = Path(__file__).resolve().parent.parent / "config" / "series_catalogue.yaml"
-    catalogue: dict = {}
-    if cat_path.exists():
-        with open(cat_path) as f:
-            catalogue = yaml.safe_load(f) or {}
+
+def build_monitor_data(
+    panels,
+    as_of: dt.date,
+    variable_ids: list[str] | None = None,
+    n_months: int = 6,
+    n_quarters: int = 4,
+) -> list[dict]:
+    """Data-availability rows for the Data Monitor, one per model input.
+
+    A period is "available" when the panel has a value, "not_due" when the release-lag rule
+    (catalogue ``months_after``: a period is used from the 1st of the month that many months
+    after it ends) has not been reached by *as_of*, and "missing" when it is due but absent.
+    """
+    from nowcast.catalogue import load as load_catalogue
+    from nowcast.explain.news import VARIABLE_LABELS
+    from nowcast.transform.inputs import released_on
+
+    root = Path(__file__).resolve().parent.parent
+    catalogue = {s["id"]: s for s in load_catalogue()}
+    with open(root / "config" / "transforms.yaml") as f:
+        series_of = _variable_series(yaml.safe_load(f) or {})
+
+    meta = panels.meta.set_index("variable")
+    variables = [v for v in (variable_ids or meta.index.tolist()) if v in meta.index]
 
     monitor: list[dict] = []
-    for _, row in panels.meta.iterrows():
-        var_id = row["variable"]
+    for var_id in variables:
+        row = meta.loc[var_id]
         freq = row.get("freq", "M")
-        var_data = panels.yoy[panels.yoy["variable"] == var_id]
-        if var_data.empty:
-            continue
-        available = var_data.dropna(subset=["value"])
-        last_period = str(available["period"].max()) if not available.empty else ""
+        sid = series_of.get(var_id, "")
+        cat = catalogue.get(sid, {})
+        months_after = int(cat.get("months_after", 2))
 
-        cat_info = catalogue.get(var_id, {})
-        months_after = cat_info.get("months_after", 1)
+        var_data = panels.yoy[(panels.yoy["variable"] == var_id)].dropna(subset=["value"])
+        have = set(var_data["period"].astype(str))
+        last_period = max(have) if have else ""
 
+        now = pd.Period(as_of, freq=freq)
+        n = n_months if freq == "M" else n_quarters
         period_status: dict[str, str] = {}
-        if freq == "M":
-            for i in range(6):
-                p = pd.Period(as_of, freq="M") - i
-                p_str = str(p)
-                has = var_data[var_data["period"] == p_str].dropna(subset=["value"]).shape[0] > 0
-                if has:
-                    period_status[p_str] = "available"
-                elif (as_of - p.end_time.date()).days < months_after * 30:
-                    period_status[p_str] = "not_due"
-                else:
-                    period_status[p_str] = "missing"
+        next_due = None
+        for i in range(n - 1, -1, -1):
+            p_str = str(now - i)
+            due = released_on(p_str, months_after)
+            if p_str in have:
+                period_status[p_str] = "available"
+            elif due > as_of:
+                period_status[p_str] = "not_due"
+                next_due = due if next_due is None else min(next_due, due)
+            else:
+                period_status[p_str] = "missing"
 
+        first = row.get("yoy_first", "")
         monitor.append({
             "variable": var_id,
             "label": VARIABLE_LABELS.get(var_id, var_id),
             "freq": freq,
-            "source": cat_info.get("source", ""),
+            "frequency": freq,
+            "series_id": sid,
+            "source": cat.get("publisher", ""),
+            "first_period": "" if pd.isna(first) else str(first),
+            "expected_lag": months_after,
             "last_period": last_period,
+            "next_due": str(next_due) if next_due else "",
             "periods": period_status,
         })
     return monitor
@@ -166,60 +205,79 @@ def build_nowcast_paths(
 # ── downloads ──────────────────────────────────────────────────────────────
 
 
-def generate_downloads(site_ctx, decomposition, sectors, out_dir: Path) -> list[dict]:
-    """CSV + Excel downloads into ``<out_dir>/downloads/``."""
+def generate_downloads(site_ctx, decomposition, sectors, staging_dir: Path) -> list[dict]:
+    """Write the CSV and Excel downloads into *staging_dir* and describe them for the site.
+
+    The site builder copies each file (``source``) into ``<site>/downloads/`` after it has
+    cleared the output folder, so files must not be written into the site folder directly.
+    """
     from nowcast.explain.sectors import format_sector_table
 
-    dl = out_dir / "downloads"
-    dl.mkdir(parents=True, exist_ok=True)
+    staging_dir.mkdir(parents=True, exist_ok=True)
     files: list[dict] = []
+    q = site_ctx.target_quarter
 
-    # Nowcast history
-    if site_ctx.nowcast_history:
-        df = pd.DataFrame(site_ctx.nowcast_history)
-        df.to_csv(dl / "nowcast_history.csv", index=False)
-        files.append({"name": "nowcast_history.csv",
-                       "path": "downloads/nowcast_history.csv",
-                       "category": "history"})
+    def add(df: pd.DataFrame, filename: str, group: str, label: str) -> None:
+        path = staging_dir / filename
+        df.to_csv(path, index=False)
+        files.append({"group": group, "filename": filename, "label": label,
+                      "format": "CSV", "source": str(path)})
+
+    # Nowcast path: every run for the quarters shown on the Nowcast Path page, with official GDP
+    path_rows = []
+    for quarter, points in (site_ctx.nowcast_paths or {}).items():
+        for pt in points:
+            path_rows.append({
+                "target_quarter": quarter,
+                "run_date": pt.get("run_date"),
+                "horizon": "official" if pt.get("official") else pt.get("horizon", ""),
+                "gdp_yoy": pt.get("gdp_yoy"),
+            })
+    path_df = pd.DataFrame(path_rows)
+    if not path_df.empty:
+        add(path_df, f"nowcast_path_{q}.csv", "history", "Nowcast path by run date")
 
     # Impact table
+    impacts_df = pd.DataFrame()
     if decomposition and decomposition.news_items:
-        rows = [{
+        impacts_df = pd.DataFrame([{
             "variable": it.variable, "label": it.label, "period": it.period,
             "surprise": it.surprise, "weight": it.weight,
             "impact": it.impact, "group": it.group,
-        } for it in decomposition.news_items]
-        pd.DataFrame(rows).to_csv(dl / "impact_table.csv", index=False)
-        files.append({"name": "impact_table.csv",
-                       "path": "downloads/impact_table.csv",
-                       "category": "impacts"})
+        } for it in decomposition.news_items])
+        add(impacts_df, f"impacts_{q}.csv", "impacts", "Impact of each new release")
 
-    # Sector contributions
-    if sectors:
-        format_sector_table(sectors).to_csv(dl / "sector_contributions.csv", index=False)
-        files.append({"name": "sector_contributions.csv",
-                       "path": "downloads/sector_contributions.csv",
-                       "category": "sectors"})
+    # Model inputs (latest observation and factor R2)
+    inputs_df = pd.DataFrame(site_ctx.dfm_inputs or [])
+    if not inputs_df.empty:
+        add(inputs_df, f"model_inputs_{q}.csv", "inputs", "Model inputs: latest values")
+
+    # Sector contributions (kept for completeness when the bridge view is produced)
+    sectors_df = format_sector_table(sectors) if sectors else pd.DataFrame()
 
     # Combined Excel workbook
     try:
-        xlsx_name = f"nowcast_{site_ctx.target_quarter}.xlsx"
-        xlsx_path = dl / xlsx_name
-        with pd.ExcelWriter(xlsx_path, engine="openpyxl") as wr:
-            if site_ctx.nowcast_history:
-                pd.DataFrame(site_ctx.nowcast_history).to_excel(wr, sheet_name="History", index=False)
-            if decomposition and decomposition.news_items:
-                pd.DataFrame([{
-                    "variable": it.variable, "label": it.label,
-                    "period": it.period, "impact": it.impact, "group": it.group,
-                } for it in decomposition.news_items]).to_excel(wr, sheet_name="Impacts", index=False)
-            if sectors:
-                format_sector_table(sectors).to_excel(wr, sheet_name="Sectors", index=False)
-        files.append({"name": xlsx_name,
-                       "path": f"downloads/{xlsx_name}",
-                       "category": "combined"})
+        xlsx_name = f"nowcast_{q}.xlsx"
+        with pd.ExcelWriter(staging_dir / xlsx_name, engine="openpyxl") as wr:
+            pd.DataFrame([{
+                "target_quarter": q, "run_date": site_ctx.run_date, "horizon": site_ctx.horizon,
+                "gdp_yoy": site_ctx.new_nowcast, "band_lo": site_ctx.band_lo,
+                "band_hi": site_ctx.band_hi, "previous": site_ctx.old_nowcast,
+            }]).to_excel(wr, sheet_name="Nowcast", index=False)
+            for name, df in (("Path", path_df), ("Impacts", impacts_df),
+                             ("Inputs", inputs_df), ("Sectors", sectors_df)):
+                if not df.empty:
+                    df.to_excel(wr, sheet_name=name, index=False)
+        files.append({"group": "combined", "filename": xlsx_name,
+                      "label": "All tables (Excel workbook)", "format": "XLSX",
+                      "source": str(staging_dir / xlsx_name)})
     except Exception as exc:
         logger.warning("Could not create Excel file: %s", exc)
+
+    # PDF notes: written into <site>/pdf/ after the site is built, linked from here
+    for lang in ("en", "uz"):
+        files.append({"group": "notes", "filename": f"note_{lang}.pdf", "href": f"pdf/note_{lang}.pdf",
+                      "label": {"en": "Note (English)", "uz": "Note (Uzbek)"}[lang], "format": "PDF"})
 
     return files
 
@@ -261,9 +319,9 @@ def run_pipeline(
     available_quarters: list[str] | None = None,
 ) -> dict:
     """Execute the full production pipeline and return a summary dict."""
+    from nowcast.explain.dfm_inputs import dfm_inputs
     from nowcast.explain.narrative import render_note
     from nowcast.explain.news import decompose
-    from nowcast.explain.dfm_inputs import dfm_inputs
     from nowcast.explain.state import load_state, save_state
     from nowcast.models.dfm import DFM
     from nowcast.report.pdf import NoteContext, generate_pdf_note
@@ -386,7 +444,7 @@ def run_pipeline(
     band_hi = gdp_yoy + band_half
 
     # ── 8. Monitor + history ──────────────────────────────────────────────
-    monitor = build_monitor_data(panels, as_of)
+    monitor = build_monitor_data(panels, as_of, variable_ids=dfm_cfg.get("variable_ids"))
     nowcast_history = build_nowcast_history(state_path)
     nowcast_history.append({
         "run_date": str(as_of),
@@ -426,8 +484,10 @@ def run_pipeline(
 
     # ── 10. Downloads ─────────────────────────────────────────────────────
     logger.info("Step 6/9: Generating downloads...")
+    import tempfile
+    staging = Path(tempfile.mkdtemp(prefix="nowcast_downloads_"))
     site_ctx.download_files = generate_downloads(
-        site_ctx, decomposition, sectors, out_path,
+        site_ctx, decomposition, sectors, staging,
     )
 
     # ── 11. Static site ───────────────────────────────────────────────────

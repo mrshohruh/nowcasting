@@ -24,8 +24,8 @@ import shutil
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-from markupsafe import Markup
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 
 from nowcast.report import charts
 
@@ -71,6 +71,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         ),
         "pp_label": "pp",
         "vs_previous": "vs previous",
+        "unchanged_vs_previous": "unchanged vs previous",
         "band_label": "80% band",
         "key_messages": "Key Messages",
         "sector_summary": "Sector Summary",
@@ -126,7 +127,15 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "bridge_sum": "bridge sum",
         "dfm_comparison": "DFM headline comparison",
         # Monitor page
-        "monitor_description": "Availability of input data used in the nowcasting model.",
+        "monitor_description": "Availability of the data the model uses for this estimate.",
+        "monitor_monthly": "Monthly inputs",
+        "monitor_quarterly": "Quarterly inputs",
+        "col_next_due": "Next due",
+        "monitor_rule_note": (
+            "A period is used from the 1st of the month that is the expected lag after the period "
+            "ends (for example, August data from 1 October). 'Next due' is the first date the next "
+            "period can enter the model."
+        ),
         "monitor_availability": "Data Availability Matrix",
         "col_source": "Source",
         "col_frequency": "Frequency",
@@ -194,6 +203,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         ),
         "pp_label": "f.b.",
         "vs_previous": "avvalgisiga nisbatan",
+        "unchanged_vs_previous": "avvalgisi bilan bir xil",
         "band_label": "80% oraliq",
         "key_messages": "Asosiy xabarlar",
         "sector_summary": "Tarmoqlar xulosasi",
@@ -249,7 +259,15 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "bridge_sum": "bridge yig'indisi",
         "dfm_comparison": "DFM bosh baho taqqoslash",
         # Monitor page
-        "monitor_description": "Nowkasting modelida ishlatiladigan kirish ma'lumotlarining mavjudligi.",
+        "monitor_description": "Model ushbu baho uchun foydalanadigan ma'lumotlarning mavjudligi.",
+        "monitor_monthly": "Oylik ko'rsatkichlar",
+        "monitor_quarterly": "Choraklik ko'rsatkichlar",
+        "col_next_due": "Keyingi muddat",
+        "monitor_rule_note": (
+            "Davr ma'lumoti u tugaganidan keyin kutilgan kechikish oyining 1-sanasidan foydalaniladi "
+            "(masalan, avgust ma'lumoti 1 oktyabrdan). 'Keyingi muddat' keyingi davr modelga "
+            "kirishi mumkin bo'lgan birinchi sana."
+        ),
         "monitor_availability": "Ma'lumotlar mavjudligi matritsasi",
         "col_source": "Manba",
         "col_frequency": "Chastota",
@@ -347,7 +365,7 @@ class SiteContext:
         Path(path).write_text(json.dumps(asdict(self), indent=2, default=str), encoding="utf-8")
 
     @classmethod
-    def from_json(cls, path: str | Path) -> "SiteContext":
+    def from_json(cls, path: str | Path) -> SiteContext:
         """Deserialise from a JSON file."""
         raw = json.loads(Path(path).read_text(encoding="utf-8"))
         return cls(**raw)
@@ -377,6 +395,15 @@ PAGES = [
 _HORIZON_SHORT = {"forecast": "ahead", "nowcast_m1": "m1", "nowcast_m2": "m2", "nowcast_m3": "m3"}
 
 
+def _human_size(n: int) -> str:
+    """File size for display: 812 B, 14.2 KB, 1.3 MB."""
+    if n < 1024:
+        return f"{n} B"
+    if n < 1024 ** 2:
+        return f"{n / 1024:.1f} KB"
+    return f"{n / 1024 ** 2:.1f} MB"
+
+
 def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     """Build the complete static dashboard site.
 
@@ -394,9 +421,15 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     shutil.copytree(str(STATIC_DIR), str(static_out))
     logger.info("Copied static assets to %s", static_out)
 
-    # 2. Copy downloads if any
+    # 2. Copy downloads (files staged elsewhere, since the output folder was just cleared)
     dl_out = out / "downloads"
     dl_out.mkdir(exist_ok=True)
+    for dl in ctx.download_files:
+        src = dl.get("source")
+        if src and Path(src).is_file():
+            dst = dl_out / dl["filename"]
+            shutil.copyfile(src, dst)
+            dl["size"] = _human_size(dst.stat().st_size)
 
     # 3. Generate chart JSON specs
     chart_specs = _generate_charts(ctx)
@@ -445,42 +478,31 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             ))
             prev_val = val
 
-    # -- Monitor: reshape for template --
-    # Template expects monitor_table (list of row objects) + monitor_columns
-    monitor_periods = set()
-    for row in ctx.monitor_data:
-        monitor_periods.update(row.get("periods", {}).keys())
-    monitor_columns = sorted(monitor_periods)
-
-    monitor_table: list[dict] = []
-    for row in ctx.monitor_data:
-        periods = row.get("periods", {})
-        availability: dict[str, str] = {}
-        for col in monitor_columns:
-            raw = periods.get(col, "not_due")
-            availability[col] = raw
-        last_avail = ""
-        for col in reversed(monitor_columns):
-            if periods.get(col) == "available":
-                last_avail = col
-                break
-        monitor_table.append(dict(
-            label=row.get("label", row.get("variable", "")),
-            source=row.get("source", ""),
-            frequency=row.get("frequency", ""),
-            availability=availability,
-            last_available=last_avail,
-        ))
+    # -- Monitor: one availability table per frequency (months and quarters differ) --
+    monitor_tables: list[dict] = []
+    for freq in ("M", "Q"):
+        rows = [r for r in ctx.monitor_data if r.get("freq", r.get("frequency", "M")) == freq]
+        if not rows:
+            continue
+        columns = sorted({p for r in rows for p in r.get("periods", {})})
+        table_rows = [dict(
+            label=r.get("label", r.get("variable", "")),
+            source=r.get("source", ""),
+            availability={c: r.get("periods", {}).get(c, "not_due") for c in columns},
+            last_available=r.get("last_period", ""),
+            next_due=r.get("next_due", ""),
+        ) for r in rows]
+        monitor_tables.append(dict(freq=freq, columns=columns, rows=table_rows))
 
     # -- Series metadata (for monitor detail panel) --
     series_metadata = [
         dict(
-            series_id=row.get("variable", ""),
+            series_id=row.get("series_id", row.get("variable", "")),
             label=row.get("label", ""),
             source=row.get("source", ""),
-            frequency=row.get("frequency", ""),
-            first_period="",
-            expected_lag=2,
+            frequency=row.get("freq", row.get("frequency", "")),
+            first_period=row.get("first_period", ""),
+            expected_lag=row.get("expected_lag", ""),
         )
         for row in ctx.monitor_data
     ]
@@ -488,14 +510,14 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     # -- Backtest summary: reshape for template --
     backtest_summary: list[dict] = []
     for b in ctx.backtest_results:
-        is_headline = b.get("model", "") == "DFM"
+        is_headline = str(b.get("model", "")).lower() == "dfm"
         backtest_summary.append(dict(
             model=b.get("model", ""),
             horizon=b.get("horizon", ""),
             rmse=b.get("rmse", 0),
-            mae=b.get("mae", b.get("rmse", 0) * 0.8),  # approximate if missing
+            mae=b.get("mae"),
             ratio=b.get("ratio_vs_ar1", b.get("ratio", 1.0)),
-            n_runs=b.get("n_runs", 20),
+            n_runs=b.get("n", b.get("n_runs")),
             is_headline=is_headline,
         ))
 
@@ -509,11 +531,15 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     # -- Downloads: group by category --
     download_groups_map: dict[str, dict] = {}
     group_titles = {
-        "nowcast_history": {"en": "Nowcast History", "uz": "Nowkast tarixi"},
-        "impact_tables": {"en": "Impact Decomposition", "uz": "Ta'sir jadvallari"},
-        "vintages": {"en": "Data Vintages", "uz": "Ma'lumotlar arxivi"},
+        "history": {"en": "Nowcast path", "uz": "Nowkast yo'li"},
+        "impacts": {"en": "What changed", "uz": "Nima o'zgardi"},
+        "inputs": {"en": "Model inputs", "uz": "Model ma'lumotlari"},
+        "combined": {"en": "Excel workbook", "uz": "Excel fayli"},
+        "notes": {"en": "Notes (PDF)", "uz": "Izohlar (PDF)"},
     }
     for dl in ctx.download_files:
+        if dl.get("source") and not dl.get("size"):
+            continue  # staged file missing: do not publish a dead link
         grp = dl.get("group", "other")
         if grp not in download_groups_map:
             download_groups_map[grp] = dict(
@@ -523,9 +549,10 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             )
         download_groups_map[grp]["files"].append(dict(
             filename=dl.get("filename", ""),
+            href=dl.get("href") or f"downloads/{dl.get('filename', '')}",
             label=dl.get("label", dl.get("filename", "")),
             format=dl.get("format", ""),
-            size="",
+            size=dl.get("size", ""),
             date=ctx.run_date,
         ))
 
@@ -534,7 +561,6 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
 
     # -- Methodology content (mark safe so autoescape doesn't escape HTML) --
-    methodology_content = Markup(ctx.methodology_html or _default_methodology_html())
 
     # 6. Render each language
     for lang in ("en", "uz"):
@@ -595,8 +621,7 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             # Path
             path_table=path_table,
             # Monitor
-            monitor_table=monitor_table,
-            monitor_columns=monitor_columns,
+            monitor_tables=monitor_tables,
             series_metadata=series_metadata,
             # Models
             backtest_summary=backtest_summary,
@@ -604,7 +629,7 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             # Downloads
             download_groups=download_groups,
             # Methodology
-            methodology_content=methodology_content,
+            methodology_content=Markup(ctx.methodology_html or _default_methodology_html(lang)),
         )
 
         for page_id, _nav_key in PAGES:
@@ -648,7 +673,9 @@ def _build_jinja_env() -> Environment:
         autoescape=True,
     )
     # Custom filters — tojson_safe must return Markup so autoescape doesn't re-escape it
-    _tojson = lambda v: Markup(json.dumps(v, default=str))
+    def _tojson(v):
+        return Markup(json.dumps(v, default=str))
+
     env.filters["tojson_safe"] = _tojson
     env.filters["tojson"] = _tojson
     env.filters["format_pct"] = lambda v: f"{v:.1f}" if v is not None else "—"
@@ -875,54 +902,148 @@ def _demo_context() -> SiteContext:
     )
 
 
-def _default_methodology_html() -> str:
-    """Return default methodology content when none is provided."""
-    return """
-<h2>Data Sources</h2>
-<p>The platform uses monthly and quarterly macroeconomic indicators from:</p>
+_METHODOLOGY_HTML = {
+    "en": """
+<h2>Data sources</h2>
+<p>Only official primary publishers are used:</p>
 <ul>
-<li><strong>Uzstat</strong> — industrial production, construction, retail and wholesale trade, services, CPI, PPI, wages, investment, GDP (national accounts)</li>
-<li><strong>Central Bank of Uzbekistan (CBU)</strong> — monetary aggregates (M2), FX reserves, policy rate, exchange rates</li>
-<li><strong>World Bank / commodity markets</strong> — gold price</li>
+<li><strong>Uzstat</strong>: industrial production, construction, retail and wholesale trade, market
+services, exports and imports, consumer and producer prices, wages, investment, GDP.</li>
+<li><strong>Central Bank of Uzbekistan</strong>: money supply (M2), international reserves, interest
+rates, the official exchange rate, remittances.</li>
+<li><strong>World Bank</strong>: the world gold price.</li>
 </ul>
+<p>Every download is stored with its date, so each estimate can be traced to the data it used.</p>
 
 <h2>Transformations</h2>
-<p>All series are seasonally adjusted using X-13ARIMA-SEATS and transformed to year-on-year growth rates
-where applicable. Missing values are handled by the EM algorithm inside the Dynamic Factor Model.</p>
+<p>Values published as totals from January are converted to single months or quarters. Real terms
+come from Uzstat's own real growth rates; money, wages and remittances are deflated by the consumer
+price index. Series with a seasonal pattern are seasonally adjusted with robust STL on log levels.
+The factor model uses the monthly (or quarterly) change of the seasonally adjusted level, in log
+points x 100, standardised. A value more than 4 robust standard deviations from the variable's median
+is treated as missing.</p>
 
-<h2>Models</h2>
-<h3>Dynamic Factor Model (DFM)</h3>
-<p>The headline model is a <em>Dynamic Factor Model with Mixed Frequencies</em>
-(<code>statsmodels.DynamicFactorMQ</code>) that extracts 2 common factors from
-the panel of monthly indicators and uses them to nowcast quarterly GDP growth.
-Key parameters: VAR(2) factor dynamics, AR(1) idiosyncratic components, 250 EM iterations.</p>
+<h2>Model</h2>
+<p>The estimate comes from a dynamic factor model with monthly and quarterly data
+(<code>statsmodels</code> DynamicFactorMQ): 2 common factors with VAR(2) dynamics, an AR(1)
+component for each variable, estimated by the EM algorithm (up to 250 iterations). The 19 input
+variables are listed on the <em>DFM Inputs</em> page. Quarterly variables are linked to the monthly
+factors by the standard mixed-frequency aggregation.</p>
+<p>The model gives GDP growth on the previous quarter for every quarter, using all data available on
+the run date (Kalman smoother). The year-on-year figure starts from the last published seasonally
+adjusted GDP level, applies the model's growth for each later quarter in turn, and compares the result
+with the level four quarters earlier. The result is limited to the mean &plusmn; 3 standard deviations
+of the last 12 published quarters.</p>
 
-<p>The model uses 19 monthly and quarterly variables, chosen by out-of-sample backtest
-(see the <em>DFM Inputs</em> page for the list and how closely each moves with the factors).
-It produces one headline number and does not split GDP by sector.</p>
+<h2>Horizons and data available</h2>
+<p>Most monthly data enter the model two months after the month ends (August data from 1 October);
+quarterly GDP from the second month after the quarter. "Month 1", "month 2" and "month 3" refer to the
+calendar month of the target quarter in which the estimate is made, not to the months of data it
+contains. On 1 October, for example, the 2026Q4 estimate has no data for October&ndash;December yet:
+it rests on the data up to August and on the model's dynamics.</p>
 
-<h2>Uncertainty Bands</h2>
-<p>The 80% uncertainty band is computed from the empirical distribution of
-historical backtest errors at each horizon (month 1, month 2, month 3).
-As more data arrives closer to the quarter end, the band narrows.</p>
+<h2>Uncertainty band</h2>
+<p>The 80% band uses the errors of the same model in the backtest at the same horizon: the larger of
+the 10th and 90th percentiles in absolute value, widened by 20% because the sample is short, is applied
+on both sides of the estimate.</p>
 
-<h2>News Decomposition</h2>
-<p>Following <em>Bańbura &amp; Modugno (2014)</em>, changes between consecutive nowcasts
-are decomposed into three components: data revisions, new data releases (news),
-and model re-estimation effects. This uses a 4-run decomposition strategy.</p>
+<h2>Backtest</h2>
+<p>Past estimates on the charts are replays: for each past run date the model uses only periods that
+would have been published by then, but with today's (revised) values, because data vintages are only
+kept from October 2026. They are compared with the latest published GDP.</p>
 
-<h2>Revision Policy</h2>
-<p>Nowcasts are produced on the 1st of each month at 06:00 Tashkent time (01:00 UTC).
-Past nowcast values are never revised — each run is a snapshot preserved in the vintage store.</p>
+<h2>What changed</h2>
+<p>A change between two consecutive estimates is split into data revisions, new data and
+re-estimation of the model by four runs: old parameters on old data, old parameters on revised data,
+old parameters on new data, and new parameters on new data. The impact of each new release follows
+the news approach of Ba&#324;bura and Modugno (2014).</p>
 
-<h2>Release Calendar</h2>
-<p>Monthly, on the 1st. The first public release is planned for April 1, 2027.</p>
+<h2>Revision policy</h2>
+<p>Each estimate is kept as it was published. A later estimate can differ because new or revised data
+arrived or the model was re-estimated; the <em>What Changed</em> page shows by how much.</p>
+
+<h2>Release calendar</h2>
+<p>Monthly, on the 1st at 06:00 Tashkent time. The first public release is planned for 1 April 2027.</p>
 
 <h2>Disclaimer</h2>
-<p>These estimates are produced automatically by the IMRS nowcasting model and are
-preliminary. They are subject to revision as new data become available and should not
-be interpreted as official GDP statistics.</p>
-"""
+<p>These estimates are produced automatically by a statistical model. They are preliminary and are not
+official GDP statistics.</p>
+""",
+    "uz": """
+<h2>Ma'lumot manbalari</h2>
+<p>Faqat rasmiy birlamchi manbalardan foydalaniladi:</p>
+<ul>
+<li><strong>Statistika agentligi</strong>: sanoat ishlab chiqarishi, qurilish, chakana va ulgurji savdo,
+bozor xizmatlari, eksport va import, iste'mol va ishlab chiqaruvchi narxlari, ish haqi, investitsiyalar,
+YaIM.</li>
+<li><strong>O'zbekiston Respublikasi Markaziy banki</strong>: pul massasi (M2), xalqaro zaxiralar, foiz
+stavkalari, rasmiy valyuta kursi, pul o'tkazmalari.</li>
+<li><strong>Jahon banki</strong>: jahon oltin narxi.</li>
+</ul>
+<p>Har bir yuklab olingan fayl sanasi bilan saqlanadi, shuning uchun har bir bahoni u foydalangan
+ma'lumotlargacha kuzatish mumkin.</p>
+
+<h2>O'zgartirishlar</h2>
+<p>Yil boshidan jami ko'rinishda e'lon qilingan qiymatlar alohida oy yoki chorakka o'tkaziladi. Real
+ko'rsatkichlar Statistika agentligining o'z real o'sish sur'atlaridan olinadi; pul, ish haqi va pul
+o'tkazmalari iste'mol narxlari indeksi bilan deflyatsiya qilinadi. Mavsumiy ko'rsatkichlar logarifmik
+darajada robust STL usuli bilan mavsumiylikdan tozalanadi. Omil modeli mavsumiylikdan tozalangan
+darajaning oylik (yoki choraklik) o'zgarishini (log x 100, standartlashtirilgan) ishlatadi. Medianadan
+4 robust standart chetlanishdan ko'p farq qiladigan qiymat tushirib qoldiriladi.</p>
+
+<h2>Model</h2>
+<p>Baho oylik va choraklik ma'lumotlar bilan dinamik omil modelidan olinadi (<code>statsmodels</code>
+DynamicFactorMQ): VAR(2) dinamikali 2 ta umumiy omil, har bir o'zgaruvchi uchun AR(1) komponent, EM
+algoritmi bilan baholanadi (250 tagacha iteratsiya). 19 ta kirish o'zgaruvchisi <em>DFM kirishlari</em>
+sahifasida keltirilgan.</p>
+<p>Model har bir chorak uchun YaIMning oldingi chorakka nisbatan o'sishini ishga tushirish sanasida
+mavjud barcha ma'lumotlardan foydalanib beradi (Kalman silliqlagichi). Yillik o'sish e'lon qilingan
+so'nggi mavsumiylikdan tozalangan YaIM darajasidan boshlab, keyingi har bir chorakka modelning o'z
+o'sishini qo'llash va natijani to'rt chorak oldingi daraja bilan solishtirish orqali hisoblanadi.
+Natija so'nggi 12 chorakning o'rtacha qiymati &plusmn; 3 standart chetlanish bilan cheklanadi.</p>
+
+<h2>Gorizontlar va mavjud ma'lumotlar</h2>
+<p>Oylik ma'lumotlarning ko'pchiligi oy tugaganidan ikki oy keyin modelga kiradi (avgust ma'lumoti
+1 oktyabrdan); choraklik YaIM chorakdan keyingi ikkinchi oydan. "1-oy", "2-oy" va "3-oy" baho qilingan
+chorakning kalendar oyini bildiradi, ma'lumotlar oylarini emas. Masalan, 1 oktyabrda 2026-yil IV chorak
+bahosida oktyabr&ndash;dekabr ma'lumotlari hali yo'q: u avgustgacha bo'lgan ma'lumotlarga va model
+dinamikasiga tayanadi.</p>
+
+<h2>Noaniqlik oralig'i</h2>
+<p>80% oraliq xuddi shu modelning shu gorizontdagi tarixiy test xatolaridan olinadi: 10- va 90-
+persentillardan mutlaq qiymati kattasi, tanlanma qisqaligi sababli 20% kengaytirilib, bahoning ikki
+tomoniga qo'llanadi.</p>
+
+<h2>Tarixiy test</h2>
+<p>Grafiklardagi o'tgan baholar qayta hisoblashdir: har bir o'tgan sana uchun model o'sha paytgacha e'lon
+qilinishi mumkin bo'lgan davrlardangina foydalanadi, lekin bugungi (qayta ko'rib chiqilgan) qiymatlar
+bilan, chunki ma'lumot arxivi faqat 2026-yil oktyabridan yuritiladi. Ular so'nggi e'lon qilingan YaIM
+bilan solishtiriladi.</p>
+
+<h2>Nima o'zgardi</h2>
+<p>Ketma-ket ikki baho o'rtasidagi farq to'rt hisob orqali ma'lumotlarning qayta ko'rib chiqilishi, yangi
+ma'lumotlar va modelni qayta baholashga ajratiladi. Har bir yangi e'lonning ta'siri Ba&#324;bura va
+Modugno (2014) yondashuviga asoslanadi.</p>
+
+<h2>Qayta ko'rib chiqish siyosati</h2>
+<p>Har bir baho e'lon qilingan holicha saqlanadi. Keyingi baho yangi yoki qayta ko'rib chiqilgan
+ma'lumotlar kelgani yoki model qayta baholangani sababli farq qilishi mumkin; <em>Nima o'zgardi</em>
+sahifasi bu farqni ko'rsatadi.</p>
+
+<h2>E'lon jadvali</h2>
+<p>Har oyning 1-sanasida, Toshkent vaqti bilan 06:00 da. Birinchi ommaviy e'lon 2027-yil 1-aprelga
+rejalashtirilgan.</p>
+
+<h2>Ogohlantirish</h2>
+<p>Ushbu baholar statistik model tomonidan avtomatik hisoblanadi. Ular dastlabki baholar bo'lib, rasmiy
+YaIM statistikasi hisoblanmaydi.</p>
+""",
+}
+
+
+def _default_methodology_html(lang: str = "en") -> str:
+    """Methodology page body in *lang* (``en`` or ``uz``)."""
+    return _METHODOLOGY_HTML.get(lang, _METHODOLOGY_HTML["en"])
 
 
 def _demo_monitor_data() -> list[dict]:

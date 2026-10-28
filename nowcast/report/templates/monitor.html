@@ -9,47 +9,50 @@
   <p class="headline-meta">{{ t.monitor_description }}</p>
 </div>
 
-{% if monitor_table %}
+{% for tbl in monitor_tables %}
 <div class="card">
-  <h2 class="section-title">{{ t.monitor_availability }}</h2>
+  <h2 class="section-title">{{ t.monitor_monthly if tbl.freq == 'M' else t.monitor_quarterly }}</h2>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th>{{ t.col_variable }}</th>
           <th>{{ t.col_source }}</th>
-          <th>{{ t.col_frequency }}</th>
-          {% for col in monitor_columns %}
+          {% for col in tbl.columns %}
           <th class="num">{{ col }}</th>
           {% endfor %}
           <th>{{ t.col_last_available }}</th>
+          <th>{{ t.col_next_due }}</th>
         </tr>
       </thead>
       <tbody>
-        {% for row in monitor_table %}
+        {% for row in tbl.rows %}
         <tr>
           <td>{{ row.label }}</td>
           <td>{{ row.source }}</td>
-          <td>{{ row.frequency }}</td>
-          {% for col in monitor_columns %}
-          {% set status = row.availability[col] if col in row.availability else 'not_due' %}
+          {% for col in tbl.columns %}
+          {% set status = row.availability[col] %}
           <td class="cell-{{ status }}">
             {% if status == 'available' %}&#10003;{% elif status == 'missing' %}&#10007;{% else %}&middot;{% endif %}
           </td>
           {% endfor %}
           <td>{{ row.last_available or '—' }}</td>
+          <td>{{ row.next_due or '—' }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
-  <div class="mt-16" style="display:flex; gap:16px; font-size:0.8125rem;">
+  {% if loop.last %}
+  <div class="mt-16" style="display:flex; gap:16px; flex-wrap:wrap; font-size:0.8125rem;">
     <span><span class="cell-available" style="display:inline-block;width:20px;text-align:center;">&#10003;</span> {{ t.legend_available }}</span>
     <span><span class="cell-missing" style="display:inline-block;width:20px;text-align:center;">&#10007;</span> {{ t.legend_missing }}</span>
     <span><span class="cell-pending" style="display:inline-block;width:20px;text-align:center;">&middot;</span> {{ t.legend_pending }}</span>
   </div>
+  <p class="headline-meta mt-16">{{ t.monitor_rule_note }}</p>
+  {% endif %}
 </div>
-{% endif %}
+{% endfor %}
 
 {% if series_metadata %}
 <div class="card">
