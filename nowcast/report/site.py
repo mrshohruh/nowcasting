@@ -24,8 +24,8 @@ import shutil
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-from markupsafe import Markup
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 
 from nowcast.report import charts
 
@@ -365,7 +365,7 @@ class SiteContext:
         Path(path).write_text(json.dumps(asdict(self), indent=2, default=str), encoding="utf-8")
 
     @classmethod
-    def from_json(cls, path: str | Path) -> "SiteContext":
+    def from_json(cls, path: str | Path) -> SiteContext:
         """Deserialise from a JSON file."""
         raw = json.loads(Path(path).read_text(encoding="utf-8"))
         return cls(**raw)
@@ -673,7 +673,9 @@ def _build_jinja_env() -> Environment:
         autoescape=True,
     )
     # Custom filters — tojson_safe must return Markup so autoescape doesn't re-escape it
-    _tojson = lambda v: Markup(json.dumps(v, default=str))
+    def _tojson(v):
+        return Markup(json.dumps(v, default=str))
+
     env.filters["tojson_safe"] = _tojson
     env.filters["tojson"] = _tojson
     env.filters["format_pct"] = lambda v: f"{v:.1f}" if v is not None else "—"

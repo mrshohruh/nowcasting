@@ -37,8 +37,9 @@ def build_meta_from_sa(sa: pd.DataFrame) -> pd.DataFrame:
 
 def load_model_config() -> dict:
     """config/model.yaml: the single source of truth for model and exit-check settings."""
-    import yaml
     from pathlib import Path
+
+    import yaml
     with open(Path(__file__).resolve().parent.parent / "config" / "model.yaml") as f:
         return yaml.safe_load(f)
 
@@ -257,7 +258,7 @@ def main(argv=None):
     error_rows = [
         dict(model=m, horizon=h, target_quarter=q, error=float(f - a))
         for m, h, q, f, a in zip(scored["model"], scored["horizon"],
-                                 scored["target_quarter"], scored["gdp_yoy"], scored["actual"])
+                                 scored["target_quarter"], scored["gdp_yoy"], scored["actual"], strict=True)
     ]
     # "history": every past nowcast next to the GDP actual (None while the quarter is still open),
     # for the Nowcast Timeline chart.
@@ -268,7 +269,7 @@ def main(argv=None):
         dict(model=m, horizon=h, target_quarter=q, run_date=str(d), forecast=float(f),
              actual=(None if pd.isna(a) else float(a)))
         for m, h, q, d, f, a in zip(hist["model"], hist["horizon"], hist["target_quarter"],
-                                    hist["run_date"], hist["gdp_yoy"], hist["actual"])
+                                    hist["run_date"], hist["gdp_yoy"], hist["actual"], strict=True)
     ]
     import json
     with open(f"{OUT_DIR}/backtest_summary.json", "w") as f:

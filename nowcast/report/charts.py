@@ -100,8 +100,8 @@ def headline_chart(nowcast_history: list[dict], bands: dict | None = None) -> di
     has_band = any(v is not None for v in lo)
     if has_band:
         # Replace None with the central value so the band doesn't break
-        lo_clean = [l if l is not None else v for l, v in zip(lo, vals)]
-        hi_clean = [h if h is not None else v for h, v in zip(hi, vals)]
+        lo_clean = [lo_v if lo_v is not None else v for lo_v, v in zip(lo, vals, strict=True)]
+        hi_clean = [h if h is not None else v for h, v in zip(hi, vals, strict=True)]
         data.append(dict(
             x=dates + dates[::-1],
             y=hi_clean + lo_clean[::-1],
@@ -323,7 +323,7 @@ def waterfall_chart(decomposition: dict) -> dict:
     values = [old, rev, news, reest, new]
 
     colours = []
-    for m, v in zip(measures, values):
+    for m, v in zip(measures, values, strict=True):
         if m == "absolute" or m == "total":
             colours.append(BLUE)
         elif v >= 0:
@@ -338,7 +338,7 @@ def waterfall_chart(decomposition: dict) -> dict:
         x=labels,
         y=values,
         textposition="outside",
-        text=[f"{v:+.2f}" if m == "relative" else f"{v:.1f}" for m, v in zip(measures, values)],
+        text=[f"{v:+.2f}" if m == "relative" else f"{v:.1f}" for m, v in zip(measures, values, strict=True)],
         textfont=dict(size=12),
         connector=dict(line=dict(color="rgba(107,114,128,0.4)", width=1, dash="dot")),
         decreasing=dict(marker=dict(color=RED)),
@@ -415,10 +415,11 @@ def dfm_inputs_chart(rows: list[dict]) -> dict:
              x=[r["r2_f2"] for r in ordered], marker=dict(color=TEAL),
              hovertemplate="%{y}: R\u00b2 %{x:.2f} with factor 2<extra></extra>"),
     ]
+    r2_max = max([r["r2_f1"] for r in rows] + [r["r2_f2"] for r in rows] + [0.1])
     layout = _merge_layout(dict(
         barmode="group",
         xaxis=dict(title="R\u00b2 of the variable on the factor",
-                   range=[0, min(1.0, round(max([r["r2_f1"] for r in rows] + [r["r2_f2"] for r in rows] + [0.1]) + 0.1, 1))],
+                   range=[0, min(1.0, round(r2_max + 0.1, 1))],
                    showgrid=True, gridcolor="rgba(226,232,240,0.5)"),
         yaxis=dict(showgrid=False, automargin=True),
         legend=dict(orientation="h", y=1.04, x=0),
