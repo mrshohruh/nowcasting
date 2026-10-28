@@ -1,0 +1,312 @@
+{
+ "run_id": "2026-10-28",
+ "vintage_date": "2026-10-28",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_mining_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_manuf_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_elec_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_total_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 368
+  },
+  "constr_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 112.2831606699
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "constr_nom": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 339328.2
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "retail_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 119.7
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "retail_nom": {
+   "summary": "1 new (2026-09), 1 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 432161194.4
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "old": 316378450.9,
+     "new": 341305728.5
+    }
+   ],
+   "removed": [],
+   "unchanged": 79
+  },
+  "wholesale_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 119.2
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 80
+  },
+  "wholesale_nom": {
+   "summary": "1 new (2026-09), 1 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 511779013.1
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "old": 346597328.5,
+     "new": 405817031.6
+    }
+   ],
+   "removed": [],
+   "unchanged": 79
+  },
+  "agri_real_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 15
+  },
+  "mkt_services_growth": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "mkt_services_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "1 new (2026Q3)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 109.9
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 10
+  },
+  "exports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "exports_gold_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 44
+  },
+  "imports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 68
+  },
+  "cpi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm_old": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 132
+  },
+  "ppi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "gold_price": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 801
+  },
+  "new_small_business": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "operating_enterprises": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 58
+  },
+  "wages_q": {
+   "summary": "1 new (2026Q3)",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 7274102.0
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 38
+  },
+  "invest_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_nom_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 26
+  },
+  "invest_fdi_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 22
+  },
+  "income_q": {
+   "summary": "1 new (2026Q3), 2 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 1026701.0
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2024Q3",
+     "old": 697076.4,
+     "new": 738323.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "old": 825308.7,
+     "new": 890813.0
+    }
+   ],
+   "removed": [],
+   "unchanged": 24
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 34
+  }
+ }
+}

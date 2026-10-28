@@ -91,7 +91,6 @@ constr,2021-09,weights: same_year
 constr,2021-10,weights: same_year
 constr,2021-11,weights: same_year
 constr,2021-12,weights: same_year
-constr,2021-10,outlier in SA panel (> 4 robust SD): value_clean missing
 constr,2023-01,outlier in SA panel (> 4 robust SD): value_clean missing
 constr,2023-02,outlier in SA panel (> 4 robust SD): value_clean missing
 constr,2024-01,outlier in SA panel (> 4 robust SD): value_clean missing
@@ -111,7 +110,7 @@ retail,2020-12,weights: same_year
 retail,2020-04,outlier in SA panel (> 4 robust SD): value_clean missing
 retail,2020-06,outlier in SA panel (> 4 robust SD): value_clean missing
 retail,2020-12,outlier in SA panel (> 4 robust SD): value_clean missing
-retail,2025-10,outlier in SA panel (> 4 robust SD): value_clean missing
+retail,2021-01,outlier in SA panel (> 4 robust SD): value_clean missing
 retail,2025-11,outlier in SA panel (> 4 robust SD): value_clean missing
 retail,2026-03,outlier in SA panel (> 4 robust SD): value_clean missing
 retail,2026-04,outlier in SA panel (> 4 robust SD): value_clean missing
@@ -138,6 +137,7 @@ wholesale,2022-11,outlier in SA panel (> 4 robust SD): value_clean missing
 wholesale,2023-11,outlier in SA panel (> 4 robust SD): value_clean missing
 wholesale,2023-12,outlier in SA panel (> 4 robust SD): value_clean missing
 wholesale,2025-11,outlier in SA panel (> 4 robust SD): value_clean missing
+wholesale,2026-03,outlier in SA panel (> 4 robust SD): value_clean missing
 mkt_trade,2024-01,weights: same_year
 mkt_trade,2024-02,weights: same_year
 mkt_trade,2024-03,weights: same_year
@@ -429,11 +429,8 @@ gva_other_services,2020Q2,outlier in SA panel (> 4 robust SD): value_clean missi
 gva_other_services,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
 remittances_real,2022Q1,outlier in SA panel (> 4 robust SD): value_clean missing
 remittances_real,2022Q2,outlier in SA panel (> 4 robust SD): value_clean missing
-income_real,2022Q1,outlier in SA panel (> 4 robust SD): value_clean missing
-income_real,2022Q2,outlier in SA panel (> 4 robust SD): value_clean missing
+wages_real,2021Q4,outlier in SA panel (> 4 robust SD): value_clean missing
 income_real,2023Q4,outlier in SA panel (> 4 robust SD): value_clean missing
-income_real,2024Q3,outlier in SA panel (> 4 robust SD): value_clean missing
-income_real,2024Q4,outlier in SA panel (> 4 robust SD): value_clean missing
 invest,2020Q1,weights: same_year
 invest,2020Q2,weights: same_year
 invest,2020Q3,weights: same_year
@@ -450,6 +447,7 @@ freight,2025Q3,weights: equal
 freight,2025Q4,weights: equal
 freight,2026Q1,weights: equal
 freight,2026Q2,weights: equal
+freight,2026Q3,weights: equal
 bop_exports,2018Q4,outlier in SA panel (> 4 robust SD): value_clean missing
 bop_exports,2020Q3,outlier in SA panel (> 4 robust SD): value_clean missing
 bop_exports,2020Q4,outlier in SA panel (> 4 robust SD): value_clean missing

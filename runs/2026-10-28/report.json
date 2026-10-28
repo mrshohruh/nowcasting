@@ -1,0 +1,1124 @@
+{
+ "run_id": "2026-10-28",
+ "vintage_date": "2026-10-28",
+ "trigger": "manual",
+ "mode": "full",
+ "previous_run": null,
+ "seeded": [],
+ "started_at": "2026-10-28T09:05:19+00:00",
+ "finished_at": "2026-10-28T09:14:00+00:00",
+ "counts": {
+  "ok": 32,
+  "warn": 0,
+  "fail": 12
+ },
+ "new_points": 9,
+ "revised_points": 4,
+ "removed_points": 0,
+ "series": {
+  "ind_total_real": {
+   "source": "siat",
+   "file": "siat:562",
+   "url": "https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.6,
+   "raw": "raw/siat/ind_total_real/2026-10-28.json",
+   "sha256": "5e681b48f3a7e40def1803074332476892076cbf0e95af89749187f9461c1d37",
+   "updated_at": "2026-09-29T13:52:03.508431+05:00",
+   "points": 92,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "ind_mining_real": {
+   "source": "siat",
+   "file": "siat:562",
+   "url": "https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "raw": "raw/siat/ind_mining_real/2026-10-28.json",
+   "sha256": "5e681b48f3a7e40def1803074332476892076cbf0e95af89749187f9461c1d37",
+   "updated_at": "2026-09-29T13:52:03.508431+05:00",
+   "points": 92,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "ind_manuf_real": {
+   "source": "siat",
+   "file": "siat:562",
+   "url": "https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "raw": "raw/siat/ind_manuf_real/2026-10-28.json",
+   "sha256": "5e681b48f3a7e40def1803074332476892076cbf0e95af89749187f9461c1d37",
+   "updated_at": "2026-09-29T13:52:03.508431+05:00",
+   "points": 92,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "ind_elec_real": {
+   "source": "siat",
+   "file": "siat:562",
+   "url": "https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "raw": "raw/siat/ind_elec_real/2026-10-28.json",
+   "sha256": "5e681b48f3a7e40def1803074332476892076cbf0e95af89749187f9461c1d37",
+   "updated_at": "2026-09-29T13:52:03.508431+05:00",
+   "points": 92,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "ind_total_nom": {
+   "source": "siat",
+   "file": "siat:590",
+   "url": "https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.0,
+   "raw": "raw/siat/ind_total_nom/2026-10-28.json",
+   "sha256": "8143136341ed080b8584010b7df438f9b49eaf4220ca0bcbd991c6565aaeac4a",
+   "updated_at": "2026-09-29T13:51:35.404348+05:00",
+   "points": 368,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "constr_real": {
+   "source": "siat",
+   "file": "siat:2406",
+   "url": "https://api.siat.stat.uz/sdmx/2406/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/constr_real/2026-10-28.json",
+   "sha256": "ee7987484c042397f0bcbc83bee1a980417e2045c79cc487b23289ff2b580bce",
+   "updated_at": "2026-10-27T09:48:32.618415+05:00",
+   "points": 69,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "constr_nom": {
+   "source": "siat",
+   "file": "siat:2403",
+   "url": "https://api.siat.stat.uz/sdmx/2403/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.8,
+   "raw": "raw/siat/constr_nom/2026-10-28.json",
+   "sha256": "19f56fa0a11c52b2823f8544f3a9a62a388ac24a7ce53aaeb091e792eb4ac9d0",
+   "updated_at": "2026-10-27T09:48:05.090687+05:00",
+   "points": 69,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "retail_real": {
+   "source": "siat",
+   "file": "siat:2700",
+   "url": "https://api.siat.stat.uz/sdmx/2700/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/retail_real/2026-10-28.json",
+   "sha256": "4632cb2a255d006d14b17a1384b0c06c70fc4bf38687b72d187daa51d5cd5b90",
+   "updated_at": "2026-10-23T11:44:25.022389+05:00",
+   "points": 81,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "retail_nom": {
+   "source": "siat",
+   "file": "siat:2699",
+   "url": "https://api.siat.stat.uz/sdmx/2699/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.8,
+   "raw": "raw/siat/retail_nom/2026-10-28.json",
+   "sha256": "bccfc1e72feb4b702c72e3d11ca662912836b0bea1384b346ff2e8ffafc5de49",
+   "updated_at": "2026-10-23T11:43:49.228287+05:00",
+   "points": 81,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09), 1 revised",
+   "new": 1,
+   "revised": 1,
+   "removed": 0
+  },
+  "wholesale_real": {
+   "source": "siat",
+   "file": "siat:2696",
+   "url": "https://api.siat.stat.uz/sdmx/2696/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/wholesale_real/2026-10-28.json",
+   "sha256": "4f06499912378288034df01059f5c83e4a07ee550ec744372e093b24df0e0807",
+   "updated_at": "2026-10-23T11:35:51.751738+05:00",
+   "points": 81,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "wholesale_nom": {
+   "source": "siat",
+   "file": "siat:964",
+   "url": "https://api.siat.stat.uz/sdmx/964/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.8,
+   "raw": "raw/siat/wholesale_nom/2026-10-28.json",
+   "sha256": "e4388ab94ed14ee80a00b6d967d198710ccd576825806f907f8edbb9ae899ef3",
+   "updated_at": "2026-10-23T11:35:04.664884+05:00",
+   "points": 81,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026-09), 1 revised",
+   "new": 1,
+   "revised": 1,
+   "removed": 0
+  },
+  "agri_real_q": {
+   "source": "siat",
+   "file": "siat:2944",
+   "url": "https://api.siat.stat.uz/sdmx/2944/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/agri_real_q/2026-10-28.json",
+   "sha256": "f75780d2120b51600c870b21bdc66c32da05016edc4d66e377d65620d71ba939",
+   "updated_at": "2026-08-01T18:15:23.274447+05:00",
+   "points": 15,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "mkt_services_growth": {
+   "source": "siat",
+   "file": "siat:3218",
+   "url": "https://api.siat.stat.uz/sdmx/3218/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/mkt_services_growth/2026-10-28.json",
+   "sha256": "890c304d4682fe0bd02189b2d8b5474ff54b580c1e14d3396893d3289f4b2e3f",
+   "updated_at": "2026-09-30T18:16:08.048785+05:00",
+   "points": 448,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "mkt_services_nom": {
+   "source": "siat",
+   "file": "siat:3217",
+   "url": "https://api.siat.stat.uz/sdmx/3217/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/mkt_services_nom/2026-10-28.json",
+   "sha256": "cd802e6064375e81359461d5fae163a4d1e9496d3ed0d66a36d8c7f510584520",
+   "updated_at": "2026-09-30T18:14:44.214891+05:00",
+   "points": 448,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "gva_services_q": {
+   "source": "stat_nag_xlsx",
+   "file": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.6,
+   "raw": "raw/stat_nag_xlsx/gva_services_q/2026-10-28.xlsx",
+   "sha256": "23a831e25b6494b8735a187d2d3e128ae1b3d02e09d0fcca9025c0e3e82ef547",
+   "points": 306,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "freight_q": {
+   "source": "siat",
+   "file": "siat:3290",
+   "url": "https://api.siat.stat.uz/sdmx/3290/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.4,
+   "raw": "raw/siat/freight_q/2026-10-28.json",
+   "sha256": "27ce1ac2025acf3dfdd3c249a637920f9482365a443f82dd32bf475124856f15",
+   "updated_at": "2026-10-27T10:54:56.774225+05:00",
+   "points": 11,
+   "latest": "2026Q3",
+   "expected_latest": "2026Q2",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026Q3)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "exports_usd": {
+   "source": "siat",
+   "file": "siat:1103",
+   "url": "https://api.siat.stat.uz/sdmx/1103/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/exports_usd/2026-10-28.json",
+   "sha256": "23dfae59c54b3d452bbdb415b59c1c5e34d9a37d112fe436b5b6b6684f2d0b87",
+   "updated_at": "2026-09-26T13:02:14.039057+05:00",
+   "points": 68,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "exports_gold_usd": {
+   "source": "siat",
+   "file": "siat:3080",
+   "url": "https://api.siat.stat.uz/sdmx/3080/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.3,
+   "raw": "raw/siat/exports_gold_usd/2026-10-28.json",
+   "sha256": "a74d7179cd3d414fa36683f2f78b9e7ad3f5d65a17cd94f9b8389996ba72394b",
+   "updated_at": "2026-09-26T12:58:34.789110+05:00",
+   "points": 44,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "imports_usd": {
+   "source": "siat",
+   "file": "siat:1162",
+   "url": "https://api.siat.stat.uz/sdmx/1162/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/imports_usd/2026-10-28.json",
+   "sha256": "6c4ec167fa3b14c98de62c35ac606834f1c82e30d89c9239fafbafc7f445b815",
+   "updated_at": "2026-09-26T13:08:51.174367+05:00",
+   "points": 68,
+   "latest": "2026-08",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "usd_rate": {
+   "source": "cbu_rate_json",
+   "file": "cbu_rate:USD",
+   "url": "https://cbu.uz/en/arkhiv-kursov-valyut/json/USD/{YYYY-MM-DD}/",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-08-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefd35d0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 78.3,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-08-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefd35d0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ost recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-08-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefd35d0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 229, in fetch\n    j = self.get(url).json()\n        ^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-08-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefd35d0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "remittances_q": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 77.8,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "t):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 154, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "bop_goods_exports": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 154, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "bop_goods_imports": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "cpi_mm": {
+   "source": "siat",
+   "file": "siat:1286",
+   "url": "https://api.siat.stat.uz/sdmx/1286/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.6,
+   "raw": "raw/siat/cpi_mm/2026-10-28.json",
+   "sha256": "d136bd78d2e2b1d98d4d9fc451382e1fce433d6212651150aea33f476f329938",
+   "updated_at": "2026-10-05T15:04:32.018685+05:00",
+   "points": 69,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "cpi_mm_old": {
+   "source": "siat",
+   "file": "siat:1285",
+   "url": "https://api.siat.stat.uz/sdmx/1285/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.0,
+   "raw": "raw/siat/cpi_mm_old/2026-10-28.json",
+   "sha256": "827284eb84fcc8fadc4be89b0b8b7fae25de979e78b03bdc66a8befb798affcb",
+   "updated_at": "2026-03-30T18:00:22.293323+05:00",
+   "points": 132,
+   "latest": "2020-12",
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "ppi_mm": {
+   "source": "siat",
+   "file": "siat:1581",
+   "url": "https://api.siat.stat.uz/sdmx/1581/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.0,
+   "raw": "raw/siat/ppi_mm/2026-10-28.json",
+   "sha256": "ee2fe862f602cae666f8eaa74f2b22b990653e5c2ba97d4fa1e7a9630e2647d9",
+   "updated_at": "2026-10-15T19:55:09.166669+05:00",
+   "points": 165,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "m2": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "url": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefc2e50>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 77.0,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefc2e50>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ck (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefc2e50>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefc2e50>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "reserves_fx": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 76.9,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ck (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "reserves_gold": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": ". (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "gold_price": {
+   "source": "worldbank_xlsx",
+   "file": "worldbank:pinksheet",
+   "url": "https://www.worldbank.org/en/research/commodity-markets",
+   "status": "ok",
+   "messages": [],
+   "seconds": 0.4,
+   "raw": "raw/worldbank_xlsx/gold_price/2026-10-28.xlsx",
+   "sha256": "ea1c350827878ea3bbe30e3cda16a13fd3bd5b409b8458940dc94a36b5a33154",
+   "points": 801,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "rate_deposit_hh": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 76.0,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": " recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_deposit_firms": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ct timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_loan_hh": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "rt=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_loan_firms": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ectionpool.py\", line 1125, in _validate_conn\n    conn.connect()\nurllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  [Previous line repeated 1 more time]\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "policy_rate": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ectionpool.py\", line 1125, in _validate_conn\n    conn.connect()\nurllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  [Previous line repeated 1 more time]\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "new_small_business": {
+   "source": "siat",
+   "file": "siat:2117",
+   "url": "https://api.siat.stat.uz/sdmx/2117/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.5,
+   "raw": "raw/siat/new_small_business/2026-10-28.json",
+   "sha256": "671a9590bf76d61359edc6ef790150599a220ab132d4bd4ddefe7c9ca290a309",
+   "updated_at": "2026-10-14T18:46:27.266687+05:00",
+   "points": 57,
+   "latest": "2026-09",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "operating_enterprises": {
+   "source": "siat",
+   "file": "siat:2138",
+   "url": "https://api.siat.stat.uz/sdmx/2138/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/operating_enterprises/2026-10-28.json",
+   "sha256": "a1b9995faa1994b36411a9f6fda6ed4ac823b846ed7357075af4c930cdf0c432",
+   "updated_at": "2026-10-14T18:46:38.272811+05:00",
+   "points": 58,
+   "latest": "2026-10",
+   "expected_latest": "2026-08",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "wages_q": {
+   "source": "siat",
+   "file": "siat:522",
+   "url": "https://api.siat.stat.uz/sdmx/522/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 2.8,
+   "raw": "raw/siat/wages_q/2026-10-28.json",
+   "sha256": "ccf40166ded6e90ee181116296c9ef582471cb28c3959f5eadd814a3e8c1d9b1",
+   "updated_at": "2026-10-27T17:26:33.744504+05:00",
+   "points": 39,
+   "latest": "2026Q3",
+   "expected_latest": "2026Q2",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026Q3)",
+   "new": 1,
+   "revised": 0,
+   "removed": 0
+  },
+  "invest_growth_q": {
+   "source": "siat",
+   "file": "siat:1331",
+   "url": "https://api.siat.stat.uz/sdmx/1331/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/invest_growth_q/2026-10-28.json",
+   "sha256": "dcee3ff627cb19c870448fed70441d39fb9dc30e033fa05d9c9d58ff432753d1",
+   "updated_at": "2026-07-25T09:34:11.465372+05:00",
+   "points": 26,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "invest_nom_q": {
+   "source": "siat",
+   "file": "siat:1561",
+   "url": "https://api.siat.stat.uz/sdmx/1561/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.7,
+   "raw": "raw/siat/invest_nom_q/2026-10-28.json",
+   "sha256": "b83d44b12100111fdd5b61fa55ad4b5b572e4c6a21fe46974942d876cc1bafdd",
+   "updated_at": "2026-07-25T09:33:51.385424+05:00",
+   "points": 26,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "invest_fdi_q": {
+   "source": "siat",
+   "file": "siat:2643",
+   "url": "https://api.siat.stat.uz/sdmx/2643/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/invest_fdi_q/2026-10-28.json",
+   "sha256": "b787590c9ee6cfbce793de8ab8be0c280c68cbc26d3a3479d47e798bf9c50bb7",
+   "updated_at": "2026-07-25T09:52:45.799103+05:00",
+   "points": 22,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "income_q": {
+   "source": "siat",
+   "file": "siat:3973",
+   "url": "https://api.siat.stat.uz/sdmx/3973/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.6,
+   "raw": "raw/siat/income_q/2026-10-28.json",
+   "sha256": "c1cbcf6d79e74fcb119a5d7e06fea5ffae0c1f6196bc400ef1b89546a6939a11",
+   "updated_at": "2026-10-24T17:17:59.414982+05:00",
+   "points": 27,
+   "latest": "2026Q3",
+   "expected_latest": "2026Q2",
+   "new_periods": 1,
+   "new_periods_expected": 0,
+   "changes": "1 new (2026Q3), 2 revised",
+   "new": 1,
+   "revised": 2,
+   "removed": 0
+  },
+  "gdp_nag": {
+   "source": "stat_nag_xlsx",
+   "file": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "status": "ok",
+   "messages": [],
+   "raw": "raw/stat_nag_xlsx/gdp_nag/2026-10-28.xlsx",
+   "sha256": "23a831e25b6494b8735a187d2d3e128ae1b3d02e09d0fcca9025c0e3e82ef547",
+   "points": 1734,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  },
+  "gdp_growth_q": {
+   "source": "siat",
+   "file": "siat:3698",
+   "url": "https://api.siat.stat.uz/sdmx/3698/table/download/?download_format=json",
+   "status": "ok",
+   "messages": [],
+   "seconds": 1.4,
+   "raw": "raw/siat/gdp_growth_q/2026-10-28.json",
+   "sha256": "c37f3bcdaa2c34d941454056b571251203ddfdf15c20358f6baebe121ee4a142",
+   "updated_at": "2026-07-31T10:54:09.201997+05:00",
+   "points": 34,
+   "latest": "2026Q2",
+   "expected_latest": "2026Q2",
+   "new_periods": 0,
+   "new_periods_expected": 0,
+   "changes": "no change",
+   "new": 0,
+   "revised": 0,
+   "removed": 0
+  }
+ },
+ "sources": {
+  "siat:562": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/562/table/download/?download_format=json",
+   "series": [
+    "ind_total_real",
+    "ind_mining_real",
+    "ind_manuf_real",
+    "ind_elec_real"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:590": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/590/table/download/?download_format=json",
+   "series": [
+    "ind_total_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2406": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2406/table/download/?download_format=json",
+   "series": [
+    "constr_real"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2403": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2403/table/download/?download_format=json",
+   "series": [
+    "constr_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2700": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2700/table/download/?download_format=json",
+   "series": [
+    "retail_real"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2699": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2699/table/download/?download_format=json",
+   "series": [
+    "retail_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2696": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2696/table/download/?download_format=json",
+   "series": [
+    "wholesale_real"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:964": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/964/table/download/?download_format=json",
+   "series": [
+    "wholesale_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2944": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2944/table/download/?download_format=json",
+   "series": [
+    "agri_real_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3218": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3218/table/download/?download_format=json",
+   "series": [
+    "mkt_services_growth"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3217": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3217/table/download/?download_format=json",
+   "series": [
+    "mkt_services_nom"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx": {
+   "source": "stat_nag_xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "series": [
+    "gva_services_q",
+    "gdp_nag"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3290": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3290/table/download/?download_format=json",
+   "series": [
+    "freight_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1103": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1103/table/download/?download_format=json",
+   "series": [
+    "exports_usd"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3080": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3080/table/download/?download_format=json",
+   "series": [
+    "exports_gold_usd"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1162": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1162/table/download/?download_format=json",
+   "series": [
+    "imports_usd"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "cbu_rate:USD": {
+   "source": "cbu_rate_json",
+   "url": "https://cbu.uz/en/arkhiv-kursov-valyut/json/USD/{YYYY-MM-DD}/",
+   "series": [
+    "usd_rate"
+   ],
+   "failed": [
+    "usd_rate"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-08-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefd35d0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx": {
+   "source": "cbu_xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "series": [
+    "remittances_q",
+    "bop_goods_exports",
+    "bop_goods_imports"
+   ],
+   "failed": [
+    "remittances_q",
+    "bop_goods_exports",
+    "bop_goods_imports"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefb9650>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "siat:1286": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1286/table/download/?download_format=json",
+   "series": [
+    "cpi_mm"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1285": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1285/table/download/?download_format=json",
+   "series": [
+    "cpi_mm_old"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1581": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1581/table/download/?download_format=json",
+   "series": [
+    "ppi_mm"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "series": [
+    "m2"
+   ],
+   "failed": [
+    "m2"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefc2e50>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "series": [
+    "reserves_fx",
+    "reserves_gold"
+   ],
+   "failed": [
+    "reserves_fx",
+    "reserves_gold"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3def0c7090>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "worldbank:pinksheet": {
+   "source": "worldbank_xlsx",
+   "url": "https://www.worldbank.org/en/research/commodity-markets",
+   "series": [
+    "gold_price"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "series": [
+    "rate_deposit_hh",
+    "rate_deposit_firms",
+    "rate_loan_hh",
+    "rate_loan_firms",
+    "policy_rate"
+   ],
+   "failed": [
+    "rate_deposit_hh",
+    "rate_deposit_firms",
+    "rate_loan_hh",
+    "rate_loan_firms",
+    "policy_rate"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3deefe0890>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "siat:2117": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2117/table/download/?download_format=json",
+   "series": [
+    "new_small_business"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2138": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2138/table/download/?download_format=json",
+   "series": [
+    "operating_enterprises"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:522": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/522/table/download/?download_format=json",
+   "series": [
+    "wages_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1331": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1331/table/download/?download_format=json",
+   "series": [
+    "invest_growth_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:1561": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/1561/table/download/?download_format=json",
+   "series": [
+    "invest_nom_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:2643": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/2643/table/download/?download_format=json",
+   "series": [
+    "invest_fdi_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3973": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3973/table/download/?download_format=json",
+   "series": [
+    "income_q"
+   ],
+   "failed": [],
+   "errors": []
+  },
+  "siat:3698": {
+   "source": "siat",
+   "url": "https://api.siat.stat.uz/sdmx/3698/table/download/?download_format=json",
+   "series": [
+    "gdp_growth_q"
+   ],
+   "failed": [],
+   "errors": []
+  }
+ }
+}
