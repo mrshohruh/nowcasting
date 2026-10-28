@@ -154,56 +154,28 @@ class DFM:
             return {"gdp_yoy": np.nan, "model": self.name,
                     "info": {"error": f"estimation failed: {e}"}}
 
-        # Get predicted values (Kalman smoother fills missing/future)
+        # GDP q/q growth for every quarter, from the smoothed estimates (all data in the panel)
         try:
-            pred = result.get_prediction()
-            pred_mean = pred.predicted_mean
+            gdp_dlog_q = quarterly_gdp_dlog(result, meta_dict)
         except Exception as e:
             logger.warning("DFM prediction failed: %s", e)
             return {"gdp_yoy": np.nan, "model": self.name,
                     "info": {"error": f"prediction failed: {e}"}}
-
-        # Extract GDP prediction for the target quarter
-        if "gdp" not in pred_mean.columns:
+        if gdp_dlog_q is None:
             return {"gdp_yoy": np.nan, "model": self.name,
                     "info": {"error": "GDP not in prediction output"}}
 
-        gdp_z = pred_mean["gdp"]
-        gdp_meta = meta_dict.get("gdp", {"mu": 0, "sd": 1})
-        mu, sd = gdp_meta["mu"], gdp_meta["sd"]
-
-        # GDP is quarterly in the SA panel: the predicted values are at monthly freq
-        # but represent the quarterly variable. Sum the three months of the quarter
-        # to get the quarterly prediction.
-        target_start = target_quarter.asfreq("M", how="start").to_timestamp()
-        # Get GDP z-score for the target quarter's last month (that's where quarterly
-        # data is placed in the DFM internal representation)
-        target_month_end = target_quarter.asfreq("M", how="end").to_timestamp(how="end")
-        if target_month_end in gdp_z.index:
-            gdp_z_val = gdp_z[target_month_end]
-        else:
-            # Try nearest
-            close = gdp_z.index[gdp_z.index >= target_start]
-            if len(close) == 0:
-                return {"gdp_yoy": np.nan, "model": self.name,
-                        "info": {"error": f"no GDP prediction for {target_quarter}"}}
-            gdp_z_val = gdp_z[close[-1]]
-
-        if np.isnan(gdp_z_val):
+        gdp_dlog = gdp_dlog_q.get(target_quarter, np.nan)
+        if not np.isfinite(gdp_dlog):
             return {"gdp_yoy": np.nan, "model": self.name,
-                    "info": {"error": "GDP prediction is NaN"}}
+                    "info": {"error": f"no GDP prediction for {target_quarter}"}}
 
-        # Unscale z to SA dlog×100
-        gdp_dlog = gdp_z_val * sd + mu
-
-        # Clamp dlog to prevent exp() overflow (±50% q/q is extreme)
-        gdp_dlog = float(np.clip(gdp_dlog, -50.0, 50.0))
-
-        # Convert dlog to y/y growth using SA levels
-        gdp_yoy = self._dlog_to_yoy(gdp_dlog, panels, target_quarter)
+        # Chain the quarterly growth path from the last official GDP level to the target
+        gdp_yoy = dlog_path_to_yoy(gdp_dlog_q, panels, target_quarter)
+        gdp_z_val = (gdp_dlog - meta_dict["gdp"]["mu"]) / meta_dict["gdp"]["sd"]
 
         # Winsorise: GDP y/y should be in a plausible range
-        # Use last 8 quarters of actual y/y for bounds (±3σ)
+        # Bounds: mean ± 3 SD (SD at least 1 pp) of the last 12 quarters of official y/y
         yoy_panel = panels.yoy
         gdp_hist = yoy_panel[(yoy_panel["variable"] == "gdp") & (yoy_panel["freq"] == "Q")]
         if not gdp_hist.empty:
@@ -231,107 +203,75 @@ class DFM:
         self._last_result = result
         return out
 
-    def _apply_intercept_correction(
-        self,
-        raw_yoy: float,
-        pred_mean: pd.DataFrame,
-        meta_dict: dict,
-        panels: Panels,
-        target_quarter: pd.Period,
-    ) -> float:
-        """Apply expanding-window intercept correction using in-sample errors.
 
-        Computes the DFM's prediction for known GDP quarters and corrects
-        the out-of-sample prediction by the mean recent bias.
-        """
-        yoy_panel = panels.yoy
-        gdp_hist = yoy_panel[(yoy_panel["variable"] == "gdp") & (yoy_panel["freq"] == "Q")].copy()
-        if gdp_hist.empty:
-            return raw_yoy
+def quarterly_gdp_dlog(result, meta_dict: dict) -> pd.Series | None:
+    """GDP q/q growth (SA dlog x 100) for every quarter in the sample, one value per quarter.
 
-        gdp_hist["pi"] = pd.PeriodIndex(gdp_hist["period"], freq="Q")
-        gdp_hist = gdp_hist.sort_values("pi").drop_duplicates("pi", keep="last").set_index("pi")
-        actuals = gdp_hist["value"]
+    Uses the smoothed estimates, which condition on every observation in the panel. The
+    one-step-ahead predictions (the statsmodels default) leave out the latest month of data.
+    DynamicFactorMQ places a quarterly variable at the last month of its quarter, so the value
+    for quarter q is the smoothed estimate at q's third month.
+    """
+    pred = result.get_prediction(information_set="smoothed").predicted_mean
+    if "gdp" not in pred.columns:
+        return None
+    gdp = pred["gdp"]
+    idx = gdp.index
+    if not isinstance(idx, pd.PeriodIndex):
+        idx = pd.DatetimeIndex(idx).to_period("M")
+    gdp = pd.Series(gdp.to_numpy(), index=idx)
+    gdp = gdp[gdp.index.month % 3 == 0]
+    gdp.index = gdp.index.asfreq("Q")
+    meta = meta_dict.get("gdp", {"mu": 0.0, "sd": 1.0})
+    dlog = gdp * meta["sd"] + meta["mu"]
+    # Clamp to keep exp() finite (+-50% q/q is far outside anything observed)
+    return dlog.clip(-50.0, 50.0)
 
-        # Get DFM's in-sample GDP predictions for known quarters
-        if "gdp" not in pred_mean.columns:
-            return raw_yoy
 
-        gdp_meta = meta_dict.get("gdp", {"mu": 0, "sd": 1})
-        mu, sd = gdp_meta["mu"], gdp_meta["sd"]
-        gdp_z = pred_mean["gdp"]
+def gdp_sa_quarterly(panels: Panels) -> pd.Series | None:
+    """Quarterly SA GDP level (PeriodIndex, freq Q), or None when the panel has none."""
+    sa_level = panels.levels.get("gdp", {}).get("sa_level")
+    if sa_level is None or sa_level.empty:
+        return None
+    if not isinstance(sa_level.index, pd.PeriodIndex):
+        sa_level = sa_level.copy()
+        sa_level.index = pd.DatetimeIndex(sa_level.index).to_period("Q")
+    if sa_level.index.freqstr.startswith("M"):
+        sa_level = sa_level.groupby(sa_level.index.asfreq("Q")).sum()
+    return sa_level.dropna().sort_index()
 
-        errors = []
-        for q in actuals.index[-8:]:  # Last 8 known quarters
-            if q >= target_quarter:
-                continue
-            # Find the DFM prediction for this quarter
-            q_end = q.asfreq("M", how="end").to_timestamp(how="end")
-            if q_end in gdp_z.index:
-                z_val = gdp_z[q_end]
-                if np.isfinite(z_val):
-                    dlog_pred = z_val * sd + mu
-                    dlog_pred = float(np.clip(dlog_pred, -50, 50))
-                    yoy_pred = self._dlog_to_yoy(dlog_pred, panels, q)
-                    if np.isfinite(yoy_pred) and q in actuals.index:
-                        errors.append(yoy_pred - actuals[q])
 
-        if len(errors) >= 3:
-            bias = float(np.mean(errors))
-            # Shrink correction to avoid over-correcting
-            correction = 0.5 * bias
-            return raw_yoy - correction
+def dlog_path_to_yoy(
+    dlog_q: pd.Series,
+    panels: Panels,
+    target_quarter: pd.Period,
+) -> float:
+    """Turn the model's quarterly growth path into y/y growth for *target_quarter*.
 
-        return raw_yoy
+    Starts from the last official SA GDP level and applies the model's q/q growth for each
+    quarter after it, up to the target: level_T = level_L * exp(sum of dlog_{L+1..T} / 100).
+    Each quarter uses its own growth rate. If the target quarter is already published, its
+    official SA level is used. y/y compares with the SA level four quarters earlier.
+    """
+    sa_q = gdp_sa_quarterly(panels)
+    target_dlog = dlog_q.get(target_quarter, np.nan) if dlog_q is not None else np.nan
+    if sa_q is None or sa_q.empty:
+        return _fallback_yoy(target_dlog, panels, target_quarter)
 
-    @staticmethod
-    def _dlog_to_yoy(
-        dlog_pct: float,
-        panels: Panels,
-        target_quarter: pd.Period,
-    ) -> float:
-        """Convert a quarterly SA dlog×100 prediction to y/y growth.
+    last_q = sa_q.index[-1]
+    if target_quarter <= last_q:
+        level = sa_q.get(target_quarter, np.nan)
+    else:
+        path = [dlog_q.get(last_q + i, np.nan) for i in range(1, (target_quarter - last_q).n + 1)]
+        if not np.all(np.isfinite(path)):
+            return _fallback_yoy(target_dlog, panels, target_quarter)
+        level = sa_q.iloc[-1] * np.exp(np.sum(path) / 100.0)
 
-        Uses GDP SA levels from the panel to anchor. The dlog represents the
-        q/q growth of the SA level. y/y = (level_t / level_{t-4} - 1) * 100.
-        """
-        sa_level = panels.levels.get("gdp", {}).get("sa_level")
-        if sa_level is None or sa_level.empty:
-            # Fallback: use y/y panel directly with AR persistence
-            return _fallback_yoy(dlog_pct, panels, target_quarter)
-
-        # Aggregate monthly SA level to quarterly (sum for GDP)
-        if hasattr(sa_level.index, "freqstr") and sa_level.index.freqstr and "M" in sa_level.index.freqstr:
-            sa_q = sa_level.groupby(sa_level.index.to_timestamp().to_period("Q")).sum()
-        else:
-            sa_q = sa_level.copy()
-
-        if sa_q.empty:
-            return _fallback_yoy(dlog_pct, panels, target_quarter)
-
-        last_q = sa_q.index[-1]
-        last_level = sa_q.iloc[-1]
-
-        # Project forward using dlog: level_next = level_prev * exp(dlog/100)
-        steps = int((target_quarter - last_q).n) if target_quarter > last_q else 0
-        projected = last_level
-        for _ in range(max(steps, 1)):
-            projected = projected * np.exp(dlog_pct / 100.0)
-
-        # Guard against overflow/underflow
-        if not np.isfinite(projected) or projected <= 0:
-            return _fallback_yoy(dlog_pct, panels, target_quarter)
-
-        # y/y: compare with same quarter a year ago
-        year_ago = target_quarter - 4
-        if year_ago in sa_q.index:
-            year_ago_level = sa_q[year_ago]
-            if year_ago_level > 0:
-                yoy = (projected / year_ago_level - 1) * 100.0
-                if np.isfinite(yoy):
-                    return yoy
-
-        return _fallback_yoy(dlog_pct, panels, target_quarter)
+    year_ago = target_quarter - 4
+    base = sa_q.get(year_ago, np.nan)
+    if not (np.isfinite(level) and np.isfinite(base)) or base <= 0 or level <= 0:
+        return _fallback_yoy(target_dlog, panels, target_quarter)
+    return float((level / base - 1) * 100.0)
 
 
 def _fallback_yoy(dlog_pct: float, panels: Panels, target_quarter: pd.Period) -> float:

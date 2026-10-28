@@ -26,6 +26,8 @@
 | 16 Oct 2026 | Phase 2: real levels chain each month (quarter) to the same period a year earlier, as the plan says for GDP, also for monthly indicators; annual-overlap chain-linking was tested and was noisier. |
 | 16 Oct 2026 | Phase 2: the plan's test "deflated growth within 1 pp of Uzstat's real growth" is applied to wages (the deflated series with an official real figure): 9.35% vs 9.3% (2025), 10.88% vs 10.9% (Jan-Jun 2026). For series where Uzstat's real growth is used directly, the test is that re-cumulating our discrete growth gives Uzstat's figure back exactly. |
 | 16 Oct 2026 | Phase 2: panels start in 2013 (central bank series); interest rates enter as levels' changes in pp; exchange rate, reserves, gold price and rates are not seasonally adjusted. The monthly workflow rebuilds the panels into `panels/` on the data branch after each run. |
+| 28 Oct 2026 | DFM output: GDP growth is read from the Kalman smoother (all data on the run date), and y/y chains each quarter's own model growth from the last published GDP level. Fixes the forecast-horizon blow-ups (16.9% for 2023Q3, 0.7% for 2024Q3) and lets the latest month of data enter. |
+| 28 Oct 2026 | Data Monitor lists only the DFM inputs, with publisher, release lag and next due date from the catalogue; quarterly inputs get their own table. Methodology page rewritten to match the code (robust STL, SA log changes, pseudo-real-time backtest), in English and Uzbek. |
 
 ## Open
 

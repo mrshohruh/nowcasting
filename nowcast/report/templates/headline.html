@@ -17,8 +17,9 @@
 
   {% if has_decomposition and old_nowcast is not none %}
   <div class="change-badge change-badge--{{ 'up' if total_change > 0.05 else ('down' if total_change < -0.05 else 'flat') }}">
-    {% if total_change > 0 %}&#9650;{% elif total_change < 0 %}&#9660;{% else %}&#9644;{% endif %}
-    {{ "%+.1f" | format(total_change) }} {{ t.pp_label }} {{ t.vs_previous }}
+    {% if total_change|round(1) == 0 %}&#9644; {{ t.unchanged_vs_previous }} ({{ "%.1f" | format(old_nowcast) }}%)
+    {% else %}{% if total_change > 0 %}&#9650;{% else %}&#9660;{% endif %}
+    {{ "%+.1f" | format(total_change) }} {{ t.pp_label }} {{ t.vs_previous }} ({{ "%.1f" | format(old_nowcast) }}%){% endif %}
   </div>
   {% endif %}
 

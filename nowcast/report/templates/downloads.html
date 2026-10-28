@@ -26,8 +26,8 @@
         <line x1="16" y1="17" x2="8" y2="17"></line>
       </svg>
       <div>
-        <a href="{{ root }}downloads/{{ file.filename }}">{{ file.label }}</a>
-        <div class="meta">{{ file.format }} &middot; {{ file.size or '' }}{% if file.date %} &middot; {{ file.date }}{% endif %}</div>
+        <a href="{{ root }}{{ file.href }}">{{ file.label }}</a>
+        <div class="meta">{{ file.format }}{% if file.size %} &middot; {{ file.size }}{% endif %}{% if file.date %} &middot; {{ file.date }}{% endif %}</div>
       </div>
     </li>
     {% endfor %}

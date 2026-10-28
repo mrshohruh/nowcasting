@@ -36,7 +36,7 @@
           <td>{{ row.model }}</td>
           <td>{{ row.horizon }}</td>
           <td class="num">{{ "%.3f" | format(row.rmse) }}</td>
-          <td class="num">{{ "%.3f" | format(row.mae) }}</td>
+          <td class="num">{% if row.mae is not none %}{{ "%.3f" | format(row.mae) }}{% else %}&mdash;{% endif %}</td>
           <td class="num {{ 'val-pos' if row.ratio < 1.0 else 'val-neg' }}">{{ "%.3f" | format(row.ratio) }}</td>
           <td class="num">{{ row.n_runs }}</td>
         </tr>
