@@ -68,7 +68,18 @@ The headline nowcast comes from a Dynamic Factor Model estimated using the `Dyna
      uses its official SA level
 5. Winsorize: clip the y/y prediction to ±3σ of the last 12 quarters' actual GDP growth
 
-**Backtest performance:** At the m3 horizon (all three months of the quarter available), the DFM achieves RMSE = 0.957 pp, which is 0.891 × the AR(1) benchmark — a 10.9% improvement.
+**Backtest performance (28 Oct 2026, 57 run dates, 2022Q1-2026Q2):**
+
+| Horizon | RMSE (pp) | vs AR(1) |
+|---|---|---|
+| Ahead (next quarter) | 1.218 | 0.80 |
+| Month 1 | 1.141 | 0.81 |
+| Month 2 | 0.943 | 0.88 |
+| Month 3 | 0.962 | 0.90 |
+
+Before the 28 Oct fix to the y/y conversion the ahead horizon scored 3.285 (2.16 × AR(1)). The
+months of the quarter are calendar months: with a two-month publication lag, "month 3" contains one
+month of in-quarter data. The DFM under-predicts on average (-0.4 to -0.7 pp across horizons).
 
 ### Model B: Bridge Equations
 
