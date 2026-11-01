@@ -17,7 +17,6 @@ ind_total,2019-07,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2019-09,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2019-11,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2019-12,outlier in SA panel (> 4 robust SD): value_clean missing
-ind_total,2020-05,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2020-06,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2020-07,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_total,2020-10,outlier in SA panel (> 4 robust SD): value_clean missing
@@ -45,7 +44,7 @@ ind_mining,2019-03,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_mining,2019-04,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_mining,2019-07,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_mining,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
-ind_mining,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_mining,2026-09,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_manuf,2019-01,weights: same_year
 ind_manuf,2019-02,weights: same_year
 ind_manuf,2019-03,weights: same_year
@@ -79,6 +78,7 @@ ind_elec,2019-12,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_elec,2020-01,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_elec,2023-06,outlier in SA panel (> 4 robust SD): value_clean missing
 ind_elec,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
+ind_elec,2026-09,outlier in SA panel (> 4 robust SD): value_clean missing
 constr,2021-01,weights: same_year
 constr,2021-02,weights: same_year
 constr,2021-03,weights: same_year
@@ -308,27 +308,16 @@ mkt_other,2024-09,weights: same_year
 mkt_other,2024-10,weights: same_year
 mkt_other,2024-11,weights: same_year
 mkt_other,2024-12,weights: same_year
-exports_nogold,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_nogold,2024-06,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_nogold,2024-07,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_nogold,2024-09,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_nogold,2024-10,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_nogold,2024-11,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_nogold,2024-12,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_nogold,2025-01,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_gold,2024-01,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_gold,2024-02,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_gold,2024-03,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_gold,2024-08,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_gold,2024-12,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_gold,2025-01,outlier in SA panel (> 4 robust SD): value_clean missing
 exports_gold,2025-02,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2022-03,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2022-06,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2023-02,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2023-03,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2026-02,outlier in SA panel (> 4 robust SD): value_clean missing
-exports_total,2026-04,outlier in SA panel (> 4 robust SD): value_clean missing
 imports,2023-06,outlier in SA panel (> 4 robust SD): value_clean missing
 imports,2023-07,outlier in SA panel (> 4 robust SD): value_clean missing
 usd_rate,2018-06,outlier in SA panel (> 4 robust SD): value_clean missing
@@ -345,7 +334,6 @@ usd_rate,2025-06,outlier in SA panel (> 4 robust SD): value_clean missing
 usd_rate,2025-09,outlier in SA panel (> 4 robust SD): value_clean missing
 usd_rate,2025-10,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2017-07,outlier in SA panel (> 4 robust SD): value_clean missing
-cpi,2017-12,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2018-01,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2018-11,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
@@ -435,7 +423,6 @@ invest,2020Q1,weights: same_year
 invest,2020Q2,weights: same_year
 invest,2020Q3,weights: same_year
 invest,2020Q4,weights: same_year
-invest,2025Q4,outlier in SA panel (> 4 robust SD): value_clean missing
 agri_output,2022Q4,no discrete growth: previous period missing or last year's nominal value not positive
 freight,2024Q1,weights: equal
 freight,2024Q2,weights: equal

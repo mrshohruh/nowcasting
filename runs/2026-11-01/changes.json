@@ -1,0 +1,703 @@
+{
+ "run_id": "2026-11-01",
+ "vintage_date": "2026-11-01",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-09",
+     "value": 108.1
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_mining_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "B",
+     "ref_period": "2026-09",
+     "value": 103.1
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_manuf_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "C",
+     "ref_period": "2026-09",
+     "value": 108.6
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_elec_real": {
+   "summary": "1 new (2026-09)",
+   "new": [
+    {
+     "item": "D",
+     "ref_period": "2026-09",
+     "value": 110.1
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 92
+  },
+  "ind_total_nom": {
+   "summary": "4 new (2026-09)",
+   "new": [
+    {
+     "item": "B",
+     "ref_period": "2026-09",
+     "value": 70261.4
+    },
+    {
+     "item": "B, C, D, E",
+     "ref_period": "2026-09",
+     "value": 1085692.2
+    },
+    {
+     "item": "C",
+     "ref_period": "2026-09",
+     "value": 943217.6
+    },
+    {
+     "item": "D",
+     "ref_period": "2026-09",
+     "value": 66089.7
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 368
+  },
+  "constr_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "constr_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "retail_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "retail_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "wholesale_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "wholesale_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "agri_real_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 15
+  },
+  "mkt_services_growth": {
+   "summary": "14 new (2026-09)",
+   "new": [
+    {
+     "item": "100",
+     "ref_period": "2026-09",
+     "value": 113.1284
+    },
+    {
+     "item": "493-494",
+     "ref_period": "2026-09",
+     "value": 115.9547
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-09",
+     "value": 124.1853
+    },
+    {
+     "item": "77",
+     "ref_period": "2026-09",
+     "value": 109.4777
+    },
+    {
+     "item": "95",
+     "ref_period": "2026-09",
+     "value": 111.1221
+    },
+    {
+     "item": "96",
+     "ref_period": "2026-09",
+     "value": 114.3789
+    },
+    {
+     "item": "G",
+     "ref_period": "2026-09",
+     "value": 117.366
+    },
+    {
+     "item": "H",
+     "ref_period": "2026-09",
+     "value": 116.4453
+    },
+    {
+     "item": "I",
+     "ref_period": "2026-09",
+     "value": 111.3162
+    },
+    {
+     "item": "J",
+     "ref_period": "2026-09",
+     "value": 121.3643
+    },
+    {
+     "item": "K",
+     "ref_period": "2026-09",
+     "value": 121.9866
+    },
+    {
+     "item": "L",
+     "ref_period": "2026-09",
+     "value": 115.2732
+    },
+    {
+     "item": "P",
+     "ref_period": "2026-09",
+     "value": 119.57
+    },
+    {
+     "item": "Q",
+     "ref_period": "2026-09",
+     "value": 114.1551
+    }
+   ],
+   "revised": [],
+   "removed": [],
+   "unchanged": 448
+  },
+  "mkt_services_nom": {
+   "summary": "14 new (2026-09), 14 revised",
+   "new": [
+    {
+     "item": "100",
+     "ref_period": "2026-09",
+     "value": 51015.1
+    },
+    {
+     "item": "493-494",
+     "ref_period": "2026-09",
+     "value": 85440.9
+    },
+    {
+     "item": "71",
+     "ref_period": "2026-09",
+     "value": 14492.7
+    },
+    {
+     "item": "77",
+     "ref_period": "2026-09",
+     "value": 11631.5
+    },
+    {
+     "item": "95",
+     "ref_period": "2026-09",
+     "value": 12117.0
+    },
+    {
+     "item": "96",
+     "ref_period": "2026-09",
+     "value": 18447.5
+    },
+    {
+     "item": "G",
+     "ref_period": "2026-09",
+     "value": 235284.4
+    },
+    {
+     "item": "H",
+     "ref_period": "2026-09",
+     "value": 162833.9
+    },
+    {
+     "item": "I",
+     "ref_period": "2026-09",
+     "value": 179704.5
+    },
+    {
+     "item": "J",
+     "ref_period": "2026-09",
+     "value": 77606.2
+    },
+    {
+     "item": "K",
+     "ref_period": "2026-09",
+     "value": 163753.5
+    },
+    {
+     "item": "L",
+     "ref_period": "2026-09",
+     "value": 23936.0
+    },
+    {
+     "item": "P",
+     "ref_period": "2026-09",
+     "value": 34763.0
+    },
+    {
+     "item": "Q",
+     "ref_period": "2026-09",
+     "value": 17612.3
+    }
+   ],
+   "revised": [
+    {
+     "item": "100",
+     "ref_period": "2025-09",
+     "old": 37103.4,
+     "new": 42302.9
+    },
+    {
+     "item": "493-494",
+     "ref_period": "2025-09",
+     "old": 67167.9,
+     "new": 68478.3
+    },
+    {
+     "item": "71",
+     "ref_period": "2025-09",
+     "old": 9233.2,
+     "new": 10737.2
+    },
+    {
+     "item": "77",
+     "ref_period": "2025-09",
+     "old": 9343.7,
+     "new": 9960.2
+    },
+    {
+     "item": "95",
+     "ref_period": "2025-09",
+     "old": 10516.2,
+     "new": 10389.0
+    },
+    {
+     "item": "96",
+     "ref_period": "2025-09",
+     "old": 14518.3,
+     "new": 14847.1
+    },
+    {
+     "item": "G",
+     "ref_period": "2025-09",
+     "old": 124528.5,
+     "new": 190055.6
+    },
+    {
+     "item": "H",
+     "ref_period": "2025-09",
+     "old": 133590.7,
+     "new": 136974.5
+    },
+    {
+     "item": "I",
+     "ref_period": "2025-09",
+     "old": 145307.7,
+     "new": 149450.1
+    },
+    {
+     "item": "J",
+     "ref_period": "2025-09",
+     "old": 54796.9,
+     "new": 61722.8
+    },
+    {
+     "item": "K",
+     "ref_period": "2025-09",
+     "old": 123523.1,
+     "new": 125703.6
+    },
+    {
+     "item": "L",
+     "ref_period": "2025-09",
+     "old": 18814.3,
+     "new": 20114.9
+    },
+    {
+     "item": "P",
+     "ref_period": "2025-09",
+     "old": 26322.4,
+     "new": 28139.1
+    },
+    {
+     "item": "Q",
+     "ref_period": "2025-09",
+     "old": 14567.7,
+     "new": 14563.4
+    }
+   ],
+   "removed": [],
+   "unchanged": 434
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 11
+  },
+  "exports_usd": {
+   "summary": "1 new (2026-09), 1 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 25843.1
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "old": 26683.6,
+     "new": 27335.4
+    }
+   ],
+   "removed": [],
+   "unchanged": 67
+  },
+  "exports_gold_usd": {
+   "summary": "1 new (2026-09), 1 revised",
+   "new": [
+    {
+     "item": "71",
+     "ref_period": "2026-09",
+     "value": 421811.0
+    }
+   ],
+   "revised": [
+    {
+     "item": "71",
+     "ref_period": "2025-09",
+     "old": 1524657.8,
+     "new": 1525732.6
+    }
+   ],
+   "removed": [],
+   "unchanged": 43
+  },
+  "imports_usd": {
+   "summary": "1 new (2026-09), 1 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026-09",
+     "value": 39560.4
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025-09",
+     "old": 33111.0,
+     "new": 34193.7
+    }
+   ],
+   "removed": [],
+   "unchanged": 67
+  },
+  "cpi_mm": {
+   "summary": "9 revised",
+   "new": [],
+   "revised": [
+    {
+     "item": "1",
+     "ref_period": "2026-01",
+     "old": 100.7,
+     "new": 100.67
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-02",
+     "old": 100.6,
+     "new": 100.61
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-03",
+     "old": 100.6,
+     "new": 100.63
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-04",
+     "old": 100.6,
+     "new": 100.59
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-05",
+     "old": 100.2,
+     "new": 100.17
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-06",
+     "old": 100.6,
+     "new": 100.61
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-07",
+     "old": 99.9,
+     "new": 99.85
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-08",
+     "old": 100.2,
+     "new": 100.24
+    },
+    {
+     "item": "1",
+     "ref_period": "2026-09",
+     "old": 100.7,
+     "new": 100.73
+    }
+   ],
+   "removed": [],
+   "unchanged": 60
+  },
+  "cpi_mm_old": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 132
+  },
+  "ppi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "gold_price": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 801
+  },
+  "new_small_business": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "operating_enterprises": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 58
+  },
+  "wages_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 39
+  },
+  "invest_growth_q": {
+   "summary": "1 new (2026Q3), 4 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 120.1
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025Q1",
+     "old": 107.9,
+     "new": 112.8
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q2",
+     "old": 105.5,
+     "new": 108.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "old": 115.2,
+     "new": 114.6
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q4",
+     "old": 110.5,
+     "new": 113.1
+    }
+   ],
+   "removed": [],
+   "unchanged": 22
+  },
+  "invest_nom_q": {
+   "summary": "1 new (2026Q3), 4 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 584154.2
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025Q1",
+     "old": 120409.8,
+     "new": 134558.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q2",
+     "old": 273429.9,
+     "new": 281000.4
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "old": 443613.6,
+     "new": 441406.7
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q4",
+     "old": 591141.0,
+     "new": 603558.8
+    }
+   ],
+   "removed": [],
+   "unchanged": 22
+  },
+  "invest_fdi_q": {
+   "summary": "1 new (2026Q3), 4 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 371728831.3
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025Q1",
+     "old": 78599736.3,
+     "new": 97405642.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q2",
+     "old": 179047393.1,
+     "new": 197713299.3
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "old": 295111307.4,
+     "new": 299798975.5
+    },
+    {
+     "item": "1700",
+     "ref_period": "2025Q4",
+     "old": 389589618.7,
+     "new": 400814327.1
+    }
+   ],
+   "removed": [],
+   "unchanged": 18
+  },
+  "income_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 27
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "1 new (2026Q3), 1 revised",
+   "new": [
+    {
+     "item": "1700",
+     "ref_period": "2026Q3",
+     "value": 108.3
+    }
+   ],
+   "revised": [
+    {
+     "item": "1700",
+     "ref_period": "2025Q3",
+     "old": 107.6,
+     "new": 108.0
+    }
+   ],
+   "removed": [],
+   "unchanged": 33
+  }
+ }
+}
