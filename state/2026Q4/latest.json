@@ -1,8 +1,8 @@
 {
-  "run_date": "2026-10-28",
-  "panel_hash": "b8caf5a6f056971f",
+  "run_date": "2026-11-01",
+  "panel_hash": "45fbca65ec7fe16c",
   "nowcast_table": {
-    "2026Q4": 7.968885019065497
+    "2026Q4": 7.949502937510822
   },
   "dfm_params_path": "dfm_params.npz",
   "panel_sa_path": "panel_sa.parquet",
