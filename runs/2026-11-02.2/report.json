@@ -1,0 +1,238 @@
+{
+ "run_id": "2026-11-02.2",
+ "vintage_date": "2026-11-02",
+ "trigger": "scheduled",
+ "mode": "catch-up",
+ "previous_run": "2026-11-02",
+ "seeded": [],
+ "started_at": "2026-11-02T07:05:14+00:00",
+ "finished_at": "2026-11-02T07:11:39+00:00",
+ "counts": {
+  "ok": 0,
+  "warn": 0,
+  "fail": 12
+ },
+ "new_points": 0,
+ "revised_points": 0,
+ "removed_points": 0,
+ "series": {
+  "usd_rate": {
+   "source": "cbu_rate_json",
+   "file": "cbu_rate:USD",
+   "url": "https://cbu.uz/en/arkhiv-kursov-valyut/json/USD/{YYYY-MM-DD}/",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-09-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fb59810>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 76.1,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-09-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fb59810>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ost recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-09-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fb59810>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 229, in fetch\n    j = self.get(url).json()\n        ^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-09-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fb59810>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "remittances_q": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 76.1,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "t):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 154, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "bop_goods_exports": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 154, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "bop_goods_imports": {
+   "source": "cbu_xlsx",
+   "file": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "m2": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "url": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe0ed0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 77.5,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe0ed0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ck (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe0ed0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe0ed0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "reserves_fx": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 75.8,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ck (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "reserves_gold": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": ". (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_deposit_hh": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "seconds": 75.7,
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": " recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/base.py\", line 118, in get\n    return http.get(self.ctx.session, url, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_deposit_firms": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ct timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/adapters.py\", line 122, in fetch\n    r = self.get(self.series[\"url\"])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_loan_hh": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "rt=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 180, in run\n    fetched[a.file_key] = (a.fetch(), None, _now())\n                           ^^^^^^^^^\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "rate_loan_firms": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ectionpool.py\", line 1125, in _validate_conn\n    conn.connect()\nurllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  [Previous line repeated 1 more time]\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  },
+  "policy_rate": {
+   "source": "cbu_sdmx",
+   "file": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "status": "fail",
+   "messages": [
+    "fail: ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ],
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))",
+   "traceback": "ectionpool.py\", line 1125, in _validate_conn\n    conn.connect()\nurllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/urllib3/util/retry.py\", line 555, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  File \"/home/runner/work/nowcasting/nowcasting/nowcast/ingest/run.py\", line 188, in run\n    raise err\n  [Previous line repeated 1 more time]\nrequests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))\n"
+  }
+ },
+ "sources": {
+  "cbu_rate:USD": {
+   "source": "cbu_rate_json",
+   "url": "https://cbu.uz/en/arkhiv-kursov-valyut/json/USD/{YYYY-MM-DD}/",
+   "series": [
+    "usd_rate"
+   ],
+   "failed": [
+    "usd_rate"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /en/arkhiv-kursov-valyut/json/USD/2026-09-01/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fb59810>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx": {
+   "source": "cbu_xlsx",
+   "url": "https://cbu.uz/sdmx/public/BOP_Analytical_Uzbekistan.xlsx",
+   "series": [
+    "remittances_q",
+    "bop_goods_exports",
+    "bop_goods_imports"
+   ],
+   "failed": [
+    "remittances_q",
+    "bop_goods_exports",
+    "bop_goods_imports"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/public/BOP_Analytical_Uzbekistan.xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd8f90>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/DCS_Uzbekistan_Online.xml",
+   "series": [
+    "m2"
+   ],
+   "failed": [
+    "m2"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/DCS_Uzbekistan_Online.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe0ed0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/IR_Uzbekistan_MCD_STA.xml",
+   "series": [
+    "reserves_fx",
+    "reserves_gold"
+   ],
+   "failed": [
+    "reserves_fx",
+    "reserves_gold"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/IR_Uzbekistan_MCD_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbe2590>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  },
+  "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml": {
+   "source": "cbu_sdmx",
+   "url": "https://cbu.uz/sdmx/INR_Uzbekistan_Online_STA.xml",
+   "series": [
+    "rate_deposit_hh",
+    "rate_deposit_firms",
+    "rate_loan_hh",
+    "rate_loan_firms",
+    "policy_rate"
+   ],
+   "failed": [
+    "rate_deposit_hh",
+    "rate_deposit_firms",
+    "rate_loan_hh",
+    "rate_loan_firms",
+    "policy_rate"
+   ],
+   "errors": [
+    "ConnectTimeout: HTTPSConnectionPool(host='cbu.uz', port=443): Max retries exceeded with url: /sdmx/INR_Uzbekistan_Online_STA.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbu.uz', port=443) at 0x7f3c9fbd9bd0>, 'Connection to cbu.uz timed out. (connect timeout=15)'))"
+   ]
+  }
+ }
+}
