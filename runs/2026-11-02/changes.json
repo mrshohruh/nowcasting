@@ -1,0 +1,231 @@
+{
+ "run_id": "2026-11-02",
+ "vintage_date": "2026-11-02",
+ "compared_with": "the store before this run",
+ "series": {
+  "ind_total_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "ind_mining_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "ind_manuf_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "ind_elec_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 93
+  },
+  "ind_total_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 372
+  },
+  "constr_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "constr_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "retail_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "retail_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "wholesale_real": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "wholesale_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 81
+  },
+  "agri_real_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 15
+  },
+  "mkt_services_growth": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 462
+  },
+  "mkt_services_nom": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 462
+  },
+  "gva_services_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 306
+  },
+  "freight_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 11
+  },
+  "exports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "exports_gold_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 45
+  },
+  "imports_usd": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 69
+  },
+  "cpi_mm_old": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 132
+  },
+  "ppi_mm": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 165
+  },
+  "gold_price": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 801
+  },
+  "new_small_business": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 57
+  },
+  "operating_enterprises": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 58
+  },
+  "wages_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 39
+  },
+  "invest_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 27
+  },
+  "invest_nom_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 27
+  },
+  "invest_fdi_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 23
+  },
+  "income_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 27
+  },
+  "gdp_nag": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 1734
+  },
+  "gdp_growth_q": {
+   "summary": "no change",
+   "new": [],
+   "revised": [],
+   "removed": [],
+   "unchanged": 35
+  }
+ }
+}
