@@ -23,6 +23,7 @@ sys.path.insert(0, str(ROOT))
 
 from nowcast.catalogue import load  # noqa: E402
 from nowcast.ingest import sdmx, siat  # noqa: E402
+from nowcast.transform.target import find_quarterly_sheet  # noqa: E402
 
 
 def check(s: dict, session: requests.Session, cache: dict) -> tuple[str, str]:
@@ -83,7 +84,10 @@ def check(s: dict, session: requests.Session, cache: dict) -> tuple[str, str]:
             r.raise_for_status()
             cache[url] = openpyxl.load_workbook(io.BytesIO(r.content), read_only=True, data_only=True)
         wb = cache[url]
-        quarterly = [n for n in wb.sheetnames if n.startswith("Quarterly_2018")]
+        try:
+            quarterly = [find_quarterly_sheet(wb)]
+        except ValueError:
+            quarterly = []
         return ("ok" if quarterly else "SHEET NOT FOUND"), ", ".join(quarterly)
     return "UNKNOWN SOURCE", ""
 

@@ -710,7 +710,7 @@ series:
     publisher: Uzstat
     source: stat_nag_xlsx
     url: https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx
-    key: sheet Quarterly_2018-2026, production blocks (see nowcast/transform/target.py)
+    key: quarterly sheet starting 2018 (found by pattern), production blocks by indicator code (see nowcast/transform/target.py)
     codes: ["*"]
     frequency: Q
     unit: billion UZS
