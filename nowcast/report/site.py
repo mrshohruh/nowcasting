@@ -66,7 +66,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "headline_chart_note": (
             "Past nowcasts are model replays (backtest), not forecasts published at the time: "
             "each uses only the observations that would have been released by that date, "
-            "but with today's revised values. Official GDP is the latest release. "
+            "but with today's revised values. The blue line is quarterly growth derived from "
+            "Uzstat's cumulative (year-to-date) figures, latest release; Uzstat itself publishes "
+            "only the cumulative rate (e.g. Jan-Sep 2026: 8.3%), shown on hover. "
             "Months 1 and 2 can be switched on in the legend."
         ),
         "pp_label": "pp",
@@ -198,7 +200,10 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
             "Oldingi nowkastlar o'sha paytda e'lon qilingan prognozlar emas, balki modelning "
             "qayta hisob-kitoblaridir (backtest): ular faqat o'sha sanagacha e'lon qilinishi "
             "mumkin bo'lgan kuzatuvlardan foydalanadi, ammo qiymatlar bugungi qayta ko'rilgan "
-            "qiymatlardir. Rasmiy YaIM - oxirgi e'lon qilingan qiymat. 1- va 2-oy "
+            "qiymatlardir. Ko'k chiziq - Statistika agentligining jamlanma (yil boshidan) "
+            "ko'rsatkichlaridan hisoblangan choraklik o'sish (oxirgi e'lon); agentlikning o'zi "
+            "faqat jamlanma o'sishni e'lon qiladi (masalan, 2026-yil yanvar-sentyabr: 8,3%), "
+            "u sichqoncha ustiga olib borilganda ko'rinadi. 1- va 2-oy "
             "nowkastlarini afsonadan yoqish mumkin."
         ),
         "pp_label": "f.b.",
