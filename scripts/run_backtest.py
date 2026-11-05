@@ -45,9 +45,12 @@ def load_model_config() -> dict:
 
 
 def get_gdp_actuals(store) -> pd.Series:
-    """Get actual GDP y/y from the latest vintage (first-release proxy)."""
+    """Get actual GDP y/y from the latest vintage (first-release proxy).
+
+    Built as of today, so a quarter appears as soon as its release lag allows (a fixed date here
+    kept 2026Q3 out of the Nowcast Timeline after Uzstat published it)."""
     from nowcast.transform.panels import build_panels
-    panels = build_panels(dt.date(2026, 10, 1), store)
+    panels = build_panels(dt.date.today(), store)
     yoy = panels.yoy
     gdp = yoy[(yoy["variable"] == "gdp") & (yoy["freq"] == "Q")].copy()
     gdp["pi"] = pd.PeriodIndex(gdp["period"], freq="Q")
