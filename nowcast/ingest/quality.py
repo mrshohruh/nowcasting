@@ -11,6 +11,7 @@
 | cumulative value falls within a year     | warn               |
 | periods removed from the source          | warn               |
 | latest period behind what the lag allows | warn               |
+| NAG levels contradict published growth   | warn               |
 
 Range and cumulative checks look only at periods that are new or revised in this run, so a known
 quirk in old data (e.g. wholesale falling in 2023-11) warns once, when the series is first
@@ -26,10 +27,12 @@ from __future__ import annotations
 import datetime as dt
 from dataclasses import dataclass, field
 
+import numpy as np
 import pandas as pd
 
 from nowcast.ingest.base import Parsed, period_index
 from nowcast.store.changes import SeriesChanges
+from nowcast.transform.target import CONSISTENCY_TOL_PP
 
 INDEX_MM_RANGE = (80.0, 125.0)
 ORDER = {"ok": 0, "warn": 1, "fail": 2}
@@ -45,6 +48,32 @@ class Result:
         if ORDER[status] > ORDER[self.status]:
             self.status = status
         self.messages.append(f"{status}: {msg}")
+
+
+def nag_inconsistencies(
+    df: pd.DataFrame, only: set[tuple[str, str]] | None = None
+) -> list[tuple[str, str, float, float]]:
+    """(item, quarter, implied growth, published growth) where R / N(previous year) and the
+    published cumulative growth G of the NAG file differ by more than the tolerance.
+
+    ``df`` holds items like 'gdp.N', 'gdp.R', 'gdp.G'; ``only`` limits the check to (item, quarter)
+    pairs that are new or revised in this run.
+    """
+    d = df.assign(base=df["item"].str[:-2], blk=df["item"].str[-1])
+    w = d.pivot(index=["base", "ref_period"], columns="blk", values="value")
+    if not {"N", "R", "G"} <= set(w.columns):
+        return []
+    n_prev = pd.Series(
+        [w["N"].get((b, f"{int(p[:4]) - 1}{p[4:]}"), np.nan) for b, p in w.index], index=w.index
+    )
+    implied = 100.0 * w["R"] / n_prev
+    out = []
+    for (b, p), c, g in zip(w.index, implied, w["G"], strict=True):
+        if only is not None and (b, p) not in only:
+            continue
+        if pd.notna(c) and pd.notna(g) and abs(c - g) > CONSISTENCY_TOL_PP:
+            out.append((b, p, float(c), float(g)))
+    return out
 
 
 def expected_latest(series: dict, run_date: dt.date) -> str:
@@ -126,6 +155,7 @@ def check(
 
     if series["form"] == "cumulative_ytd":
         d = df.sort_values(["item", "ref_period"]).copy()
+        d = d[~d["item"].str.endswith(".G")]  # NAG '.G' rows are growth rates, not running totals
         d["year"] = d["ref_period"].str[:4]
         d["prev"] = d.groupby(["item", "year"])["value"].shift(1)
         falls = d[(d["value"] < d["prev"] - 1e-9) & is_touched.reindex(d.index)]
@@ -134,6 +164,17 @@ def check(
                 "warn",
                 "cumulative value falls within the year at "
                 + ", ".join(f"{r.item}:{r.ref_period}" for r in falls.head(5).itertuples()),
+            )
+
+    if series["source"] == "stat_nag_xlsx":
+        bad = nag_inconsistencies(df, {(i[:-2], p) for i, p in touched})
+        if bad:
+            res.flag(
+                "warn",
+                f"NAG levels contradict the published growth (R / N of last year vs G) by more than "
+                f"{CONSISTENCY_TOL_PP:g} pp in {len(bad)} cells, e.g. "
+                + ", ".join(f"{b}:{p} ({c:.2f} vs {g:.2f})" for b, p, c, g in bad[:3])
+                + "; the target uses the published growth for these quarters",
             )
 
     latest = df["ref_period"].max()

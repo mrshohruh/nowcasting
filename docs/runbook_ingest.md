@@ -81,7 +81,7 @@ exactly like a download, and moves it to `inbox/_used/<run>/<series_id>/`.
 | cbu_xlsx | `BOP_Analytical_Uzbekistan.xlsx` from the catalogue URL |
 | cbu_rate_json (`usd_rate`) | a CSV with columns `date,rate` and one row for every calendar day of the months to add |
 | worldbank_xlsx | `CMO-Historical-Data-Monthly.xlsx` (the "Monthly prices" link on the commodity-markets page) |
-| stat_nag_xlsx | `nag_uzbekistan_mcd.xlsx` from the catalogue URL |
+| stat_nag_xlsx | `nag_uzbekistan_mcd.xlsx` from the catalogue URL (both layouts are read: labelled until 2 Nov 2026, coded e-GDDS since; the sheet name is found by pattern) |
 
 The file must be the publisher's own file, unchanged (official primary sources only). If the
 parser cannot read it, the series fails as usual and the file stays in the inbox.
