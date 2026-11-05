@@ -1,0 +1,73 @@
+{
+ "run_id": "2026-11-05.2",
+ "vintage_date": "2026-11-05",
+ "trigger": "manual",
+ "mode": "selected",
+ "previous_run": null,
+ "seeded": [],
+ "started_at": "2026-11-05T09:38:23+00:00",
+ "finished_at": "2026-11-05T09:38:25+00:00",
+ "counts": {
+  "ok": 0,
+  "warn": 2,
+  "fail": 0
+ },
+ "new_points": 60,
+ "revised_points": 61,
+ "removed_points": 0,
+ "series": {
+  "gva_services_q": {
+   "source": "stat_nag_xlsx",
+   "file": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "status": "warn",
+   "messages": [
+    "warn: NAG levels contradict the published growth (R / N of last year vs G) by more than 0.05 pp in 3 cells, e.g. other_services:2025Q3 (113.18 vs 106.31), trade_accommodation:2025Q3 (158.15 vs 113.02), transport_ict:2025Q3 (119.85 vs 114.65); the target uses the published growth for these quarters"
+   ],
+   "seconds": 1.5,
+   "raw": "raw/stat_nag_xlsx/gva_services_q/2026-11-05.2.xlsx",
+   "sha256": "878581402e819cf9fdd2620df6e45bcc2d7784cefeb534a166eb9d46ab24a018",
+   "points": 315,
+   "latest": "2026Q3",
+   "expected_latest": "2026Q3",
+   "new_periods": 1,
+   "new_periods_expected": 1,
+   "changes": "9 new (2026Q3), 9 revised",
+   "new": 9,
+   "revised": 9,
+   "removed": 0
+  },
+  "gdp_nag": {
+   "source": "stat_nag_xlsx",
+   "file": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "status": "warn",
+   "messages": [
+    "warn: NAG levels contradict the published growth (R / N of last year vs G) by more than 0.05 pp in 16 cells, e.g. accommodation:2025Q3 (112.45 vs 111.96), agriculture:2025Q3 (112.53 vs 103.79), construction:2025Q3 (145.35 vs 114.05); the target uses the published growth for these quarters"
+   ],
+   "raw": "raw/stat_nag_xlsx/gdp_nag/2026-11-05.2.xlsx",
+   "sha256": "878581402e819cf9fdd2620df6e45bcc2d7784cefeb534a166eb9d46ab24a018",
+   "points": 1785,
+   "latest": "2026Q3",
+   "expected_latest": "2026Q3",
+   "new_periods": 1,
+   "new_periods_expected": 1,
+   "changes": "51 new (2026Q3), 52 revised",
+   "new": 51,
+   "revised": 52,
+   "removed": 0
+  }
+ },
+ "sources": {
+  "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx": {
+   "source": "stat_nag_xlsx",
+   "url": "https://stat.uz/img/uploads/download_xlsx/nag_uzbekistan_mcd.xlsx",
+   "series": [
+    "gva_services_q",
+    "gdp_nag"
+   ],
+   "failed": [],
+   "errors": []
+  }
+ }
+}

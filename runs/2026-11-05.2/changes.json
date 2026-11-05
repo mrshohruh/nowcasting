@@ -1,0 +1,691 @@
+{
+ "run_id": "2026-11-05.2",
+ "vintage_date": "2026-11-05",
+ "compared_with": "the store before this run",
+ "series": {
+  "gva_services_q": {
+   "summary": "9 new (2026Q3), 9 revised",
+   "new": [
+    {
+     "item": "other_services.G",
+     "ref_period": "2026Q3",
+     "value": 103.18966696929206
+    },
+    {
+     "item": "other_services.N",
+     "ref_period": "2026Q3",
+     "value": 448473.3511000001
+    },
+    {
+     "item": "other_services.R",
+     "ref_period": "2026Q3",
+     "value": 408836.64100000006
+    },
+    {
+     "item": "trade_accommodation.G",
+     "ref_period": "2026Q3",
+     "value": 115.12210245122081
+    },
+    {
+     "item": "trade_accommodation.N",
+     "ref_period": "2026Q3",
+     "value": 247106.7566
+    },
+    {
+     "item": "trade_accommodation.R",
+     "ref_period": "2026Q3",
+     "value": 232345.94019999998
+    },
+    {
+     "item": "transport_ict.G",
+     "ref_period": "2026Q3",
+     "value": 118.09426983180032
+    },
+    {
+     "item": "transport_ict.N",
+     "ref_period": "2026Q3",
+     "value": 135438.43600000005
+    },
+    {
+     "item": "transport_ict.R",
+     "ref_period": "2026Q3",
+     "value": 131362.71549999996
+    }
+   ],
+   "revised": [
+    {
+     "item": "other_services.G",
+     "ref_period": "2025Q3",
+     "old": 106.361796685505,
+     "new": 106.31190011762209
+    },
+    {
+     "item": "other_services.N",
+     "ref_period": "2025Q3",
+     "old": 367029.5203999999,
+     "new": 396199.20579999994
+    },
+    {
+     "item": "other_services.R",
+     "ref_period": "2025Q3",
+     "old": 318536.99309999996,
+     "new": 338944.63277511235
+    },
+    {
+     "item": "trade_accommodation.G",
+     "ref_period": "2025Q3",
+     "old": 110.62470946857246,
+     "new": 113.01801604484393
+    },
+    {
+     "item": "trade_accommodation.N",
+     "ref_period": "2025Q3",
+     "old": 140121.10009999998,
+     "new": 201825.65749999997
+    },
+    {
+     "item": "trade_accommodation.R",
+     "ref_period": "2025Q3",
+     "old": 128581.84010000003,
+     "new": 183821.3193
+    },
+    {
+     "item": "transport_ict.G",
+     "ref_period": "2025Q3",
+     "old": 114.56297431114173,
+     "new": 114.65338438053536
+    },
+    {
+     "item": "transport_ict.N",
+     "ref_period": "2025Q3",
+     "old": 105028.95490000001,
+     "new": 111235.46950000002
+    },
+    {
+     "item": "transport_ict.R",
+     "ref_period": "2025Q3",
+     "old": 93906.5381,
+     "new": 98242.0512
+    }
+   ],
+   "removed": [],
+   "unchanged": 297
+  },
+  "gdp_nag": {
+   "summary": "51 new (2026Q3), 52 revised",
+   "new": [
+    {
+     "item": "accommodation.G",
+     "ref_period": "2026Q3",
+     "value": 111.19581803205045
+    },
+    {
+     "item": "accommodation.N",
+     "ref_period": "2026Q3",
+     "value": 85392.90999999999
+    },
+    {
+     "item": "accommodation.R",
+     "ref_period": "2026Q3",
+     "value": 79072.1596
+    },
+    {
+     "item": "agriculture.G",
+     "ref_period": "2026Q3",
+     "value": 104.5946867771059
+    },
+    {
+     "item": "agriculture.N",
+     "ref_period": "2026Q3",
+     "value": 261702.80130000008
+    },
+    {
+     "item": "agriculture.R",
+     "ref_period": "2026Q3",
+     "value": 242697.7984
+    },
+    {
+     "item": "construction.G",
+     "ref_period": "2026Q3",
+     "value": 112.49822755588991
+    },
+    {
+     "item": "construction.N",
+     "ref_period": "2026Q3",
+     "value": 140159.83359999995
+    },
+    {
+     "item": "construction.R",
+     "ref_period": "2026Q3",
+     "value": 132844.12689999994
+    },
+    {
+     "item": "electricity.G",
+     "ref_period": "2026Q3",
+     "value": 110.088985838127
+    },
+    {
+     "item": "electricity.N",
+     "ref_period": "2026Q3",
+     "value": 29849.27689999999
+    },
+    {
+     "item": "electricity.R",
+     "ref_period": "2026Q3",
+     "value": 26994.4781
+    },
+    {
+     "item": "gdp.G",
+     "ref_period": "2026Q3",
+     "value": 108.29954797619948
+    },
+    {
+     "item": "gdp.N",
+     "ref_period": "2026Q3",
+     "value": 1755485.7575000008
+    },
+    {
+     "item": "gdp.R",
+     "ref_period": "2026Q3",
+     "value": 1619011.8961
+    },
+    {
+     "item": "gva.G",
+     "ref_period": "2026Q3",
+     "value": 108.29399218432197
+    },
+    {
+     "item": "gva.N",
+     "ref_period": "2026Q3",
+     "value": 1683303.4521000006
+    },
+    {
+     "item": "gva.R",
+     "ref_period": "2026Q3",
+     "value": 1549828.0786999997
+    },
+    {
+     "item": "ict.G",
+     "ref_period": "2026Q3",
+     "value": 121.61177762952906
+    },
+    {
+     "item": "ict.N",
+     "ref_period": "2026Q3",
+     "value": 51026.396
+    },
+    {
+     "item": "ict.R",
+     "ref_period": "2026Q3",
+     "value": 49257.47059999999
+    },
+    {
+     "item": "industry.G",
+     "ref_period": "2026Q3",
+     "value": 108.06807998204143
+    },
+    {
+     "item": "industry.N",
+     "ref_period": "2026Q3",
+     "value": 450422.2735000001
+    },
+    {
+     "item": "industry.R",
+     "ref_period": "2026Q3",
+     "value": 401740.85670000006
+    },
+    {
+     "item": "manufacturing.G",
+     "ref_period": "2026Q3",
+     "value": 108.64822998012136
+    },
+    {
+     "item": "manufacturing.N",
+     "ref_period": "2026Q3",
+     "value": 373087.2236
+    },
+    {
+     "item": "manufacturing.R",
+     "ref_period": "2026Q3",
+     "value": 331921.0651
+    },
+    {
+     "item": "mining.G",
+     "ref_period": "2026Q3",
+     "value": 103.06948294231508
+    },
+    {
+     "item": "mining.N",
+     "ref_period": "2026Q3",
+     "value": 44415.70450000001
+    },
+    {
+     "item": "mining.R",
+     "ref_period": "2026Q3",
+     "value": 40267.555100000005
+    },
+    {
+     "item": "net_taxes.G",
+     "ref_period": "2026Q3",
+     "value": 108.42415618655015
+    },
+    {
+     "item": "net_taxes.N",
+     "ref_period": "2026Q3",
+     "value": 72182.3154
+    },
+    {
+     "item": "net_taxes.R",
+     "ref_period": "2026Q3",
+     "value": 69183.8174
+    },
+    {
+     "item": "other_services.G",
+     "ref_period": "2026Q3",
+     "value": 103.18966696929206
+    },
+    {
+     "item": "other_services.N",
+     "ref_period": "2026Q3",
+     "value": 448473.3511000001
+    },
+    {
+     "item": "other_services.R",
+     "ref_period": "2026Q3",
+     "value": 408836.64100000006
+    },
+    {
+     "item": "trade.G",
+     "ref_period": "2026Q3",
+     "value": 117.25805559496703
+    },
+    {
+     "item": "trade.N",
+     "ref_period": "2026Q3",
+     "value": 161713.85660000003
+    },
+    {
+     "item": "trade.R",
+     "ref_period": "2026Q3",
+     "value": 153273.7806
+    },
+    {
+     "item": "trade_accommodation.G",
+     "ref_period": "2026Q3",
+     "value": 115.12210245122081
+    },
+    {
+     "item": "trade_accommodation.N",
+     "ref_period": "2026Q3",
+     "value": 247106.7566
+    },
+    {
+     "item": "trade_accommodation.R",
+     "ref_period": "2026Q3",
+     "value": 232345.94019999998
+    },
+    {
+     "item": "transport.G",
+     "ref_period": "2026Q3",
+     "value": 116.07999822517804
+    },
+    {
+     "item": "transport.N",
+     "ref_period": "2026Q3",
+     "value": 84412.04000000002
+    },
+    {
+     "item": "transport.R",
+     "ref_period": "2026Q3",
+     "value": 82105.24489999998
+    },
+    {
+     "item": "transport_ict.G",
+     "ref_period": "2026Q3",
+     "value": 118.09426983180032
+    },
+    {
+     "item": "transport_ict.N",
+     "ref_period": "2026Q3",
+     "value": 135438.43600000005
+    },
+    {
+     "item": "transport_ict.R",
+     "ref_period": "2026Q3",
+     "value": 131362.71549999996
+    },
+    {
+     "item": "water.G",
+     "ref_period": "2026Q3",
+     "value": 101.61427882484915
+    },
+    {
+     "item": "water.N",
+     "ref_period": "2026Q3",
+     "value": 3070.068499999999
+    },
+    {
+     "item": "water.R",
+     "ref_period": "2026Q3",
+     "value": 2701.2266
+    }
+   ],
+   "revised": [
+    {
+     "item": "accommodation.G",
+     "ref_period": "2025Q3",
+     "old": 108.36065254325224,
+     "new": 111.96239874756297
+    },
+    {
+     "item": "accommodation.N",
+     "ref_period": "2025Q3",
+     "old": 68595.52519999997,
+     "new": 71110.73150000001
+    },
+    {
+     "item": "accommodation.R",
+     "ref_period": "2025Q3",
+     "old": 61036.4712,
+     "new": 63338.521
+    },
+    {
+     "item": "agriculture.G",
+     "ref_period": "2025Q3",
+     "old": 103.5549693946394,
+     "new": 103.79204939940172
+    },
+    {
+     "item": "agriculture.N",
+     "ref_period": "2025Q3",
+     "old": 211035.33759999994,
+     "new": 232036.45030000003
+    },
+    {
+     "item": "agriculture.R",
+     "ref_period": "2025Q3",
+     "old": 198469.4478,
+     "new": 215673.21240000002
+    },
+    {
+     "item": "construction.G",
+     "ref_period": "2025Q3",
+     "old": 114.22457661087473,
+     "new": 114.04847901648488
+    },
+    {
+     "item": "construction.N",
+     "ref_period": "2025Q3",
+     "old": 92872.99900000001,
+     "new": 118085.52880000001
+    },
+    {
+     "item": "construction.R",
+     "ref_period": "2025Q3",
+     "old": 87689.09960000002,
+     "new": 111584.46790000003
+    },
+    {
+     "item": "electricity.G",
+     "ref_period": "2025Q3",
+     "old": 103.98969403605942,
+     "new": 103.99817169667025
+    },
+    {
+     "item": "electricity.N",
+     "ref_period": "2025Q3",
+     "old": 23072.543999999998,
+     "new": 24520.598400000003
+    },
+    {
+     "item": "electricity.R",
+     "ref_period": "2025Q3",
+     "old": 20826.223899999997,
+     "new": 22171.5985
+    },
+    {
+     "item": "gdp.G",
+     "ref_period": "2025Q3",
+     "old": 107.64358392045443,
+     "new": 108.00283685719172
+    },
+    {
+     "item": "gdp.N",
+     "ref_period": "2025Q3",
+     "old": 1303702.0945999997,
+     "new": 1494938.7382999996
+    },
+    {
+     "item": "gdp.R",
+     "ref_period": "2025Q3",
+     "old": 1162416.7115,
+     "new": 1322345.9089751125
+    },
+    {
+     "item": "gva.G",
+     "ref_period": "2025Q3",
+     "old": 107.67739964845427,
+     "new": 108.03919214591869
+    },
+    {
+     "item": "gva.N",
+     "ref_period": "2025Q3",
+     "old": 1239893.6040999996,
+     "new": 1431130.2477999998
+    },
+    {
+     "item": "gva.R",
+     "ref_period": "2025Q3",
+     "old": 1113027.4769999997,
+     "new": 1272869.4539751124
+    },
+    {
+     "item": "ict.G",
+     "ref_period": "2025Q3",
+     "old": 121.12182219211181,
+     "new": 125.43184262314165
+    },
+    {
+     "item": "ict.N",
+     "ref_period": "2025Q3",
+     "old": 35974.11090000001,
+     "new": 40503.86530000001
+    },
+    {
+     "item": "ict.R",
+     "ref_period": "2025Q3",
+     "old": 31327.920700000002,
+     "new": 35510.8158
+    },
+    {
+     "item": "industry.G",
+     "ref_period": "2025Q3",
+     "old": 106.83455895068062,
+     "new": 106.2994542212232
+    },
+    {
+     "item": "industry.N",
+     "ref_period": "2025Q3",
+     "old": 323805.69210000004,
+     "new": 371747.9359
+    },
+    {
+     "item": "industry.R",
+     "ref_period": "2025Q3",
+     "old": 285843.5583,
+     "new": 324603.7704
+    },
+    {
+     "item": "manufacturing.G",
+     "ref_period": "2025Q3",
+     "old": 107.50338748866753,
+     "new": 107.13165172801729
+    },
+    {
+     "item": "manufacturing.N",
+     "ref_period": "2025Q3",
+     "old": 261441.28880000007,
+     "new": 305500.6649999999
+    },
+    {
+     "item": "manufacturing.R",
+     "ref_period": "2025Q3",
+     "old": 228937.1237,
+     "new": 265213.51239999995
+    },
+    {
+     "item": "mining.G",
+     "ref_period": "2025Q3",
+     "old": 103.96300422158878,
+     "new": 101.44181895482124
+    },
+    {
+     "item": "mining.N",
+     "ref_period": "2024Q2",
+     "old": 20716.250799999998,
+     "new": 20716.2408
+    },
+    {
+     "item": "mining.N",
+     "ref_period": "2025Q3",
+     "old": 36982.7955,
+     "new": 39068.3585
+    },
+    {
+     "item": "mining.R",
+     "ref_period": "2025Q3",
+     "old": 34071.271400000005,
+     "new": 35233.324199999995
+    },
+    {
+     "item": "net_taxes.G",
+     "ref_period": "2025Q3",
+     "old": 106.88711147374661,
+     "new": 107.07587219054402
+    },
+    {
+     "item": "net_taxes.N",
+     "ref_period": "2024Q2",
+     "old": 26933.359,
+     "new": 26933.339
+    },
+    {
+     "item": "net_taxes.R",
+     "ref_period": "2025Q3",
+     "old": 49389.2345,
+     "new": 49476.455
+    },
+    {
+     "item": "other_services.G",
+     "ref_period": "2025Q3",
+     "old": 106.361796685505,
+     "new": 106.31190011762209
+    },
+    {
+     "item": "other_services.N",
+     "ref_period": "2025Q3",
+     "old": 367029.5203999999,
+     "new": 396199.20579999994
+    },
+    {
+     "item": "other_services.R",
+     "ref_period": "2025Q3",
+     "old": 318536.99309999996,
+     "new": 338944.63277511235
+    },
+    {
+     "item": "trade.G",
+     "ref_period": "2025Q3",
+     "old": 112.75353333164126,
+     "new": 113.58098286351843
+    },
+    {
+     "item": "trade.N",
+     "ref_period": "2025Q3",
+     "old": 71525.57489999999,
+     "new": 130714.92599999999
+    },
+    {
+     "item": "trade.R",
+     "ref_period": "2025Q3",
+     "old": 67545.3689,
+     "new": 120482.79829999998
+    },
+    {
+     "item": "trade_accommodation.G",
+     "ref_period": "2025Q3",
+     "old": 110.62470946857246,
+     "new": 113.01801604484393
+    },
+    {
+     "item": "trade_accommodation.N",
+     "ref_period": "2025Q3",
+     "old": 140121.10009999998,
+     "new": 201825.65749999997
+    },
+    {
+     "item": "trade_accommodation.R",
+     "ref_period": "2025Q3",
+     "old": 128581.84010000003,
+     "new": 183821.3193
+    },
+    {
+     "item": "transport.G",
+     "ref_period": "2025Q3",
+     "old": 111.53927509501229,
+     "new": 109.33494000416917
+    },
+    {
+     "item": "transport.N",
+     "ref_period": "2025Q3",
+     "old": 69054.864,
+     "new": 70731.60420000002
+    },
+    {
+     "item": "transport.R",
+     "ref_period": "2025Q3",
+     "old": 62578.617399999996,
+     "new": 62731.2354
+    },
+    {
+     "item": "transport_ict.G",
+     "ref_period": "2025Q3",
+     "old": 114.56297431114173,
+     "new": 114.65338438053536
+    },
+    {
+     "item": "transport_ict.N",
+     "ref_period": "2025Q3",
+     "old": 105028.95490000001,
+     "new": 111235.46950000002
+    },
+    {
+     "item": "transport_ict.R",
+     "ref_period": "2025Q3",
+     "old": 93906.5381,
+     "new": 98242.0512
+    },
+    {
+     "item": "water.G",
+     "ref_period": "2025Q3",
+     "old": 108.04104249515964,
+     "new": 119.25003861626182
+    },
+    {
+     "item": "water.N",
+     "ref_period": "2025Q3",
+     "old": 2309.0638,
+     "new": 2658.314
+    },
+    {
+     "item": "water.R",
+     "ref_period": "2025Q3",
+     "old": 1944.1467000000002,
+     "new": 2095.2611
+    }
+   ],
+   "removed": [],
+   "unchanged": 1682
+  }
+ }
+}
