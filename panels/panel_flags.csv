@@ -334,6 +334,7 @@ usd_rate,2025-06,outlier in SA panel (> 4 robust SD): value_clean missing
 usd_rate,2025-09,outlier in SA panel (> 4 robust SD): value_clean missing
 usd_rate,2025-10,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2017-07,outlier in SA panel (> 4 robust SD): value_clean missing
+cpi,2017-12,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2018-01,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2018-11,outlier in SA panel (> 4 robust SD): value_clean missing
 cpi,2019-08,outlier in SA panel (> 4 robust SD): value_clean missing
