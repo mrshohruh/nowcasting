@@ -78,6 +78,9 @@ def _merge_layout(overrides: dict) -> dict:
 # 1.  Headline chart — GDP y/y nowcast with 80 % band
 # ---------------------------------------------------------------------------
 
+ACTUAL_LABEL = "GDP, quarter (from Uzstat)"
+
+
 def headline_chart(nowcast_history: list[dict], bands: dict | None = None) -> dict:
     """GDP y/y nowcast timeline with optional 80 % uncertainty band.
 
@@ -135,10 +138,10 @@ def headline_chart(nowcast_history: list[dict], bands: dict | None = None) -> di
             x=off_dates,
             y=off_vals,
             mode="markers",
-            name="Official GDP",
+            name=ACTUAL_LABEL,
             marker=dict(size=9, color=BLUE, symbol="diamond"),
             type="scatter",
-            hovertemplate="%{y:.1f}%<extra>Official</extra>",
+            hovertemplate="%{y:.1f}%<extra>" + ACTUAL_LABEL + "</extra>",
         ))
 
     # Latest marker highlight
@@ -168,7 +171,7 @@ def nowcast_vs_actual_chart(
     current: dict | None = None,
     model: str = "dfm",
 ) -> dict:
-    """Past nowcasts against official GDP, one point per target quarter.
+    """Past nowcasts against GDP growth of the quarter (derived from Uzstat's cumulative figures).
 
     Parameters
     ----------
@@ -189,6 +192,8 @@ def nowcast_vs_actual_chart(
         slot[r["horizon"]] = r["forecast"]
         if r.get("actual") is not None:
             slot["actual"] = r["actual"]
+        if r.get("actual_cum") is not None:
+            slot["actual_cum"] = r["actual_cum"]
 
     quarters = set(by_q)
     if current:
@@ -198,12 +203,21 @@ def nowcast_vs_actual_chart(
     def series(key: str) -> list:
         return [by_q.get(q, {}).get(key) for q in quarters]
 
+    # Uzstat publishes only cumulative growth (Q1, Jan-Jun, Jan-Sep, Jan-Dec); the line is the
+    # quarter derived from it, so the published figure goes into the hover text.
+    span = {"Q1": "Jan-Mar", "Q2": "Jan-Jun", "Q3": "Jan-Sep", "Q4": "Jan-Dec"}
+    cum_text = [
+        f"Uzstat {span[q[4:]]}: {c:.1f}%" if (c := by_q.get(q, {}).get("actual_cum")) is not None else ""
+        for q in quarters
+    ]
     data: list[dict] = [
         dict(
-            x=quarters, y=series("actual"), mode="lines+markers", name="Official GDP",
+            x=quarters, y=series("actual"), customdata=cum_text, mode="lines+markers",
+            name=ACTUAL_LABEL,
             line=dict(color=BLUE, width=2.5),
             marker=dict(size=8, color=BLUE, symbol="diamond"),
-            type="scatter", hovertemplate="%{y:.1f}%<extra>Official GDP</extra>",
+            type="scatter",
+            hovertemplate="%{y:.1f}%<br>%{customdata}<extra>" + ACTUAL_LABEL + "</extra>",
         ),
         dict(
             x=quarters, y=series("nowcast_m3"), mode="lines+markers",

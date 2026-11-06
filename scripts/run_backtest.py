@@ -58,6 +58,14 @@ def get_gdp_actuals(store) -> pd.Series:
     return gdp["value"].rename_axis("quarter").rename("actual")
 
 
+def get_gdp_cumulative(store) -> dict[str, float]:
+    """Uzstat's own headline: cumulative (year-to-date) real GDP growth in %, by quarter
+    (Q1 = Jan-Mar, Q2 = Jan-Jun, Q3 = Jan-Sep, Q4 = Jan-Dec), from the latest vintage."""
+    d = store.latest(["gdp_nag"])
+    d = d[d["item"] == "gdp.G"].sort_values("ref_period")
+    return {str(r.ref_period): float(r.value) - 100.0 for r in d.itertuples()}
+
+
 def main(argv=None):
     global DATA_ROOT, OUT_DIR
     import argparse
@@ -267,12 +275,16 @@ def main(argv=None):
     # for the Nowcast Timeline chart.
     hist = results.copy()
     hist["actual"] = hist["target_quarter"].map(actuals_dict)
+    cum = get_gdp_cumulative(store)
+    hist["actual_cum"] = hist["target_quarter"].map(cum)
     hist = hist.dropna(subset=["gdp_yoy"])
     history_rows = [
         dict(model=m, horizon=h, target_quarter=q, run_date=str(d), forecast=float(f),
-             actual=(None if pd.isna(a) else float(a)))
-        for m, h, q, d, f, a in zip(hist["model"], hist["horizon"], hist["target_quarter"],
-                                    hist["run_date"], hist["gdp_yoy"], hist["actual"], strict=True)
+             actual=(None if pd.isna(a) else float(a)),
+             actual_cum=(None if pd.isna(c) else float(c)))
+        for m, h, q, d, f, a, c in zip(hist["model"], hist["horizon"], hist["target_quarter"],
+                                       hist["run_date"], hist["gdp_yoy"], hist["actual"],
+                                       hist["actual_cum"], strict=True)
     ]
     import json
     with open(f"{OUT_DIR}/backtest_summary.json", "w") as f:
