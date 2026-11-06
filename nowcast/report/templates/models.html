@@ -28,6 +28,8 @@
           <th class="num">{{ t.col_mae }}</th>
           <th class="num">{{ t.col_ratio_ar1 }}</th>
           <th class="num">{{ t.col_n_runs }}</th>
+          <th class="num">{{ t.col_rmse_ytd }}</th>
+          <th class="num">{{ t.col_ratio_ytd }}</th>
         </tr>
       </thead>
       <tbody>
@@ -39,12 +41,14 @@
           <td class="num">{% if row.mae is not none %}{{ "%.3f" | format(row.mae) }}{% else %}&mdash;{% endif %}</td>
           <td class="num {{ 'val-pos' if row.ratio < 1.0 else 'val-neg' }}">{{ "%.3f" | format(row.ratio) }}</td>
           <td class="num">{{ row.n_runs }}</td>
+          <td class="num">{% if row.rmse_ytd is not none %}{{ "%.3f" | format(row.rmse_ytd) }}{% else %}&mdash;{% endif %}</td>
+          <td class="num {% if row.ratio_ytd is not none %}{{ 'val-pos' if row.ratio_ytd < 1.0 else 'val-neg' }}{% endif %}">{% if row.ratio_ytd is not none %}{{ "%.3f" | format(row.ratio_ytd) }}{% else %}&mdash;{% endif %}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
-  <p class="headline-meta mt-16">{{ t.ratio_note }}</p>
+  <p class="headline-meta mt-16">{{ t.ratio_note }} {{ t.ytd_scores_note }}</p>
 </div>
 {% endif %}
 

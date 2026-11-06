@@ -36,6 +36,12 @@
   </div>
 </div>
 
+{% if decomp_basis == "ytd" %}
+<div class="card">
+  <p class="headline-meta">{% if ytd_period %}{{ ytd_period }}. {% endif %}{{ t.whatchanged_ytd_note | format(100 * target_share) }}</p>
+</div>
+{% endif %}
+
 <!-- Waterfall chart -->
 {% if chart_waterfall %}
 <div class="card">
@@ -57,6 +63,13 @@
         </tr>
       </thead>
       <tbody>
+        {% if decomp_basis == "ytd" %}
+        <tr>
+          <td><strong>{{ t.effect_earlier }}</strong></td>
+          <td class="num {{ 'val-pos' if earlier_effect > 0.05 else ('val-neg' if earlier_effect < -0.05 else '') }}">{{ "%+.2f" | format(earlier_effect) }}</td>
+          <td>{{ t.effect_earlier_desc }}</td>
+        </tr>
+        {% endif %}
         <tr>
           <td><strong>{{ t.effect_revision }}</strong></td>
           <td class="num {{ 'val-pos' if revision_effect > 0.05 else ('val-neg' if revision_effect < -0.05 else '') }}">{{ "%+.2f" | format(revision_effect) }}</td>

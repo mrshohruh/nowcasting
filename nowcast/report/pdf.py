@@ -27,6 +27,14 @@ TEMPLATE_DIR = Path(__file__).parent / "templates"
 LOGO_PATH = Path(__file__).parent / "static" / "logo.svg"
 
 
+def _span(ytd: dict | None, lang: str) -> str:
+    """'Jan-Dec' / 'yanvar-dekabr' for a year-to-date context, '' without one."""
+    from nowcast.transform.cumulative import SPAN, SPAN_UZ
+    if not ytd or not ytd.get("quarter"):
+        return ""
+    return (SPAN_UZ if lang == "uz" else SPAN)[int(ytd["quarter"])]
+
+
 # ---------------------------------------------------------------------------
 # Data container
 # ---------------------------------------------------------------------------
@@ -48,6 +56,12 @@ class NoteContext:
     sectors: list[dict] = field(default_factory=list)        # [{label, growth_yoy, contribution_pp}, …]
     narrative: str = ""
     has_decomposition: bool = False
+    # Year to date (the headline, as Uzstat publishes it) and the quarter alone beside it
+    quarter_nowcast: float | None = None
+    ytd: dict = field(default_factory=dict)
+    earlier_effect: float = 0.0
+    band_lo: float | None = None
+    band_hi: float | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -69,6 +83,10 @@ PDF_TRANSLATIONS: dict[str, dict[str, str]] = {
         "growth_col": "Growth (y/y %)",
         "contrib_col": "Contribution (pp)",
         "revision": "Data revisions",
+        "earlier": "Earlier quarters (Uzstat)",
+        "alone": "alone",
+        "uzstat": "Uzstat",
+        "band": "80% band",
         "news": "New data",
         "reestimation": "Model re-estimation",
         "pp": "pp",
@@ -98,6 +116,10 @@ PDF_TRANSLATIONS: dict[str, dict[str, str]] = {
         "growth_col": "O‘sish (y/y %)",
         "contrib_col": "Hissa (f.b.)",
         "revision": "Ma‘lumot tuzatishlari",
+        "earlier": "Oldingi choraklar (agentlik)",
+        "alone": "o‘zi",
+        "uzstat": "Statistika agentligi",
+        "band": "80% oraliq",
         "news": "Yangi ma‘lumotlar",
         "reestimation": "Model qayta baholash",
         "pp": "f.b.",
@@ -198,9 +220,9 @@ tr:nth-child(even) td { background: #f9fafb; }
     <div class="sub">{{ horizon_label }}</div>
   </div>
   <div class="kpi">
-    <div class="label">{{ t.headline }}</div>
+    <div class="label">{{ t.headline }}{% if ytd_span %}, {{ ytd_span }} {{ target_quarter[:4] }}{% endif %}</div>
     <div class="value red">{{ "%.1f" | format(new_nowcast) }}%</div>
-    <div class="sub">{{ t.as_of }} {{ run_date }}</div>
+    <div class="sub">{% if ytd and ytd.quarter and ytd.quarter > 1 and quarter_nowcast is not none %}{{ target_quarter[4:] }} {{ t.alone }}: {{ "%.1f" | format(quarter_nowcast) }}%{% if ytd.known_through %} &middot; {{ t.uzstat }} {{ known_span }}: {{ "%.1f" | format(ytd.known_value) }}%{% endif %}<br>{% endif %}{% if band_lo is not none and band_hi is not none %}{{ t.band }}: {{ "%.1f" | format(band_lo) }}–{{ "%.1f" | format(band_hi) }}% &middot; {% endif %}{{ t.as_of }} {{ run_date }}</div>
   </div>
   {% if has_decomposition and old_nowcast is not none %}
   <div class="kpi">
@@ -331,7 +353,9 @@ def generate_pdf_note(
             abs(ctx.revision_effect), abs(ctx.news_effect),
             abs(ctx.reestimation_effect), 0.01,
         )
-        for label_key, value in [
+        effects = [("earlier", ctx.earlier_effect)] if ctx.ytd else []
+        max_abs = max(max_abs, abs(ctx.earlier_effect))
+        for label_key, value in effects + [
             ("revision", ctx.revision_effect),
             ("news", ctx.news_effect),
             ("reestimation", ctx.reestimation_effect),
@@ -353,6 +377,13 @@ def generate_pdf_note(
         target_quarter=ctx.target_quarter,
         horizon_label=horizon_label,
         new_nowcast=ctx.new_nowcast,
+        quarter_nowcast=ctx.quarter_nowcast,
+        ytd=ctx.ytd or {},
+        ytd_span=_span(ctx.ytd, lang),
+        known_span=_span({"quarter": int(str(ctx.ytd.get("known_through"))[-1])}
+                         if (ctx.ytd or {}).get("known_through") else None, lang),
+        band_lo=ctx.band_lo,
+        band_hi=ctx.band_hi,
         old_nowcast=ctx.old_nowcast,
         total_change=ctx.total_change,
         has_decomposition=ctx.has_decomposition,

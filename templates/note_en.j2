@@ -15,6 +15,8 @@ Context variables:
     sectors          list[SectorContribution]
     bridge_gdp       float  bridge-equation GDP (for comparison)
     has_decomposition bool
+    ytd              dict  year-to-date context (None in old callers): with it new_nowcast,
+                           old_nowcast and the effects are year to date, as Uzstat publishes
 -#}
 {%- set horizon_label = {
     "forecast": "forecast",
@@ -24,8 +26,15 @@ Context variables:
     "backcast": "backcast",
 }.get(horizon, horizon) -%}
 
+{%- if ytd %}
+{%- set ordinal = {1: "first", 2: "second", 3: "third", 4: "fourth"}[ytd.quarter] -%}
+As of {{ run_date }}, the {{ horizon_label }} of GDP growth for {{ ytd.span_en }} {{ ytd.year }} is {{ "%.1f"|format(new_nowcast) }}% y/y, on the cumulative basis Uzstat publishes.
+{%- if ytd.quarter > 1 %} The {{ ordinal }} quarter alone is estimated at {{ "%.1f"|format(ytd.quarter_value) }}%{% if ytd.known_through %}; Uzstat's figure for {{ ytd.known_span_en }} is {{ "%.1f"|format(ytd.known_value) }}%{% endif %}.{% endif %}
+{%- else %}
 As of {{ run_date }}, the {{ horizon_label }} for {{ target_quarter }} GDP growth is {{ "%.1f"|format(new_nowcast) }}% y/y.
+{%- endif %}
 {%- if has_decomposition and old_nowcast is not none %} {% if total_change|round(1) == 0 %}This is unchanged from the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.{% else %}This is {{ "%.1f"|format(total_change|abs) }} pp {{ "higher" if total_change > 0 else "lower" }} than the previous estimate of {{ "%.1f"|format(old_nowcast) }}%.{% endif %}
+{%- if ytd and ytd.earlier_effect|abs >= 0.05 %} Of the change, {{ "%+.1f"|format(ytd.earlier_effect) }} pp comes from Uzstat's figures for the earlier quarters of the year (or the model's estimate of them).{% endif %}
 {%- endif %}
 
 {%- if has_decomposition and top_news %}
