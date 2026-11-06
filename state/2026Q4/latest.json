@@ -10,5 +10,11 @@
   "factor_orders": 2,
   "n_monthly_vars": 14,
   "n_quarterly_vars": 5,
-  "em_iterations": 250
+  "em_iterations": 250,
+  "nowcast_ytd": {
+    "2026Q4": 8.53089735397845
+  },
+  "quarter_estimates": {
+    "2026Q4": 9.021172722513127
+  }
 }

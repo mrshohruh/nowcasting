@@ -4,9 +4,11 @@
   "best_rmse_m3": 1.0928071721930501,
   "best_ratio": 0.8953423241751759,
   "dfm_rmse_m3": 1.0928071721930501,
+  "dfm_rmse_ytd_m3": 0.608118306583593,
+  "ar1_rmse_ytd_m3": 0.7457904262286827,
   "exit_check": "PASS",
   "n_run_dates": 57,
-  "n_predictions": 380,
+  "n_predictions": 450,
   "eval_quarters": [
     "2022Q1",
     "2022Q2",
