@@ -47,6 +47,7 @@ def render_note(
     target_quarter: str = "",
     horizon: str = "",
     new_nowcast: float | None = None,
+    ytd: dict | None = None,
 ) -> str:
     """Render a nowcasting note from decomposition + sector results.
 
@@ -64,6 +65,11 @@ def render_note(
         Override values (used when decomposition is None).
     new_nowcast : float, optional
         Override nowcast value (used when decomposition is None).
+    ytd : dict, optional
+        Year-to-date context from the production pipeline (span, year, quarter, quarter_value,
+        known_through, known_value, earlier_effect, ...). With it the note leads with the
+        year-to-date figure, as Uzstat publishes it, and names the quarter alone beside it;
+        ``new_nowcast`` and the decomposition are then in year-to-date terms.
 
     Returns
     -------
@@ -137,6 +143,7 @@ def render_note(
         ctx["sectors"] = []
         ctx["bridge_gdp"] = None
 
+    ctx["ytd"] = ytd
     text = template.render(**ctx)
 
     # Clean up: collapse multiple blank lines, strip trailing whitespace

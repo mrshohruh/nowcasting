@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Phase 3 backtest: replay all models on 57 monthly dates and score."""
+"""Phase 3 backtest: replay all models on 57 monthly dates and score.
+
+Scores twice: the single quarter (what the models forecast; the exit check) and the year to date
+(Q1, Jan-Jun, Jan-Sep, Jan-Dec), against Uzstat's published cumulative growth, which is what the
+dashboard shows (nowcast/transform/cumulative.py)."""
 
 from __future__ import annotations
 
@@ -129,6 +133,12 @@ def main(argv=None):
     elapsed = time.time() - t0
     print(f"\nReplay done: {len(results)} predictions in {elapsed:.0f}s")
 
+    # Year-to-date figures, comparable with Uzstat (Q1, Jan-Jun, Jan-Sep, Jan-Dec): each row
+    # combines Uzstat's figures as known on its run date with the same model's quarter estimates
+    from nowcast.transform.cumulative import ytd_for_results
+    published_cache: dict = {}
+    results = ytd_for_results(results, store, published_cache)
+
     # Save raw results
     results.to_parquet(f"{OUT_DIR}/replay_results.parquet", index=False)
     results.to_csv(f"{OUT_DIR}/replay_results.csv", index=False)
@@ -141,7 +151,10 @@ def main(argv=None):
     for q in sorted(actuals_dict.keys()):
         print(f"  {q}: {actuals_dict[q]:.2f}%")
 
+    cum = get_gdp_cumulative(store)  # Uzstat's published year-to-date growth, latest release
+
     # ── score individual models ──
+    # Quarter scores exclude backcasts from the summary print only; they stay in scores.csv
     scores_df = score(results, actuals_dict)
     print("\n── Individual model scores ──")
     for model in scores_df["model"].unique():
@@ -176,11 +189,23 @@ def main(argv=None):
 
     all_results = pd.concat([results, combo_equal, combo_imse, combo_dfm_dom],
                             ignore_index=True)
+    all_results = pd.concat([results, ytd_for_results(
+        all_results[~all_results["model"].isin(results["model"].unique())],
+        store, published_cache)], ignore_index=True)
     all_results.to_parquet(f"{OUT_DIR}/all_results.parquet", index=False)
 
     # Score combinations
     all_combos = pd.concat([combo_equal, combo_imse, combo_dfm_dom], ignore_index=True)
+    all_combos = ytd_for_results(all_combos, store, published_cache)
     combo_scores = score(all_combos, actuals_dict)
+
+    # ── year-to-date scores: against Uzstat's published cumulative growth ──
+    ytd_all = pd.concat([results, all_combos], ignore_index=True)
+    scores_ytd = score(ytd_all.assign(gdp_yoy=ytd_all["gdp_ytd"]), cum)
+    print("\n── Year-to-date scores (vs Uzstat's published cumulative growth) ──")
+    for _, r in scores_ytd[scores_ytd["model"].isin(["ar1", "dfm"])].sort_values(
+            ["model", "horizon"]).iterrows():
+        print(f"  {r['model']:14s} {r['horizon']:12s}  RMSE={r['rmse']:.3f}  n={int(r['n'])}")
 
     print("\n── Combination scores ──")
     for model in combo_scores["model"].unique():
@@ -239,6 +264,13 @@ def main(argv=None):
         if crmse < best_rmse:
             best_name, best_rmse, best_ratio = cname, crmse, cratio
 
+    # The exit check stays on the single quarter (what the model forecasts). In year-to-date terms
+    # the published part of the year has no error, so RMSEs shrink for Q2-Q4; the ratio is reported.
+    s_ytd = scores_ytd.set_index(["model", "horizon"])["rmse"]
+    if ("dfm", "nowcast_m3") in s_ytd and ("ar1", "nowcast_m3") in s_ytd:
+        print(f"  DFM year-to-date RMSE (m3): {s_ytd['dfm', 'nowcast_m3']:.3f}  "
+              f"ratio={s_ytd['dfm', 'nowcast_m3'] / s_ytd['ar1', 'nowcast_m3']:.3f}")
+
     threshold = float(cfg.get("exit_check", {}).get("threshold", 0.9))
     passed = best_ratio <= threshold
     print(f"\n  Best headline: {best_name}")
@@ -248,18 +280,27 @@ def main(argv=None):
     # Save scores
     all_scores = pd.concat([scores_df, combo_scores], ignore_index=True)
     all_scores.to_csv(f"{OUT_DIR}/scores.csv", index=False)
+    scores_ytd.to_csv(f"{OUT_DIR}/scores_ytd.csv", index=False)
 
     # ── file read by the production pipeline (scripts/produce.py) ──
     # "scores": one row per model and horizon, for the Models page.
     # "errors": one row per scored prediction (forecast minus actual), for the 80% bands.
     ar1_rmse_by_h = scores_df[scores_df["model"] == "ar1"].set_index("horizon")["rmse"].to_dict()
+    ytd_by = scores_ytd.set_index(["model", "horizon"])
+    ar1_ytd_by_h = scores_ytd[scores_ytd["model"] == "ar1"].set_index("horizon")["rmse"].to_dict()
     score_rows = []
     for _, r in all_scores.iterrows():
         h_ar1 = ar1_rmse_by_h.get(r["horizon"])
+        y = ytd_by.loc[(r["model"], r["horizon"])] if (r["model"], r["horizon"]) in ytd_by.index else None
+        y_ar1 = ar1_ytd_by_h.get(r["horizon"])
         score_rows.append(dict(
             model=r["model"], horizon=r["horizon"], rmse=float(r["rmse"]),
             mae=float(r["mae"]), n=int(r["n"]),
             ratio_vs_ar1=float(r["rmse"] / h_ar1) if h_ar1 else None,
+            rmse_ytd=None if y is None else float(y["rmse"]),
+            mae_ytd=None if y is None else float(y["mae"]),
+            n_ytd=None if y is None else int(y["n"]),
+            ratio_ytd_vs_ar1=(float(y["rmse"] / y_ar1) if y is not None and y_ar1 else None),
         ))
     scored = results.merge(
         pd.DataFrame({"target_quarter": list(actuals_dict.keys()),
@@ -275,16 +316,21 @@ def main(argv=None):
     # for the Nowcast Timeline chart.
     hist = results.copy()
     hist["actual"] = hist["target_quarter"].map(actuals_dict)
-    cum = get_gdp_cumulative(store)
     hist["actual_cum"] = hist["target_quarter"].map(cum)
     hist = hist.dropna(subset=["gdp_yoy"])
+
+    def _f(v):
+        return None if v is None or pd.isna(v) else float(v)
+
+    # forecast = the quarter alone; forecast_ytd = year to date, comparable with actual_cum
     history_rows = [
         dict(model=m, horizon=h, target_quarter=q, run_date=str(d), forecast=float(f),
-             actual=(None if pd.isna(a) else float(a)),
-             actual_cum=(None if pd.isna(c) else float(c)))
-        for m, h, q, d, f, a, c in zip(hist["model"], hist["horizon"], hist["target_quarter"],
-                                       hist["run_date"], hist["gdp_yoy"], hist["actual"],
-                                       hist["actual_cum"], strict=True)
+             actual=_f(a), actual_cum=_f(c), forecast_ytd=_f(fy), target_share=_f(ts),
+             unknown_share=_f(us))
+        for m, h, q, d, f, a, c, fy, ts, us in zip(
+            hist["model"], hist["horizon"], hist["target_quarter"], hist["run_date"],
+            hist["gdp_yoy"], hist["actual"], hist["actual_cum"], hist["gdp_ytd"],
+            hist["target_share"], hist["unknown_share"], strict=True)
     ]
     import json
     with open(f"{OUT_DIR}/backtest_summary.json", "w") as f:
@@ -300,6 +346,8 @@ def main(argv=None):
         "best_rmse_m3": float(best_rmse),
         "best_ratio": float(best_ratio),
         "dfm_rmse_m3": float(dfm_rmse),
+        "dfm_rmse_ytd_m3": float(s_ytd.get(("dfm", "nowcast_m3"), np.nan)),
+        "ar1_rmse_ytd_m3": float(s_ytd.get(("ar1", "nowcast_m3"), np.nan)),
         "exit_check": "PASS" if passed else "FAIL",
         "n_run_dates": len(results["run_date"].unique()),
         "n_predictions": len(results),

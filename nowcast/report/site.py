@@ -61,15 +61,23 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Headline page
         "target_quarter_label": "Target quarter",
         "as_of_label": "As of",
-        "headline_subtitle": "GDP growth, year-on-year",
+        "headline_subtitle": "Real GDP growth, year on year, cumulative from January",
+        "headline_basis": "Same basis as Uzstat's published figure",
+        "quarter_alone": "%s alone",
+        "period_fmt": "{span} {year}",
+        "uzstat_published": "Uzstat",
+        "span_Jan-Mar": "Jan-Mar", "span_Jan-Jun": "Jan-Jun",
+        "span_Jan-Sep": "Jan-Sep", "span_Jan-Dec": "Jan-Dec",
         "headline_chart_title": "Nowcast Timeline",
         "headline_chart_note": (
-            "Past nowcasts are model replays (backtest), not forecasts published at the time: "
-            "each uses only the observations that would have been released by that date, "
-            "but with today's revised values. The blue line is quarterly growth derived from "
-            "Uzstat's cumulative (year-to-date) figures, latest release; Uzstat itself publishes "
-            "only the cumulative rate (e.g. Jan-Sep 2026: 8.3%), shown on hover. "
-            "Months 1 and 2 can be switched on in the legend."
+            "Both lines are cumulative from January (Q1 = Jan-Mar, Q2 = Jan-Jun, Q3 = Jan-Sep, "
+            "Q4 = Jan-Dec), the only form Uzstat publishes. The blue line is Uzstat's figure, "
+            "latest release. Each nowcast is the model's estimate for its quarter combined with "
+            "Uzstat's figure for the earlier quarters of the year as it stood on the run date; "
+            "the quarter alone is shown on hover. Past nowcasts are model replays (backtest), "
+            "not forecasts published at the time: each uses only the observations that would "
+            "have been released by that date, but with today's revised values. Months 1 and 2 "
+            "can be switched on in the legend."
         ),
         "pp_label": "pp",
         "vs_previous": "vs previous",
@@ -107,6 +115,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "effect_news_desc": "Newly released observations",
         "effect_reestimation": "Re-estimation",
         "effect_reestimation_desc": "Updated model parameters",
+        "effect_earlier": "Earlier quarters",
+        "effect_earlier_desc": "Uzstat's figures for earlier quarters of the year released since the previous run (or the model's estimate of them): their weight in the year to date and their effect on this quarter's estimate",
+        "whatchanged_ytd_note": "In year-to-date terms. Data effects are those on the quarter, times the quarter's share of the year to date (%.0f%%).",
         "total_label": "Total",
         "grouped_impacts_title": "Impact by Group",
         "top_drivers_title": "Top Drivers",
@@ -159,6 +170,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "col_rmse": "RMSE",
         "col_mae": "MAE",
         "col_ratio_ar1": "vs AR(1)",
+        "col_rmse_ytd": "RMSE, year to date",
+        "col_ratio_ytd": "vs AR(1), YTD",
+        "ytd_scores_note": "RMSE is for the quarter alone; year to date is against Uzstat's published cumulative figure, where the published part of the year has no error.",
         "col_n_runs": "Runs",
         "ratio_note": "Ratio < 1 means the model beats a simple AR(1) benchmark.",
         # Downloads page
@@ -194,17 +208,25 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Headline page
         "target_quarter_label": "Maqsadli chorak",
         "as_of_label": "Sana",
-        "headline_subtitle": "YaIM o'sishi, yillik",
+        "headline_subtitle": "Real YaIM o'sishi, yillik, yil boshidan jamlanma",
+        "headline_basis": "Statistika agentligi e'lon qiladigan ko'rsatkich bilan bir xil asosda",
+        "quarter_alone": "%s chorakning o'zi",
+        "period_fmt": "{year}-yil {span}",
+        "uzstat_published": "Statistika agentligi",
+        "span_Jan-Mar": "yanvar-mart", "span_Jan-Jun": "yanvar-iyun",
+        "span_Jan-Sep": "yanvar-sentyabr", "span_Jan-Dec": "yanvar-dekabr",
         "headline_chart_title": "Nowkast vaqt chizig'i",
         "headline_chart_note": (
-            "Oldingi nowkastlar o'sha paytda e'lon qilingan prognozlar emas, balki modelning "
-            "qayta hisob-kitoblaridir (backtest): ular faqat o'sha sanagacha e'lon qilinishi "
-            "mumkin bo'lgan kuzatuvlardan foydalanadi, ammo qiymatlar bugungi qayta ko'rilgan "
-            "qiymatlardir. Ko'k chiziq - Statistika agentligining jamlanma (yil boshidan) "
-            "ko'rsatkichlaridan hisoblangan choraklik o'sish (oxirgi e'lon); agentlikning o'zi "
-            "faqat jamlanma o'sishni e'lon qiladi (masalan, 2026-yil yanvar-sentyabr: 8,3%), "
-            "u sichqoncha ustiga olib borilganda ko'rinadi. 1- va 2-oy "
-            "nowkastlarini afsonadan yoqish mumkin."
+            "Ikkala chiziq ham yil boshidan jamlanma (I chorak = yanvar-mart, II = yanvar-iyun, "
+            "III = yanvar-sentyabr, IV = yanvar-dekabr): Statistika agentligi faqat shu shaklda "
+            "e'lon qiladi. Ko'k chiziq - agentlik ko'rsatkichi (oxirgi e'lon). Har bir nowkast "
+            "modelning shu chorak uchun bahosini yilning oldingi choraklari bo'yicha agentlik "
+            "ko'rsatkichi (hisoblash sanasidagi holati) bilan birlashtiradi; chorakning o'zi "
+            "sichqoncha ustiga olib borilganda ko'rinadi. Oldingi nowkastlar o'sha paytda e'lon "
+            "qilingan prognozlar emas, balki modelning qayta hisob-kitoblaridir (backtest): ular "
+            "faqat o'sha sanagacha e'lon qilinishi mumkin bo'lgan kuzatuvlardan foydalanadi, "
+            "ammo qiymatlar bugungi qayta ko'rilgan qiymatlardir. 1- va 2-oy nowkastlarini "
+            "afsonadan yoqish mumkin."
         ),
         "pp_label": "f.b.",
         "vs_previous": "avvalgisiga nisbatan",
@@ -242,6 +264,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "effect_news_desc": "Yangi e'lon qilingan kuzatuvlar",
         "effect_reestimation": "Qayta baholash",
         "effect_reestimation_desc": "Yangilangan model parametrlari",
+        "effect_earlier": "Oldingi choraklar",
+        "effect_earlier_desc": "Oldingi hisoblashdan beri e'lon qilingan yilning oldingi choraklari bo'yicha agentlik ko'rsatkichlari (yoki ularning model bahosi): ularning yil boshidan jamlanmadagi vazni va shu chorak bahosiga ta'siri",
+        "whatchanged_ytd_note": "Yil boshidan jamlanma asosda. Ma'lumotlar ta'siri chorakka ta'sirning chorakning yil boshidan jamlanmadagi ulushiga (%.0f%%) ko'paytmasi.",
         "total_label": "Jami",
         "grouped_impacts_title": "Guruh bo'yicha ta'sir",
         "top_drivers_title": "Asosiy omillar",
@@ -294,6 +319,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "col_rmse": "RMSE",
         "col_mae": "MAE",
         "col_ratio_ar1": "AR(1) ga nisbatan",
+        "col_rmse_ytd": "RMSE, yil boshidan",
+        "col_ratio_ytd": "AR(1) ga nisbatan, yil boshidan",
+        "ytd_scores_note": "RMSE chorakning o'zi uchun; yil boshidan ko'rsatkich agentlik e'lon qilgan jamlanma ko'rsatkich bilan solishtiriladi, unda yilning e'lon qilingan qismida xato yo'q.",
         "col_n_runs": "Ishga tushirishlar",
         "ratio_note": "Nisbat < 1 model oddiy AR(1) benchmarkni yengganini bildiradi.",
         # Downloads page
@@ -327,6 +355,12 @@ class SiteContext:
     total_change: float | None = None
     band_lo: float | None = None
     band_hi: float | None = None
+
+    # The headline (new_nowcast, old_nowcast, band) is year to date, as Uzstat publishes it;
+    # the quarter alone sits beside it. ``ytd``: span, known_through, known_value, ... (produce.py)
+    quarter_nowcast: float | None = None
+    quarter_old: float | None = None
+    ytd: dict = field(default_factory=dict)
 
     # Decomposition (serialised dict — see nowcast.explain.news.Decomposition)
     decomposition: dict | None = None
@@ -395,6 +429,9 @@ PAGES = [
 # Builder
 # ---------------------------------------------------------------------------
 
+
+_SPAN_OF_Q = {"1": "Jan-Mar", "2": "Jan-Jun", "3": "Jan-Sep", "4": "Jan-Dec"}
+_ROMAN = {"1": "I", "2": "II", "3": "III", "4": "IV"}
 
 # Horizon codes as shown in the Nowcast Path table
 _HORIZON_SHORT = {"forecast": "ahead", "nowcast_m1": "m1", "nowcast_m2": "m2", "nowcast_m3": "m3"}
@@ -523,6 +560,8 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             mae=b.get("mae"),
             ratio=b.get("ratio_vs_ar1", b.get("ratio", 1.0)),
             n_runs=b.get("n", b.get("n_runs")),
+            rmse_ytd=b.get("rmse_ytd"),
+            ratio_ytd=b.get("ratio_ytd_vs_ar1"),
             is_headline=is_headline,
         ))
 
@@ -607,6 +646,18 @@ def build_site(ctx: SiteContext, out_dir: str | Path = "_site") -> Path:
             total_change=ctx.total_change,
             band_lo=ctx.band_lo,
             band_hi=ctx.band_hi,
+            quarter_nowcast=ctx.quarter_nowcast,
+            ytd=ctx.ytd or {},
+            ytd_span=t.get(f"span_{(ctx.ytd or {}).get('span', '')}", (ctx.ytd or {}).get("span", "")),
+            ytd_period=(t["period_fmt"].format(
+                span=t.get(f"span_{ctx.ytd['span']}", ctx.ytd["span"]), year=ctx.target_quarter[:4])
+                if (ctx.ytd or {}).get("span") else ""),
+            quarter_alone_label=t["quarter_alone"] % (
+                _ROMAN.get(ctx.target_quarter[-1:], "") if lang == "uz" else ctx.target_quarter[4:]),
+            ytd_known_span=(t.get(f"span_{_SPAN_OF_Q.get(str((ctx.ytd or {}).get('known_through') or '')[-1:], '')}", "")),
+            earlier_effect=decomp.get("earlier_effect", 0.0),
+            decomp_basis=decomp.get("basis", "quarter"),
+            target_share=decomp.get("target_share", 1.0),
             has_decomposition=has_decomposition,
             narrative_text=narrative_text,
             sectors=ctx.sectors,
@@ -698,7 +749,8 @@ def _generate_charts(ctx: SiteContext) -> dict[str, dict | None]:
         c["headline"] = charts.nowcast_vs_actual_chart(
             ctx.nowcast_vs_actual,
             current=dict(quarter=ctx.target_quarter, value=ctx.new_nowcast,
-                         band_lo=ctx.band_lo, band_hi=ctx.band_hi),
+                         band_lo=ctx.band_lo, band_hi=ctx.band_hi,
+                         quarter_value=ctx.quarter_nowcast),
         )
     elif ctx.nowcast_history:
         c["headline"] = charts.headline_chart(ctx.nowcast_history)
@@ -940,6 +992,22 @@ adjusted GDP level, applies the model's growth for each later quarter in turn, a
 with the level four quarters earlier. The result is limited to the mean &plusmn; 3 standard deviations
 of the last 12 published quarters.</p>
 
+<h2>Published figure: cumulative from January</h2>
+<p>Uzstat publishes real GDP growth only from the start of the year: January&ndash;March,
+January&ndash;June, January&ndash;September and January&ndash;December. The headline is on the same basis,
+so it can be checked directly against Uzstat's release. The model estimates one quarter at a time;
+the year-to-date figure combines that estimate with Uzstat's published figure for the earlier quarters
+of the year, weighted as Uzstat weights them: last year's GDP in current prices for the same months.
+For example, January&ndash;December = (last year's January&ndash;September GDP &times; (1 + Uzstat's
+January&ndash;September growth) + last year's Q4 GDP &times; (1 + the model's Q4 growth)) / last year's
+January&ndash;December GDP. Applied to a quarter derived from Uzstat's own figures, this returns Uzstat's
+cumulative rate exactly. In the first month of a quarter Uzstat has not yet published the quarter just
+ended, so the model's estimate of it is used until it has. For Q1 the two figures are the same. The
+quarter alone is shown beside the headline.</p>
+<p>When a quarter of last year in Uzstat's file is clearly on a different price basis from the months
+before it (its size relative to them more than 20% away from the median of the three previous years),
+its weight is taken from that median instead. In the November 2026 file this applies to Q4 2025.</p>
+
 <h2>Horizons and data available</h2>
 <p>Most monthly data enter the model two months after the month ends (August data from 1 October);
 quarterly GDP from the second month after the quarter. "Month 1", "month 2" and "month 3" refer to the
@@ -950,18 +1018,24 @@ it rests on the data up to August and on the model's dynamics.</p>
 <h2>Uncertainty band</h2>
 <p>The 80% band uses the errors of the same model in the backtest at the same horizon: the larger of
 the 10th and 90th percentiles in absolute value, widened by 20% because the sample is short, is applied
-on both sides of the estimate.</p>
+on both sides of the estimate. Errors are measured on the quarter; for the year-to-date figure the
+band is scaled by the weight of the quarters the model estimates, because Uzstat's published quarters
+carry no error.</p>
 
 <h2>Backtest</h2>
 <p>Past estimates on the charts are replays: for each past run date the model uses only periods that
 would have been published by then, but with today's (revised) values, because data vintages are only
-kept from October 2026. They are compared with the latest published GDP.</p>
+kept from October 2026. They are compared with the latest published GDP: on the <em>Models</em> page
+both for the quarter alone and year to date against Uzstat's cumulative figure.</p>
 
 <h2>What changed</h2>
 <p>A change between two consecutive estimates is split into data revisions, new data and
 re-estimation of the model by four runs: old parameters on old data, old parameters on revised data,
 old parameters on new data, and new parameters on new data. The impact of each new release follows
-the news approach of Ba&#324;bura and Modugno (2014).</p>
+the news approach of Ba&#324;bura and Modugno (2014). In year-to-date terms each impact on the quarter
+is multiplied by the quarter's weight in the year to date, and a separate line shows the effect of
+Uzstat's figures for the earlier quarters of the year published between the two runs, including their
+effect on the quarter's estimate through the GDP level the model starts from.</p>
 
 <h2>Revision policy</h2>
 <p>Each estimate is kept as it was published. A later estimate can differ because new or revised data
@@ -1007,6 +1081,22 @@ so'nggi mavsumiylikdan tozalangan YaIM darajasidan boshlab, keyingi har bir chor
 o'sishini qo'llash va natijani to'rt chorak oldingi daraja bilan solishtirish orqali hisoblanadi.
 Natija so'nggi 12 chorakning o'rtacha qiymati &plusmn; 3 standart chetlanish bilan cheklanadi.</p>
 
+<h2>E'lon qilinadigan ko'rsatkich: yil boshidan jamlanma</h2>
+<p>Statistika agentligi real YaIM o'sishini faqat yil boshidan e'lon qiladi: yanvar&ndash;mart,
+yanvar&ndash;iyun, yanvar&ndash;sentyabr va yanvar&ndash;dekabr. Asosiy ko'rsatkich ham shu asosda, shuning
+uchun uni agentlik e'loni bilan bevosita solishtirish mumkin. Model bir vaqtda bitta chorakni baholaydi;
+yil boshidan ko'rsatkich bu bahoni yilning oldingi choraklari bo'yicha agentlik e'lon qilgan ko'rsatkich
+bilan agentlik qo'llaydigan vaznlarda birlashtiradi: o'tgan yilning shu oylardagi joriy narxlardagi YaIMi.
+Masalan, yanvar&ndash;dekabr = (o'tgan yilning yanvar&ndash;sentyabr YaIMi &times; (1 + agentlikning
+yanvar&ndash;sentyabr o'sishi) + o'tgan yilning IV chorak YaIMi &times; (1 + modelning IV chorak o'sishi)) /
+o'tgan yilning yanvar&ndash;dekabr YaIMi. Agentlik ko'rsatkichlaridan hisoblangan chorakka qo'llanganda
+bu agentlikning jamlanma ko'rsatkichini aynan qaytaradi. Chorakning birinchi oyida agentlik hali tugagan
+chorakni e'lon qilmagan bo'ladi, shuning uchun u e'lon qilinguncha modelning bahosi ishlatiladi. I chorak
+uchun ikkala ko'rsatkich bir xil. Chorakning o'zi asosiy ko'rsatkich yonida ko'rsatiladi.</p>
+<p>Agentlik faylida o'tgan yilning biror chorakligi undan oldingi oylardan aniq boshqa narx asosida bo'lsa
+(ularga nisbatan hajmi oldingi uch yil medianasidan 20% dan ko'proq farq qilsa), uning vazni shu
+medianadan olinadi. 2026-yil noyabr faylida bu 2025-yil IV chorakka tegishli.</p>
+
 <h2>Gorizontlar va mavjud ma'lumotlar</h2>
 <p>Oylik ma'lumotlarning ko'pchiligi oy tugaganidan ikki oy keyin modelga kiradi (avgust ma'lumoti
 1 oktyabrdan); choraklik YaIM chorakdan keyingi ikkinchi oydan. "1-oy", "2-oy" va "3-oy" baho qilingan
@@ -1017,7 +1107,8 @@ dinamikasiga tayanadi.</p>
 <h2>Noaniqlik oralig'i</h2>
 <p>80% oraliq xuddi shu modelning shu gorizontdagi tarixiy test xatolaridan olinadi: 10- va 90-
 persentillardan mutlaq qiymati kattasi, tanlanma qisqaligi sababli 20% kengaytirilib, bahoning ikki
-tomoniga qo'llanadi.</p>
+tomoniga qo'llanadi. Xatolar chorak bo'yicha o'lchanadi; yil boshidan ko'rsatkich uchun oraliq model
+baholaydigan choraklar vazniga ko'paytiriladi, chunki agentlik e'lon qilgan choraklarda xato yo'q.</p>
 
 <h2>Tarixiy test</h2>
 <p>Grafiklardagi o'tgan baholar qayta hisoblashdir: har bir o'tgan sana uchun model o'sha paytgacha e'lon
@@ -1028,7 +1119,10 @@ bilan solishtiriladi.</p>
 <h2>Nima o'zgardi</h2>
 <p>Ketma-ket ikki baho o'rtasidagi farq to'rt hisob orqali ma'lumotlarning qayta ko'rib chiqilishi, yangi
 ma'lumotlar va modelni qayta baholashga ajratiladi. Har bir yangi e'lonning ta'siri Ba&#324;bura va
-Modugno (2014) yondashuviga asoslanadi.</p>
+Modugno (2014) yondashuviga asoslanadi. Yil boshidan jamlanma asosda chorakka har bir ta'sir chorakning
+yil boshidan jamlanmadagi vazniga ko'paytiriladi, alohida qator esa ikki hisob orasida agentlik e'lon
+qilgan yilning oldingi choraklari ta'sirini, jumladan model boshlanadigan YaIM darajasi orqali chorak
+bahosiga ta'sirini ko'rsatadi.</p>
 
 <h2>Qayta ko'rib chiqish siyosati</h2>
 <p>Har bir baho e'lon qilingan holicha saqlanadi. Keyingi baho yangi yoki qayta ko'rib chiqilgan

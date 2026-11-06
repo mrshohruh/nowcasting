@@ -125,12 +125,65 @@ class Decomposition:
     run_date: str = ""
     prev_run_date: str = ""
 
+    # Year-to-date terms only (see ``in_ytd_terms``): Uzstat's release of earlier quarters of the
+    # year, or the model's backcasts of them, between the two runs
+    earlier_effect: float = 0.0
+    basis: str = "quarter"  # "quarter" or "ytd"
+    target_share: float = 1.0
+
     @property
     def residual(self) -> float:
         """Decomposition residual — should be < 0.001 pp."""
         return abs(
             self.total_change
-            - (self.revision_effect + self.news_effect + self.reestimation_effect)
+            - (self.earlier_effect + self.revision_effect + self.news_effect
+               + self.reestimation_effect)
+        )
+
+    def in_ytd_terms(self, ytd, old_ytd: float, old_quarter: float | None = None) -> Decomposition:
+        """The same decomposition for the year-to-date figure (Uzstat's cumulative rate).
+
+        ``ytd`` is this run's ``cumulative.YTD``; ``old_ytd`` is the year-to-date figure the
+        previous run published. The year-to-date figure is linear in the target quarter, so the
+        data revision, new data and re-estimation effects are the quarter's times
+        ``ytd.target_share``. The rest of the change is ``earlier_effect``: Uzstat's figures for
+        the earlier quarters of the year that arrived between the two runs (their own weight in
+        the year to date, and their effect on the quarter through the GDP level the model
+        starts from), or changes in the model's backcast of them:
+
+            new_ytd - old_ytd = earlier_effect + share x (revision + news + re-estimation)
+
+        ``old_quarter`` (the previous run's published quarter) is not needed for the identity
+        and kept for callers that record it.
+        """
+        s = float(ytd.target_share)
+
+        def scaled(items: list[NewsItem]) -> list[NewsItem]:
+            return [NewsItem(variable=i.variable, period=i.period, actual=i.actual,
+                             forecast=i.forecast, surprise=i.surprise, weight=i.weight * s,
+                             impact=i.impact * s, group=i.group) for i in items]
+
+        rev, news, reest = (self.revision_effect * s, self.news_effect * s,
+                            self.reestimation_effect * s)
+        earlier = float(ytd.value - old_ytd - (rev + news + reest))
+        base = old_ytd + earlier
+        return Decomposition(
+            target_quarter=self.target_quarter,
+            old_nowcast=float(old_ytd),
+            new_nowcast=float(ytd.value),
+            total_change=float(ytd.value - old_ytd),
+            revision_effect=rev,
+            news_effect=news,
+            reestimation_effect=reest,
+            news_items=scaled(self.news_items),
+            revision_items=scaled(self.revision_items),
+            y_hat_2=base + rev,
+            y_hat_3=base + rev + news,
+            run_date=self.run_date,
+            prev_run_date=self.prev_run_date,
+            earlier_effect=earlier,
+            basis="ytd",
+            target_share=s,
         )
 
     def top_news(self, n: int = 5) -> list[NewsItem]:

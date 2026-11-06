@@ -10,10 +10,17 @@
 <!-- Hero card -->
 <div class="card card--hero">
   <div class="headline-meta">{{ t.target_quarter_label }}: {{ target_quarter }} &middot; {{ t.as_of_label }}: {{ run_date }} &middot; {{ horizon_label }}</div>
+  {% if ytd_period %}<div class="headline-period">{{ ytd_period }}</div>{% endif %}
   <div class="headline-number">
     {{ "%.1f" | format(new_nowcast) }}<span class="unit">% y/y</span>
   </div>
-  <div class="headline-meta">{{ t.headline_subtitle }}</div>
+  <div class="headline-meta">{{ t.headline_subtitle }}{% if ytd_span %} &middot; {{ t.headline_basis }}{% endif %}</div>
+  {% if ytd and ytd.quarter and ytd.quarter > 1 and quarter_nowcast is not none %}
+  <div class="headline-aside">
+    <span>{{ quarter_alone_label }}: <strong>{{ "%.1f" | format(quarter_nowcast) }}%</strong></span>
+    {% if ytd.known_through %}<span>{{ t.uzstat_published }}, {{ ytd_known_span }}: <strong>{{ "%.1f" | format(ytd.known_value) }}%</strong></span>{% endif %}
+  </div>
+  {% endif %}
 
   {% if has_decomposition and old_nowcast is not none %}
   <div class="change-badge change-badge--{{ 'up' if total_change > 0.05 else ('down' if total_change < -0.05 else 'flat') }}">

@@ -108,6 +108,23 @@ A simple AR(1) model serves as the benchmark. It projects GDP y/y by shrinking t
 
 A Mixed Data Sampling model using elastic net with Almon polynomial weighting. It operates on the y/y panel with 6 monthly lags and polynomial degree 3. Currently experimental — included in model combinations but not used as the headline.
 
+## Published Figure: Year to Date
+
+Uzstat publishes real GDP growth only cumulatively from January (Q1, Jan-Jun, Jan-Sep, Jan-Dec):
+G = R_cum(t) / N_cum(t-1), real output so far this year in last year's prices over last year's
+nominal output for the same months. The headline is on that basis (`nowcast/transform/cumulative.py`):
+
+    YTD = [W_k (1 + G_k) + sum_j w_j (1 + g_j)] / [W_k + sum_j w_j] - 1
+
+with G_k Uzstat's cumulative rate for the quarters already published, W_k = R_cum_k / G_k (last
+year's nominal value of those months as Uzstat used it), g_j the model's growth for each quarter
+not yet published (the target, and at month 1 the quarter just ended) and w_j last year's nominal
+value of that quarter. It is the exact inverse of the decumulation in `target.py`. The figure is
+linear in the target quarter: 1 pp on the quarter moves it by the quarter's weight (about 58% for
+Jan-Jun, 40% for Jan-Sep, 32% for Jan-Dec), which scales the band and the news decomposition.
+A last-year quarter whose size relative to the months before it is more than 20% from the median
+of the three previous years (a price-basis break in Uzstat's file) takes its weight from that median.
+
 ## Uncertainty Bands
 
 The 80% prediction interval is constructed from the historical distribution of backtest errors:
@@ -146,7 +163,7 @@ The backtest replays the nowcasting pipeline on historical vintages to measure o
 - **Frequency:** Monthly (1st of each month)
 - **Run dates:** 57
 - **Horizons:** forecast (next quarter), nowcast_m1/m2/m3 (current quarter with 1/2/3 months of data), backcast (quarter ended, awaiting release)
-- **Target:** First-release GDP y/y (also evaluated against latest vintage)
+- **Target:** GDP y/y of the quarter alone (exit check), and year to date against Uzstat's published cumulative growth (what the dashboard shows)
 - **Benchmark:** AR(1) with φ = 0.6
 
 Key results at m3 horizon:

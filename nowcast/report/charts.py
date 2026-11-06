@@ -78,7 +78,9 @@ def _merge_layout(overrides: dict) -> dict:
 # 1.  Headline chart — GDP y/y nowcast with 80 % band
 # ---------------------------------------------------------------------------
 
-ACTUAL_LABEL = "GDP, quarter (from Uzstat)"
+# Uzstat publishes GDP growth only cumulatively from January (Q1, Jan-Jun, Jan-Sep, Jan-Dec)
+ACTUAL_LABEL = "GDP, Uzstat (cumulative from January)"
+SPAN = {"Q1": "Jan-Mar", "Q2": "Jan-Jun", "Q3": "Jan-Sep", "Q4": "Jan-Dec"}
 
 
 def headline_chart(nowcast_history: list[dict], bands: dict | None = None) -> dict:
@@ -171,15 +173,21 @@ def nowcast_vs_actual_chart(
     current: dict | None = None,
     model: str = "dfm",
 ) -> dict:
-    """Past nowcasts against GDP growth of the quarter (derived from Uzstat's cumulative figures).
+    """Past nowcasts against Uzstat's published GDP growth, both cumulative from January.
+
+    Uzstat publishes only Q1, Jan-Jun, Jan-Sep and Jan-Dec, so every point is on that basis:
+    the blue line is Uzstat's figure, the nowcasts are the year-to-date figures built from the
+    model's quarter (``forecast_ytd``). The quarter alone goes into the hover text.
 
     Parameters
     ----------
     history : list of dict
-        Backtest rows ``[{model, horizon, target_quarter, forecast, actual}, ...]``.
-        ``actual`` is None while the quarter is still open.
+        Backtest rows ``[{model, horizon, target_quarter, forecast, forecast_ytd, actual,
+        actual_cum}, ...]``; ``forecast``/``actual`` are the quarter alone. ``actual_cum`` is
+        None while the quarter is still open.
     current : dict, optional
-        The live nowcast ``{quarter, value, band_lo, band_hi}``, drawn with its band.
+        The live nowcast ``{quarter, value, band_lo, band_hi, quarter_value}`` (year to date),
+        drawn with its band.
     model : str
         Which model's past nowcasts to draw (default: the headline DFM).
     """
@@ -189,7 +197,9 @@ def nowcast_vs_actual_chart(
         if r.get("model") != model or r.get("horizon") not in horizons:
             continue
         slot = by_q.setdefault(r["target_quarter"], {})
-        slot[r["horizon"]] = r["forecast"]
+        if r.get("forecast_ytd") is not None:
+            slot[r["horizon"]] = r["forecast_ytd"]
+            slot[r["horizon"] + "_q"] = r.get("forecast")
         if r.get("actual") is not None:
             slot["actual"] = r["actual"]
         if r.get("actual_cum") is not None:
@@ -203,49 +213,54 @@ def nowcast_vs_actual_chart(
     def series(key: str) -> list:
         return [by_q.get(q, {}).get(key) for q in quarters]
 
-    # Uzstat publishes only cumulative growth (Q1, Jan-Jun, Jan-Sep, Jan-Dec); the line is the
-    # quarter derived from it, so the published figure goes into the hover text.
-    span = {"Q1": "Jan-Mar", "Q2": "Jan-Jun", "Q3": "Jan-Sep", "Q4": "Jan-Dec"}
-    cum_text = [
-        f"Uzstat {span[q[4:]]}: {c:.1f}%" if (c := by_q.get(q, {}).get("actual_cum")) is not None else ""
-        for q in quarters
-    ]
+    def alone(q: str, v) -> str:
+        # Q1 is Jan-Mar: the quarter and the year to date are the same number
+        return "" if v is None or q.endswith("Q1") else f"<br>{q[4:]} alone: {v:.1f}%"
+
+    def span(q: str) -> str:
+        return SPAN[q[4:]] + " " + q[:4]
+
+    actual_text = [f"Uzstat {span(q)}" + alone(q, by_q.get(q, {}).get("actual")) for q in quarters]
     data: list[dict] = [
         dict(
-            x=quarters, y=series("actual"), customdata=cum_text, mode="lines+markers",
+            x=quarters, y=series("actual_cum"), customdata=actual_text, mode="lines+markers",
             name=ACTUAL_LABEL,
             line=dict(color=BLUE, width=2.5),
             marker=dict(size=8, color=BLUE, symbol="diamond"),
             type="scatter",
             hovertemplate="%{y:.1f}%<br>%{customdata}<extra>" + ACTUAL_LABEL + "</extra>",
         ),
-        dict(
-            x=quarters, y=series("nowcast_m3"), mode="lines+markers",
-            name="Nowcast (month 3, end of quarter)",
-            line=dict(color=RED, width=2.5), marker=dict(size=6, color=RED),
-            type="scatter", hovertemplate="%{y:.1f}%<extra>Nowcast, month 3</extra>",
-        ),
     ]
-    # Earlier-in-the-quarter nowcasts: available from the legend
-    for key, label, dash in (("nowcast_m2", "Nowcast (month 2)", "dot"),
-                             ("nowcast_m1", "Nowcast (month 1)", "dot")):
-        data.append(dict(
-            x=quarters, y=series(key), mode="lines+markers", name=label, visible="legendonly",
-            line=dict(color=RED, width=1.5, dash=dash), marker=dict(size=4, color=RED),
-            opacity=0.6, type="scatter",
-            hovertemplate="%{y:.1f}%<extra>" + label + "</extra>",
-        ))
+    for key, label, main in (("nowcast_m3", "Nowcast (month 3, end of quarter)", True),
+                             ("nowcast_m2", "Nowcast (month 2)", False),
+                             ("nowcast_m1", "Nowcast (month 1)", False)):
+        text = [span(q) + alone(q, by_q.get(q, {}).get(key + "_q")) for q in quarters]
+        trace = dict(
+            x=quarters, y=series(key), customdata=text, mode="lines+markers", name=label,
+            type="scatter",
+            hovertemplate="%{y:.1f}%<br>%{customdata}<extra>" + label + "</extra>",
+        )
+        if main:
+            trace.update(line=dict(color=RED, width=2.5), marker=dict(size=6, color=RED))
+        else:  # earlier-in-the-quarter nowcasts: available from the legend
+            trace.update(visible="legendonly", opacity=0.6,
+                         line=dict(color=RED, width=1.5, dash="dot"),
+                         marker=dict(size=4, color=RED))
+        data.append(trace)
 
     if current:
         v = current["value"]
+        q = current["quarter"]
         lo, hi = current.get("band_lo"), current.get("band_hi")
         trace = dict(
-            x=[current["quarter"]], y=[v], mode="markers+text",
-            name=f"Current nowcast {current['quarter']}",
+            x=[q], y=[v], customdata=[span(q) + alone(q, current.get("quarter_value"))],
+            mode="markers+text",
+            name=f"Current nowcast {q}",
             marker=dict(size=13, color=RED, line=dict(color=WHITE, width=2)),
             text=[f"  {v:.1f}%"], textposition="middle right",
             textfont=dict(size=13, color=RED, family="Inter, system-ui, sans-serif"),
-            type="scatter", hovertemplate="%{y:.1f}%<extra>Current nowcast</extra>",
+            type="scatter",
+            hovertemplate="%{y:.1f}%<br>%{customdata}<extra>Current nowcast</extra>",
         )
         if lo is not None and hi is not None:
             trace["error_y"] = dict(
@@ -257,7 +272,8 @@ def nowcast_vs_actual_chart(
     # No in-chart title: the card heading already names the chart, and a title collides with the legend
     layout = _merge_layout(dict(
         # -45 degrees puts the END of each label under its tick; positive angles shift labels right
-        xaxis=dict(type="category", title="Target quarter", tickangle=-45),
+        # no axis title: it overlapped the rotated labels; the footnote says what the quarters mean
+        xaxis=dict(type="category", tickangle=-45),
         yaxis=dict(title="y/y %", ticksuffix="%"),
     ))
     return dict(data=data, layout=layout, config=_CONFIG)
@@ -302,12 +318,12 @@ def nowcast_path_chart(paths: dict[str, list[dict]]) -> dict:
                             line=dict(color=WHITE, width=2)),
                 showlegend=False,
                 type="scatter",
-                hovertemplate=f"{qtr} official: " + "%{y:.1f}%<extra></extra>",
+                hovertemplate=f"{qtr} Uzstat ({SPAN.get(qtr[4:], '')}): " + "%{y:.1f}%<extra></extra>",
             ))
 
     # No in-chart title: the card heading names the chart, and a title collides with the legend
     layout = _merge_layout(dict(
-        yaxis=dict(title="GDP y/y %", ticksuffix="%"),
+        yaxis=dict(title="GDP y/y %, cumulative from January", ticksuffix="%"),
         xaxis=dict(title="Run date"),
     ))
     return dict(data=data, layout=layout, config=_CONFIG)
@@ -330,11 +346,16 @@ def waterfall_chart(decomposition: dict) -> dict:
     rev = decomposition.get("revision_effect", 0)
     news = decomposition.get("news_effect", 0)
     reest = decomposition.get("reestimation_effect", 0)
-    new = decomposition.get("new_nowcast", old + rev + news + reest)
+    earlier = decomposition.get("earlier_effect", 0) or 0
+    new = decomposition.get("new_nowcast", old + earlier + rev + news + reest)
 
     labels = ["Previous", "Data revisions", "New data", "Re-estimation", "Current"]
     measures = ["absolute", "relative", "relative", "relative", "total"]
     values = [old, rev, news, reest, new]
+    if decomposition.get("basis") == "ytd":  # year to date: Uzstat's earlier quarters first
+        labels.insert(1, "Earlier quarters")
+        measures.insert(1, "relative")
+        values.insert(1, earlier)
 
     colours = []
     for m, v in zip(measures, values, strict=True):
@@ -362,7 +383,8 @@ def waterfall_chart(decomposition: dict) -> dict:
 
     layout = _merge_layout(dict(
         title=dict(text="Nowcast Revision Decomposition", font=dict(size=15)),
-        yaxis=dict(title="GDP y/y %", ticksuffix="%"),
+        yaxis=dict(title=("GDP y/y %, cumulative from January"
+                          if decomposition.get("basis") == "ytd" else "GDP y/y %"), ticksuffix="%"),
         showlegend=False,
     ))
     return dict(data=data, layout=layout, config=_CONFIG)

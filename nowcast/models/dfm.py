@@ -178,6 +178,7 @@ class DFM:
         # Bounds: mean ± 3 SD (SD at least 1 pp) of the last 12 quarters of official y/y
         yoy_panel = panels.yoy
         gdp_hist = yoy_panel[(yoy_panel["variable"] == "gdp") & (yoy_panel["freq"] == "Q")]
+        lo, hi = -np.inf, np.inf
         if not gdp_hist.empty:
             hist_vals = gdp_hist["value"].dropna()
             if len(hist_vals) >= 4:
@@ -186,6 +187,20 @@ class DFM:
                 lo = y_mean - 3 * max(y_std, 1.0)
                 hi = y_mean + 3 * max(y_std, 1.0)
                 gdp_yoy = float(np.clip(gdp_yoy, lo, hi))
+
+        # Earlier quarters of the target's year that GDP has not been published for yet (at month
+        # 1 the quarter just ended), from the same fit: the year-to-date figure needs them.
+        published = (pd.PeriodIndex(gdp_hist.dropna(subset=["value"])["period"], freq="Q")
+                     if not gdp_hist.empty else pd.PeriodIndex([], freq="Q"))
+        last_pub = published.max() if len(published) else None
+        yoy_by_quarter = {str(target_quarter): float(gdp_yoy)}
+        for j in range(1, target_quarter.quarter):
+            q = pd.Period(year=target_quarter.year, quarter=j, freq="Q")
+            if last_pub is not None and q <= last_pub:
+                continue
+            v = dlog_path_to_yoy(gdp_dlog_q, panels, q)
+            if np.isfinite(v):
+                yoy_by_quarter[str(q)] = float(np.clip(v, lo, hi))
 
         out = {
             "gdp_yoy": float(gdp_yoy),
@@ -197,6 +212,7 @@ class DFM:
                 "target": str(target_quarter),
                 "gdp_z": float(gdp_z_val),
                 "gdp_dlog": float(gdp_dlog),
+                "yoy_by_quarter": yoy_by_quarter,
             },
         }
         # Stash the result object for Phase 4 news decomposition

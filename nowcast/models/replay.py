@@ -68,6 +68,26 @@ def _target_quarters(run_date: dt.date) -> list[pd.Period]:
     return targets
 
 
+def _last_published_gdp(panels) -> pd.Period | None:
+    """Last quarter with GDP in the panel (as known on the run date)."""
+    yoy = panels.yoy
+    g = yoy[(yoy["variable"] == "gdp") & (yoy["freq"] == "Q")].dropna(subset=["value"])
+    return pd.PeriodIndex(g["period"], freq="Q").max() if len(g) else None
+
+
+def _backcast_quarters(run_date: dt.date, targets: list[pd.Period],
+                       last_published: pd.Period | None) -> list[pd.Period]:
+    """Ended quarters without published GDP in the year of any target (year-to-date inputs)."""
+    current = pd.Period(run_date, freq="Q")
+    years = {t.year for t in targets}
+    out = []
+    q = current - 1
+    while q.year in years and (last_published is None or q > last_published):
+        out.append(q)
+        q -= 1
+    return sorted(out)
+
+
 def replay(
     store,
     models: list,
@@ -127,6 +147,8 @@ def replay(
             panels.meta = build_meta_fn(panels.sa)
 
         target_quarters = _target_quarters(rd)
+        backcasts = _backcast_quarters(rd, target_quarters, _last_published_gdp(panels))
+        same_fit: dict[str, dict[str, float]] = {}  # model -> quarter estimates from one fit
 
         for tq in target_quarters:
             horizon = _classify_horizon(rd, tq)
@@ -141,6 +163,8 @@ def replay(
                     pred = {"gdp_yoy": np.nan, "model": model.name,
                             "info": {"error": str(e)}}
                 elapsed = time.monotonic() - t0
+                if tq == pd.Period(rd, freq="Q"):
+                    same_fit[model.name] = (pred.get("info") or {}).get("yoy_by_quarter") or {}
 
                 results.append({
                     "run_date": rd,
@@ -149,6 +173,29 @@ def replay(
                     "model": pred.get("model", model.name),
                     "gdp_yoy": pred.get("gdp_yoy", np.nan),
                     "elapsed_sec": elapsed,
+                })
+
+        # Backcasts: quarters of this year that have ended but whose GDP is not out yet (at
+        # month 1, the quarter just ended). Not scored as nowcasts; the year-to-date figure of
+        # the current quarter needs them. Taken from the current-quarter fit when the model
+        # reports it (the DFM does, as in production), else predicted separately.
+        for bq in backcasts:
+            for model in models:
+                t0 = time.monotonic()
+                v = same_fit.get(model.name, {}).get(str(bq))
+                if v is None:
+                    try:
+                        v = model.predict(panels, bq).get("gdp_yoy", np.nan)
+                    except Exception as e:
+                        logger.warning("%s backcast failed on %s→%s: %s", model.name, rd, bq, e)
+                        v = np.nan
+                results.append({
+                    "run_date": rd,
+                    "target_quarter": str(bq),
+                    "horizon": "backcast",
+                    "model": model.name,
+                    "gdp_yoy": v,
+                    "elapsed_sec": time.monotonic() - t0,
                 })
 
     df = pd.DataFrame(results)

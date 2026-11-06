@@ -22,7 +22,7 @@ import datetime as dt
 import hashlib
 import json
 import logging
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 import numpy as np
@@ -47,6 +47,10 @@ class RunState:
     n_monthly_vars: int = 0
     n_quarterly_vars: int = 0
     em_iterations: int = 250
+
+    # Year-to-date figure per quarter (comparable with Uzstat) and every quarter estimate it used
+    nowcast_ytd: dict[str, float] = field(default_factory=dict)
+    quarter_estimates: dict[str, float] = field(default_factory=dict)
 
 
 def panel_hash(sa_df: pd.DataFrame) -> str:
@@ -96,6 +100,8 @@ def save_state(
     nowcast_table: dict[str, float],
     dfm_result=None,
     dfm_config: dict | None = None,
+    nowcast_ytd: dict[str, float] | None = None,
+    quarter_estimates: dict[str, float] | None = None,
 ) -> RunState:
     """Persist run state to disk.
 
@@ -146,6 +152,8 @@ def save_state(
         n_monthly_vars=cfg.get("n_monthly_vars", 0),
         n_quarterly_vars=cfg.get("n_quarterly_vars", 0),
         em_iterations=cfg.get("em_max_iter", 250),
+        nowcast_ytd=dict(nowcast_ytd or {}),
+        quarter_estimates=dict(quarter_estimates or {}),
     )
 
     # 5. Write metadata JSON

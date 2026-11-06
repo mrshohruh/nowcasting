@@ -1,6 +1,10 @@
 """Production nowcasting pipeline.
 
-Orchestrates: panels → DFM → bridges → decomposition → narrative → site → PDF → downloads.
+Orchestrates: panels → DFM → year to date → decomposition → narrative → site → PDF → downloads.
+
+The headline is year to date (Q1, Jan-Jun, Jan-Sep, Jan-Dec), the figure Uzstat publishes: the
+DFM nowcasts the quarter and ``nowcast/transform/cumulative.py`` combines it with Uzstat's
+cumulative rate for the quarters already out. The quarter alone is shown beside it.
 
 Usage::
 
@@ -150,18 +154,26 @@ def build_monitor_data(
 # ── history ────────────────────────────────────────────────────────────────
 
 
-def build_nowcast_history(state_dir: Path) -> list[dict]:
-    """Previous nowcasts read from saved state."""
+def build_nowcast_history(state_dir: Path, store=None) -> list[dict]:
+    """Previous nowcasts read from saved state: ``gdp_yoy`` is the year-to-date figure (the
+    headline), ``gdp_quarter`` the quarter alone. A state saved before the year-to-date headline
+    has only the quarter; it is converted with Uzstat's figures as known on its run date."""
     from nowcast.explain.state import load_state
+    from nowcast.transform.cumulative import published_as_of, to_ytd
 
     history: list[dict] = []
     state = load_state(state_dir)
     if state and state.nowcast_table:
         for quarter, yoy in state.nowcast_table.items():
+            ytd = state.nowcast_ytd.get(quarter)
+            if ytd is None and store is not None:
+                est = {**state.quarter_estimates, quarter: yoy}
+                ytd = to_ytd(quarter, est, published_as_of(store, state.run_date)).value
             history.append({
                 "run_date": state.run_date,
                 "target_quarter": quarter,
-                "gdp_yoy": yoy,
+                "gdp_yoy": ytd if ytd is not None and np.isfinite(ytd) else yoy,
+                "gdp_quarter": yoy,
             })
     return history
 
@@ -176,6 +188,8 @@ def build_nowcast_paths(
 
     Past quarters come from the backtest replays (one point per monthly run, ending with an
     ``official`` marker when GDP has been published); the current quarter takes the live runs.
+    Values are year to date (Q1, Jan-Jun, Jan-Sep, Jan-Dec), as Uzstat publishes them; the
+    official marker is Uzstat's cumulative rate.
     """
     horizons = {"forecast", "nowcast_m1", "nowcast_m2", "nowcast_m3"}
     by_q: dict[str, list[dict]] = {}
@@ -183,10 +197,14 @@ def build_nowcast_paths(
     for r in past_nowcasts:
         if r.get("horizon") not in horizons:
             continue
+        v = r.get("forecast_ytd")
+        if v is None:  # backtest file from before the year-to-date headline
+            continue
         by_q.setdefault(r["target_quarter"], []).append(
-            {"run_date": r["run_date"], "gdp_yoy": r["forecast"], "horizon": r["horizon"]})
-        if r.get("actual") is not None:
-            actual[r["target_quarter"]] = r["actual"]
+            {"run_date": r["run_date"], "gdp_yoy": v, "gdp_quarter": r["forecast"],
+             "horizon": r["horizon"]})
+        if r.get("actual_cum") is not None:
+            actual[r["target_quarter"]] = r["actual_cum"]
 
     paths: dict[str, list[dict]] = {}
     for q in [q for q in sorted(by_q) if q != current_quarter][-n_past:]:
@@ -231,7 +249,8 @@ def generate_downloads(site_ctx, decomposition, sectors, staging_dir: Path) -> l
                 "target_quarter": quarter,
                 "run_date": pt.get("run_date"),
                 "horizon": "official" if pt.get("official") else pt.get("horizon", ""),
-                "gdp_yoy": pt.get("gdp_yoy"),
+                "gdp_ytd": pt.get("gdp_yoy"),
+                "gdp_quarter": pt.get("gdp_quarter"),
             })
     path_df = pd.DataFrame(path_rows)
     if not path_df.empty:
@@ -259,10 +278,15 @@ def generate_downloads(site_ctx, decomposition, sectors, staging_dir: Path) -> l
     try:
         xlsx_name = f"nowcast_{q}.xlsx"
         with pd.ExcelWriter(staging_dir / xlsx_name, engine="openpyxl") as wr:
+            ytd = site_ctx.ytd or {}
             pd.DataFrame([{
                 "target_quarter": q, "run_date": site_ctx.run_date, "horizon": site_ctx.horizon,
-                "gdp_yoy": site_ctx.new_nowcast, "band_lo": site_ctx.band_lo,
+                "period": f"{ytd.get('span', '')} {q[:4]}",
+                "gdp_ytd": site_ctx.new_nowcast, "band_lo": site_ctx.band_lo,
                 "band_hi": site_ctx.band_hi, "previous": site_ctx.old_nowcast,
+                "gdp_quarter": site_ctx.quarter_nowcast,
+                "uzstat_published_through": ytd.get("known_through"),
+                "uzstat_published_ytd": ytd.get("known_value"),
             }]).to_excel(wr, sheet_name="Nowcast", index=False)
             for name, df in (("Path", path_df), ("Impacts", impacts_df),
                              ("Inputs", inputs_df), ("Sectors", sectors_df)):
@@ -295,6 +319,9 @@ def _serialize_decomposition(d) -> dict:
         "revision_effect": d.revision_effect,
         "news_effect": d.news_effect,
         "reestimation_effect": d.reestimation_effect,
+        "earlier_effect": getattr(d, "earlier_effect", 0.0),
+        "basis": getattr(d, "basis", "quarter"),
+        "target_share": getattr(d, "target_share", 1.0),
         "news_items": [{
             "variable": it.variable, "label": it.label,
             "period": it.period, "surprise": it.surprise,
@@ -365,6 +392,26 @@ def run_pipeline(
         sys.exit(1)
     logger.info("  DFM GDP y/y: %.2f%%", gdp_yoy)
 
+    # ── 3b. Year to date: the figure Uzstat publishes (Q1, Jan-Jun, Jan-Sep, Jan-Dec) ──
+    # Uzstat's cumulative rate for the quarters already out, plus the model for the target and
+    # for any earlier quarter of the year not published yet (at month 1, the quarter just ended).
+    from nowcast.transform.cumulative import SPAN_LONG, SPAN_UZ, published_as_of, to_ytd
+    published = published_as_of(store, as_of)
+    estimates = dict(dfm_result.get("info", {}).get("yoy_by_quarter") or {})
+    estimates[str(target_quarter)] = gdp_yoy
+    ytd = to_ytd(target_quarter, estimates, published)
+    if not np.isfinite(ytd.value):
+        logger.error("Year-to-date figure could not be built (quarters %s) — aborting", ytd.estimated)
+        sys.exit(1)
+    gdp_ytd = ytd.value
+    logger.info("  Year to date (%s %d): %.2f%%  [Uzstat to %s: %s; model: %s; share %.2f]",
+                ytd.span, target_quarter.year, gdp_ytd, ytd.known_through, ytd.known_value,
+                ytd.estimated, ytd.target_share)
+    for qq, b in ytd.weight_basis.items():
+        if b != "levels":
+            logger.warning("  Weight of %s from %s (its level is inconsistent with the rest of "
+                           "the year in Uzstat's file)", qq, b)
+
     # ── 4. DFM inputs (what the headline rests on) ────────────────────────
     # The sector bridge view is no longer published: every number on the dashboard comes from
     # the DFM. The bridge code stays in nowcast/models/bridges.py for research use.
@@ -396,17 +443,48 @@ def run_pipeline(
     else:
         logger.info("  First run — no decomposition available")
 
+    # Previous estimate on the same basis, and the decomposition in year-to-date terms
+    old_ytd = old_quarter = None
+    if prev_state is not None:
+        q_str = str(target_quarter)
+        old_quarter = prev_state.nowcast_table.get(q_str)
+        if old_quarter is None and decomposition is not None:
+            old_quarter = decomposition.old_nowcast
+        old_ytd = prev_state.nowcast_ytd.get(q_str)
+        if old_ytd is None and old_quarter is not None:
+            # state saved before the year-to-date headline: convert as of its run date
+            old_est = {**estimates, **prev_state.quarter_estimates, q_str: old_quarter}
+            old_ytd = to_ytd(q_str, old_est, published_as_of(store, prev_state.run_date)).value
+    if decomposition is not None and old_ytd is not None and np.isfinite(old_ytd):
+        decomposition = decomposition.in_ytd_terms(ytd, old_ytd, old_quarter)
+        logger.info("  Change %+.2f pp year to date: earlier quarters %+.2f, this quarter %+.2f "
+                    "(x %.2f)", decomposition.total_change, decomposition.earlier_effect,
+                    decomposition.total_change - decomposition.earlier_effect, ytd.target_share)
+    elif decomposition is not None:
+        logger.warning("  Previous year-to-date figure unknown: What Changed is in quarter terms")
+
     # ── 6. Narratives ─────────────────────────────────────────────────────
     logger.info("Step 5/9: Rendering narrative notes...")
+    ytd_info = {
+        "year": target_quarter.year, "quarter": target_quarter.quarter, "span": ytd.span,
+        "span_en": SPAN_LONG[target_quarter.quarter], "span_uz": SPAN_UZ[target_quarter.quarter],
+        "quarter_value": gdp_yoy, "known_through": ytd.known_through,
+        "known_value": ytd.known_value,
+        "known_span_en": SPAN_LONG[int(ytd.known_through[-1])] if ytd.known_through else None,
+        "known_span_uz": SPAN_UZ[int(ytd.known_through[-1])] if ytd.known_through else None,
+        "estimated": ytd.estimated, "target_share": ytd.target_share,
+        "unknown_share": ytd.unknown_share, "weight_basis": ytd.weight_basis,
+        "earlier_effect": getattr(decomposition, "earlier_effect", 0.0) if decomposition else 0.0,
+    }
     narrative_en = render_note(
         decomposition, sectors, lang="en",
         run_date=str(as_of), target_quarter=str(target_quarter),
-        horizon=horizon, new_nowcast=gdp_yoy,
+        horizon=horizon, new_nowcast=gdp_ytd, ytd=ytd_info,
     )
     narrative_uz = render_note(
         decomposition, sectors, lang="uz",
         run_date=str(as_of), target_quarter=str(target_quarter),
-        horizon=horizon, new_nowcast=gdp_yoy,
+        horizon=horizon, new_nowcast=gdp_ytd, ytd=ytd_info,
     )
 
     # ── 7. Uncertainty bands ──────────────────────────────────────────────
@@ -440,16 +518,23 @@ def run_pipeline(
     else:
         logger.warning("No backtest file at %s; Models page empty and default band used", bt_file)
 
-    band_lo = gdp_yoy - band_half
-    band_hi = gdp_yoy + band_half
+    # The band comes from quarter errors; in year-to-date terms only the model-estimated part
+    # of the year is uncertain (Uzstat's published quarters have no error), so it is scaled by
+    # that part's weight (errors of a backcast and the nowcast taken as fully correlated).
+    band_half_q = band_half
+    band_half = band_half_q * ytd.unknown_share
+    band_lo = gdp_ytd - band_half
+    band_hi = gdp_ytd + band_half
+    logger.info("  80%% band: ±%.2f pp quarter, ±%.2f pp year to date", band_half_q, band_half)
 
     # ── 8. Monitor + history ──────────────────────────────────────────────
     monitor = build_monitor_data(panels, as_of, variable_ids=dfm_cfg.get("variable_ids"))
-    nowcast_history = build_nowcast_history(state_path)
+    nowcast_history = build_nowcast_history(state_path, store)
     nowcast_history.append({
         "run_date": str(as_of),
         "target_quarter": str(target_quarter),
-        "gdp_yoy": gdp_yoy,
+        "gdp_yoy": gdp_ytd,
+        "gdp_quarter": gdp_yoy,
         "band_lo": band_lo,
         "band_hi": band_hi,
     })
@@ -459,11 +544,14 @@ def run_pipeline(
         run_date=str(as_of),
         target_quarter=str(target_quarter),
         horizon=horizon,
-        new_nowcast=gdp_yoy,
+        new_nowcast=gdp_ytd,
         old_nowcast=decomposition.old_nowcast if decomposition else None,
         total_change=decomposition.total_change if decomposition else None,
         band_lo=band_lo,
         band_hi=band_hi,
+        quarter_nowcast=gdp_yoy,
+        quarter_old=old_quarter,
+        ytd=ytd_info,
         decomposition=(
             _serialize_decomposition(decomposition) if decomposition else None
         ),
@@ -476,7 +564,8 @@ def run_pipeline(
         nowcast_vs_actual=past_nowcasts,
         nowcast_paths=build_nowcast_paths(
             past_nowcasts, str(target_quarter),
-            [{"run_date": h["run_date"], "gdp_yoy": h["gdp_yoy"], "horizon": horizon}
+            [{"run_date": h["run_date"], "gdp_yoy": h["gdp_yoy"],
+              "gdp_quarter": h.get("gdp_quarter"), "horizon": horizon}
              for h in nowcast_history if h["target_quarter"] == str(target_quarter)],
         ),
         available_quarters=available_quarters or [str(target_quarter)],
@@ -500,7 +589,12 @@ def run_pipeline(
         run_date=str(as_of),
         target_quarter=str(target_quarter),
         horizon=horizon,
-        new_nowcast=gdp_yoy,
+        new_nowcast=gdp_ytd,
+        quarter_nowcast=gdp_yoy,
+        ytd=ytd_info,
+        earlier_effect=getattr(decomposition, "earlier_effect", 0.0) if decomposition else 0.0,
+        band_lo=band_lo,
+        band_hi=band_hi,
         old_nowcast=decomposition.old_nowcast if decomposition else None,
         total_change=decomposition.total_change if decomposition else None,
         revision_effect=decomposition.revision_effect if decomposition else 0.0,
@@ -530,6 +624,8 @@ def run_pipeline(
     logger.info("Step 9/9: Saving run state...")
     nowcast_table = {str(target_quarter): gdp_yoy}
     save_state(
+        nowcast_ytd={str(target_quarter): gdp_ytd},
+        quarter_estimates={k: float(v) for k, v in ytd.estimates.items()},
         state_dir=state_path,
         run_date=as_of,
         panels=panels,
@@ -549,7 +645,9 @@ def run_pipeline(
         "run_date": str(as_of),
         "target_quarter": str(target_quarter),
         "horizon": horizon,
-        "gdp_yoy": gdp_yoy,
+        "gdp_ytd": gdp_ytd,
+        "ytd_span": f"{ytd.span} {target_quarter.year}",
+        "gdp_quarter": gdp_yoy,
         "band": [band_lo, band_hi],
         "has_decomposition": decomposition is not None,
         "n_sectors": len(sectors),
